@@ -1,0 +1,327 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+const Navigation = () => {
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-black bg-opacity-95 shadow-md">
+      <div className="container mx-auto px-6 py-3 flex justify-between items-center">
+        <div className="flex items-center space-x-4">
+          <Link href="/" className="text-2xl font-bold text-dental-accent1">
+            <img
+              src="/assets/logo-type-white.png"
+              alt="Dr Mo Smiles"
+              className="h-12 w-auto"
+            />
+          </Link>
+          <div className="w-5"></div>
+          <Link
+            href="#about"
+            className="text-dental-accent1 hover:text-dental-accent2"
+          >
+            About
+          </Link>
+          <div className="relative group">
+            <button className="text-dental-accent1 hover:text-dental-accent2 flex items-center">
+              Services
+            </button>
+            {/* Add bridge for main menu */}
+            <div className="absolute -bottom-2 left-0 w-full h-2" />
+            <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-black mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
+              <div className="relative group/sub">
+                <button className="w-full text-left px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light flex items-center justify-between">
+                  General
+                  <span className="ml-2">›</span>
+                </button>
+                {/* Make the bridge wider and taller */}
+                <div className="absolute -left-8 top-0 w-8 h-full" />
+                {/* Add peer class to detect hover */}
+                <div
+                  className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-black py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
+                >
+                  {/* Add a hidden element to detect if menu should flip */}
+                  <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
+                  <Link
+                    href="/services/general/cleanings-and-exams"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Cleanings & Exams
+                  </Link>
+                  <Link
+                    href="/services/general/emergency-care"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Emergency Care
+                  </Link>
+                  <Link
+                    href="/services/general/crowns"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Crowns
+                  </Link>
+                  <Link
+                    href="/services/general/gum-therapy"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Gum Therapy
+                  </Link>
+                  <Link
+                    href="/services/general/dental-fillings"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Dental Fillings
+                  </Link>
+                  <Link
+                    href="/services/general/dentures"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Dentures
+                  </Link>
+                  <Link
+                    href="/services/general/night-guards"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Night Guards
+                  </Link>
+                  <Link
+                    href="/services/general/family-dentistry"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Family Dentistry
+                  </Link>
+                </div>
+              </div>
+              <div className="relative group/sub">
+                <button className="w-full text-left px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light flex items-center justify-between">
+                  Surgical
+                  <span className="ml-2">›</span>
+                </button>
+                {/* Make the bridge wider and taller */}
+                <div className="absolute -left-8 top-0 w-8 h-full" />
+                {/* Add peer class to detect hover */}
+                <div
+                  className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-black py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
+                >
+                  {/* Add a hidden element to detect if menu should flip */}
+                  <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
+                  <Link
+                    href="/services/surgeries/implants"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Implants
+                  </Link>
+                  <Link
+                    href="/services/surgeries/extractions"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Extractions
+                  </Link>
+                  <Link
+                    href="/services/surgeries/bone-grafts"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Bone Grafts
+                  </Link>
+                  <Link
+                    href="/services/surgeries/implant-supported-dentures"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Implant-Supported Dentures
+                  </Link>
+                  <Link
+                    href="/services/surgeries/bridges"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Bridges
+                  </Link>
+                </div>
+              </div>
+              <div className="relative group/sub">
+                <button className="w-full text-left px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light flex items-center justify-between">
+                  Cosmetic
+                  <span className="ml-2">›</span>
+                </button>
+                {/* Make the bridge wider and taller */}
+                <div className="absolute -left-8 top-0 w-8 h-full" />
+                {/* Add peer class to detect hover */}
+                <div
+                  className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-black py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
+                >
+                  {/* Add a hidden element to detect if menu should flip */}
+                  <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
+                  <Link
+                    href="/services/cosmetic/invisalign"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Invisalign
+                  </Link>
+                  <Link
+                    href="/services/cosmetic/teeth-whitening"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Teeth Whitening
+                  </Link>
+                  <Link
+                    href="/services/cosmetic/bonding"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Bonding
+                  </Link>
+                  <Link
+                    href="/services/cosmetic/veneers"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Veneers
+                  </Link>
+                  <Link
+                    href="/services/cosmetic/smile-makeover"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Smile Makeover
+                  </Link>
+                </div>
+              </div>
+              <div className="relative group/sub">
+                <button className="w-full text-left px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light flex items-center justify-between">
+                  Full-Mouth Transformation
+                  <span className="ml-2">›</span>
+                </button>
+                {/* Make the bridge wider and taller */}
+                <div className="absolute -left-8 top-0 w-8 h-full" />
+                {/* Add peer class to detect hover */}
+                <div
+                  className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-black py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
+                >
+                  {/* Add a hidden element to detect if menu should flip */}
+                  <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
+                  <Link
+                    href="/services/transformation/cosmetic-dentistry"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Cosmetic Dentistry
+                  </Link>
+                  <Link
+                    href="/services/transformation/digital-smile-design"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Digital Smile Design
+                  </Link>
+                  <Link
+                    href="/services/transformation/porcelain-veneers"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Porcelain Veneers
+                  </Link>
+                  <Link
+                    href="/services/transformation/teeth-whitening"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Teeth Whitening
+                  </Link>
+                  <Link
+                    href="/services/transformation/clear-braces"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Clear Braces / Clear Aligners
+                  </Link>
+                  <Link
+                    href="/services/transformation/smile-makeover"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Smile Makeover
+                  </Link>
+                  <Link
+                    href="/services/transformation/gum-lift"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Gum Lift
+                  </Link>
+                  <Link
+                    href="/services/transformation/bonding"
+                    className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                  >
+                    Bonding / Resin Veneers
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="relative group">
+            <button className="text-dental-accent1 hover:text-dental-accent2 flex items-center">
+              Problems I Treat
+            </button>
+            {/* Add bridge for main menu */}
+            <div className="absolute -bottom-2 left-0 w-full h-2" />
+            <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-black mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
+              <Link
+                href="/services/problems/chipped-cracked-teeth"
+                className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+              >
+                Chipped or Cracked Teeth
+              </Link>
+              <Link
+                href="/services/problems/wisdom-tooth-pain"
+                className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+              >
+                Wisdom Tooth Pain
+              </Link>
+              <Link
+                href="/services/problems/missing-tooth"
+                className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+              >
+                Missing Tooth
+              </Link>
+              <Link
+                href="/services/problems/toothache"
+                className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+              >
+                Toothache
+              </Link>
+              <Link
+                href="/services/problems/teeth-grinding"
+                className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+              >
+                Teeth Grinding
+              </Link>
+              <Link
+                href="/services/problems/stained-teeth"
+                className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+              >
+                Stained Teeth
+              </Link>
+              <Link
+                href="/services/problems/crooked-teeth"
+                className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+              >
+                Crooked Teeth
+              </Link>
+              <Link
+                href="/services/problems/bleeding-gums"
+                className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+              >
+                Bleeding Gums
+              </Link>
+              <Link
+                href="/services/problems/bad-breath"
+                className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+              >
+                Bad Breath
+              </Link>
+            </div>
+          </div>
+        </div>
+        <Button
+          asChild
+          className="bg-dental-primary hover:bg-dental-secondary text-white"
+        >
+          <Link href="#book">Schedule Now</Link>
+        </Button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
