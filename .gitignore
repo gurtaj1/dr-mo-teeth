@@ -35,5 +35,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# assets (this probably needs changing before production)
-/public/assets
