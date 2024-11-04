@@ -45,7 +45,7 @@ const DentalImplants = () => {
   });
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Dental Implants Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
