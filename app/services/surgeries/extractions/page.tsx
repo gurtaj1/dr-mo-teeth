@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 const DentalImplants = () => {
   const [isAnswer1Visible, setIsAnswer1Visible] = useState(false);
@@ -302,55 +304,38 @@ const DentalImplants = () => {
       </section>
 
       {/* Who Needs IV Sedation Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2">
-              <div
-                ref={ivSedationImageRef}
-                className={`transition-transform duration-1000 ease-out ${
-                  isIVSedationImageVisible
-                    ? "translate-x-0"
-                    : "-translate-x-full"
-                }`}
-              >
-                <Image
-                  src="/placeholder.svg"
-                  width={600}
-                  height={400}
-                  alt="IV Sedation Patient"
-                  className="rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-            <div className="w-full md:w-1/2">
-              <h2
-                ref={ivSedationParallaxRef}
-                className="text-3xl mb-6 text-dental-navy"
-                style={{
-                  transform: `translateY(${ivSedationParallaxOffset}px)`,
-                }}
-              >
-                Who Needs <br /> <span className="font-bold">IV Sedation?</span>
-              </h2>
-              <p className="text-gray-600 mb-4">
-                Intravenous Sedation can benefit people with:
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Dental anxiety</li>
-                <li>• Fear of visiting the dentist</li>
-                <li>• Overly sensitive gag reflex</li>
-                <li>• Fear of needles</li>
-                <li>• Extreme teeth sensitivity</li>
-                <li>• Claustrophobia in the dental chair</li>
-                <li>• Decreased sensitivity to local anaesthesia</li>
-                <li>• Difficulty controlling movements</li>
-                <li>• Special needs (physical, cognitive, or behavioural)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AnimatedImageTextSection
+        imageRef={ivSedationImageRef}
+        titleRef={ivSedationParallaxRef}
+        isImageVisible={isIVSedationImageVisible}
+        imagePosition="left"
+        imageSrc="/placeholder.svg"
+        imageAlt="IV Sedation Patient"
+        title={
+          <>
+            Who Needs <br /> <span className="font-bold">IV Sedation?</span>
+          </>
+        }
+        titleColor="text-dental-navy"
+        scrollY={ivSedationParallaxOffset}
+        scrollFactor={1}
+      >
+        <p className="text-gray-600 mb-4">
+          Intravenous Sedation can benefit people with:
+        </p>
+        <ul className="space-y-2 text-gray-600">
+          <li>• Dental anxiety</li>
+          <li>• Fear of visiting the dentist</li>
+          <li>• Overly sensitive gag reflex</li>
+          <li>• Fear of needles</li>
+          <li>• Extreme teeth sensitivity</li>
+          <li>• Claustrophobia in the dental chair</li>
+          <li>• Decreased sensitivity to local anaesthesia</li>
+          <li>• Difficulty controlling movements</li>
+          <li>• Special needs (physical, cognitive, or behavioural)</li>
+        </ul>
+      </AnimatedImageTextSection>
+
       {/* IV Sedation Process Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">

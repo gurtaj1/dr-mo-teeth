@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 const DentalImplants = () => {
   const [isImplantJourneyImageVisible, setIsImplantJourneyImageVisible] =
@@ -89,105 +90,73 @@ const DentalImplants = () => {
         </div>
       </section>
 
-      {/* Your Dental Implant Journey Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2">
-              <div
-                ref={implantJourneyImageRef}
-                className={`transition-transform duration-1000 ease-out ${
-                  isImplantJourneyImageVisible
-                    ? "translate-x-0"
-                    : "-translate-x-full"
-                }`}
-              >
-                <Image
-                  src="/placeholder.svg"
-                  width={600}
-                  height={400}
-                  alt="Dental Implant Procedure"
-                  className="rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-            <div className="w-full md:w-1/2">
-              <h2
-                className="text-3xl mb-6 text-dental-navy"
-                style={{ transform: `translateY(${scrollY * -0.05}px)` }}
-              >
-                Your Dental <br />{" "}
-                <span className="font-bold">Implant Journey</span>:
-              </h2>
-              <p className="text-gray-600 mb-4">
-                I collaborate closely with you to detail every step of your
-                treatment, making sure you know what to expect at each stage:
-              </p>
-              <ol className="space-y-2 text-gray-600">
-                <li>
-                  <strong>Step 1.</strong> Assessment and treatment planning.
-                  Bespoke solutions tailored for you using Advanced 3D imaging
-                  technology
-                </li>
-                <li>
-                  <strong>Step 2.</strong> Placement of the Implant
-                </li>
-                <li>
-                  <strong>Step 3.</strong> Healing phase: allowing for a
-                  comfortable recovery
-                </li>
-                <li>
-                  <strong>Step 4.</strong> Restoration Phase: Making the custom
-                  made teeth for your smile
-                </li>
-                <li>
-                  <strong>Step 5.</strong> Maintenance phase: Teaching you how
-                  to care for your implant
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AnimatedImageTextSection
+        imageRef={implantJourneyImageRef}
+        isImageVisible={isImplantJourneyImageVisible}
+        imagePosition="left"
+        imageSrc="/placeholder.svg"
+        imageAlt="Dental Implant Procedure"
+        title={
+          <>
+            Your Dental <br />{" "}
+            <span className="font-bold">Implant Journey</span>:
+          </>
+        }
+        titleColor="text-dental-navy"
+        scrollY={scrollY}
+        scrollFactor={-0.05}
+      >
+        <p className="text-gray-600 mb-4">
+          I collaborate closely with you to detail every step of your treatment,
+          making sure you know what to expect at each stage:
+        </p>
+        <ol className="space-y-2 text-gray-600">
+          <li>
+            <strong>Step 1.</strong> Assessment and treatment planning. Bespoke
+            solutions tailored for you using Advanced 3D imaging technology
+          </li>
+          <li>
+            <strong>Step 2.</strong> Placement of the Implant
+          </li>
+          <li>
+            <strong>Step 3.</strong> Healing phase: allowing for a comfortable
+            recovery
+          </li>
+          <li>
+            <strong>Step 4.</strong> Restoration Phase: Making the custom made
+            teeth for your smile
+          </li>
+          <li>
+            <strong>Step 5.</strong> Maintenance phase: Teaching you how to care
+            for your implant
+          </li>
+        </ol>
+      </AnimatedImageTextSection>
 
-      {/* Benefits Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2">
-              <h2
-                className="text-3xl mb-6 text-dental-accent1"
-                style={{ transform: `translateY(${scrollY * -0.025}px)` }}
-              >
-                Amazing Benefits of <br />{" "}
-                <span className="font-bold">Dental Implants</span>:
-              </h2>
-              <ul className="space-y-4 text-dental-accent1">
-                <li>⭐ Strengthens your jawbone</li>
-                <li>⭐ Promotes healthy gums</li>
-                <li>⭐ Restores your ability to chew and speak</li>
-                <li>⭐ Boosts your confidence to smile naturally again</li>
-              </ul>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div
-                ref={benefitsImageRef}
-                className={`transition-transform duration-1000 ease-out ${
-                  isBenefitsImageVisible ? "translate-x-0" : "translate-x-full"
-                }`}
-              >
-                <Image
-                  src="/placeholder.svg"
-                  width={600}
-                  height={400}
-                  alt="Dental Implant Benefits"
-                  className="rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AnimatedImageTextSection
+        imageRef={benefitsImageRef}
+        isImageVisible={isBenefitsImageVisible}
+        imagePosition="right"
+        imageSrc="/placeholder.svg"
+        imageAlt="Dental Implant Benefits"
+        title={
+          <>
+            Amazing Benefits of <br />{" "}
+            <span className="font-bold">Dental Implants</span>:
+          </>
+        }
+        titleColor="text-dental-accent1"
+        backgroundColor="bg-dental-navy"
+        scrollY={scrollY}
+        scrollFactor={-0.025}
+      >
+        <ul className="space-y-4 text-dental-accent1">
+          <li>⭐ Strengthens your jawbone</li>
+          <li>⭐ Promotes healthy gums</li>
+          <li>⭐ Restores your ability to chew and speak</li>
+          <li>⭐ Boosts your confidence to smile naturally again</li>
+        </ul>
+      </AnimatedImageTextSection>
 
       {/* Implant Retained Dentures Section */}
       <section className="py-16">
