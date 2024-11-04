@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
@@ -10,52 +12,37 @@ const DentalImplants = () => {
   const [isImplantJourneyImageVisible, setIsImplantJourneyImageVisible] =
     useState(false);
   const [isBenefitsImageVisible, setIsBenefitsImageVisible] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  const [implantJourneyParallaxOffset, setImplantJourneyParallaxOffset] =
+    useState(0);
+  const [benefitsParallaxOffset, setBenefitsParallaxOffset] = useState(0);
+
   const implantJourneyImageRef = useRef(null);
   const benefitsImageRef = useRef(null);
+  const implantJourneyParallaxRef = useRef(null);
+  const benefitsParallaxRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          // Determine which element is intersecting and update its visibility independently
-          if (
-            entry.target === implantJourneyImageRef.current &&
-            entry.isIntersecting
-          ) {
-            setIsImplantJourneyImageVisible(true); // Transition the first element independently
-            observer.unobserve(entry.target); // Stop observing to avoid repeated triggers
-          } else if (
-            entry.target === benefitsImageRef.current &&
-            entry.isIntersecting
-          ) {
-            setIsBenefitsImageVisible(true); // Transition the second element independently
-            observer.unobserve(entry.target); // Stop observing to avoid repeated triggers
-          }
-        });
+  useIntersectionObservers({
+    intersectionTargets: [
+      {
+        ref: implantJourneyImageRef,
+        onIntersect: () => setIsImplantJourneyImageVisible(true),
       },
-      { threshold: 0.1 } // Start observing when 10% of each element is visible
-    );
-
-    // Observe each individual element
-    if (implantJourneyImageRef.current)
-      observer.observe(implantJourneyImageRef.current);
-    if (benefitsImageRef.current) observer.observe(benefitsImageRef.current);
-
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      if (implantJourneyImageRef.current)
-        observer.unobserve(implantJourneyImageRef.current);
-      if (benefitsImageRef.current)
-        observer.unobserve(benefitsImageRef.current);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      {
+        ref: benefitsImageRef,
+        onIntersect: () => setIsBenefitsImageVisible(true),
+      },
+    ],
+    parallaxTargets: [
+      {
+        ref: implantJourneyParallaxRef,
+        onScroll: (offset) => setImplantJourneyParallaxOffset(offset),
+      },
+      {
+        ref: benefitsParallaxRef,
+        onScroll: (offset) => setBenefitsParallaxOffset(offset),
+      },
+    ],
+  });
 
   return (
     <div className="min-h-screen bg-white">
@@ -92,6 +79,7 @@ const DentalImplants = () => {
 
       <AnimatedImageTextSection
         imageRef={implantJourneyImageRef}
+        titleRef={implantJourneyParallaxRef}
         isImageVisible={isImplantJourneyImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.svg"
@@ -103,8 +91,8 @@ const DentalImplants = () => {
           </>
         }
         titleColor="text-dental-navy"
-        scrollY={scrollY}
-        scrollFactor={-0.05}
+        scrollY={implantJourneyParallaxOffset}
+        scrollFactor={1}
       >
         <p className="text-gray-600 mb-4">
           I collaborate closely with you to detail every step of your treatment,
@@ -135,6 +123,7 @@ const DentalImplants = () => {
 
       <AnimatedImageTextSection
         imageRef={benefitsImageRef}
+        titleRef={benefitsParallaxRef}
         isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.svg"
@@ -147,8 +136,8 @@ const DentalImplants = () => {
         }
         titleColor="text-dental-accent1"
         backgroundColor="bg-dental-navy"
-        scrollY={scrollY}
-        scrollFactor={-0.025}
+        scrollY={benefitsParallaxOffset}
+        scrollFactor={1}
       >
         <ul className="space-y-4 text-dental-accent1">
           <li>⭐ Strengthens your jawbone</li>

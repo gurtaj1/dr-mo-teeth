@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import Image from "next/image";
+import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
@@ -24,90 +25,36 @@ const DentalImplants = () => {
   const ivSedationParallaxRef = useRef(null);
   const emergencyPainParallaxRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          // Determine which element is intersecting and update its visibility independently
-          if (entry.target === answer1Ref.current && entry.isIntersecting) {
-            setIsAnswer1Visible(true); // Transition the first element independently
-            observer.unobserve(entry.target); // Stop observing to avoid repeated triggers
-          } else if (
-            entry.target === answer2Ref.current &&
-            entry.isIntersecting
-          ) {
-            setIsAnswer2Visible(true); // Transition the second element independently
-            observer.unobserve(entry.target); // Stop observing to avoid repeated triggers
-          } else if (
-            entry.target === answer3Ref.current &&
-            entry.isIntersecting
-          ) {
-            setIsAnswer3Visible(true); // Transition the third element independently
-            observer.unobserve(entry.target); // Stop observing to avoid repeated triggers
-          } else if (
-            entry.target === ivSedationImageRef.current &&
-            entry.isIntersecting
-          ) {
-            setIsIVSedationImageVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
+  useIntersectionObservers({
+    intersectionTargets: [
+      {
+        ref: answer1Ref,
+        onIntersect: () => setIsAnswer1Visible(true),
       },
-      { threshold: 0.1 } // Start observing when 10% of each element is visible
-    );
-
-    // Observe each individual element
-    if (answer1Ref.current) observer.observe(answer1Ref.current);
-    if (answer2Ref.current) observer.observe(answer2Ref.current);
-    if (answer3Ref.current) observer.observe(answer3Ref.current);
-    if (ivSedationImageRef.current)
-      observer.observe(ivSedationImageRef.current);
-
-    const parallaxObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const calculateOffset = () => {
-              const rect = entry.target.getBoundingClientRect();
-              const scrolled = rect.top;
-              if (entry.target === ivSedationParallaxRef.current) {
-                setIvSedationParallaxOffset(scrolled * 0.05);
-              } else if (entry.target === emergencyPainParallaxRef.current) {
-                setEmergencyPainParallaxOffset(scrolled * 0.05);
-              }
-            };
-
-            window.addEventListener("scroll", calculateOffset);
-            calculateOffset(); // Initial calculation
-
-            return () => window.removeEventListener("scroll", calculateOffset);
-          }
-        });
+      {
+        ref: answer2Ref,
+        onIntersect: () => setIsAnswer2Visible(true),
       },
-      { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] }
-    );
-
-    if (ivSedationParallaxRef.current) {
-      parallaxObserver.observe(ivSedationParallaxRef.current);
-    }
-    if (emergencyPainParallaxRef.current) {
-      parallaxObserver.observe(emergencyPainParallaxRef.current);
-    }
-
-    return () => {
-      if (answer1Ref.current) observer.unobserve(answer1Ref.current);
-      if (answer2Ref.current) observer.unobserve(answer2Ref.current);
-      if (answer3Ref.current) observer.unobserve(answer3Ref.current);
-      if (ivSedationImageRef.current)
-        observer.unobserve(ivSedationImageRef.current);
-      if (ivSedationParallaxRef.current) {
-        parallaxObserver.unobserve(ivSedationParallaxRef.current);
-      }
-      if (emergencyPainParallaxRef.current) {
-        parallaxObserver.unobserve(emergencyPainParallaxRef.current);
-      }
-    };
-  }, []);
+      {
+        ref: answer3Ref,
+        onIntersect: () => setIsAnswer3Visible(true),
+      },
+      {
+        ref: ivSedationImageRef,
+        onIntersect: () => setIsIVSedationImageVisible(true),
+      },
+    ],
+    parallaxTargets: [
+      {
+        ref: ivSedationParallaxRef,
+        onScroll: (offset) => setIvSedationParallaxOffset(offset),
+      },
+      {
+        ref: emergencyPainParallaxRef,
+        onScroll: (offset) => setEmergencyPainParallaxOffset(offset),
+      },
+    ],
+  });
 
   return (
     <div className="min-h-screen bg-white">
