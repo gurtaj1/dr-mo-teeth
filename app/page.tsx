@@ -15,7 +15,10 @@ const HomePage = () => {
           muted
           playsInline
         >
-          <source src={"/assets/mo-teeth-invideo.mp4"} type="video/mp4" />
+          <source
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/assets/mo-teeth-invideo.mp4`}
+            type="video/mp4"
+          />
         </video>
         <div className="absolute inset-0 bg-dental-black bg-opacity-60"></div>
         <div className="relative z-10 text-center text-dental-accent1">
