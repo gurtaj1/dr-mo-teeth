@@ -8,7 +8,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === "production" ? "/dr-mo-teeth/" : "",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProduction ? "/dr-mo-teeth" : "",
+  },
 };
 
 export default nextConfig;
