@@ -139,7 +139,9 @@ const HomePage = () => {
                 <Card className="bg-dental-primary/10 hover:bg-dental-primary/20 transition-colors border-dental-accent1/20">
                   <CardContent className="p-6">
                     <img
-                      src={`/service-${index + 1}.jpg`}
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH}/service-${
+                        index + 1
+                      }.jpg`}
                       alt={service.title}
                       className="w-full h-48 object-cover rounded-lg mb-4"
                     />
