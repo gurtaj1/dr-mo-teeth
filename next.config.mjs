@@ -8,9 +8,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  //   env: {
-  //     NEXT_PUBLIC_BASE_PATH: isProduction ? "/dr-mo-teeth" : "",
-  //   },
+  assetPrefix: "/dr-mo-teeth/",
 };
 
 export default nextConfig;
