@@ -53,7 +53,9 @@ const HomePage = () => {
             ].map((testimonial, index) => (
               <Card key={index}>
                 <CardContent className="p-6">
-                  <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
+                  <p className="text-gray-600 mb-4">
+                    &quot;{testimonial.text}&quot;
+                  </p>
                   <p className="font-semibold">{testimonial.name}</p>
                 </CardContent>
               </Card>
@@ -164,7 +166,7 @@ const HomePage = () => {
               techniques to ensure you receive the best possible treatment. We
               believe in personalized care, taking the time to understand your
               unique needs and concerns. Choose us for a healthier, brighter
-              smile that you'll love to show off!
+              smile that you&apos;ll love to show off!
             </p>
             <Button
               asChild
