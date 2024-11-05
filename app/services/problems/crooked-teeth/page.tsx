@@ -67,7 +67,7 @@ const CrookedTeeth = () => {
           <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
             Crooked teeth refer to any misalignment in your smile, which can
             manifest as overcrowding, gaps from lost teeth, or other
-            irregularities. While having crooked teeth isn't necessarily a
+            irregularities. While having crooked teeth isn&apos;t necessarily a
             problem in itself, it can lead to various health issues.
           </p>
           <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
