@@ -61,8 +61,8 @@ const DentalFillings = () => {
             other hand, are made from a tooth-coloured resin, which allows them
             to blend in with your natural teeth. During the filling process,
             your dentist will remove the decay, clean the area, and then place
-            the filling to restore the tooth's shape and function, helping you
-            maintain a healthy smile.
+            the filling to restore the tooth&apos;s shape and function, helping
+            you maintain a healthy smile.
           </p>
           <div className="text-center mt-8">
             <Button

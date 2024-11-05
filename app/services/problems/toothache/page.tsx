@@ -1,1 +1,241 @@
-export default function Page() { return ( <div><h1>Page Title</h1></div> ); }
+"use client";
+
+import { useRef, useState } from "react";
+
+import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
+
+const Toothache = () => {
+  const [isCausesImageVisible, setIsCausesImageVisible] = useState(false);
+  const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
+    useState(false);
+  const [isPreventionImageVisible, setIsPreventionImageVisible] =
+    useState(false);
+  const [isWisdomImageVisible, setIsWisdomImageVisible] = useState(false);
+  const [isWisdomBenefitsImageVisible, setIsWisdomBenefitsImageVisible] =
+    useState(false);
+  const [isWisdomProcessImageVisible, setIsWisdomProcessImageVisible] =
+    useState(false);
+  const [causesParallaxOffset, setCausesParallaxOffset] = useState(0);
+  const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
+  const [preventionParallaxOffset, setPreventionParallaxOffset] = useState(0);
+  const [wisdomParallaxOffset, setWisdomParallaxOffset] = useState(0);
+  const [wisdomBenefitsParallaxOffset, setWisdomBenefitsParallaxOffset] =
+    useState(0);
+  const [wisdomProcessParallaxOffset, setWisdomProcessParallaxOffset] =
+    useState(0);
+
+  const causesImageRef = useRef(null);
+  const treatmentsImageRef = useRef(null);
+  const preventionImageRef = useRef(null);
+  const wisdomImageRef = useRef(null);
+  const wisdomBenefitsImageRef = useRef(null);
+  const wisdomProcessImageRef = useRef(null);
+  const causesParallaxRef = useRef(null);
+  const treatmentsParallaxRef = useRef(null);
+  const preventionParallaxRef = useRef(null);
+  const wisdomParallaxRef = useRef(null);
+  const wisdomBenefitsParallaxRef = useRef(null);
+  const wisdomProcessParallaxRef = useRef(null);
+
+  useIntersectionObservers({
+    intersectionTargets: [
+      {
+        ref: causesImageRef,
+        onIntersect: () => setIsCausesImageVisible(true),
+      },
+      {
+        ref: treatmentsImageRef,
+        onIntersect: () => setIsTreatmentsImageVisible(true),
+      },
+      {
+        ref: preventionImageRef,
+        onIntersect: () => setIsPreventionImageVisible(true),
+      },
+      {
+        ref: wisdomImageRef,
+        onIntersect: () => setIsWisdomImageVisible(true),
+      },
+      {
+        ref: wisdomBenefitsImageRef,
+        onIntersect: () => setIsWisdomBenefitsImageVisible(true),
+      },
+      {
+        ref: wisdomProcessImageRef,
+        onIntersect: () => setIsWisdomProcessImageVisible(true),
+      },
+    ],
+    parallaxTargets: [
+      {
+        ref: causesParallaxRef,
+        onScroll: (offset) => setCausesParallaxOffset(offset),
+      },
+      {
+        ref: treatmentsParallaxRef,
+        onScroll: (offset) => setTreatmentsParallaxOffset(offset),
+      },
+      {
+        ref: preventionParallaxRef,
+        onScroll: (offset) => setPreventionParallaxOffset(offset),
+      },
+      {
+        ref: wisdomParallaxRef,
+        onScroll: (offset) => setWisdomParallaxOffset(offset),
+      },
+      {
+        ref: wisdomBenefitsParallaxRef,
+        onScroll: (offset) => setWisdomBenefitsParallaxOffset(offset),
+      },
+      {
+        ref: wisdomProcessParallaxRef,
+        onScroll: (offset) => setWisdomProcessParallaxOffset(offset),
+      },
+    ],
+  });
+
+  return (
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      {/* Toothache Section */}
+      <section className="py-16 bg-dental-navy">
+        <div className="container mx-auto px-6">
+          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+            Common Causes of Tooth Pain
+          </h1>
+          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            Tooth pain is a widespread issue that can significantly affect your
+            overall health and daily life. Understanding what might be causing
+            your discomfort is the first step toward finding relief.
+          </p>
+          <div className="text-center mt-8">
+            <Button
+              asChild
+              size="lg"
+              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+            >
+              <Link href="#book">Book a Consultation</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <AnimatedImageTextSection
+        imageRef={causesImageRef}
+        titleRef={causesParallaxRef}
+        isImageVisible={isCausesImageVisible}
+        imagePosition="left"
+        imageSrc="/placeholder.svg"
+        imageAlt="Common Causes of Tooth Pain"
+        title={
+          <>
+            Understanding Your <br />{" "}
+            <span className="font-bold">Tooth Pain</span>
+          </>
+        }
+        titleColor="text-dental-navy"
+        scrollY={causesParallaxOffset}
+        scrollFactor={1}
+      >
+        <p className="text-gray-600 mb-4">Your tooth pain could be due to:</p>
+        <ul className="space-y-2 text-gray-600">
+          <li>• Tooth decay/cavities</li>
+          <li>• Gum disease</li>
+          <li>• Grinding (bruxism)</li>
+          <li>• Enamel erosion</li>
+          <li>• Traumatic injury</li>
+          <li>• Abscessed tooth (root infection)</li>
+          <li>• Impacted tooth</li>
+          <li>• Cracked teeth</li>
+          <li>• Broken filling</li>
+        </ul>
+        <p className="text-gray-600 mt-4">
+          If attending for a pain appointment, I will discuss your pain&apos;s
+          history and severity and perform a thorough oral exam. I may also take
+          X-rays to pinpoint the cause of your discomfort. After identifying the
+          issue, I&apos;ll explain your treatment options in detail.
+        </p>
+      </AnimatedImageTextSection>
+
+      <AnimatedImageTextSection
+        imageRef={treatmentsImageRef}
+        titleRef={treatmentsParallaxRef}
+        isImageVisible={isTreatmentsImageVisible}
+        imagePosition="right"
+        imageSrc="/placeholder.svg"
+        imageAlt="Tooth Pain Treatments"
+        title={
+          <>
+            Common Treatments for <br />{" "}
+            <span className="font-bold">Tooth Pain</span>
+          </>
+        }
+        titleColor="text-dental-accent1"
+        backgroundColor="bg-dental-navy"
+        scrollY={treatmentsParallaxOffset}
+        scrollFactor={1}
+      >
+        <h3 className="text-dental-accent1 font-bold mb-2">Fillings</h3>
+        <p className="text-dental-accent1 mb-4">
+          Tooth pain from decay often means there&apos;s a cavity. We can clean
+          out the affected area and use fillings to restore and protect your
+          tooth from further pain.
+        </p>
+
+        <h3 className="text-dental-accent1 font-bold mb-2">Root Canals</h3>
+        <p className="text-dental-accent1 mb-4">
+          If a tooth is severely infected, root canal therapy may be necessary
+          to save it and restore its function. We ensure a comfortable
+          experience during this treatment to help ease any dental anxiety.
+        </p>
+
+        <h3 className="text-dental-accent1 font-bold mb-2">Extractions</h3>
+        <p className="text-dental-accent1">
+          While we aim to keep your natural teeth whenever possible, sometimes
+          an extraction is the best option. We offer same-day appointments for
+          emergency extractions, and we&apos;ll work with you to create a plan
+          for replacing the tooth afterward.
+        </p>
+      </AnimatedImageTextSection>
+
+      <AnimatedImageTextSection
+        imageRef={preventionImageRef}
+        titleRef={preventionParallaxRef}
+        isImageVisible={isPreventionImageVisible}
+        imagePosition="left"
+        imageSrc="/placeholder.svg"
+        imageAlt="Preventing Tooth Pain"
+        title={
+          <>
+            How to <br /> <span className="font-bold">Prevent Tooth Pain</span>
+          </>
+        }
+        titleColor="text-dental-navy"
+        scrollY={preventionParallaxOffset}
+        scrollFactor={1}
+      >
+        <p className="text-gray-600 mb-4">
+          Tooth pain can arise from various factors, but you can adopt some
+          habits to lower your risk of developing pain and other oral health
+          issues:
+        </p>
+        <ul className="space-y-2 text-gray-600">
+          <li>
+            • Maintain good oral hygiene by brushing twice a day, flossing
+            daily, and using a gentle mouthwash.
+          </li>
+          <li>• Schedule dental check-ups and cleanings every six months.</li>
+          <li>• Avoid smoking and limit alcohol consumption.</li>
+          <li>• Eat a balanced diet rich in nutrients.</li>
+          <li>
+            • Wear a mouthguard at night if you grind your teeth during sleep.
+          </li>
+        </ul>
+      </AnimatedImageTextSection>
+
+    </div>
+  );
+};
+
+export default Toothache;

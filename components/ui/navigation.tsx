@@ -215,70 +215,6 @@ const Navigation = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="relative group/sub">
-                  <button className="w-full text-left px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light flex items-center justify-between">
-                    Full-Mouth Transformation
-                    <span className="ml-2">›</span>
-                  </button>
-                  {/* Make the bridge wider and taller */}
-                  <div className="absolute -left-8 top-0 w-8 h-full" />
-                  {/* Add peer class to detect hover */}
-                  <div
-                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-black py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
-                    [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
-                  >
-                    {/* Add a hidden element to detect if menu should flip */}
-                    <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
-                    <Link
-                      href="/services/transformation/cosmetic-dentistry"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Cosmetic Dentistry
-                    </Link>
-                    <Link
-                      href="/services/transformation/digital-smile-design"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Digital Smile Design
-                    </Link>
-                    <Link
-                      href="/services/transformation/porcelain-veneers"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Porcelain Veneers
-                    </Link>
-                    <Link
-                      href="/services/transformation/teeth-whitening"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Teeth Whitening
-                    </Link>
-                    <Link
-                      href="/services/transformation/clear-braces"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Clear Braces / Clear Aligners
-                    </Link>
-                    <Link
-                      href="/services/transformation/smile-makeover"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Smile Makeover
-                    </Link>
-                    <Link
-                      href="/services/transformation/gum-lift"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Gum Lift
-                    </Link>
-                    <Link
-                      href="/services/transformation/bonding"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Bonding / Resin Veneers
-                    </Link>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="relative group">
@@ -319,7 +255,7 @@ const Navigation = () => {
                   Teeth Grinding
                 </Link>
                 <Link
-                  href="/services/problems/stained-teeth"
+                  href="/services/cosmetic/teeth-whitening"
                   className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                 >
                   Stained Teeth
@@ -341,6 +277,18 @@ const Navigation = () => {
                   className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                 >
                   Bad Breath
+                </Link>
+                <Link
+                  href="/services/problems/dental-anxiety"
+                  className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                >
+                  Dental Anxiety
+                </Link>
+                <Link
+                  href="/services/problems/sensitive-teeth"
+                  className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                >
+                  Sensitive Teeth
                 </Link>
               </div>
             </div>
@@ -477,6 +425,53 @@ const Navigation = () => {
                         Bone Grafts
                       </Link>
                     </div>
+
+                    {/* Cosmetic Services */}
+                    <button
+                      onClick={() => toggleMobileMenu("cosmetic")}
+                      className="w-full px-6 py-2 text-sm text-dental-accent1 flex items-center justify-between"
+                    >
+                      Cosmetic
+                      <span className="ml-2">
+                        {mobileSubMenus.cosmetic ? "−" : "+"}
+                      </span>
+                    </button>
+                    <div
+                      className={`pl-4 ${
+                        mobileSubMenus.cosmetic ? "block" : "hidden"
+                      }`}
+                    >
+                      <Link
+                        href="/services/cosmetic/invisalign"
+                        className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                      >
+                        Invisalign
+                      </Link>
+                      <Link
+                        href="/services/cosmetic/teeth-whitening"
+                        className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                      >
+                        Teeth Whitening
+                      </Link>
+                      <Link
+                        href="/services/cosmetic/bonding"
+                        className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                      >
+                        Bonding
+                      </Link>
+                      <Link
+                        href="/services/cosmetic/veneers"
+                        className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                      >
+                        Veneers
+                      </Link>
+                      <Link
+                        href="/services/cosmetic/smile-makeover"
+                        className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                      >
+                        Smile Makeover
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
@@ -515,7 +510,7 @@ const Navigation = () => {
                       Teeth Grinding
                     </Link>
                     <Link
-                      href="/services/problems/stained-teeth"
+                      href="/services/cosmetic/teeth-whitening"
                       className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                     >
                       Stained Teeth
@@ -537,6 +532,18 @@ const Navigation = () => {
                       className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                     >
                       Bad Breath
+                    </Link>
+                    <Link
+                      href="/services/problems/dental-anxiety"
+                      className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                    >
+                      Dental Anxiety
+                    </Link>
+                    <Link
+                      href="/services/problems/sensitive-teeth"
+                      className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                    >
+                      Sensitive Teeth
                     </Link>
                   </div>
                 </div>
