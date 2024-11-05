@@ -15,7 +15,7 @@ const HomePage = () => {
           muted
           playsInline
         >
-          <source src={`/assets/mo-teeth-invideo.mp4`} type="video/mp4" />
+          <source src={"/assets/mo-teeth-invideo.mp4"} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-dental-black bg-opacity-60"></div>
         <div className="relative z-10 text-center text-dental-accent1">
@@ -136,9 +136,7 @@ const HomePage = () => {
                 <Card className="bg-dental-primary/10 hover:bg-dental-primary/20 transition-colors border-dental-accent1/20">
                   <CardContent className="p-6">
                     <img
-                      src={`${process.env.NEXT_PUBLIC_BASE_PATH}/service-${
-                        index + 1
-                      }.jpg`}
+                      src={`/service-${index + 1}.jpg`}
                       alt={service.title}
                       className="w-full h-48 object-cover rounded-lg mb-4"
                     />
