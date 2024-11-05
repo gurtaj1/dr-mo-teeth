@@ -92,12 +92,6 @@ const Navigation = () => {
                       Cleanings & Exams
                     </Link>
                     <Link
-                      href="/services/general/emergency-care"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Emergency Care
-                    </Link>
-                    <Link
                       href="/services/general/crowns"
                       className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                     >
@@ -122,16 +116,16 @@ const Navigation = () => {
                       Dentures
                     </Link>
                     <Link
-                      href="/services/general/night-guards"
+                      href="/services/general/bridges"
                       className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                     >
-                      Night Guards
+                      Bridges
                     </Link>
                     <Link
-                      href="/services/general/family-dentistry"
+                      href="/services/general/root-canal"
                       className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                     >
-                      Family Dentistry
+                      Root Canal
                     </Link>
                   </div>
                 </div>
@@ -172,12 +166,6 @@ const Navigation = () => {
                       className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                     >
                       Implant-Supported Dentures
-                    </Link>
-                    <Link
-                      href="/services/surgeries/bridges"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Bridges
                     </Link>
                   </div>
                 </div>
@@ -418,12 +406,6 @@ const Navigation = () => {
                         Cleanings & Exams
                       </Link>
                       <Link
-                        href="/services/general/emergency-care"
-                        className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
-                      >
-                        Emergency Care
-                      </Link>
-                      <Link
                         href="/services/general/crowns"
                         className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                       >
@@ -448,16 +430,16 @@ const Navigation = () => {
                         Dentures
                       </Link>
                       <Link
-                        href="/services/general/night-guards"
+                        href="/services/general/bridges"
                         className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                       >
-                        Night Guards
+                        Bridges
                       </Link>
                       <Link
-                        href="/services/general/family-dentistry"
+                        href="/services/general/root-canal"
                         className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                       >
-                        Family Dentistry
+                        Root Canal
                       </Link>
                     </div>
 
