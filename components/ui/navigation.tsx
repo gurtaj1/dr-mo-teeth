@@ -47,7 +47,7 @@ const Navigation = () => {
         <div className="flex items-center space-x-4">
           <Link href="/" className="text-2xl font-bold text-dental-accent1">
             <Image
-              src="logo-type-white.png"
+              src="/logo-type-white.png"
               alt="Dr Mo Smiles"
               width={180}
               height={48}
