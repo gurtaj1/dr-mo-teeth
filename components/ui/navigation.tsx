@@ -317,7 +317,10 @@ const Navigation = () => {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80 bg-dental-black p-0">
+            <SheetContent
+              side="bottom"
+              className="w-full h-[90vh] bg-dental-black p-0"
+            >
               <div className="flex flex-col h-full overflow-y-auto">
                 <Link
                   href="#about"
