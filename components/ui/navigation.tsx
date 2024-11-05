@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -44,10 +46,13 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/" className="text-2xl font-bold text-dental-accent1">
-            <img
-              src={"/assets/logo-type-white.png"}
+            <Image
+              src="/assets/logo-type-white.png"
               alt="Dr Mo Smiles"
+              width={180}
+              height={48}
               className="h-12 w-auto"
+              priority
             />
           </Link>
           {/* Desktop Navigation - hide on mobile */}
