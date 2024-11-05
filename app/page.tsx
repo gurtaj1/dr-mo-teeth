@@ -8,7 +8,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
-        {/* <video
+        <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           loop
@@ -16,7 +16,7 @@ const HomePage = () => {
           playsInline
         >
           <source src={"/assets/mo-teeth-invideo.mp4"} type="video/mp4" />
-        </video> */}
+        </video>
         <div className="absolute inset-0 bg-dental-black bg-opacity-60"></div>
         <div className="relative z-10 text-center text-dental-accent1">
           <h1 className="text-5xl font-bold mb-4">Dr Mo Teeth</h1>
