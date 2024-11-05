@@ -77,11 +77,11 @@ const BadBreath = () => {
             Smell So Bad?
           </h1>
           <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            It's normal to have bad breath occasionally—like after eating strong
-            foods or when you wake up in the morning. However, about 25% of
-            people experience chronic bad breath, known as halitosis. This type
-            of bad breath can't be fixed just by brushing, flossing, drinking
-            water, or chewing gum.
+            It&apos;s normal to have bad breath occasionally—like after eating
+            strong foods or when you wake up in the morning. However, about 25%
+            of people experience chronic bad breath, known as halitosis. This
+            type of bad breath can&apos;t be fixed just by brushing, flossing,
+            drinking water, or chewing gum.
           </p>
           <div className="text-center mt-8">
             <Button
@@ -155,8 +155,8 @@ const BadBreath = () => {
           </ol>
 
           <p>
-            Your treatment will depend on what we find, so it's important to get
-            a professional diagnosis to find the right solution!
+            Your treatment will depend on what we find, so it&apos;s important
+            to get a professional diagnosis to find the right solution!
           </p>
 
           <div>
@@ -233,6 +233,7 @@ const BadBreath = () => {
           </>
         }
         backgroundColor="bg-dental-navy"
+        titleColor="text-dental-accent1"
         scrollY={faqParallaxOffset}
         scrollFactor={1}
       >

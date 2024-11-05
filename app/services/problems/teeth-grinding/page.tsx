@@ -142,7 +142,7 @@ const TeethGrinding = () => {
         imageAlt="Dream Without Grinding"
         title={
           <>
-            We'll Help You <br />{" "}
+            We&apos;ll Help You <br />{" "}
             <span className="font-bold">Dream Without Grinding</span>
           </>
         }
@@ -153,14 +153,14 @@ const TeethGrinding = () => {
       >
         <div className="space-y-4 text-dental-accent1">
           <p>
-            I understand how important a good night's sleep is and how teeth
-            grinding can disrupt your daily life. That's why I'm dedicated to
-            helping you sleep peacefully.
+            I understand how important a good night&apos;s sleep is and how
+            teeth grinding can disrupt your daily life. That&apos;s why I&apos;m
+            dedicated to helping you sleep peacefully.
           </p>
           <p>
-            With my expertise and personalized approach, I'll work closely with
-            you to identify the underlying causes of your bruxism and provide
-            effective, tailored treatments.
+            With my expertise and personalized approach, I&apos;ll work closely
+            with you to identify the underlying causes of your bruxism and
+            provide effective, tailored treatments.
           </p>
         </div>
       </AnimatedImageTextSection>
@@ -197,8 +197,8 @@ const TeethGrinding = () => {
               <li>⭐ Tooth sensitivity</li>
             </ul>
             <p className="mt-2">
-              If you notice any of these symptoms, it's important to schedule an
-              appointment with us.
+              If you notice any of these symptoms, it&apos;s important to
+              schedule an appointment with us.
             </p>
           </div>
 

@@ -14,32 +14,16 @@ const Toothache = () => {
     useState(false);
   const [isPreventionImageVisible, setIsPreventionImageVisible] =
     useState(false);
-  const [isWisdomImageVisible, setIsWisdomImageVisible] = useState(false);
-  const [isWisdomBenefitsImageVisible, setIsWisdomBenefitsImageVisible] =
-    useState(false);
-  const [isWisdomProcessImageVisible, setIsWisdomProcessImageVisible] =
-    useState(false);
   const [causesParallaxOffset, setCausesParallaxOffset] = useState(0);
   const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
   const [preventionParallaxOffset, setPreventionParallaxOffset] = useState(0);
-  const [wisdomParallaxOffset, setWisdomParallaxOffset] = useState(0);
-  const [wisdomBenefitsParallaxOffset, setWisdomBenefitsParallaxOffset] =
-    useState(0);
-  const [wisdomProcessParallaxOffset, setWisdomProcessParallaxOffset] =
-    useState(0);
 
   const causesImageRef = useRef(null);
   const treatmentsImageRef = useRef(null);
   const preventionImageRef = useRef(null);
-  const wisdomImageRef = useRef(null);
-  const wisdomBenefitsImageRef = useRef(null);
-  const wisdomProcessImageRef = useRef(null);
   const causesParallaxRef = useRef(null);
   const treatmentsParallaxRef = useRef(null);
   const preventionParallaxRef = useRef(null);
-  const wisdomParallaxRef = useRef(null);
-  const wisdomBenefitsParallaxRef = useRef(null);
-  const wisdomProcessParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
@@ -55,18 +39,6 @@ const Toothache = () => {
         ref: preventionImageRef,
         onIntersect: () => setIsPreventionImageVisible(true),
       },
-      {
-        ref: wisdomImageRef,
-        onIntersect: () => setIsWisdomImageVisible(true),
-      },
-      {
-        ref: wisdomBenefitsImageRef,
-        onIntersect: () => setIsWisdomBenefitsImageVisible(true),
-      },
-      {
-        ref: wisdomProcessImageRef,
-        onIntersect: () => setIsWisdomProcessImageVisible(true),
-      },
     ],
     parallaxTargets: [
       {
@@ -80,18 +52,6 @@ const Toothache = () => {
       {
         ref: preventionParallaxRef,
         onScroll: (offset) => setPreventionParallaxOffset(offset),
-      },
-      {
-        ref: wisdomParallaxRef,
-        onScroll: (offset) => setWisdomParallaxOffset(offset),
-      },
-      {
-        ref: wisdomBenefitsParallaxRef,
-        onScroll: (offset) => setWisdomBenefitsParallaxOffset(offset),
-      },
-      {
-        ref: wisdomProcessParallaxRef,
-        onScroll: (offset) => setWisdomProcessParallaxOffset(offset),
       },
     ],
   });
@@ -233,7 +193,6 @@ const Toothache = () => {
           </li>
         </ul>
       </AnimatedImageTextSection>
-
     </div>
   );
 };

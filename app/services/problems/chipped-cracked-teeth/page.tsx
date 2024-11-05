@@ -9,7 +9,6 @@ import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 const BrokenTeeth = () => {
-  const [isCausesImageVisible, setIsCausesImageVisible] = useState(false);
   const [isDentalCareImageVisible, setIsDentalCareImageVisible] =
     useState(false);
   const [isHomeManagementImageVisible, setIsHomeManagementImageVisible] =
@@ -17,19 +16,16 @@ const BrokenTeeth = () => {
   const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
     useState(false);
   const [isQuestionsImageVisible, setIsQuestionsImageVisible] = useState(false);
-  const [causesParallaxOffset, setCausesParallaxOffset] = useState(0);
   const [dentalCareParallaxOffset, setDentalCareParallaxOffset] = useState(0);
   const [homeManagementParallaxOffset, setHomeManagementParallaxOffset] =
     useState(0);
   const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
   const [questionsParallaxOffset, setQuestionsParallaxOffset] = useState(0);
 
-  const causesImageRef = useRef(null);
   const dentalCareImageRef = useRef(null);
   const homeManagementImageRef = useRef(null);
   const treatmentsImageRef = useRef(null);
   const questionsImageRef = useRef(null);
-  const causesParallaxRef = useRef(null);
   const dentalCareParallaxRef = useRef(null);
   const homeManagementParallaxRef = useRef(null);
   const treatmentsParallaxRef = useRef(null);
@@ -37,10 +33,6 @@ const BrokenTeeth = () => {
 
   useIntersectionObservers({
     intersectionTargets: [
-      {
-        ref: causesImageRef,
-        onIntersect: () => setIsCausesImageVisible(true),
-      },
       {
         ref: dentalCareImageRef,
         onIntersect: () => setIsDentalCareImageVisible(true),
@@ -59,10 +51,6 @@ const BrokenTeeth = () => {
       },
     ],
     parallaxTargets: [
-      {
-        ref: causesParallaxRef,
-        onScroll: (offset) => setCausesParallaxOffset(offset),
-      },
       {
         ref: dentalCareParallaxRef,
         onScroll: (offset) => setDentalCareParallaxOffset(offset),

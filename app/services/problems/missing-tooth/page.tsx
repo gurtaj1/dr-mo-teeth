@@ -65,16 +65,16 @@ const MissingTooth = () => {
           </h1>
           <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
             Losing teeth can be a tough experience, affecting not just your oral
-            health but also your everyday life. If you're missing teeth, you
-            might find it hard to chew certain foods, which can impact your
+            health but also your everyday life. If you&apos;re missing teeth,
+            you might find it hard to chew certain foods, which can impact your
             nutrition. Speaking clearly could become a challenge, and you might
             feel self-conscious about your smile.
           </p>
           <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
             I understand how missing teeth can affect your life, which is why I
             offer effective treatment options to help you restore your smile and
-            confidence. Together, we'll find the best solution for your unique
-            needs.
+            confidence. Together, we&apos;ll find the best solution for your
+            unique needs.
           </p>
           <div className="text-center mt-8">
             <Button
@@ -98,7 +98,7 @@ const MissingTooth = () => {
         title={
           <>
             Renewing Your <br />{" "}
-            <span className="font-bold">Smile's Functionality</span>
+            <span className="font-bold">Smile&apos;s Functionality</span>
           </>
         }
         titleColor="text-dental-navy"

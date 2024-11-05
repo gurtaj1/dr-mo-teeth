@@ -91,8 +91,8 @@ const SensitiveTeeth = () => {
         <p className="text-gray-600 mb-4">
           I provide a variety of effective treatments to help alleviate tooth
           sensitivity and restore your oral health. After identifying the
-          cause—whether it's enamel erosion, gum recession, tooth grinding, or
-          other factors - I will recommend the best treatment for you.
+          cause—whether it&apos;s enamel erosion, gum recession, tooth grinding,
+          or other factors - I will recommend the best treatment for you.
         </p>
       </AnimatedImageTextSection>
 

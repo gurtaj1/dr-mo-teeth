@@ -64,10 +64,10 @@ const BleedingGums = () => {
           </h1>
           <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
             Bleeding gums can be caused by a variety of things such as brushing
-            and flossing too vigorously. But if your gums won't stop bleeding,
-            or they always look and feel swollen, it's likely a sign that you're
-            suffering from one of the most common (but dangerous) oral health
-            issues — gum disease.
+            and flossing too vigorously. But if your gums won&apos;t stop
+            bleeding, or they always look and feel swollen, it&apos;s likely a
+            sign that you&apos;re suffering from one of the most common (but
+            dangerous) oral health issues — gum disease.
           </p>
           <div className="text-center mt-8">
             <Button
@@ -148,8 +148,9 @@ const BleedingGums = () => {
             </li>
           </ol>
           <p>
-            Your treatment plan will depend on your diagnosis. It's important to
-            get a professional diagnosis so you can find the right solution!
+            Your treatment plan will depend on your diagnosis. It&apos;s
+            important to get a professional diagnosis so you can find the right
+            solution!
           </p>
         </div>
       </AnimatedImageTextSection>

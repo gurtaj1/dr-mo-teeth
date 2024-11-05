@@ -96,7 +96,7 @@ const TeethWhitening = () => {
           it tough to keep them looking their best, even with good dental care.
           Professional teeth whitening offers a fantastic solution to rejuvenate
           the natural colour of your teeth or even achieve a shade lighter than
-          your original colour if that's what you desire.
+          your original colour if that&apos;s what you desire.
         </p>
       </AnimatedImageTextSection>
 
@@ -138,8 +138,8 @@ const TeethWhitening = () => {
               individual results may vary based on personal circumstances. We
               generally advise against teeth whitening for pregnant or lactating
               women, children under 18, or anyone with known allergies to
-              whitening agents. We'll help determine if you're a suitable
-              candidate for treatment.
+              whitening agents. We&apos;ll help determine if you&apos;re a
+              suitable candidate for treatment.
             </p>
           </div>
 
@@ -148,7 +148,7 @@ const TeethWhitening = () => {
               Is Teeth Whitening Safe for Sensitive Teeth?
             </h3>
             <p>
-              If you have sensitive teeth, it's best to steer clear of
+              If you have sensitive teeth, it&apos;s best to steer clear of
               over-the-counter whitening products. Your dentist can recommend
               professional treatments, designed to minimise irritation while
               ensuring a comfortable and effective experience.

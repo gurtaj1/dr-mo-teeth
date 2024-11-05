@@ -92,7 +92,7 @@ const Bridges = () => {
       >
         <p className="text-gray-600 mb-4">
           Unlike removable partial dentures, dental bridges are fixed in place,
-          making them a preferred choice for many patients. We'll help you
+          making them a preferred choice for many patients. We&apos;ll help you
           determine if this option is right for you.
         </p>
       </AnimatedImageTextSection>
