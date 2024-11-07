@@ -57,6 +57,9 @@ const GumTherapy = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+        <h1>Gum Therapy</h1>
+      </div>
       <AnimatedImageTextSection
         imageRef={introImageRef}
         titleRef={introParallaxRef}
@@ -103,7 +106,6 @@ const GumTherapy = () => {
           <Link href="#book">Book a Consultation</Link>
         </Button>
       </AnimatedImageTextSection>
-
       <AnimatedImageTextSection
         imageRef={gumTherapyImageRef}
         titleRef={gumTherapyParallaxRef}
@@ -132,7 +134,6 @@ const GumTherapy = () => {
           <li>• Loose teeth or changes in bite</li>
         </ul>
       </AnimatedImageTextSection>
-
       <AnimatedImageTextSection
         imageRef={treatmentImageRef}
         titleRef={treatmentParallaxRef}
