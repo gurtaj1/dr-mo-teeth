@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
+import { navBarHeight } from "@/app/globals/constants";
+
 const Navigation = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -69,8 +71,25 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <div className="w-5"></div>
             <Link
-              href="#about"
+              href="/#about"
               className="text-dental-accent1 hover:text-dental-accent2"
+              onClick={(e) => {
+                // Only handle the scroll behavior if we're already on the home page
+                if (pathname === "/") {
+                  e.preventDefault();
+                  const element = document.getElementById("about");
+                  const elementPosition =
+                    element?.getBoundingClientRect().top ?? 0;
+                  const offsetPosition =
+                    elementPosition + window.pageYOffset - navBarHeight;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                  });
+                }
+                // If we're not on the home page, let the default navigation happen
+              }}
             >
               About
             </Link>

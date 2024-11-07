@@ -1,9 +1,32 @@
+"use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
+import { navBarHeight } from "./globals/constants";
+
 const HomePage = () => {
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (window.location.hash === "#about") {
+      // Add a small delay to ensure the page content is loaded
+      setTimeout(() => {
+        const element = document.getElementById("about");
+        const elementPosition = element?.getBoundingClientRect().top ?? 0;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - navBarHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }, 100);
+    }
+  }, []); // Run once when component mounts
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}

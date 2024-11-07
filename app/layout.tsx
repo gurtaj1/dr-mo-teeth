@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 
+import { navBarHeight } from "./globals/constants";
+
 import "./globals.css";
 
 const geistSans = localFont({
@@ -33,10 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navigation />
-        <main className="pt-[72px]">
-          {/* Add padding-top equal to navbar height */}
-          {children}
-        </main>
+        <main className={`pt-[${navBarHeight}px]`}>{children}</main>
         <Footer />
       </body>
     </html>
