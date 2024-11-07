@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: "Brought to you by Dr Mo",
 };
 
-// const navBarHeight = 72;
+const navBarHeight = 72;
 
 export default function RootLayout({
   children,
@@ -35,7 +35,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Navigation />
-        <main className={"pt-[72px] flex-grow flex flex-col"}>{children}</main>
+        <main className={`pt-[${navBarHeight}px] flex-grow flex flex-col`}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
