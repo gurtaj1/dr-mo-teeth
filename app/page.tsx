@@ -48,7 +48,7 @@ const HomePage = () => {
             size="lg"
             className="mb-4 bg-dental-teal hover:bg-dental-secondary"
           >
-            <Link href="mailto:beverley.reception@eyds.co.uk,hedon.reception@eyds.co.uk">
+            <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
               Make an Enquiry
             </Link>
           </Button>

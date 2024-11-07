@@ -330,7 +330,7 @@ const Navigation = () => {
             asChild
             className="bg-dental-primary hover:bg-dental-secondary text-white"
           >
-            <Link href="mailto:beverley.reception@eyds.co.uk,hedon.reception@eyds.co.uk">
+            <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
               Get in touch
             </Link>
           </Button>
@@ -588,7 +588,7 @@ const Navigation = () => {
                     asChild
                     className="w-full bg-dental-primary hover:bg-dental-secondary text-white"
                   >
-                    <Link href="mailto:beverley.reception@eyds.co.uk,hedon.reception@eyds.co.uk">
+                    <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
                       Get in touch
                     </Link>
                   </Button>

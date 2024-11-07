@@ -42,9 +42,23 @@ const Footer = () => {
                 <Phone className="mr-2" size={18} />
                 <span>01482 898362 / 01482 871704</span>
               </li>
-              <li className="flex items-center">
-                <Mail className="mr-2" size={18} />
-                <span>implantclinician@outlook.com</span>
+              <li>
+                <Link
+                  href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com"
+                  className="flex items-center"
+                >
+                  <Mail className="mr-2" size={18} />
+                  <span>implantclinician@outlook.com</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com"
+                  className="flex items-center"
+                >
+                  <Mail className="mr-2" size={18} />
+                  <span>drmohsinaslam@outlook.com</span>
+                </Link>
               </li>
               <li className="flex items-center">
                 <MapPin className="mr-2" size={18} />
