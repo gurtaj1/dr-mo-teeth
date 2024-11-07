@@ -61,10 +61,6 @@ const DentalImplants = () => {
             help restore your ability to chew and speak comfortably, making them
             a great long-term solution for tooth loss.
           </p>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
-            I am committed to delivering the best dental implant process,
-            ensuring a seamless journey.
-          </p>
           <div className="text-center mt-8">
             <Button
               asChild
