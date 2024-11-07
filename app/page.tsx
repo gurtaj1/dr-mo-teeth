@@ -19,7 +19,7 @@ const HomePage = () => {
         </video>
         <div className="absolute inset-0 bg-dental-black bg-opacity-60"></div>
         <div className="relative z-10 text-center text-dental-accent1">
-          <h1 className="text-5xl font-bold mb-4">Dr Mo Teeth</h1>
+          <h1 className="text-9xl font-bold mb-4">Dr Mo</h1>
           <Button
             asChild
             size="lg"

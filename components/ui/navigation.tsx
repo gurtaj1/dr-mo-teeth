@@ -47,6 +47,16 @@ const Navigation = () => {
         <div className="flex items-center space-x-4">
           <Link href="/" className="text-2xl font-bold text-dental-accent1">
             <Image
+              src="/logo-mark-white.png"
+              alt="Dr Mo Smiles"
+              width={180}
+              height={48}
+              className="h-12 w-auto"
+              priority
+            />
+          </Link>
+          <Link href="/" className="text-2xl font-bold text-dental-accent1">
+            <Image
               src="/logo-type-white.png"
               alt="Dr Mo Smiles"
               width={180}
@@ -56,7 +66,7 @@ const Navigation = () => {
             />
           </Link>
           {/* Desktop Navigation - hide on mobile */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-8">
             <div className="w-5"></div>
             <Link
               href="#about"
@@ -301,7 +311,9 @@ const Navigation = () => {
             asChild
             className="bg-dental-primary hover:bg-dental-secondary text-white"
           >
-            <Link href="#book">Schedule Now</Link>
+            <Link href="mailto:beverley.reception@eyds.co.uk,hedon.reception@eyds.co.uk">
+              Get in touch
+            </Link>
           </Button>
         </div>
 
@@ -557,7 +569,9 @@ const Navigation = () => {
                     asChild
                     className="w-full bg-dental-primary hover:bg-dental-secondary text-white"
                   >
-                    <Link href="#book">Schedule Now</Link>
+                    <Link href="mailto:beverley.reception@eyds.co.uk,hedon.reception@eyds.co.uk">
+                      Get in touch
+                    </Link>
                   </Button>
                 </div>
               </div>
