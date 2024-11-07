@@ -35,7 +35,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Navigation />
-        <main className={`pt-[${navBarHeight}px] flex-grow flex flex-col`}>
+        <main
+          className="flex-grow flex flex-col"
+          style={{ paddingTop: navBarHeight }}
+        >
           {children}
         </main>
         <Footer />
