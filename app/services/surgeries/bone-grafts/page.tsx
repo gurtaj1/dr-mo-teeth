@@ -4,9 +4,9 @@ import AnimatedElement from "@/components/ui/animated-element";
 
 const BoneGrafts = () => {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="flex-grow flex flex-col min-h-screen bg-white overflow-x-hidden">
       {/* Bone Grafts Section */}
-      <section className="py-16 bg-dental-navy">
+      <section className="flex-grow py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
             <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
@@ -29,7 +29,7 @@ const BoneGrafts = () => {
       </section>
 
       {/* Crown Lengthening Section */}
-      <section className="py-16">
+      <section className="flex-grow py-16">
         <div className="container mx-auto px-6">
           <AnimatedElement>
             <h2 className="text-3xl font-bold mb-6 text-dental-navy text-center">
