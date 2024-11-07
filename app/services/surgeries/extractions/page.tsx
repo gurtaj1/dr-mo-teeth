@@ -10,36 +10,18 @@ import AnimatedImageTextSection from "../../../../components/ui/animated-image-t
 import AnimatedElement from "@/components/ui/animated-element";
 
 const DentalImplants = () => {
-  const [isAnswer1Visible, setIsAnswer1Visible] = useState(false);
-  const [isAnswer2Visible, setIsAnswer2Visible] = useState(false);
-  const [isAnswer3Visible, setIsAnswer3Visible] = useState(false);
   const [isIVSedationImageVisible, setIsIVSedationImageVisible] =
     useState(false);
   const [ivSedationParallaxOffset, setIvSedationParallaxOffset] = useState(0);
   const [emergencyPainParallaxOffset, setEmergencyPainParallaxOffset] =
     useState(0);
 
-  const answer1Ref = useRef(null);
-  const answer2Ref = useRef(null);
-  const answer3Ref = useRef(null);
   const ivSedationImageRef = useRef(null);
   const ivSedationParallaxRef = useRef(null);
   const emergencyPainParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
-      {
-        ref: answer1Ref,
-        onIntersect: () => setIsAnswer1Visible(true),
-      },
-      {
-        ref: answer2Ref,
-        onIntersect: () => setIsAnswer2Visible(true),
-      },
-      {
-        ref: answer3Ref,
-        onIntersect: () => setIsAnswer3Visible(true),
-      },
       {
         ref: ivSedationImageRef,
         onIntersect: () => setIsIVSedationImageVisible(true),
