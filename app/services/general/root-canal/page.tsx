@@ -56,6 +56,9 @@ const RootCanal = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+        <h1>Root Canal Therapy</h1>
+      </div>
       {/* Root Canal Section */}
       <AnimatedImageTextSection
         imageRef={heroImageRef}
