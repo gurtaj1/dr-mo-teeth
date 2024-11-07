@@ -53,7 +53,7 @@ const Invisalign = () => {
               size="lg"
               className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
             >
-              <Link href="#book">Book a Consultation</Link>
+              <Link href="#book">Get in touch</Link>
             </Button>
           </div>
         </div>

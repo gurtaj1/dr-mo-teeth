@@ -11,13 +11,17 @@ import AnimatedImageTextSection from "../../../../components/ui/animated-image-t
 const DentalFillings = () => {
   const [isTypesImageVisible, setIsTypesImageVisible] = useState(false);
   const [isProcessImageVisible, setIsProcessImageVisible] = useState(false);
+  const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
   const [typesParallaxOffset, setTypesParallaxOffset] = useState(0);
   const [processParallaxOffset, setProcessParallaxOffset] = useState(0);
+  const [heroParallaxOffset, setHeroParallaxOffset] = useState(0);
 
   const typesImageRef = useRef(null);
   const processImageRef = useRef(null);
+  const heroImageRef = useRef(null);
   const typesParallaxRef = useRef(null);
   const processParallaxRef = useRef(null);
+  const heroParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
@@ -29,6 +33,10 @@ const DentalFillings = () => {
         ref: processImageRef,
         onIntersect: () => setIsProcessImageVisible(true),
       },
+      {
+        ref: heroImageRef,
+        onIntersect: () => setIsHeroImageVisible(true),
+      },
     ],
     parallaxTargets: [
       {
@@ -39,42 +47,56 @@ const DentalFillings = () => {
         ref: processParallaxRef,
         onScroll: (offset) => setProcessParallaxOffset(offset),
       },
+      {
+        ref: heroParallaxRef,
+        onScroll: (offset) => setHeroParallaxOffset(offset),
+      },
     ],
   });
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      {/* Dental Fillings Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+        <h1>Fillings</h1>
+      </div>
+
+      <AnimatedImageTextSection
+        imageRef={heroImageRef}
+        titleRef={heroParallaxRef}
+        isImageVisible={isHeroImageVisible}
+        imagePosition="right"
+        imageSrc="/placeholder.svg"
+        imageAlt="Dental Filling Treatment"
+        title={
+          <>
             Fill your tooth
-          </h1>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            Before it fails
-          </p>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
-            A dental filling is a treatment used to restore a tooth that has
-            been damaged by decay or injury. There are two common types of
-            fillings: amalgam and composite. Amalgam fillings are made from a
-            mixture of metals, including silver. Composite fillings, on the
-            other hand, are made from a tooth-coloured resin, which allows them
-            to blend in with your natural teeth. During the filling process,
-            your dentist will remove the decay, clean the area, and then place
-            the filling to restore the tooth&apos;s shape and function, helping
-            you maintain a healthy smile.
-          </p>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Book an Appointment</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+            <br /> <span className="font-bold">Before it fails</span>
+          </>
+        }
+        titleColor="text-dental-accent1"
+        backgroundColor="bg-dental-navy"
+        scrollY={heroParallaxOffset}
+        scrollFactor={1}
+      >
+        <p className="text-dental-accent1 mb-8">
+          A dental filling is a treatment used to restore a tooth that has been
+          damaged by decay or injury. There are two common types of fillings:
+          amalgam and composite. Amalgam fillings are made from a mixture of
+          metals, including silver. Composite fillings, on the other hand, are
+          made from a tooth-coloured resin, which allows them to blend in with
+          your natural teeth. During the filling process, your dentist will
+          remove the decay, clean the area, and then place the filling to
+          restore the tooth&apos;s shape and function, helping you maintain a
+          healthy smile.
+        </p>
+        <Button
+          asChild
+          size="lg"
+          className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+        >
+          <Link href="#book">Get in touch</Link>
+        </Button>
+      </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
         imageRef={typesImageRef}
