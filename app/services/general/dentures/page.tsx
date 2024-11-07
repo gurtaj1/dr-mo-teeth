@@ -7,6 +7,7 @@ import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
+import AnimatedElement from "@/components/ui/animated-element";
 
 const Dentures = () => {
   const [isDentureTypesImageVisible, setIsDentureTypesImageVisible] =
@@ -49,32 +50,41 @@ const Dentures = () => {
       {/* Dentures Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-            Dentures
-          </h1>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            Dentures are removable dental appliances designed to replace missing
-            teeth and restore your smile. They can be complete dentures, which
-            replace all your teeth, or partial dentures, which fill in gaps when
-            some natural teeth are still present. Made from materials like
-            acrylic or a combination of metal and plastic, dentures are custom
-            fitted to your mouth for comfort and stability.
-          </p>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
-            They not only help improve your appearance but also make it easier
-            to eat and speak. With proper care, dentures can be a long-lasting
-            solution for tooth loss, helping you regain your confidence and
-            enjoy everyday activities.
-          </p>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Get in touch</Link>
-            </Button>
-          </div>
+          <AnimatedElement>
+            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+              Dentures
+            </h1>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              Dentures are removable dental appliances designed to replace
+              missing teeth and restore your smile. They can be complete
+              dentures, which replace all your teeth, or partial dentures, which
+              fill in gaps when some natural teeth are still present. Made from
+              materials like acrylic or a combination of metal and plastic,
+              dentures are custom fitted to your mouth for comfort and
+              stability.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
+              They not only help improve your appearance but also make it easier
+              to eat and speak. With proper care, dentures can be a long-lasting
+              solution for tooth loss, helping you regain your confidence and
+              enjoy everyday activities.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+              >
+                <Link href="#book">Get in touch</Link>
+              </Button>
+            </div>
+          </AnimatedElement>
         </div>
       </section>
 

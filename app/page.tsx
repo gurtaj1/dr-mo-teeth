@@ -336,7 +336,7 @@ const HomePage = () => {
                 },
                 {
                   name: "Jane Smith",
-                  text: "The team at Dr Mo Teeth made me feel comfortable throughout my entire treatment.",
+                  text: "The team at Dr Mo made me feel comfortable throughout my entire treatment.",
                 },
                 {
                   name: "Mike Johnson",

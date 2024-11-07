@@ -7,6 +7,7 @@ import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
+import AnimatedElement from "@/components/ui/animated-element";
 
 const MissingTooth = () => {
   const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
@@ -60,31 +61,39 @@ const MissingTooth = () => {
       {/* Hero Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-            Smile Again with Confidence
-          </h1>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            Losing teeth can be a tough experience, affecting not just your oral
-            health but also your everyday life. If you&apos;re missing teeth,
-            you might find it hard to chew certain foods, which can impact your
-            nutrition. Speaking clearly could become a challenge, and you might
-            feel self-conscious about your smile.
-          </p>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
-            I understand how missing teeth can affect your life, which is why I
-            offer effective treatment options to help you restore your smile and
-            confidence. Together, we&apos;ll find the best solution for your
-            unique needs.
-          </p>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Get in touch</Link>
-            </Button>
-          </div>
+          <AnimatedElement>
+            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+              Smile Again with Confidence
+            </h1>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              Losing teeth can be a tough experience, affecting not just your
+              oral health but also your everyday life. If you&apos;re missing
+              teeth, you might find it hard to chew certain foods, which can
+              impact your nutrition. Speaking clearly could become a challenge,
+              and you might feel self-conscious about your smile.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
+              I understand how missing teeth can affect your life, which is why
+              I offer effective treatment options to help you restore your smile
+              and confidence. Together, we&apos;ll find the best solution for
+              your unique needs.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+              >
+                <Link href="#book">Get in touch</Link>
+              </Button>
+            </div>
+          </AnimatedElement>
         </div>
       </section>
 

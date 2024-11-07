@@ -7,6 +7,7 @@ import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
+import AnimatedElement from "@/components/ui/animated-element";
 
 const DentalAnxiety = () => {
   const [isReasonsImageVisible, setIsReasonsImageVisible] = useState(false);
@@ -72,25 +73,31 @@ const DentalAnxiety = () => {
       {/* Dental Anxiety Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-            Don&apos;t Suffer Through Dental Anxiety
-          </h1>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            Feeling nervous before a dentist appointment? You&apos;re not
-            alone—dental anxiety is very common among people of all ages. No
-            matter what&apos;s causing your anxiety, I&apos;m here to help you
-            feel at ease. My goal is to ensure you can receive the treatment you
-            need with confidence.
-          </p>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Let&apos;s Talk About Your Concerns</Link>
-            </Button>
-          </div>
+          <AnimatedElement>
+            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+              Don&apos;t Suffer Through Dental Anxiety
+            </h1>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              Feeling nervous before a dentist appointment? You&apos;re not
+              alone—dental anxiety is very common among people of all ages. No
+              matter what&apos;s causing your anxiety, I&apos;m here to help you
+              feel at ease. My goal is to ensure you can receive the treatment
+              you need with confidence.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+              >
+                <Link href="#book">Let&apos;s Talk About Your Concerns</Link>
+              </Button>
+            </div>
+          </AnimatedElement>
         </div>
       </section>
 
@@ -190,24 +197,33 @@ const DentalAnxiety = () => {
       {/* How I Help Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
-            How I Help You Through Dental Anxiety
-          </h2>
-          <ul className="text-dental-accent1 max-w-3xl mx-auto space-y-2">
-            <li>
-              • No-Judgment Appointments: Feel free to discuss your concerns
-              openly
-            </li>
-            <li>• Thorough Answers: addressing all your questions and fears</li>
-            <li>• Numbing Options: use anaesthetics to minimize discomfort</li>
-            <li>
-              • Comfortable Environment: the surgery is designed to feel
-              soothing and welcoming
-            </li>
-            <li>
-              • Flexible Payment Options: providing various ways to manage costs
-            </li>
-          </ul>
+          <AnimatedElement>
+            <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
+              How I Help You Through Dental Anxiety
+            </h2>
+          </AnimatedElement>
+          <AnimatedElement>
+            <ul className="text-dental-accent1 max-w-3xl mx-auto space-y-2">
+              <li>
+                • No-Judgment Appointments: Feel free to discuss your concerns
+                openly
+              </li>
+              <li>
+                • Thorough Answers: addressing all your questions and fears
+              </li>
+              <li>
+                • Numbing Options: use anaesthetics to minimize discomfort
+              </li>
+              <li>
+                • Comfortable Environment: the surgery is designed to feel
+                soothing and welcoming
+              </li>
+              <li>
+                • Flexible Payment Options: providing various ways to manage
+                costs
+              </li>
+            </ul>
+          </AnimatedElement>
         </div>
       </section>
 
@@ -267,23 +283,31 @@ const DentalAnxiety = () => {
       {/* Dangers Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
-            What are the dangers of dental anxiety?
-          </h2>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            The main risk is neglecting your oral health due to missed
-            appointments, which can lead to:
-          </p>
-          <ul className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4 space-y-2">
-            <li>• Tooth loss</li>
-            <li>• Cavities</li>
-            <li>• Gum disease</li>
-            <li>• Bone loss</li>
-          </ul>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-6">
-            Your oral health matters, and I&apos;m here to help you manage any
-            anxiety you may have so you can get the care you need!
-          </p>
+          <AnimatedElement>
+            <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
+              What are the dangers of dental anxiety?
+            </h2>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              The main risk is neglecting your oral health due to missed
+              appointments, which can lead to:
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <ul className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4 space-y-2">
+              <li>• Tooth loss</li>
+              <li>• Cavities</li>
+              <li>• Gum disease</li>
+              <li>• Bone loss</li>
+            </ul>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-6">
+              Your oral health matters, and I&apos;m here to help you manage any
+              anxiety you may have so you can get the care you need!
+            </p>
+          </AnimatedElement>
         </div>
       </section>
     </div>

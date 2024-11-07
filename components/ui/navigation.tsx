@@ -190,12 +190,6 @@ const Navigation = () => {
                     >
                       Bone Grafts
                     </Link>
-                    <Link
-                      href="/services/surgeries/implant-supported-dentures"
-                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
-                    >
-                      Implant-Supported Dentures
-                    </Link>
                   </div>
                 </div>
                 <div className="relative group/sub">

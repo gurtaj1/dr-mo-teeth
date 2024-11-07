@@ -7,6 +7,7 @@ import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
+import AnimatedElement from "@/components/ui/animated-element";
 
 const Bonding = () => {
   const [isProcessImageVisible, setIsProcessImageVisible] = useState(false);
@@ -47,29 +48,35 @@ const Bonding = () => {
       {/* Composite Bonding Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-            Composite Bonding
-          </h1>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            Composite bonding is a dental procedure used to improve the
-            appearance of your teeth by applying a tooth-coloured resin
-            material. This process can help fix chips, gaps, or discoloration,
-            giving you a more even and natural-looking smile. During the
-            procedure, your dentist will match the resin to the colour of your
-            teeth, then apply it and shape it to achieve the desired look. The
-            material is then hardened using a special light. Composite bonding
-            is a quick, effective, and often painless way to enhance your smile,
-            and it can usually be completed in just one visit.
-          </p>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Get in touch</Link>
-            </Button>
-          </div>
+          <AnimatedElement>
+            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+              Composite Bonding
+            </h1>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              Composite bonding is a dental procedure used to improve the
+              appearance of your teeth by applying a tooth-coloured resin
+              material. This process can help fix chips, gaps, or discoloration,
+              giving you a more even and natural-looking smile. During the
+              procedure, your dentist will match the resin to the colour of your
+              teeth, then apply it and shape it to achieve the desired look. The
+              material is then hardened using a special light. Composite bonding
+              is a quick, effective, and often painless way to enhance your
+              smile, and it can usually be completed in just one visit.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+              >
+                <Link href="#book">Get in touch</Link>
+              </Button>
+            </div>
+          </AnimatedElement>
         </div>
       </section>
 

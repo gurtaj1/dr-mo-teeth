@@ -7,6 +7,7 @@ import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
+import AnimatedElement from "@/components/ui/animated-element";
 
 const TeethWhitening = () => {
   const [isLightenImageVisible, setIsLightenImageVisible] = useState(false);
@@ -47,28 +48,35 @@ const TeethWhitening = () => {
       {/* Teeth Whitening Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-            Teeth Whitening
-          </h1>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            Teeth whitening is a popular dental treatment that brightens your
-            smile. It works by using safe bleaching agents that lighten the
-            enamel, helping to restore your teeth to a more radiant shade. There
-            are different options for teeth whitening, including in-surgery
-            treatments done by your dentist for quick results, or take-home kits
-            that allow you to whiten at your own pace. Whether you want to
-            enhance your smile for a special occasion or simply boost your
-            confidence, teeth whitening can give you a brighter, whiter smile.
-          </p>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Get in touch</Link>
-            </Button>
-          </div>
+          <AnimatedElement>
+            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+              Teeth Whitening
+            </h1>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              Teeth whitening is a popular dental treatment that brightens your
+              smile. It works by using safe bleaching agents that lighten the
+              enamel, helping to restore your teeth to a more radiant shade.
+              There are different options for teeth whitening, including
+              in-surgery treatments done by your dentist for quick results, or
+              take-home kits that allow you to whiten at your own pace. Whether
+              you want to enhance your smile for a special occasion or simply
+              boost your confidence, teeth whitening can give you a brighter,
+              whiter smile.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+              >
+                <Link href="#book">Get in touch</Link>
+              </Button>
+            </div>
+          </AnimatedElement>
         </div>
       </section>
 

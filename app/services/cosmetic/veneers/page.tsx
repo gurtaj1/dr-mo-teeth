@@ -7,7 +7,7 @@ import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-
+import AnimatedElement from "@/components/ui/animated-element";
 const Veneers = () => {
   const [isProcessImageVisible, setIsProcessImageVisible] = useState(false);
   const [isBenefitsImageVisible, setIsBenefitsImageVisible] = useState(false);
@@ -47,30 +47,36 @@ const Veneers = () => {
       {/* Veneers Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-            Veneers
-          </h1>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            Veneers are thin, custom-made shells that are placed over the front
-            surface of your teeth to improve their appearance. They can help fix
-            issues like discoloration, chips, or gaps, giving you a beautiful,
-            natural-looking smile. Made from either porcelain or resin, veneers
-            are designed to match the colour and shape of your existing teeth.
-            The process typically involves a small amount of enamel being
-            removed to ensure a proper fit, and then the veneers are securely
-            bonded to your teeth. With proper care, veneers can last for many
-            years, making them a popular choice for those looking to enhance
-            their smile.
-          </p>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Get in touch</Link>
-            </Button>
-          </div>
+          <AnimatedElement>
+            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+              Veneers
+            </h1>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              Veneers are thin, custom-made shells that are placed over the
+              front surface of your teeth to improve their appearance. They can
+              help fix issues like discoloration, chips, or gaps, giving you a
+              beautiful, natural-looking smile. Made from either porcelain or
+              resin, veneers are designed to match the colour and shape of your
+              existing teeth. The process typically involves a small amount of
+              enamel being removed to ensure a proper fit, and then the veneers
+              are securely bonded to your teeth. With proper care, veneers can
+              last for many years, making them a popular choice for those
+              looking to enhance their smile.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+              >
+                <Link href="#book">Get in touch</Link>
+              </Button>
+            </div>
+          </AnimatedElement>
         </div>
       </section>
 
@@ -146,37 +152,48 @@ const Veneers = () => {
       {/* Types of Veneers Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6 text-dental-navy text-center">
-            Porcelain Veneers
-          </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto text-center">
-            Porcelain veneers are the gold standard in cosmetic dentistry. They
-            offer superior durability, stain resistance, and the most
-            natural-looking results. These custom-crafted shells are designed to
-            perfectly match your natural teeth while providing the improvements
-            you desire.
-          </p>
-          <p className="text-gray-600 max-w-3xl mx-auto text-center mt-4">
-            The porcelain material reflects light similarly to natural tooth
-            enamel, ensuring your smile looks completely natural. With proper
-            care, porcelain veneers can last 10-15 years or more.
-          </p>
+          <AnimatedElement>
+            <h2 className="text-3xl font-bold mb-6 text-dental-navy text-center">
+              Porcelain Veneers
+            </h2>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-gray-600 max-w-3xl mx-auto text-center">
+              Porcelain veneers are the gold standard in cosmetic dentistry.
+              They offer superior durability, stain resistance, and the most
+              natural-looking results. These custom-crafted shells are designed
+              to perfectly match your natural teeth while providing the
+              improvements you desire.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-gray-600 max-w-3xl mx-auto text-center mt-4">
+              The porcelain material reflects light similarly to natural tooth
+              enamel, ensuring your smile looks completely natural. With proper
+              care, porcelain veneers can last 10-15 years or more.
+            </p>
+          </AnimatedElement>
         </div>
       </section>
 
       {/* Composite Veneers Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
-            Composite Veneers
-          </h2>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            Composite veneers offer a more affordable alternative to porcelain
-            veneers. Made from tooth-colored resin material, they can be applied
-            in a single visit and require less removal of natural tooth
-            structure. While they may not last as long as porcelain veneers,
-            they provide excellent results and can be easily repaired if needed.
-          </p>
+          <AnimatedElement>
+            <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
+              Composite Veneers
+            </h2>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              Composite veneers offer a more affordable alternative to porcelain
+              veneers. Made from tooth-colored resin material, they can be
+              applied in a single visit and require less removal of natural
+              tooth structure. While they may not last as long as porcelain
+              veneers, they provide excellent results and can be easily repaired
+              if needed.
+            </p>
+          </AnimatedElement>
         </div>
       </section>
     </div>

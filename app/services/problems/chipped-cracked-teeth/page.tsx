@@ -7,6 +7,7 @@ import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
+import AnimatedElement from "@/components/ui/animated-element";
 
 const BrokenTeeth = () => {
   const [isDentalCareImageVisible, setIsDentalCareImageVisible] =
@@ -75,47 +76,56 @@ const BrokenTeeth = () => {
       {/* Hero Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-            What Causes a Broken Tooth?
-          </h1>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            A cracked, chipped, or broken tooth is a common dental issue that
-            can be quite painful and lead to further problems like tooth decay
-            and gum disease. Here are some common causes:
-          </p>
-          <ul className="text-dental-accent1 max-w-3xl mx-auto mt-4 space-y-2">
-            <li>
-              - Injury: A fall or blow to the face can easily damage a tooth.
-            </li>
-            <li>
-              - Hard Foods: Biting into hard items, such as candy or ice, can
-              cause chips or cracks.
-            </li>
-            <li>
-              - Chewing Habits: Compulsive habits, like chewing ice or pens, can
-              weaken teeth over time.
-            </li>
-            <li>
-              - Bruxism: Grinding or clenching your teeth excessively can lead
-              to damage.
-            </li>
-            <li>
-              - Tooth Decay: Weakened teeth from decay are more likely to break.
-            </li>
-            <li>
-              - Health Conditions: Certain health issues and medications can
-              weaken tooth structure.
-            </li>
-          </ul>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Get in touch</Link>
-            </Button>
-          </div>
+          <AnimatedElement>
+            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+              What Causes a Broken Tooth?
+            </h1>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              A cracked, chipped, or broken tooth is a common dental issue that
+              can be quite painful and lead to further problems like tooth decay
+              and gum disease. Here are some common causes:
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <ul className="text-dental-accent1 max-w-3xl mx-auto mt-4 space-y-2">
+              <li>
+                - Injury: A fall or blow to the face can easily damage a tooth.
+              </li>
+              <li>
+                - Hard Foods: Biting into hard items, such as candy or ice, can
+                cause chips or cracks.
+              </li>
+              <li>
+                - Chewing Habits: Compulsive habits, like chewing ice or pens,
+                can weaken teeth over time.
+              </li>
+              <li>
+                - Bruxism: Grinding or clenching your teeth excessively can lead
+                to damage.
+              </li>
+              <li>
+                - Tooth Decay: Weakened teeth from decay are more likely to
+                break.
+              </li>
+              <li>
+                - Health Conditions: Certain health issues and medications can
+                weaken tooth structure.
+              </li>
+            </ul>
+          </AnimatedElement>
+          <AnimatedElement>
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+              >
+                <Link href="#book">Get in touch</Link>
+              </Button>
+            </div>
+          </AnimatedElement>
         </div>
       </section>
 

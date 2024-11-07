@@ -7,6 +7,7 @@ import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
+import AnimatedElement from "@/components/ui/animated-element";
 
 const CleaningsAndExams = () => {
   const [isExamImageVisible, setIsExamImageVisible] = useState(false);
@@ -47,32 +48,39 @@ const CleaningsAndExams = () => {
       {/* Examination Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-            Dental Examination
-          </h1>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-            A dental examination is a routine check-up that helps ensure your
-            teeth and gums are healthy. During the exam, your dentist will
-            carefully look at your mouth, teeth, and gums to check for any signs
-            of cavities, gum disease, or other dental issues. They may also take
-            X-rays to get a better view of what&apos;s happening below the
-            surface.
-          </p>
-          <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
-            The exam is an important part of maintaining your oral health, as it
-            allows your dentist to catch any problems early and provide
-            recommendations for care or treatment. Regular examinations help you
-            keep your smile healthy and prevent bigger issues down the road.
-          </p>
-          <div className="text-center mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Book an Examination</Link>
-            </Button>
-          </div>
+          <AnimatedElement>
+            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+              Dental Examination
+            </h1>
+          </AnimatedElement>
+          <AnimatedElement>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+              A dental examination is a routine check-up that helps ensure your
+              teeth and gums are healthy. During the exam, your dentist will
+              carefully look at your mouth, teeth, and gums to check for any
+              signs of cavities, gum disease, or other dental issues. They may
+              also take X-rays to get a better view of what&apos;s happening
+              below the surface.
+            </p>
+            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
+              The exam is an important part of maintaining your oral health, as
+              it allows your dentist to catch any problems early and provide
+              recommendations for care or treatment. Regular examinations help
+              you keep your smile healthy and prevent bigger issues down the
+              road.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement>
+            <div className="text-center mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+              >
+                <Link href="#book">Book an Examination</Link>
+              </Button>
+            </div>
+          </AnimatedElement>
         </div>
       </section>
 
@@ -149,54 +157,62 @@ const CleaningsAndExams = () => {
       {/* FAQ Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl mb-4 text-dental-navy text-center">
-            <span className="font-bold">Answers</span>
-            <br />
-            To Your Oral Hygiene Questions
-          </h2>
+          <AnimatedElement>
+            <h2 className="text-4xl mb-4 text-dental-navy text-center">
+              <span className="font-bold">Answers</span>
+              <br />
+              To Your Oral Hygiene Questions
+            </h2>
+          </AnimatedElement>
           <div className="w-0.5 h-8 bg-dental-accent1 mx-auto mb-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <div>
-              <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
-                <span className="text-dental-accent1">✦</span>
-                Is it beneficial to have your teeth cleaned?
-              </h3>
-              <p className="text-gray-600">
-                Definitely! Regular dental cleanings are essential for removing
-                stubborn plaque and tartar that can harbour bacteria. If not
-                addressed, these build-ups can lead to tooth decay, gum disease,
-                and other serious dental issues.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
-                <span className="text-dental-accent1">✦</span>
-                Is a scale and polish painful?
-              </h3>
-              <p className="text-gray-600">
-                If it&apos;s been some time since your last scale and polish,
-                you might experience slight bleeding from your gums. However,
-                hygienists are gentle and will proceed at a pace that suits your
-                comfort level. If you feel any soreness afterward, an
-                over-the-counter pain reliever should help.
-              </p>
-            </div>
+            <AnimatedElement transitionSize>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
+                  <span className="text-dental-accent1">✦</span>
+                  Is it beneficial to have your teeth cleaned?
+                </h3>
+                <p className="text-gray-600">
+                  Definitely! Regular dental cleanings are essential for
+                  removing stubborn plaque and tartar that can harbour bacteria.
+                  If not addressed, these build-ups can lead to tooth decay, gum
+                  disease, and other serious dental issues.
+                </p>
+              </div>
+            </AnimatedElement>
+            <AnimatedElement transitionSize>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
+                  <span className="text-dental-accent1">✦</span>
+                  Is a scale and polish painful?
+                </h3>
+                <p className="text-gray-600">
+                  If it&apos;s been some time since your last scale and polish,
+                  you might experience slight bleeding from your gums. However,
+                  hygienists are gentle and will proceed at a pace that suits
+                  your comfort level. If you feel any soreness afterward, an
+                  over-the-counter pain reliever should help.
+                </p>
+              </div>
+            </AnimatedElement>
             <div className="md:col-span-2">
-              <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
-                <span className="text-dental-accent1">✦</span>
-                What occurs during a scale and polish?
-              </h3>
-              <p className="text-gray-600">
-                During your cleaning, your dental hygienist will perform a
-                thorough assessment of your gums, looking for any signs of
-                recession or periodontal pockets. They&apos;ll gently remove
-                plaque and tartar from around your gum line and between your
-                teeth. After that, we&apos;ll polish your teeth using a
-                specialized electric brush and finish by flossing. We also
-                conduct an oral cancer screening during each visit and may
-                suggest a prescription fluoride treatment or mouthwash if
-                you&apos;re prone to cavities or have sensitive teeth.
-              </p>
+              <AnimatedElement transitionSize>
+                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
+                  <span className="text-dental-accent1">✦</span>
+                  What occurs during a scale and polish?
+                </h3>
+                <p className="text-gray-600">
+                  During your cleaning, your dental hygienist will perform a
+                  thorough assessment of your gums, looking for any signs of
+                  recession or periodontal pockets. They&apos;ll gently remove
+                  plaque and tartar from around your gum line and between your
+                  teeth. After that, we&apos;ll polish your teeth using a
+                  specialized electric brush and finish by flossing. We also
+                  conduct an oral cancer screening during each visit and may
+                  suggest a prescription fluoride treatment or mouthwash if
+                  you&apos;re prone to cavities or have sensitive teeth.
+                </p>
+              </AnimatedElement>
             </div>
           </div>
         </div>
