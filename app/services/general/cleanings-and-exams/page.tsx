@@ -149,12 +149,16 @@ const CleaningsAndExams = () => {
       {/* FAQ Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-dental-navy text-center">
-            Answers to Your Oral Hygiene Questions
+          <h2 className="text-4xl mb-4 text-dental-navy text-center">
+            <span className="font-bold">Answers</span>
+            <br />
+            To Your Oral Hygiene Questions
           </h2>
-          <div className="space-y-8 max-w-3xl mx-auto">
+          <div className="w-0.5 h-8 bg-dental-accent1 mx-auto mb-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <div>
-              <h3 className="font-bold mb-2 text-dental-navy">
+              <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
+                <span className="text-dental-accent1">✦</span>
                 Is it beneficial to have your teeth cleaned?
               </h3>
               <p className="text-gray-600">
@@ -165,7 +169,21 @@ const CleaningsAndExams = () => {
               </p>
             </div>
             <div>
-              <h3 className="font-bold mb-2 text-dental-navy">
+              <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
+                <span className="text-dental-accent1">✦</span>
+                Is a scale and polish painful?
+              </h3>
+              <p className="text-gray-600">
+                If it&apos;s been some time since your last scale and polish,
+                you might experience slight bleeding from your gums. However,
+                hygienists are gentle and will proceed at a pace that suits your
+                comfort level. If you feel any soreness afterward, an
+                over-the-counter pain reliever should help.
+              </p>
+            </div>
+            <div className="md:col-span-2">
+              <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
+                <span className="text-dental-accent1">✦</span>
                 What occurs during a scale and polish?
               </h3>
               <p className="text-gray-600">
@@ -178,18 +196,6 @@ const CleaningsAndExams = () => {
                 conduct an oral cancer screening during each visit and may
                 suggest a prescription fluoride treatment or mouthwash if
                 you&apos;re prone to cavities or have sensitive teeth.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-2 text-dental-navy">
-                Is a scale and polish painful?
-              </h3>
-              <p className="text-gray-600">
-                If it&apos;s been some time since your last scale and polish,
-                you might experience slight bleeding from your gums. However,
-                hygienists are gentle and will proceed at a pace that suits your
-                comfort level. If you feel any soreness afterward, an
-                over-the-counter pain reliever should help.
               </p>
             </div>
           </div>

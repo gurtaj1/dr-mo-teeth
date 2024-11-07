@@ -118,7 +118,7 @@ const Navigation = () => {
                       href="/services/general/cleanings-and-exams"
                       className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                     >
-                      Cleanings & Exams
+                      Examinations and Hygiene
                     </Link>
                     <Link
                       href="/services/general/crowns"
@@ -385,7 +385,7 @@ const Navigation = () => {
                         href="/services/general/cleanings-and-exams"
                         className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                       >
-                        Cleanings & Exams
+                        Examinations and Hygiene
                       </Link>
                       <Link
                         href="/services/general/crowns"
