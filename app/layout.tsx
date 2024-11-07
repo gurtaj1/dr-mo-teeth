@@ -4,8 +4,6 @@ import localFont from "next/font/local";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 
-import { navBarHeight } from "./globals/constants";
-
 import "./globals.css";
 
 const geistSans = localFont({
@@ -23,6 +21,8 @@ export const metadata: Metadata = {
   title: "Dr Mo",
   description: "Brought to you by Dr Mo",
 };
+
+const navBarHeight = 72;
 
 export default function RootLayout({
   children,
