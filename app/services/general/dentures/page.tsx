@@ -111,10 +111,6 @@ const Dentures = () => {
             extraction
           </li>
           <li>
-            <strong>Custom-Fitted Dentures:</strong> Precisely made for your
-            mouth shape
-          </li>
-          <li>
             <strong>Flexible Dentures:</strong> Made from comfortable, flexible
             materials
           </li>
