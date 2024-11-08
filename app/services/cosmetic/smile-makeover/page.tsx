@@ -162,9 +162,9 @@ const SmileMakeover = () => {
               <strong>1. Initial Consultation</strong>
               <p>
                 Every Smile Makeover begins with a thorough consultation. During
-                this visit, we'll discuss your aesthetic goals, examine your
-                teeth and gums, and determine which treatments are right for
-                you.
+                this visit, we&apos;ll discuss your aesthetic goals, examine
+                your teeth and gums, and determine which treatments are right
+                for you.
               </p>
             </li>
             <li>
@@ -189,7 +189,7 @@ const SmileMakeover = () => {
             <li>
               <strong>4. Post-Treatment Care</strong>
               <p>
-                After your Smile Makeover, we'll provide detailed aftercare
+                After your Smile Makeover, we&apos;ll provide detailed aftercare
                 instructions to ensure that your new smile lasts. Regular
                 check-ups will help maintain the beauty and function of your
                 smile.
