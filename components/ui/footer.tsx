@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-dental-black text-dental-accent1 pt-12 pb-12">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -22,8 +22,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+          <div className="md:border-l md:border-dental-accent1 md:pl-8">
+            <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
             <div className="flex space-x-4">
               <Link
                 href="https://instagram.com/drmosmiles"
@@ -35,7 +35,7 @@ const Footer = () => {
               {/* Add more social media icons as needed */}
             </div>
           </div>
-          <div>
+          <div className="md:border-l md:border-dental-accent1 md:pl-8">
             <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
             <ul className="space-y-2">
               <li className="flex items-center">
@@ -66,7 +66,18 @@ const Footer = () => {
                   10 Soutter Gate, Hedon, Hull HU12 8JS
                 </Link>
               </li>
+              <li className="flex items-center">
+                <MapPin className="mr-2" size={18} />
+                <Link href="https://maps.app.goo.gl/5qfbALW59Bgx3VvWA">
+                  10 Railway St, Beverley HU17 0DX
+                </Link>
+              </li>
             </ul>
+            <Button asChild className="mt-4 w-full text-dental-accent1">
+              <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+                Book an Appointment
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
