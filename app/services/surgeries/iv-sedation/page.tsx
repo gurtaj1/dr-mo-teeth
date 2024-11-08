@@ -185,7 +185,7 @@ export default function IVSedationPage() {
             <p className="text-dental-accent1 text-center mt-8">
               If your anxious about dental treatment,{" "}
               <Link
-                href="#book"
+                href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com"
                 className="underline hover:text-dental-accent2"
               >
                 book an appointment

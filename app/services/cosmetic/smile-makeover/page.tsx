@@ -4,8 +4,6 @@ import { useRef, useState } from "react";
 
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 const SmileMakeover = () => {
@@ -91,15 +89,6 @@ const SmileMakeover = () => {
             range of dental concerns, giving you a refreshed and youthful
             appearance.
           </p>
-          <div>
-            <Button
-              asChild
-              size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-            >
-              <Link href="#book">Get in touch</Link>
-            </Button>
-          </div>
         </div>
       </AnimatedImageTextSection>
 

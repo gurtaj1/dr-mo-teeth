@@ -4,8 +4,6 @@ import { useRef, useState } from "react";
 
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 const GumTherapy = () => {
@@ -98,13 +96,6 @@ const GumTherapy = () => {
           don&apos;t become loose and help you maintain a healthy smile for
           years to come.
         </p>
-        <Button
-          asChild
-          size="lg"
-          className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-        >
-          <Link href="#book">Get in touch</Link>
-        </Button>
       </AnimatedImageTextSection>
       <AnimatedImageTextSection
         imageRef={gumTherapyImageRef}
