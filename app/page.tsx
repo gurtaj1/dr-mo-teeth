@@ -253,47 +253,46 @@ const HomePage = () => {
               Our Services
             </h2>
           </AnimatedElement>
-          <AnimatedElement transitionSize>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Teeth Whitening",
-                  description:
-                    "Brighten your smile with our professional whitening treatment.",
-                  link: "services/cosmetic/teeth-whitening",
-                },
-                {
-                  title: "Dental Implants",
-                  description:
-                    "Replace missing teeth with natural-looking implants.",
-                  link: "services/surgeries/implants",
-                },
-                {
-                  title: "Invisalign",
-                  description:
-                    "Straighten your teeth discreetly with clear aligners.",
-                  link: "services/cosmetic/invisalign",
-                },
-                {
-                  title: "Veneers",
-                  description:
-                    "Transform your smile with custom-made porcelain veneers.",
-                  link: "services/cosmetic/veneers",
-                },
-                {
-                  title: "Root Canal Therapy",
-                  description:
-                    "Save your natural tooth with root canal therapy.",
-                  link: "services/general/root-canal",
-                },
-                {
-                  title: "Dental Crowns",
-                  description:
-                    "Restore damaged teeth with durable, natural-looking crowns.",
-                  link: "services/general/crowns",
-                },
-              ].map((service, index) => (
-                <Link key={index} href={service.link} className="h-full">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Teeth Whitening",
+                description:
+                  "Brighten your smile with our professional whitening treatment.",
+                link: "services/cosmetic/teeth-whitening",
+              },
+              {
+                title: "Dental Implants",
+                description:
+                  "Replace missing teeth with natural-looking implants.",
+                link: "services/surgeries/implants",
+              },
+              {
+                title: "Invisalign",
+                description:
+                  "Straighten your teeth discreetly with clear aligners.",
+                link: "services/cosmetic/invisalign",
+              },
+              {
+                title: "Veneers",
+                description:
+                  "Transform your smile with custom-made porcelain veneers.",
+                link: "services/cosmetic/veneers",
+              },
+              {
+                title: "Root Canal Therapy",
+                description: "Save your natural tooth with root canal therapy.",
+                link: "services/general/root-canal",
+              },
+              {
+                title: "Dental Crowns",
+                description:
+                  "Restore damaged teeth with durable, natural-looking crowns.",
+                link: "services/general/crowns",
+              },
+            ].map((service, index) => (
+              <AnimatedElement transitionSize key={index}>
+                <Link href={service.link} className="h-full">
                   <Card className="bg-dental-primary/10 hover:bg-dental-primary/20 transition-colors border-dental-accent1/20 h-full flex flex-col">
                     <CardContent className="p-6 flex flex-col flex-1">
                       <img
@@ -312,9 +311,9 @@ const HomePage = () => {
                     </CardContent>
                   </Card>
                 </Link>
-              ))}
-            </div>
-          </AnimatedElement>
+              </AnimatedElement>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -326,26 +325,26 @@ const HomePage = () => {
               3 SIMPLE STEPS FOR ACHIEVING YOUR BEST SMILE
             </h2>
           </AnimatedElement>
-          <AnimatedElement transitionSize>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  step: 1,
-                  text: "Schedule an exam",
-                  image: "/step-1.jpg",
-                },
-                {
-                  step: 2,
-                  text: "Speak with a dentist about your goals",
-                  image: "/step-2.jpg",
-                },
-                {
-                  step: 3,
-                  text: "Create a plan and start your smile journey",
-                  image: "/step-3.jpg",
-                },
-              ].map((step, index) => (
-                <div key={index} className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                step: 1,
+                text: "Schedule an exam",
+                image: "/step-1.jpg",
+              },
+              {
+                step: 2,
+                text: "Speak with a dentist about your goals",
+                image: "/step-2.jpg",
+              },
+              {
+                step: 3,
+                text: "Create a plan and start your smile journey",
+                image: "/step-3.jpg",
+              },
+            ].map((step, index) => (
+              <AnimatedElement transitionSize key={index}>
+                <div className="relative">
                   <div className="relative">
                     <img
                       src={step.image}
@@ -362,9 +361,9 @@ const HomePage = () => {
                     {step.text}
                   </p>
                 </div>
-              ))}
-            </div>
-          </AnimatedElement>
+              </AnimatedElement>
+            ))}
+          </div>
         </div>
       </section>
 

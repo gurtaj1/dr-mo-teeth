@@ -35,7 +35,7 @@ const AnimatedElement = ({
         isVisible ? "opacity-100" : "opacity-50",
         isVisible && transitionSize
           ? "scale-100"
-          : transitionSize && !isVisible
+          : !isVisible && transitionSize
           ? "scale-95"
           : ""
       )}
