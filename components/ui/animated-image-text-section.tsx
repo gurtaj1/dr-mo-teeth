@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { RefObject } from "react";
+import Image from "next/image";
+import AnimatedElement from "@/components/ui/animated-element";
 
 interface AnimatedImageTextSectionProps {
   imageRef: RefObject<HTMLDivElement>;
@@ -33,12 +34,12 @@ const AnimatedImageTextSection = ({
   const imageContent = (
     <div
       ref={imageRef}
-      className={`transition-transform duration-1000 ease-out ${
+      className={`transition-all duration-1000 ease-out ${
         isImageVisible
-          ? "translate-x-0"
+          ? "translate-x-0 opacity-100"
           : imagePosition === "left"
-          ? "-translate-x-full"
-          : "translate-x-full"
+          ? "-translate-x-8 opacity-25"
+          : "translate-x-8 opacity-25"
       }`}
     >
       <Image
