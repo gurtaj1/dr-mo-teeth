@@ -63,7 +63,7 @@ const WisdomToothPain = () => {
         titleRef={wisdomParallaxRef}
         isImageVisible={isWisdomImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Wisdom Tooth Pain"
         title={
           <>
@@ -102,7 +102,7 @@ const WisdomToothPain = () => {
         titleRef={wisdomBenefitsParallaxRef}
         isImageVisible={isWisdomBenefitsImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Benefits of Wisdom Tooth Removal"
         title={
           <>
@@ -140,7 +140,7 @@ const WisdomToothPain = () => {
         titleRef={wisdomProcessParallaxRef}
         isImageVisible={isWisdomProcessImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Wisdom Teeth Removal Process"
         title={
           <>

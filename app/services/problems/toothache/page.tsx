@@ -93,7 +93,7 @@ const Toothache = () => {
         titleRef={causesParallaxRef}
         isImageVisible={isCausesImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Common Causes of Tooth Pain"
         title={
           <>
@@ -130,7 +130,7 @@ const Toothache = () => {
         titleRef={treatmentsParallaxRef}
         isImageVisible={isTreatmentsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Tooth Pain Treatments"
         title={
           <>
@@ -171,7 +171,7 @@ const Toothache = () => {
         titleRef={preventionParallaxRef}
         isImageVisible={isPreventionImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Preventing Tooth Pain"
         title={
           <>

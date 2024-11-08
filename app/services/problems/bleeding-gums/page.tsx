@@ -10,47 +10,23 @@ import AnimatedImageTextSection from "../../../../components/ui/animated-image-t
 import AnimatedElement from "@/components/ui/animated-element";
 
 const BleedingGums = () => {
-  const [isCausesImageVisible, setIsCausesImageVisible] = useState(false);
   const [isTreatmentImageVisible, setIsTreatmentImageVisible] = useState(false);
-  const [isQuestionsImageVisible, setIsQuestionsImageVisible] = useState(false);
-  const [causesParallaxOffset, setCausesParallaxOffset] = useState(0);
   const [treatmentParallaxOffset, setTreatmentParallaxOffset] = useState(0);
-  const [questionsParallaxOffset, setQuestionsParallaxOffset] = useState(0);
 
-  const causesImageRef = useRef(null);
   const treatmentImageRef = useRef(null);
-  const questionsImageRef = useRef(null);
-  const causesParallaxRef = useRef(null);
   const treatmentParallaxRef = useRef(null);
-  const questionsParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
       {
-        ref: causesImageRef,
-        onIntersect: () => setIsCausesImageVisible(true),
-      },
-      {
         ref: treatmentImageRef,
         onIntersect: () => setIsTreatmentImageVisible(true),
-      },
-      {
-        ref: questionsImageRef,
-        onIntersect: () => setIsQuestionsImageVisible(true),
       },
     ],
     parallaxTargets: [
       {
-        ref: causesParallaxRef,
-        onScroll: (offset) => setCausesParallaxOffset(offset),
-      },
-      {
         ref: treatmentParallaxRef,
         onScroll: (offset) => setTreatmentParallaxOffset(offset),
-      },
-      {
-        ref: questionsParallaxRef,
-        onScroll: (offset) => setQuestionsParallaxOffset(offset),
       },
     ],
   });
@@ -59,75 +35,31 @@ const BleedingGums = () => {
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
+        <div className="container max-w-3xl mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-              Bleeding Gums
+            <h1 className="text-4xl mb-8 text-dental-accent1">
+              My Gums
+              <br /> <span className="font-bold">Are Bleeding</span>
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className="text-dental-accent1 text-center">
               Bleeding gums can be caused by a variety of things such as
               brushing and flossing too vigorously. But if your gums won&apos;t
               stop bleeding, or they always look and feel swollen, it&apos;s
               likely a sign that you&apos;re suffering from one of the most
-              common (but dangerous) oral health issues — gum disease.
+              common oral health issues which is gum disease.
             </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <div className="text-center mt-8">
-              <Button
-                asChild
-                size="lg"
-                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-              >
-                <Link href="#book">Get in touch</Link>
-              </Button>
-            </div>
           </AnimatedElement>
         </div>
       </section>
-
-      <AnimatedImageTextSection
-        imageRef={causesImageRef}
-        titleRef={causesParallaxRef}
-        isImageVisible={isCausesImageVisible}
-        imagePosition="left"
-        imageSrc="/placeholder.svg"
-        imageAlt="Causes of Bleeding Gums"
-        title={
-          <>
-            Why Gum Disease Causes <br />{" "}
-            <span className="font-bold">Gums to Bleed</span>
-          </>
-        }
-        titleColor="text-dental-navy"
-        scrollY={causesParallaxOffset}
-        scrollFactor={1}
-      >
-        <ol className="space-y-2 text-gray-600">
-          <li>
-            <strong>Step 1.</strong> Gum disease starts when plaque accumulates
-          </li>
-          <li>
-            <strong>Step 2.</strong> Plaque eventually hardens into tartar
-          </li>
-          <li>
-            <strong>Step 3.</strong> Tartar irritates your gums, causing
-            inflammation and swelling
-          </li>
-          <li>
-            <strong>Step 4.</strong> Swollen gums are more likely to bleed
-          </li>
-        </ol>
-      </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
         imageRef={treatmentImageRef}
         titleRef={treatmentParallaxRef}
         isImageVisible={isTreatmentImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Treatment Steps"
         title={
           <>
@@ -135,12 +67,11 @@ const BleedingGums = () => {
             <span className="font-bold">Your Gum Health</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        titleColor="text-dental-navy"
         scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-dental-accent1">
+        <div className="space-y-6 text-gray-600">
           <ol className="space-y-4">
             <li>
               <strong>Step 1.</strong> Request your appointment
@@ -162,55 +93,73 @@ const BleedingGums = () => {
         </div>
       </AnimatedImageTextSection>
 
-      <AnimatedImageTextSection
-        imageRef={questionsImageRef}
-        titleRef={questionsParallaxRef}
-        isImageVisible={isQuestionsImageVisible}
-        imagePosition="left"
-        imageSrc="/placeholder.svg"
-        imageAlt="FAQ About Bleeding Gums"
-        title={
-          <>
-            Common Questions About <br />{" "}
-            <span className="font-bold">Bleeding Gums</span>
-          </>
-        }
-        titleColor="text-dental-navy"
-        scrollY={questionsParallaxOffset}
-        scrollFactor={1}
-      >
-        <div className="space-y-6 text-gray-600">
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              How can you prevent bleeding gums?
-            </h3>
-            <ul className="space-y-2">
-              <li>⭐ Brush your teeth twice a day for 2 minutes</li>
-              <li>⭐ Floss once a day</li>
-              <li>⭐ Avoid smoking, vaping, or chewing tobacco</li>
-              <li>
-                ⭐ Visit us every 6 months for a professional exam and cleaning
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              Can you stop bleeding gums at home?
-            </h3>
-            <p className="mb-2">
-              Try these home remedies until you can see your dentist:
-            </p>
-            <ul className="space-y-2">
-              <li>⭐ Hold an ice pack against your gums</li>
-              <li>⭐ Try a warm salt water rinse</li>
-              <li>
-                ⭐ Hold a clean, damp gauze or wet tea bag against the area
-              </li>
-            </ul>
+      {/* Common Questions Section */}
+      <section className="py-16 bg-dental-navy">
+        <div className="container mx-auto px-6">
+          <AnimatedElement>
+            <h2 className="text-4xl mb-4 text-dental-accent1 text-center">
+              Common Questions About
+              <br />
+              <span className="font-bold">Bleeding Gums</span>
+            </h2>
+          </AnimatedElement>
+          <div className="w-0.5 h-8 bg-white mx-auto mb-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <AnimatedElement transitionSize>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-dental-accent1 flex items-center gap-2">
+                  <span className="text-white">✦</span>
+                  Gum disease has 2 forms:
+                </h3>
+                <ol className="space-y-2">
+                  <li>
+                    <span className="font-bold">
+                      Inflammation of the gums (gingivitis):
+                    </span>{" "}
+                    This is the mildest form of gum disease and is reversible if
+                    treated with help from your dentist.
+                  </li>
+                  <li>
+                    <span className="font-bold">
+                      Inflammation of the ligament which holds the teeth in the
+                      bone (periodontitis):
+                    </span>{" "}
+                    This is a more severe form of gum disease and is
+                    irreversible. Without professional treatment periodontitis
+                    can result in tooth loss.
+                  </li>
+                </ol>
+              </div>
+            </AnimatedElement>
+            <AnimatedElement transitionSize>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-dental-accent1 flex items-center gap-2">
+                  <span className="text-white">✦</span>
+                  How can you prevent bleeding gums?
+                </h3>
+                <ul className="space-y-2">
+                  <li>
+                    <span className="text-dental-accent1">⭐</span> Brush your
+                    teeth twice a day for 2 minutes
+                  </li>
+                  <li>
+                    <span className="text-dental-accent1">⭐</span> Floss once a
+                    day
+                  </li>
+                  <li>
+                    <span className="text-dental-accent1">⭐</span> Avoid
+                    smoking, vaping, or chewing tobacco
+                  </li>
+                  <li>
+                    <span className="text-dental-accent1">⭐</span> Visit us
+                    every 6 months for a professional exam and cleaning
+                  </li>
+                </ul>
+              </div>
+            </AnimatedElement>
           </div>
         </div>
-      </AnimatedImageTextSection>
+      </section>
     </div>
   );
 };

@@ -85,7 +85,7 @@ const Bonding = () => {
         titleRef={processParallaxRef}
         isImageVisible={isProcessImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Bonding Process"
         title={
           <>
@@ -123,7 +123,7 @@ const Bonding = () => {
         titleRef={benefitsParallaxRef}
         isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Bonding Benefits"
         title={
           <>

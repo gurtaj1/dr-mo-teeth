@@ -81,22 +81,11 @@ const DentalAnxiety = () => {
           <AnimatedElement>
             <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
               Feeling nervous before a dentist appointment? You&apos;re not
-              alone—dental anxiety is very common among people of all ages. No
+              alone. Dental anxiety is very common among people of all ages. No
               matter what&apos;s causing your anxiety, I&apos;m here to help you
               feel at ease. My goal is to ensure you can receive the treatment
               you need with confidence.
             </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <div className="text-center mt-8">
-              <Button
-                asChild
-                size="lg"
-                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-              >
-                <Link href="#book">Let&apos;s Talk About Your Concerns</Link>
-              </Button>
-            </div>
           </AnimatedElement>
         </div>
       </section>
@@ -106,7 +95,7 @@ const DentalAnxiety = () => {
         titleRef={reasonsParallaxRef}
         isImageVisible={isReasonsImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Common Reasons for Dental Anxiety"
         title={
           <>
@@ -120,14 +109,25 @@ const DentalAnxiety = () => {
       >
         <div className="space-y-4 text-gray-600">
           <ul className="space-y-2">
-            <li>
-              ✓ Previous Negative Experiences: Past visits that didn&apos;t go
-              well can create fear
+            <li className="flex items-start">
+              <span className="mr-2 flex-shrink-0">✓</span>
+              <span>
+                Previous Negative Experiences: Past visits that didn&apos;t go
+                well can create fear
+              </span>
             </li>
-            <li>✓ Anticipation of Pain: Worrying that treatment will hurt</li>
-            <li>
-              ✓ Fear of Judgment: Concern about how the dentist will perceive
-              your dental habits
+            <li className="flex items-start">
+              <span className="mr-2 flex-shrink-0">✓</span>
+              <span>
+                Anticipation of Pain: Worrying that treatment will hurt
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 flex-shrink-0">✓</span>
+              <span>
+                Fear of Judgment: Concern about how the dentist will perceive
+                your dental habits
+              </span>
             </li>
           </ul>
         </div>
@@ -138,7 +138,7 @@ const DentalAnxiety = () => {
         titleRef={effectsParallaxRef}
         isImageVisible={isEffectsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Effects of Dental Anxiety"
         title={
           <>
@@ -167,7 +167,7 @@ const DentalAnxiety = () => {
         titleRef={managementParallaxRef}
         isImageVisible={isManagementImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Managing Dental Anxiety"
         title={
           <>
@@ -203,7 +203,7 @@ const DentalAnxiety = () => {
             </h2>
           </AnimatedElement>
           <AnimatedElement>
-            <ul className="text-dental-accent1 max-w-3xl mx-auto space-y-2">
+            <ul className="text-dental-accent1 max-w-3xl mx-auto space-y-2 text-center">
               <li>
                 • No-Judgment Appointments: Feel free to discuss your concerns
                 openly
@@ -227,87 +227,63 @@ const DentalAnxiety = () => {
         </div>
       </section>
 
-      <AnimatedImageTextSection
-        imageRef={questionsImageRef}
-        titleRef={questionsParallaxRef}
-        isImageVisible={isQuestionsImageVisible}
-        imagePosition="right"
-        imageSrc="/placeholder.svg"
-        imageAlt="Common Questions About Dental Anxiety"
-        title={
-          <>
-            Common Questions About <br />{" "}
-            <span className="font-bold">Dental Anxiety</span>
-          </>
-        }
-        titleColor="text-dental-navy"
-        scrollY={questionsParallaxOffset}
-        scrollFactor={1}
-      >
-        <div className="space-y-6 text-gray-600">
-          <div>
-            <h3 className="font-bold mb-2">
-              What can I do to lessen my dental anxiety?
-            </h3>
-            <p>
-              You don&apos;t have to face this alone! Here are some strategies
-              that may help:
-            </p>
-            <ul className="space-y-2 mt-2">
-              <li>• Talk to your hygienist or dentist about your fears</li>
-              <li>• Let us know if you need a break during your appointment</li>
-              <li>• Use breathing and mindfulness techniques to stay calm</li>
-              <li>
-                • Bring a supportive friend or family member to your visit
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold mb-2">
-              What are the symptoms of dental anxiety?
-            </h3>
-            <p>
-              Everyone experiences dental anxiety differently, but some common
-              symptoms include:
-            </p>
-            <ul className="space-y-2 mt-2">
-              <li>• Low blood pressure</li>
-              <li>• Panic attacks during or before appointments</li>
-              <li>• Dizziness or faintness</li>
-              <li>• Heart palpitations</li>
-            </ul>
-          </div>
-        </div>
-      </AnimatedImageTextSection>
-
-      {/* Dangers Section */}
-      <section className="py-16 bg-dental-navy">
+      {/* Common Questions Section */}
+      <section className="py-16">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
-              What are the dangers of dental anxiety?
+            <h2 className="text-4xl mb-4 text-dental-navy text-center">
+              Dr. Mo Addresses Your
+              <br />
+              <span className="font-bold">
+                Top Questions About Dental Anxiety
+              </span>
             </h2>
           </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              The main risk is neglecting your oral health due to missed
-              appointments, which can lead to:
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <ul className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4 space-y-2">
-              <li>• Tooth loss</li>
-              <li>• Cavities</li>
-              <li>• Gum disease</li>
-              <li>• Bone loss</li>
-            </ul>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-6">
-              Your oral health matters, and I&apos;m here to help you manage any
-              anxiety you may have so you can get the care you need!
-            </p>
-          </AnimatedElement>
+          <div className="w-0.5 h-8 bg-dental-accent1 mx-auto mb-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <AnimatedElement transitionSize>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
+                  <span className="text-dental-accent1">✦</span>
+                  What can I do to lessen my dental anxiety?
+                </h3>
+                <p className="text-gray-600">
+                  You don&apos;t have to face this alone! Here are some
+                  strategies that may help:
+                </p>
+                <ul className="list-none mt-2 text-gray-600">
+                  <li>- Talk to your hygienist or dentist about your fears</li>
+                  <li>
+                    - Let us know if you need a break during your appointment
+                  </li>
+                  <li>
+                    - Use breathing and mindfulness techniques to stay calm
+                  </li>
+                  <li>
+                    - Bring a supportive friend or family member to your visit
+                  </li>
+                </ul>
+              </div>
+            </AnimatedElement>
+            <AnimatedElement transitionSize>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
+                  <span className="text-dental-accent1">✦</span>
+                  What are the symptoms of dental anxiety?
+                </h3>
+                <p className="text-gray-600">
+                  Everyone experiences dental anxiety differently, but some
+                  common symptoms include:
+                </p>
+                <ul className="list-none mt-2 text-gray-600">
+                  <li>- Low blood pressure</li>
+                  <li>- Panic attacks during or before appointments</li>
+                  <li>- Dizziness or faintness</li>
+                  <li>- Heart palpitations</li>
+                </ul>
+              </div>
+            </AnimatedElement>
+          </div>
         </div>
       </section>
     </div>

@@ -65,7 +65,7 @@ const RootCanal = () => {
         titleRef={heroParallaxRef}
         isImageVisible={isHeroImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Root Canal Treatment Hero"
         title={
           <>
@@ -98,7 +98,7 @@ const RootCanal = () => {
         titleRef={treatmentParallaxRef}
         isImageVisible={isTreatmentImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Root Canal Treatment"
         title={
           <>
@@ -131,7 +131,7 @@ const RootCanal = () => {
         titleRef={signsParallaxRef}
         isImageVisible={isSignsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Root Canal Signs and Symptoms"
         title={
           <>

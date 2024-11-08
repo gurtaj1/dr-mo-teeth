@@ -85,7 +85,7 @@ const Veneers = () => {
         titleRef={processParallaxRef}
         isImageVisible={isProcessImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Veneer Procedure"
         title={
           <>
@@ -128,7 +128,7 @@ const Veneers = () => {
         titleRef={benefitsParallaxRef}
         isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Veneer Benefits"
         title={
           <>

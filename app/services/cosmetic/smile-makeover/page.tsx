@@ -56,12 +56,15 @@ const SmileMakeover = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+        <h1>Smile Makeover</h1>
+      </div>
       <AnimatedImageTextSection
         imageRef={heroImageRef}
         titleRef={heroParallaxRef}
         isImageVisible={isHeroImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Smile Makeover Hero"
         title={
           <>
@@ -75,10 +78,18 @@ const SmileMakeover = () => {
       >
         <div className="space-y-6">
           <p className="text-dental-accent1">
-            If you&apos;re looking to improve your smile, porcelain veneers
-            offer a quick and impactful solution for cosmetic concerns. Veneers
-            can provide a faster and simpler way to achieve a beautifully
-            aligned smile without the need for braces.
+            A radiant, confident smile is one of the first things people notice.
+            If you&apos;re unhappy with the appearance of your teeth, a Smile
+            Makeover can provide the transformation you&apos;ve been dreaming
+            of. Whether you&apos;re dealing with crooked, stained, chipped, or
+            missing teeth, we offer customised solutions to help you achieve the
+            beautiful smile you deserve. What is a Smile Makeover? A Smile
+            Makeover is a comprehensive approach to improving the aesthetics of
+            your smile. It combines various cosmetic dental treatments, tailored
+            to your unique needs and goals. From teeth whitening to veneers,
+            dental crowns, and orthodontics, a Smile Makeover can address a wide
+            range of dental concerns, giving you a refreshed and youthful
+            appearance.
           </p>
           <div>
             <Button
@@ -97,12 +108,12 @@ const SmileMakeover = () => {
         titleRef={processParallaxRef}
         isImageVisible={isProcessImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Smile Makeover Process"
         title={
           <>
-            <span className="font-bold">A Fresh Smile</span> <br /> In 2
-            Appointments
+            Common Treatments in a <br />
+            <span className="font-bold">Smile Makeover</span>
           </>
         }
         titleColor="text-dental-navy"
@@ -110,26 +121,19 @@ const SmileMakeover = () => {
         scrollFactor={1}
       >
         <div className="space-y-6 text-gray-600">
-          <div>
-            <h3 className="font-bold mb-2">Appointment 1:</h3>
-            <p>
-              During your first appointment, we&apos;ll prepare your teeth for
-              the veneers by removing a thin layer of enamel—approximately the
-              thickness of a fingernail. After that, we&apos;ll take an
-              impression of your smile and send it to our local dental lab to
-              create your custom veneers.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-bold mb-2">Appointment 2:</h3>
-            <p>
-              In about 2 weeks, I shall securely attach your porcelain veneers.
-              We&apos;ll start with a gentle cleaning of your teeth, then use a
-              dental cement to bond the veneers in place. The result? Your new
-              veneers will look and feel just like your natural teeth, but even
-              more stunning!
-            </p>
-          </div>
+          <p>
+            Depending on your needs, a Smile Makeover may include one or more of
+            the following procedures:
+          </p>
+          <ol className="space-y-2">
+            <li>1. Teeth Whitening</li>
+            <li>2. Porcelain Veneers</li>
+            <li>3. Dental Crowns</li>
+            <li>4. Clear Aligners</li>
+            <li>5. Bonding</li>
+            <li>6. Gum Contouring / Crown Lengthening</li>
+            <li>7. Implants or Bridges</li>
+          </ol>
         </div>
       </AnimatedImageTextSection>
 
@@ -138,12 +142,13 @@ const SmileMakeover = () => {
         titleRef={benefitsParallaxRef}
         isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
-        imageAlt="Smile Makeover Benefits"
+        imageSrc="/placeholder.jpg"
+        imageAlt="Smile Makeover Journey"
         title={
           <>
-            Benefits of a<br />{" "}
-            <span className="font-bold">Smile Makeover</span>
+            Your Smile Makeover Journey
+            <br />
+            <span className="font-bold">The Process</span>
           </>
         }
         titleColor="text-dental-accent1"
@@ -151,13 +156,47 @@ const SmileMakeover = () => {
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
-        <ul className="space-y-4 text-dental-accent1">
-          <li>⭐ Quick results in just 2 appointments</li>
-          <li>⭐ Natural-looking enhancement</li>
-          <li>⭐ Minimal tooth preparation required</li>
-          <li>⭐ Alternative to lengthy orthodontic treatment</li>
-          <li>⭐ Customized to your desired smile</li>
-        </ul>
+        <div className="space-y-4 text-dental-accent1">
+          <ol className="space-y-4">
+            <li>
+              <strong>1. Initial Consultation</strong>
+              <p>
+                Every Smile Makeover begins with a thorough consultation. During
+                this visit, we'll discuss your aesthetic goals, examine your
+                teeth and gums, and determine which treatments are right for
+                you.
+              </p>
+            </li>
+            <li>
+              <strong>2. Customized Treatment Plan</strong>
+              <p>
+                Once we have a clear understanding of your needs, we will create
+                a customized treatment plan to achieve your desired results.
+                This may involve a combination of services, and we will ensure
+                that each procedure is designed to complement your overall
+                goals.
+              </p>
+            </li>
+            <li>
+              <strong>3. The Makeover</strong>
+              <p>
+                With your treatment plan in place, we will begin the makeover
+                process. Depending on the procedures involved, your smile
+                makeover may be completed over multiple visits. Our team will
+                keep you comfortable and informed every step of the way.
+              </p>
+            </li>
+            <li>
+              <strong>4. Post-Treatment Care</strong>
+              <p>
+                After your Smile Makeover, we'll provide detailed aftercare
+                instructions to ensure that your new smile lasts. Regular
+                check-ups will help maintain the beauty and function of your
+                smile.
+              </p>
+            </li>
+          </ol>
+        </div>
       </AnimatedImageTextSection>
     </div>
   );

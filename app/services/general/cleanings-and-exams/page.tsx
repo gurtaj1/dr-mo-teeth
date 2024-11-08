@@ -89,7 +89,7 @@ const CleaningsAndExams = () => {
         titleRef={examParallaxRef}
         isImageVisible={isExamImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Dental Examination Process"
         title={
           <>
@@ -125,7 +125,7 @@ const CleaningsAndExams = () => {
         titleRef={cleaningParallaxRef}
         isImageVisible={isCleaningImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Scale and Polish"
         title={
           <>

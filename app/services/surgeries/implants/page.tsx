@@ -86,7 +86,7 @@ const DentalImplants = () => {
         titleRef={implantJourneyParallaxRef}
         isImageVisible={isImplantJourneyImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Dental Implant Procedure"
         title={
           <>
@@ -130,7 +130,7 @@ const DentalImplants = () => {
         titleRef={benefitsParallaxRef}
         isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Dental Implant Benefits"
         title={
           <>

@@ -115,17 +115,6 @@ const BrokenTeeth = () => {
               </li>
             </ul>
           </AnimatedElement>
-          <AnimatedElement>
-            <div className="text-center mt-8">
-              <Button
-                asChild
-                size="lg"
-                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-              >
-                <Link href="#book">Get in touch</Link>
-              </Button>
-            </div>
-          </AnimatedElement>
         </div>
       </section>
 
@@ -134,7 +123,7 @@ const BrokenTeeth = () => {
         titleRef={dentalCareParallaxRef}
         isImageVisible={isDentalCareImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Poor Dental Care"
         title={
           <>
@@ -151,7 +140,7 @@ const BrokenTeeth = () => {
           make your teeth more vulnerable. Inconsistent brushing and flossing
           allow plaque and bacteria to build up, which can weaken enamel and
           lead to cavities. This makes your teeth more susceptible to damage. To
-          help prevent broken teeth, maintain regular dental cleanings!
+          help prevent broken teeth, maintain regular dental check-ups!
         </p>
       </AnimatedImageTextSection>
 
@@ -160,7 +149,7 @@ const BrokenTeeth = () => {
         titleRef={homeManagementParallaxRef}
         isImageVisible={isHomeManagementImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Managing at Home"
         title={
           <>
@@ -180,17 +169,10 @@ const BrokenTeeth = () => {
             protect your mouth:
           </p>
           <ul className="space-y-2">
+            <li>⭐ Pain Relief: To help reduce pain and inflammation</li>
             <li>
-              ⭐ Pain Relief: Take ibuprofen to help reduce pain and
-              inflammation
-            </li>
-            <li>
-              ⭐ Ice Pack: Apply an ice pack to the outside of your face to
-              reduce swelling
-            </li>
-            <li>
-              ⭐ Rinse: Gargle with mouthwash or salt water to kill bacteria and
-              help prevent infection
+              ⭐ Rinse: With mouthwash or salt water to kill bacteria and help
+              prevent infection
             </li>
             <li>
               ⭐ Dental Wax: Use dental wax to cover sharp edges on the broken
@@ -205,7 +187,7 @@ const BrokenTeeth = () => {
         titleRef={treatmentsParallaxRef}
         isImageVisible={isTreatmentsImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Treatment Process"
         title={
           <>
@@ -258,7 +240,7 @@ const BrokenTeeth = () => {
         titleRef={questionsParallaxRef}
         isImageVisible={isQuestionsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Common Questions"
         title={
           <>

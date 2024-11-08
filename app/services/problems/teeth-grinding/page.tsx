@@ -60,38 +60,28 @@ const TeethGrinding = () => {
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
+        <div className="container max-w-3xl mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-              Wake Up Refreshed—Say Goodbye to Bruxism!
+            <h1 className="text-4xl mb-8 text-dental-accent1">
+              Stop Wearing your
+              <br /> <span className="font-bold">Teeth Away</span>
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              Are you tired of waking up with a sore jaw and worn teeth? I know
-              how challenging it can be to deal with the effects of teeth
-              grinding, such as worn enamel, jaw pain, headaches, and even
-              cracked teeth. But don&apos;t worry—I&apos;m here to help!
+            <p className="text-dental-accent1 text-center">
+              Bruxism is the grinding or clenching of teeth. The effects of
+              teeth grinding, such as worn enamel, jaw pain, headaches, and even
+              cracked teeth can be difficult to deal with. But don&apos;t worry,
+              I&apos;m here to help.
             </p>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
+            <p className="text-dental-accent1 text-center mt-4">
               By focusing on the root causes of bruxism, I can provide lasting
               relief and prevent further damage to your teeth and overall oral
               health. My goal is to restore your smile, improve your quality of
               sleep, and enhance your well-being.
             </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <div className="text-center mt-8">
-              <Button
-                asChild
-                size="lg"
-                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-              >
-                <Link href="#book">Get in touch</Link>
-              </Button>
-            </div>
           </AnimatedElement>
         </div>
       </section>
@@ -101,7 +91,7 @@ const TeethGrinding = () => {
         titleRef={shieldParallaxRef}
         isImageVisible={isShieldImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Shield Against Teeth Grinding"
         title={
           <>
@@ -147,7 +137,7 @@ const TeethGrinding = () => {
         titleRef={treatmentsParallaxRef}
         isImageVisible={isTreatmentsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Dream Without Grinding"
         title={
           <>
@@ -179,7 +169,7 @@ const TeethGrinding = () => {
         titleRef={questionsParallaxRef}
         isImageVisible={isQuestionsImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Common Questions About Teeth Grinding"
         title={
           <>

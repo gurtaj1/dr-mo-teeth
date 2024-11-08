@@ -154,7 +154,7 @@ const Navigation = () => {
                       href="/services/general/root-canal"
                       className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                     >
-                      Root Canal
+                      Root Canal Therapy
                     </Link>
                   </div>
                 </div>
@@ -179,6 +179,12 @@ const Navigation = () => {
                       Implants
                     </Link>
                     <Link
+                      href="/services/surgeries/iv-sedation"
+                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                    >
+                      IV Sedation
+                    </Link>
+                    <Link
                       href="/services/surgeries/extractions"
                       className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                     >
@@ -189,6 +195,12 @@ const Navigation = () => {
                       className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                     >
                       Bone Grafts
+                    </Link>
+                    <Link
+                      href="/services/surgeries/crown-lengthening"
+                      className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
+                    >
+                      Crown Lengthening
                     </Link>
                   </div>
                 </div>
@@ -260,10 +272,10 @@ const Navigation = () => {
                   Wisdom Tooth Pain
                 </Link>
                 <Link
-                  href="/services/problems/missing-tooth"
+                  href="/services/problems/missing-teeth"
                   className="block px-4 py-2 text-dental-accent1 hover:text-dental-accent2 hover:bg-dental-black-light"
                 >
-                  Missing Tooth
+                  Missing Teeth
                 </Link>
                 <Link
                   href="/services/problems/toothache"
@@ -415,7 +427,7 @@ const Navigation = () => {
                         href="/services/general/root-canal"
                         className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                       >
-                        Root Canal
+                        Root Canal Therapy
                       </Link>
                     </div>
 
@@ -441,6 +453,12 @@ const Navigation = () => {
                         Implants
                       </Link>
                       <Link
+                        href="/services/surgeries/iv-sedation"
+                        className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                      >
+                        IV Sedation
+                      </Link>
+                      <Link
                         href="/services/surgeries/extractions"
                         className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                       >
@@ -451,6 +469,12 @@ const Navigation = () => {
                         className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                       >
                         Bone Grafts
+                      </Link>
+                      <Link
+                        href="/services/surgeries/crown-lengthening"
+                        className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                      >
+                        Crown Lengthening
                       </Link>
                     </div>
 
@@ -572,6 +596,12 @@ const Navigation = () => {
                       className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
                     >
                       Sensitive Teeth
+                    </Link>
+                    <Link
+                      href="/services/problems/missing-teeth"
+                      className="block px-6 py-2 text-sm text-dental-accent1 hover:text-dental-accent2"
+                    >
+                      Missing Teeth
                     </Link>
                   </div>
                 </div>

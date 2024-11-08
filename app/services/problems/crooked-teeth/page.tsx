@@ -111,7 +111,7 @@ const CrookedTeeth = () => {
         titleRef={causesParallaxRef}
         isImageVisible={isCausesImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Causes of Crooked Teeth"
         title={
           <>
@@ -160,7 +160,7 @@ const CrookedTeeth = () => {
         titleRef={dentalCareParallaxRef}
         isImageVisible={isDentalCareImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="When to See a Dentist"
         title={
           <>
@@ -193,7 +193,7 @@ const CrookedTeeth = () => {
         titleRef={treatmentsParallaxRef}
         isImageVisible={isTreatmentsImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Treatment Process"
         title={
           <>

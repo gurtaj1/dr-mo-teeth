@@ -27,30 +27,6 @@ const BoneGrafts = () => {
           </AnimatedElement>
         </div>
       </section>
-
-      {/* Crown Lengthening Section */}
-      <section className="flex-grow py-16">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h2 className="text-3xl font-bold mb-6 text-dental-navy text-center">
-              Crown Lengthening
-            </h2>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-gray-600 max-w-3xl mx-auto text-center">
-              Crown lengthening is a dental procedure that involves removing
-              some gum and sometimes a small amount of bone around the tooth to
-              expose more of a tooth&apos;s structure. This is often done when a
-              tooth is decayed or damaged below the gum line, making it
-              difficult to place a crown or filling. By increasing the visible
-              portion of the tooth, crown lengthening helps ensure a better fit
-              for restorations and improves the overall appearance of your
-              smile. It&apos;s a simple procedure that can make a big difference
-              in both function and aesthetics.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
     </div>
   );
 };

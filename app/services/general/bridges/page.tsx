@@ -87,7 +87,7 @@ const Bridges = () => {
         titleRef={bridgesParallaxRef}
         isImageVisible={isBridgesImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Dental Bridge"
         title={
           <>
@@ -111,7 +111,7 @@ const Bridges = () => {
         titleRef={careParallaxRef}
         isImageVisible={isCareImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Bridge Care"
         title={
           <>

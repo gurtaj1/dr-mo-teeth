@@ -93,7 +93,7 @@ const Dentures = () => {
         titleRef={dentureTypesParallaxRef}
         isImageVisible={isDentureTypesImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Types of Dentures"
         title={
           <>
@@ -132,7 +132,7 @@ const Dentures = () => {
         titleRef={benefitsParallaxRef}
         isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Denture Benefits"
         title={
           <>

@@ -45,17 +45,20 @@ const Crowns = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+        <h1>Crowns</h1>
+      </div>
       {/* Dental Crowns Section */}
       <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
+        <div className="container max-w-3xl mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl text-center mb-8 text-dental-accent1">
+            <h1 className="text-4xl mb-8 text-dental-accent1">
               Place a crown
               <br /> <span className="font-bold">Before your tooth cracks</span>
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className="text-dental-accent1 text-center">
               A dental crown is a cap that fits over a damaged or weakened tooth
               to restore its shape, size, strength, and appearance. Crowns are
               often used after a tooth has been significantly decayed, cracked,
@@ -83,7 +86,7 @@ const Crowns = () => {
         titleRef={crownsParallaxRef}
         isImageVisible={isCrownsImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Dental Crown Procedure"
         title={
           <>
@@ -115,7 +118,7 @@ const Crowns = () => {
         titleRef={processParallaxRef}
         isImageVisible={isProcessImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Crown Benefits"
         title={
           <>

@@ -81,23 +81,12 @@ const BadBreath = () => {
           </AnimatedElement>
           <AnimatedElement>
             <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              It&apos;s normal to have bad breath occasionally—like after eating
-              strong foods or when you wake up in the morning. However, about
-              25% of people experience chronic bad breath, known as halitosis.
-              This type of bad breath can&apos;t be fixed just by brushing,
-              flossing, drinking water, or chewing gum.
+              It&apos;s normal to have bad breath occasionally, for example
+              after eating strong foods or when you wake up in the morning.
+              However, about 25% of people experience chronic bad breath, known
+              as halitosis. This type of bad breath can&apos;t be fixed just by
+              brushing, flossing, drinking water, or chewing gum.
             </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <div className="text-center mt-8">
-              <Button
-                asChild
-                size="lg"
-                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-              >
-                <Link href="#book">Get in touch</Link>
-              </Button>
-            </div>
           </AnimatedElement>
         </div>
       </section>
@@ -107,7 +96,7 @@ const BadBreath = () => {
         titleRef={causesParallaxRef}
         isImageVisible={isCausesImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Bad Breath Causes"
         title={
           <>
@@ -134,7 +123,7 @@ const BadBreath = () => {
         titleRef={treatmentsParallaxRef}
         isImageVisible={isTreatmentsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Bad Breath Treatment"
         title={
           <>
@@ -165,26 +154,6 @@ const BadBreath = () => {
             Your treatment will depend on what we find, so it&apos;s important
             to get a professional diagnosis to find the right solution!
           </p>
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              Common Treatments for Halitosis:
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                ⭐ Deep Cleaning: If gum disease is the cause, we may suggest a
-                deep cleaning or other gum treatment
-              </li>
-              <li>
-                ⭐ Filling or Root Canal: If you have tooth decay or infection,
-                a filling or root canal may be needed
-              </li>
-              <li>
-                ⭐ Oral Appliance: For nighttime mouth breathing, a custom night
-                guard might be the solution
-              </li>
-            </ul>
-          </div>
         </div>
       </AnimatedImageTextSection>
 
@@ -193,7 +162,7 @@ const BadBreath = () => {
         titleRef={questionsParallaxRef}
         isImageVisible={isQuestionsImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Bad Breath FAQs"
         title={
           <>
@@ -231,7 +200,7 @@ const BadBreath = () => {
         titleRef={faqParallaxRef}
         isImageVisible={isFaqImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="More Bad Breath FAQs"
         title={
           <>

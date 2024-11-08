@@ -39,7 +39,7 @@ const Invisalign = () => {
             <AnimatedElement transitionSize>
               <div className="flex justify-center">
                 <img
-                  src="/placeholder.svg"
+                  src="/placeholder.jpg"
                   alt="Clear aligners and braces comparison"
                   className="max-w-2xl w-full rounded-lg"
                 />

@@ -65,7 +65,7 @@ const GumTherapy = () => {
         titleRef={introParallaxRef}
         isImageVisible={isIntroImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Gum Disease Overview"
         title={
           <>
@@ -111,7 +111,7 @@ const GumTherapy = () => {
         titleRef={gumTherapyParallaxRef}
         isImageVisible={isGumTherapyImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Gum Disease Treatment"
         title={
           <>
@@ -139,7 +139,7 @@ const GumTherapy = () => {
         titleRef={treatmentParallaxRef}
         isImageVisible={isTreatmentImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Gum Treatment Benefits"
         title={
           <>

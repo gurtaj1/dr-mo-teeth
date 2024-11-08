@@ -85,7 +85,7 @@ const TeethWhitening = () => {
         titleRef={lightenParallaxRef}
         isImageVisible={isLightenImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Teeth Whitening Results"
         title={
           <>
@@ -113,7 +113,7 @@ const TeethWhitening = () => {
         titleRef={factsParallaxRef}
         isImageVisible={isFactsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Teeth Whitening Facts"
         title={
           <>
@@ -133,7 +133,7 @@ const TeethWhitening = () => {
               <li>⭐ Coffee and tea</li>
               <li>⭐ Foods with dark pigments</li>
               <li>⭐ Smoking and tobacco use</li>
-              <li>⭐ Natural aging</li>
+              <li>⭐ Natural ageing</li>
             </ul>
           </div>
 

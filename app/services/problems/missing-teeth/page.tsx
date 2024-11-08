@@ -83,17 +83,6 @@ const MissingTooth = () => {
               your unique needs.
             </p>
           </AnimatedElement>
-          <AnimatedElement>
-            <div className="text-center mt-8">
-              <Button
-                asChild
-                size="lg"
-                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-              >
-                <Link href="#book">Get in touch</Link>
-              </Button>
-            </div>
-          </AnimatedElement>
         </div>
       </section>
 
@@ -102,7 +91,7 @@ const MissingTooth = () => {
         titleRef={treatmentsParallaxRef}
         isImageVisible={isTreatmentsImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Renewing Your Smile"
         title={
           <>
@@ -116,11 +105,10 @@ const MissingTooth = () => {
       >
         <div className="space-y-4 text-gray-600">
           <p>
-            At Jackson Family Dental, we provide a range of treatments for
-            missing teeth, including dental implants, dentures, and bridges. We
-            know that everyone has different needs, so we take the time to
-            assess your oral health and listen to your concerns to determine the
-            best treatment for you.
+            I provide a range of treatments for missing teeth, including dental
+            implants, dentures, and bridges. We know that everyone has different
+            needs, so we take the time to assess your oral health and listen to
+            your concerns to determine the best treatment for you.
           </p>
         </div>
       </AnimatedImageTextSection>
@@ -130,7 +118,7 @@ const MissingTooth = () => {
         titleRef={optionsParallaxRef}
         isImageVisible={isOptionsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Treatment Options"
         title={
           <>
@@ -177,7 +165,7 @@ const MissingTooth = () => {
         titleRef={questionsParallaxRef}
         isImageVisible={isQuestionsImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Common Questions"
         title={
           <>

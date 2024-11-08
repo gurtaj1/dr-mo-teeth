@@ -57,7 +57,7 @@ const DentalFillings = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
-        <h1>Fillings</h1>
+        <h1>Dental Fillings</h1>
       </div>
 
       <AnimatedImageTextSection
@@ -65,7 +65,7 @@ const DentalFillings = () => {
         titleRef={heroParallaxRef}
         isImageVisible={isHeroImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Dental Filling Treatment"
         title={
           <>
@@ -103,7 +103,7 @@ const DentalFillings = () => {
         titleRef={typesParallaxRef}
         isImageVisible={isTypesImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Types of Dental Fillings"
         title={
           <>
@@ -141,7 +141,7 @@ const DentalFillings = () => {
         titleRef={processParallaxRef}
         isImageVisible={isProcessImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.svg"
+        imageSrc="/placeholder.jpg"
         imageAlt="Filling Process"
         title={
           <>
