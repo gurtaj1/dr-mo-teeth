@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useIntersectionObservers } from "@/hooks/useIntersectionObservers";
+import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import { cn } from "@/lib/utils";
 
 interface AnimatedElementProps {
@@ -33,7 +33,11 @@ const AnimatedElement = ({
       className={cn(
         "transition-all duration-500 ease-in-out will-change-transform will-change-opacity origin-center",
         isVisible ? "opacity-100" : "opacity-50",
-        isVisible && transitionSize ? "cale-100" : "scale-95"
+        isVisible && transitionSize
+          ? "scale-100"
+          : transitionSize && !isVisible
+          ? "scale-95"
+          : ""
       )}
     >
       {children}

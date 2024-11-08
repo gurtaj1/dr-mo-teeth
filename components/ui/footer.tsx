@@ -67,9 +67,6 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <Button asChild className="mt-4">
-              <Link href="#book">Book a Session</Link>
-            </Button>
           </div>
         </div>
       </div>

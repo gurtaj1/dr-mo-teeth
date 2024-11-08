@@ -1,15 +1,53 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedElement from "@/components/ui/animated-element";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { navBarHeight } from "./globals/constants";
 
 const HomePage = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const isMobile = useMediaQuery("(max-width: 640px)");
+  const slidesPerView = isMobile ? 1 : 3;
+
+  const testimonials = [
+    {
+      name: "John Doe",
+      text: "Dr Mo transformed my smile! I couldn't be happier with the results.",
+    },
+    {
+      name: "Jane Smith",
+      text: "The team at Dr Mo made me feel comfortable throughout my entire treatment.",
+    },
+    {
+      name: "Mike Johnson",
+      text: "I've never felt more confident about my teeth. Thank you, Dr Mo!",
+    },
+    {
+      name: "Sarah Williams",
+      text: "Professional, caring and excellent results. Highly recommend Dr Mo!",
+    },
+    {
+      name: "David Brown",
+      text: "The best dental experience I've ever had. Dr Mo is fantastic.",
+    },
+    {
+      name: "Emma Davis",
+      text: "Life-changing results! So happy I chose Dr Mo for my treatment.",
+    },
+  ];
+
+  const maxIndex = Math.max(0, testimonials.length - slidesPerView);
+
   useEffect(() => {
     // Check if there's a hash in the URL
     if (window.location.hash === "#about") {
@@ -28,6 +66,44 @@ const HomePage = () => {
     }
   }, []); // Run once when component mounts
 
+  // const autoRotateInterval = 5000;
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setActiveIndex((current) => (current < maxIndex ? current + 1 : 0));
+  //   }, autoRotateInterval);
+
+  //   return () => clearInterval(timer);
+  // }, [maxIndex, autoRotateInterval]);
+
+  const nextTestimonial = () => {
+    setActiveIndex((current) => Math.min(current + 1, maxIndex));
+  };
+
+  const prevTestimonial = () => {
+    setActiveIndex((current) => Math.max(current - 1, 0));
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    const minSwipeDistance = 50;
+    if (touchStart - touchEnd > minSwipeDistance) {
+      // Swiped left
+      nextTestimonial();
+    }
+    if (touchEnd - touchStart > minSwipeDistance) {
+      // Swiped right
+      prevTestimonial();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -43,7 +119,7 @@ const HomePage = () => {
         </video>
         <div className="absolute inset-0 bg-dental-black bg-opacity-60"></div>
         <div className="relative z-10 text-center text-dental-accent1">
-          <h1 className="text-9xl font-bold mb-4">Dr Mo</h1>
+          <h1 className="text-9xl font-bold mb-4">DR. MO</h1>
           <Button
             asChild
             size="lg"
@@ -107,59 +183,65 @@ const HomePage = () => {
               My Approach to Dental Care
             </h2>
           </AnimatedElement>
-          <AnimatedElement transitionSize>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <AnimatedElement transitionSize>
+              <div className="text-center p-6 rounded-lg transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group">
                 <div className="mb-4">
                   <svg
-                    className="w-12 h-12 mx-auto text-dental-teal"
+                    className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
                     <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy">
+                <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
                   TECHNOLOGY
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 transition-colors duration-300 group-hover:text-dental-navy">
                   The latest tools for a modern experience
                 </p>
               </div>
-              <div className="text-center">
+            </AnimatedElement>
+            <AnimatedElement transitionSize>
+              <div className="text-center p-6 rounded-lg transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group">
                 <div className="mb-4">
                   <svg
-                    className="w-12 h-12 mx-auto text-dental-teal"
+                    className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy">
+                <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
                   QUALITY
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 transition-colors duration-300 group-hover:text-dental-navy">
                   High quality dentistry, guided by science
                 </p>
               </div>
-              <div className="text-center">
+            </AnimatedElement>
+            <AnimatedElement transitionSize>
+              <div className="text-center p-6 rounded-lg transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group">
                 <div className="mb-4">
                   <svg
-                    className="w-12 h-12 mx-auto text-dental-teal"
+                    className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
                     <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy">
+                <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
                   PERSONAL
                 </h3>
-                <p className="text-gray-600">100% personalised care</p>
+                <p className="text-gray-600 transition-colors duration-300 group-hover:text-dental-navy">
+                  100% personalised care
+                </p>
               </div>
-            </div>
-          </AnimatedElement>
+            </AnimatedElement>
+          </div>
         </div>
       </section>
 
@@ -286,72 +368,73 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Testimonials Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
             <h2 className="text-3xl font-bold text-center mb-8 text-dental-accent1">
-              Why Choose Me as Your Dentist
-            </h2>
-          </AnimatedElement>
-          <div className="max-w-3xl mx-auto text-center">
-            <AnimatedElement>
-              <p className="text-dental-accent1 mb-6">
-                With over 15 years of experience, I am committed to providing
-                the highest quality dental care in a comfortable and friendly
-                environment. My team and I use the latest technology and
-                techniques to ensure you receive the best possible treatment. We
-                believe in personalized care, taking the time to understand your
-                unique needs and concerns. Choose us for a healthier, brighter
-                smile that you&apos;ll love to show off!
-              </p>
-            </AnimatedElement>
-            <AnimatedElement>
-              <Button
-                asChild
-                size="lg"
-                className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-              >
-                <Link href="#book">Get in touch</Link>
-              </Button>
-            </AnimatedElement>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h2 className="text-3xl font-bold text-center mb-8 text-dental-navy">
               Patient Reviews
             </h2>
           </AnimatedElement>
           <AnimatedElement transitionSize>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "John Doe",
-                  text: "Dr Mo transformed my smile! I couldn't be happier with the results.",
-                },
-                {
-                  name: "Jane Smith",
-                  text: "The team at Dr Mo made me feel comfortable throughout my entire treatment.",
-                },
-                {
-                  name: "Mike Johnson",
-                  text: "I've never felt more confident about my teeth. Thank you, Dr Mo!",
-                },
-              ].map((testimonial, index) => (
-                <Card key={index}>
-                  <CardContent className="p-6">
-                    <p className="text-gray-600 mb-4">
-                      &quot;{testimonial.text}&quot;
-                    </p>
-                    <p className="font-semibold">{testimonial.name}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="w-full max-w-6xl mx-auto px-4 py-8">
+              <div className="relative">
+                <div
+                  className="overflow-hidden"
+                  onTouchStart={handleTouchStart}
+                  onTouchMove={handleTouchMove}
+                  onTouchEnd={handleTouchEnd}
+                >
+                  <div
+                    className="flex transition-transform duration-300 ease-in-out"
+                    style={{
+                      transform: `translateX(-${
+                        activeIndex * (100 / slidesPerView)
+                      }%)`,
+                    }}
+                  >
+                    {testimonials.map((testimonial, index) => (
+                      <div
+                        key={index}
+                        className={`w-full sm:w-1/3 flex-shrink-0 px-2`}
+                      >
+                        <Card className="h-full border-none shadow-lg">
+                          <CardContent className="p-6 flex flex-col justify-between h-full">
+                            <p className="text-gray-600 mb-4 text-lg italic">
+                              &quot;{testimonial.text}&quot;
+                            </p>
+                            <p className="font-semibold text-right">
+                              {testimonial.name}
+                            </p>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full -ml-4"
+                    onClick={prevTestimonial}
+                    disabled={activeIndex === 0}
+                    aria-label="Previous testimonials"
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full -mr-4"
+                    onClick={nextTestimonial}
+                    disabled={activeIndex === maxIndex}
+                    aria-label="Next testimonials"
+                  >
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
             </div>
           </AnimatedElement>
         </div>
