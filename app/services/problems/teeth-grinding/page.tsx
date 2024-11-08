@@ -175,7 +175,7 @@ const TeethGrinding = () => {
                   <li>⭐ Tooth sensitivity</li>
                 </ul>
                 <p className="mt-2">
-                  If you notice any of these symptoms, it's important to
+                  If you notice any of these symptoms, it&apos;s important to
                   schedule an appointment with us.
                 </p>
               </>

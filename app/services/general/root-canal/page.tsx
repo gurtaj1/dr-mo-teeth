@@ -7,26 +7,18 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
 const RootCanal = () => {
-  const [isSignsImageVisible, setIsSignsImageVisible] = useState(false);
   const [isTreatmentImageVisible, setIsTreatmentImageVisible] = useState(false);
   const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
-  const [signsParallaxOffset, setSignsParallaxOffset] = useState(0);
   const [treatmentParallaxOffset, setTreatmentParallaxOffset] = useState(0);
   const [heroParallaxOffset, setHeroParallaxOffset] = useState(0);
 
-  const signsImageRef = useRef(null);
   const treatmentImageRef = useRef(null);
   const heroImageRef = useRef(null);
-  const signsParallaxRef = useRef(null);
   const treatmentParallaxRef = useRef(null);
   const heroParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
-      {
-        ref: signsImageRef,
-        onIntersect: () => setIsSignsImageVisible(true),
-      },
       {
         ref: treatmentImageRef,
         onIntersect: () => setIsTreatmentImageVisible(true),
@@ -37,10 +29,6 @@ const RootCanal = () => {
       },
     ],
     parallaxTargets: [
-      {
-        ref: signsParallaxRef,
-        onScroll: (offset) => setSignsParallaxOffset(offset),
-      },
       {
         ref: treatmentParallaxRef,
         onScroll: (offset) => setTreatmentParallaxOffset(offset),

@@ -330,17 +330,17 @@ const HomePage = () => {
               {
                 step: 1,
                 text: "Schedule an exam",
-                image: "/step-1.jpg",
+                image: "/placeholder-2.jpg",
               },
               {
                 step: 2,
                 text: "Speak with a dentist about your goals",
-                image: "/step-2.jpg",
+                image: "/placeholder-2.jpg",
               },
               {
                 step: 3,
                 text: "Create a plan and start your smile journey",
-                image: "/step-3.jpg",
+                image: "/placeholder-2.jpg",
               },
             ].map((step, index) => (
               <AnimatedElement transitionSize key={index}>

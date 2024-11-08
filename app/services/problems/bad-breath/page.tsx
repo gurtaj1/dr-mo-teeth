@@ -28,7 +28,7 @@ const questions = [
     title: "What's the best mouthwash for bad breath?",
     content: (
       <p>
-        If you suffer from chronic bad breath, a mouthwash won't solve the
+        If you suffer from chronic bad breath, a mouthwash won&apos;t solve the
         problem. In fact, mouthwash often dries out your mouth and makes your
         breath worse! Talk to your dentist and your hygienist about whether or
         not mouthwash is the best choice for you — and if so, which one.
@@ -40,7 +40,7 @@ const questions = [
     title: "Will gum help my bad breath?",
     content: (
       <p>
-        While a stick of gum will provide a burst of freshness, it's not a
+        While a stick of gum will provide a burst of freshness, it&apos;s not a
         lasting solution. In fact, gum and mints are often filled with sugar,
         which is bad for your teeth!
       </p>
