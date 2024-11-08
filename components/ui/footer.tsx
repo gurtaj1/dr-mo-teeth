@@ -61,13 +61,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="flex items-center">
-                <MapPin className="mr-2" size={18} />
+                <Link href="https://maps.app.goo.gl/dbgXNq8s5xRRJCPW7">
+                  <MapPin className="mr-2" size={18} />
+                </Link>
                 <Link href="https://maps.app.goo.gl/dbgXNq8s5xRRJCPW7">
                   10 Soutter Gate, Hedon, Hull HU12 8JS
                 </Link>
               </li>
               <li className="flex items-center">
-                <MapPin className="mr-2" size={18} />
+                <Link href="https://maps.app.goo.gl/5qfbALW59Bgx3VvWA">
+                  <MapPin className="mr-2" size={18} />
+                </Link>
                 <Link href="https://maps.app.goo.gl/5qfbALW59Bgx3VvWA">
                   10 Railway St, Beverley HU17 0DX
                 </Link>

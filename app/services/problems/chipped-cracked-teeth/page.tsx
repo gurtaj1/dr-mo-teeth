@@ -6,6 +6,7 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
+import QuestionsSection from "@/components/ui/questions-section";
 
 const BrokenTeeth = () => {
   const [isDentalCareImageVisible, setIsDentalCareImageVisible] =
@@ -14,21 +15,17 @@ const BrokenTeeth = () => {
     useState(false);
   const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
     useState(false);
-  const [isQuestionsImageVisible, setIsQuestionsImageVisible] = useState(false);
   const [dentalCareParallaxOffset, setDentalCareParallaxOffset] = useState(0);
   const [homeManagementParallaxOffset, setHomeManagementParallaxOffset] =
     useState(0);
   const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
-  const [questionsParallaxOffset, setQuestionsParallaxOffset] = useState(0);
 
   const dentalCareImageRef = useRef(null);
   const homeManagementImageRef = useRef(null);
   const treatmentsImageRef = useRef(null);
-  const questionsImageRef = useRef(null);
   const dentalCareParallaxRef = useRef(null);
   const homeManagementParallaxRef = useRef(null);
   const treatmentsParallaxRef = useRef(null);
-  const questionsParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
@@ -44,10 +41,6 @@ const BrokenTeeth = () => {
         ref: treatmentsImageRef,
         onIntersect: () => setIsTreatmentsImageVisible(true),
       },
-      {
-        ref: questionsImageRef,
-        onIntersect: () => setIsQuestionsImageVisible(true),
-      },
     ],
     parallaxTargets: [
       {
@@ -61,10 +54,6 @@ const BrokenTeeth = () => {
       {
         ref: treatmentsParallaxRef,
         onScroll: (offset) => setTreatmentsParallaxOffset(offset),
-      },
-      {
-        ref: questionsParallaxRef,
-        onScroll: (offset) => setQuestionsParallaxOffset(offset),
       },
     ],
   });
@@ -233,70 +222,67 @@ const BrokenTeeth = () => {
         </div>
       </AnimatedImageTextSection>
 
-      <AnimatedImageTextSection
-        imageRef={questionsImageRef}
-        titleRef={questionsParallaxRef}
-        isImageVisible={isQuestionsImageVisible}
-        imagePosition="right"
-        imageSrc="/placeholder.jpg"
-        imageAlt="Common Questions"
+      <QuestionsSection
+        theme="dark"
         title={
           <>
-            Common Questions About <br />{" "}
+            Common Questions About
+            <br />
             <span className="font-bold">Chipped Tooth Repair</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
-        scrollY={questionsParallaxOffset}
-        scrollFactor={1}
-      >
-        <div className="space-y-6 text-dental-accent1">
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              How do you know if your tooth is damaged?
-            </h3>
-            <p>
-              Some tooth damage is obvious, like a visible chip, but other
-              issues may not be as clear. Signs of a damaged tooth include:
-            </p>
-            <ul className="list-disc pl-6 mt-2">
-              <li>Increased sensitivity to hot or cold foods</li>
-              <li>Pain while chewing</li>
-              <li>Intermittent tooth pain that comes and goes</li>
-              <li>Swollen gums around the affected tooth</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              How do you prevent a broken tooth in the future?
-            </h3>
-            <p>
-              After repairing a cracked or broken tooth, it&apos;s important to
-              take steps to avoid future damage. Here&apos;s how:
-            </p>
-            <ul className="list-disc pl-6">
-              <li>Maintain Good Oral Hygiene: Brush and floss regularly</li>
-              <li>
-                Schedule Regular Dental Check-Ups: Keep an eye on your tooth
-                health
-              </li>
-              <li>
-                Address Grinding or Clenching: Seek treatment for these habits
-              </li>
-              <li>
-                Avoid Using Your Teeth as Tools: Don&apos;t use them to hold
-                items or open packages
-              </li>
-              <li>
-                Wear a Mouthguard: Especially when playing sports to protect
-                your teeth
-              </li>
-            </ul>
-          </div>
-        </div>
-      </AnimatedImageTextSection>
+        questions={[
+          {
+            icon: "✦",
+            title: "How do you know if your tooth is damaged?",
+            content: (
+              <>
+                <p>
+                  Some tooth damage is obvious, like a visible chip, but other
+                  issues may not be as clear. Signs of a damaged tooth include:
+                </p>
+                <ul className="list-disc pl-6 mt-2">
+                  <li>Increased sensitivity to hot or cold foods</li>
+                  <li>Pain while chewing</li>
+                  <li>Intermittent tooth pain that comes and goes</li>
+                  <li>Swollen gums around the affected tooth</li>
+                </ul>
+              </>
+            ),
+          },
+          {
+            icon: "✦",
+            title: "How do you prevent a broken tooth in the future?",
+            content: (
+              <>
+                <p>
+                  After repairing a cracked or broken tooth, it&apos;s important
+                  to take steps to avoid future damage. Here&apos;s how:
+                </p>
+                <ul className="list-disc pl-6">
+                  <li>Maintain Good Oral Hygiene: Brush and floss regularly</li>
+                  <li>
+                    Schedule Regular Dental Check-Ups: Keep an eye on your tooth
+                    health
+                  </li>
+                  <li>
+                    Address Grinding or Clenching: Seek treatment for these
+                    habits
+                  </li>
+                  <li>
+                    Avoid Using Your Teeth as Tools: Don&apos;t use them to hold
+                    items or open packages
+                  </li>
+                  <li>
+                    Wear a Mouthguard: Especially when playing sports to protect
+                    your teeth
+                  </li>
+                </ul>
+              </>
+            ),
+          },
+        ]}
+      />
     </div>
   );
 };

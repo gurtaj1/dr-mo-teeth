@@ -6,6 +6,7 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
+import QuestionsSection from "@/components/ui/questions-section";
 
 const BleedingGums = () => {
   const [isTreatmentImageVisible, setIsTreatmentImageVisible] = useState(false);
@@ -28,6 +29,56 @@ const BleedingGums = () => {
       },
     ],
   });
+
+  const questions = [
+    {
+      icon: "✦",
+      title: "Gum disease has 2 forms:",
+      content: (
+        <ol className="space-y-2">
+          <li>
+            <span className="font-bold">
+              Inflammation of the gums (gingivitis):
+            </span>{" "}
+            This is the mildest form of gum disease and is reversible if treated
+            with help from your dentist.
+          </li>
+          <li>
+            <span className="font-bold">
+              Inflammation of the ligament which holds the teeth in the bone
+              (periodontitis):
+            </span>{" "}
+            This is a more severe form of gum disease and is irreversible.
+            Without professional treatment periodontitis can result in tooth
+            loss.
+          </li>
+        </ol>
+      ),
+    },
+    {
+      icon: "✦",
+      title: "How can you prevent bleeding gums?",
+      content: (
+        <ul className="space-y-2">
+          <li>
+            <span className="text-dental-accent1">⭐</span> Brush your teeth
+            twice a day for 2 minutes
+          </li>
+          <li>
+            <span className="text-dental-accent1">⭐</span> Floss once a day
+          </li>
+          <li>
+            <span className="text-dental-accent1">⭐</span> Avoid smoking,
+            vaping, or chewing tobacco
+          </li>
+          <li>
+            <span className="text-dental-accent1">⭐</span> Visit us every 6
+            months for a professional exam and cleaning
+          </li>
+        </ul>
+      ),
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
@@ -91,73 +142,17 @@ const BleedingGums = () => {
         </div>
       </AnimatedImageTextSection>
 
-      {/* Common Questions Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h2 className="text-4xl mb-4 text-dental-accent1 text-center">
-              Common Questions About
-              <br />
-              <span className="font-bold">Bleeding Gums</span>
-            </h2>
-          </AnimatedElement>
-          <div className="w-0.5 h-8 bg-white mx-auto mb-8"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <AnimatedElement transitionSize>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-dental-accent1 flex items-center gap-2">
-                  <span className="text-white">✦</span>
-                  Gum disease has 2 forms:
-                </h3>
-                <ol className="space-y-2">
-                  <li>
-                    <span className="font-bold">
-                      Inflammation of the gums (gingivitis):
-                    </span>{" "}
-                    This is the mildest form of gum disease and is reversible if
-                    treated with help from your dentist.
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      Inflammation of the ligament which holds the teeth in the
-                      bone (periodontitis):
-                    </span>{" "}
-                    This is a more severe form of gum disease and is
-                    irreversible. Without professional treatment periodontitis
-                    can result in tooth loss.
-                  </li>
-                </ol>
-              </div>
-            </AnimatedElement>
-            <AnimatedElement transitionSize>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-dental-accent1 flex items-center gap-2">
-                  <span className="text-white">✦</span>
-                  How can you prevent bleeding gums?
-                </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <span className="text-dental-accent1">⭐</span> Brush your
-                    teeth twice a day for 2 minutes
-                  </li>
-                  <li>
-                    <span className="text-dental-accent1">⭐</span> Floss once a
-                    day
-                  </li>
-                  <li>
-                    <span className="text-dental-accent1">⭐</span> Avoid
-                    smoking, vaping, or chewing tobacco
-                  </li>
-                  <li>
-                    <span className="text-dental-accent1">⭐</span> Visit us
-                    every 6 months for a professional exam and cleaning
-                  </li>
-                </ul>
-              </div>
-            </AnimatedElement>
-          </div>
-        </div>
-      </section>
+      <QuestionsSection
+        theme="dark"
+        title={
+          <>
+            Common Questions About
+            <br />
+            <span className="font-bold">Bleeding Gums</span>
+          </>
+        }
+        questions={questions}
+      />
     </div>
   );
 };

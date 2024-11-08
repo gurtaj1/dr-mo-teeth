@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-
+import QuestionsSection from "@/components/ui/questions-section";
 const RootCanal = () => {
   const [isSignsImageVisible, setIsSignsImageVisible] = useState(false);
   const [isTreatmentImageVisible, setIsTreatmentImageVisible] = useState(false);
@@ -117,56 +117,56 @@ const RootCanal = () => {
         </p>
       </AnimatedImageTextSection>
 
-      <AnimatedImageTextSection
-        imageRef={signsImageRef}
-        titleRef={signsParallaxRef}
-        isImageVisible={isSignsImageVisible}
-        imagePosition="right"
-        imageSrc="/placeholder.jpg"
-        imageAlt="Root Canal Signs and Symptoms"
+      <QuestionsSection
+        theme="dark"
         title={
           <>
             Common Questions About <br />{" "}
             <span className="font-bold">Root Canal Treatment</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
-        scrollY={signsParallaxOffset}
-        scrollFactor={1}
-      >
-        <div className="space-y-6 text-dental-accent1">
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              How Long Does a Root Canal Take?
-            </h3>
-            <p>
-              A root canal generally lasts between 60 to 90 minutes. In some
-              cases, your treatment may be spread over two appointments.
-              We&apos;ll ensure you know what to expect throughout the process.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              What Are the Signs of an Infected Tooth?
-            </h3>
-            <p className="mb-2">
-              While only your dentist can accurately diagnose an infected tooth,
-              here are some symptoms to watch for:
-            </p>
-            <ul className="space-y-2">
-              <li>⭐ Persistent toothache</li>
-              <li>⭐ Ongoing sensitivity to temperature changes</li>
-              <li>⭐ Tenderness in the jawbone</li>
-              <li>
-                ⭐ Chips or fractures in your tooth (even minor breaks can lead
-                to significant decay and infection)
-              </li>
-            </ul>
-          </div>
-        </div>
-      </AnimatedImageTextSection>
+        questions={[
+          {
+            icon: "✦",
+            title: "How Long Does a Root Canal Take?",
+            content:
+              "A root canal generally lasts between 60 to 90 minutes. In some cases, your treatment may be spread over two appointments. We'll ensure you know what to expect throughout the process.",
+          },
+          {
+            icon: "✦",
+            title: "What Are the Signs of an Infected Tooth?",
+            content: (
+              <>
+                <p className="mb-2">
+                  While only your dentist can accurately diagnose an infected
+                  tooth, here are some symptoms to watch for:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex">
+                    <span className="w-6 shrink-0">⭐</span>
+                    <span>Persistent toothache</span>
+                  </li>
+                  <li className="flex">
+                    <span className="w-6 shrink-0">⭐</span>
+                    <span>Ongoing sensitivity to temperature changes</span>
+                  </li>
+                  <li className="flex">
+                    <span className="w-6 shrink-0">⭐</span>
+                    <span>Tenderness in the jawbone</span>
+                  </li>
+                  <li className="flex">
+                    <span className="w-6 shrink-0">⭐</span>
+                    <span>
+                      Chips or fractures in your tooth (even minor breaks can
+                      lead to significant decay and infection)
+                    </span>
+                  </li>
+                </ul>
+              </>
+            ),
+          },
+        ]}
+      />
     </div>
   );
 };

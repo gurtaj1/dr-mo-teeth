@@ -6,22 +6,19 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
+import QuestionsSection from "@/components/ui/questions-section";
 
 const MissingTooth = () => {
   const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
     useState(false);
   const [isOptionsImageVisible, setIsOptionsImageVisible] = useState(false);
-  const [isQuestionsImageVisible, setIsQuestionsImageVisible] = useState(false);
   const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
   const [optionsParallaxOffset, setOptionsParallaxOffset] = useState(0);
-  const [questionsParallaxOffset, setQuestionsParallaxOffset] = useState(0);
 
   const treatmentsImageRef = useRef(null);
   const optionsImageRef = useRef(null);
-  const questionsImageRef = useRef(null);
   const treatmentsParallaxRef = useRef(null);
   const optionsParallaxRef = useRef(null);
-  const questionsParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
@@ -33,10 +30,6 @@ const MissingTooth = () => {
         ref: optionsImageRef,
         onIntersect: () => setIsOptionsImageVisible(true),
       },
-      {
-        ref: questionsImageRef,
-        onIntersect: () => setIsQuestionsImageVisible(true),
-      },
     ],
     parallaxTargets: [
       {
@@ -46,10 +39,6 @@ const MissingTooth = () => {
       {
         ref: optionsParallaxRef,
         onScroll: (offset) => setOptionsParallaxOffset(offset),
-      },
-      {
-        ref: questionsParallaxRef,
-        onScroll: (offset) => setQuestionsParallaxOffset(offset),
       },
     ],
   });
@@ -158,55 +147,50 @@ const MissingTooth = () => {
         </div>
       </AnimatedImageTextSection>
 
-      <AnimatedImageTextSection
-        imageRef={questionsImageRef}
-        titleRef={questionsParallaxRef}
-        isImageVisible={isQuestionsImageVisible}
-        imagePosition="left"
-        imageSrc="/placeholder.jpg"
-        imageAlt="Common Questions"
+      <QuestionsSection
+        theme="light"
         title={
           <>
-            Common Questions About <br />{" "}
+            Common Questions About
+            <br />
             <span className="font-bold">Missing Teeth</span>
           </>
         }
-        titleColor="text-dental-navy"
-        scrollY={questionsParallaxOffset}
-        scrollFactor={1}
-      >
-        <div className="space-y-6 text-gray-600">
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              What causes missing teeth?
-            </h3>
-            <p>Missing teeth can result from various factors, including:</p>
-            <ul className="list-disc pl-6 mt-2">
-              <li>Tooth decay</li>
-              <li>Gum disease</li>
-              <li>Trauma</li>
-              <li>Ageing</li>
-            </ul>
-            <p className="mt-2">
-              Poor dental hygiene and lifestyle habits like smoking can also
-              lead to tooth loss.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              What are the consequences of missing teeth?
-            </h3>
-            <p>
-              Missing teeth can make it difficult to chew and speak properly. It
-              can also lead to bone loss in the jaw and changes in your facial
-              appearance. Most importantly, it can affect your self-confidence
-              and overall quality of life, which is why seeking tooth
-              replacement treatment is important.
-            </p>
-          </div>
-        </div>
-      </AnimatedImageTextSection>
+        questions={[
+          {
+            icon: "✦",
+            title: "What causes missing teeth?",
+            content: (
+              <>
+                <p>Missing teeth can result from various factors, including:</p>
+                <ul className="list-disc pl-6 mt-2">
+                  <li>Tooth decay</li>
+                  <li>Gum disease</li>
+                  <li>Trauma</li>
+                  <li>Ageing</li>
+                </ul>
+                <p className="mt-2">
+                  Poor dental hygiene and lifestyle habits like smoking can also
+                  lead to tooth loss.
+                </p>
+              </>
+            ),
+          },
+          {
+            icon: "✦",
+            title: "What are the consequences of missing teeth?",
+            content: (
+              <p>
+                Missing teeth can make it difficult to chew and speak properly.
+                It can also lead to bone loss in the jaw and changes in your
+                facial appearance. Most importantly, it can affect your
+                self-confidence and overall quality of life, which is why
+                seeking tooth replacement treatment is important.
+              </p>
+            ),
+          },
+        ]}
+      />
     </div>
   );
 };

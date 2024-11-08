@@ -6,7 +6,7 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
-
+import QuestionsSection from "@/components/ui/questions-section";
 const DentalAnxiety = () => {
   const [isReasonsImageVisible, setIsReasonsImageVisible] = useState(false);
   const [isEffectsImageVisible, setIsEffectsImageVisible] = useState(false);
@@ -214,30 +214,28 @@ const DentalAnxiety = () => {
       </section>
 
       {/* Common Questions Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h2 className="text-4xl mb-4 text-dental-navy text-center">
-              Dr. Mo Addresses Your
-              <br />
-              <span className="font-bold">
-                Top Questions About Dental Anxiety
-              </span>
-            </h2>
-          </AnimatedElement>
-          <div className="w-0.5 h-8 bg-dental-accent1 mx-auto mb-8"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <AnimatedElement transitionSize>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
-                  <span className="text-dental-accent1">✦</span>
-                  What can I do to lessen my dental anxiety?
-                </h3>
+      <QuestionsSection
+        theme="light"
+        title={
+          <>
+            Dr. Mo Addresses Your
+            <br />
+            <span className="font-bold">
+              Top Questions About Dental Anxiety
+            </span>
+          </>
+        }
+        questions={[
+          {
+            icon: "✦",
+            title: "What can I do to lessen my dental anxiety?",
+            content: (
+              <>
                 <p className="text-gray-600">
                   You don&apos;t have to face this alone! Here are some
                   strategies that may help:
                 </p>
-                <ul className="list-none mt-2 text-gray-600">
+                <ul className="list-none mt-2">
                   <li>- Talk to your hygienist or dentist about your fears</li>
                   <li>
                     - Let us know if you need a break during your appointment
@@ -249,29 +247,29 @@ const DentalAnxiety = () => {
                     - Bring a supportive friend or family member to your visit
                   </li>
                 </ul>
-              </div>
-            </AnimatedElement>
-            <AnimatedElement transitionSize>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
-                  <span className="text-dental-accent1">✦</span>
-                  What are the symptoms of dental anxiety?
-                </h3>
-                <p className="text-gray-600">
+              </>
+            ),
+          },
+          {
+            icon: "✦",
+            title: "What are the symptoms of dental anxiety?",
+            content: (
+              <>
+                <p>
                   Everyone experiences dental anxiety differently, but some
                   common symptoms include:
                 </p>
-                <ul className="list-none mt-2 text-gray-600">
+                <ul className="list-none mt-2">
                   <li>- Low blood pressure</li>
                   <li>- Panic attacks during or before appointments</li>
                   <li>- Dizziness or faintness</li>
                   <li>- Heart palpitations</li>
                 </ul>
-              </div>
-            </AnimatedElement>
-          </div>
-        </div>
-      </section>
+              </>
+            ),
+          },
+        ]}
+      />
     </div>
   );
 };

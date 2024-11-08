@@ -6,22 +6,19 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
+import QuestionsSection from "@/components/ui/questions-section";
 
 const TeethGrinding = () => {
   const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
     useState(false);
   const [isShieldImageVisible, setIsShieldImageVisible] = useState(false);
-  const [isQuestionsImageVisible, setIsQuestionsImageVisible] = useState(false);
   const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
   const [shieldParallaxOffset, setShieldParallaxOffset] = useState(0);
-  const [questionsParallaxOffset, setQuestionsParallaxOffset] = useState(0);
 
   const treatmentsImageRef = useRef(null);
   const shieldImageRef = useRef(null);
-  const questionsImageRef = useRef(null);
   const treatmentsParallaxRef = useRef(null);
   const shieldParallaxRef = useRef(null);
-  const questionsParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
@@ -33,10 +30,6 @@ const TeethGrinding = () => {
         ref: shieldImageRef,
         onIntersect: () => setIsShieldImageVisible(true),
       },
-      {
-        ref: questionsImageRef,
-        onIntersect: () => setIsQuestionsImageVisible(true),
-      },
     ],
     parallaxTargets: [
       {
@@ -46,10 +39,6 @@ const TeethGrinding = () => {
       {
         ref: shieldParallaxRef,
         onScroll: (offset) => setShieldParallaxOffset(offset),
-      },
-      {
-        ref: questionsParallaxRef,
-        onScroll: (offset) => setQuestionsParallaxOffset(offset),
       },
     ],
   });
@@ -162,67 +151,50 @@ const TeethGrinding = () => {
         </div>
       </AnimatedImageTextSection>
 
-      <AnimatedImageTextSection
-        imageRef={questionsImageRef}
-        titleRef={questionsParallaxRef}
-        isImageVisible={isQuestionsImageVisible}
-        imagePosition="left"
-        imageSrc="/placeholder.jpg"
-        imageAlt="Common Questions About Teeth Grinding"
+      <QuestionsSection
+        theme="light"
         title={
           <>
             Common Questions About <br />{" "}
             <span className="font-bold">Teeth Grinding</span>
           </>
         }
-        titleColor="text-dental-navy"
-        scrollY={questionsParallaxOffset}
-        scrollFactor={1}
-      >
-        <div className="space-y-6 text-gray-600">
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              What are the signs and symptoms of teeth grinding?
-            </h3>
-            <p className="mb-2">
-              Teeth grinding can show up in several ways, including:
-            </p>
-            <ul className="space-y-2">
-              <li>⭐ Worn enamel</li>
-              <li>⭐ Jaw pain</li>
-              <li>⭐ Headaches</li>
-              <li>⭐ Tooth sensitivity</li>
-            </ul>
-            <p className="mt-2">
-              If you notice any of these symptoms, it&apos;s important to
-              schedule an appointment with us.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              Can teeth grinding cause permanent damage?
-            </h3>
-            <p>
-              Yes, if untreated, teeth grinding can lead to cracked teeth,
-              receding gums, and even tooth loss. Early intervention and
-              appropriate treatment are vital to prevent long-term issues.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              Is teeth grinding preventable?
-            </h3>
-            <p>
-              In some cases, teeth grinding can be prevented or minimized. By
-              identifying and addressing the underlying causes, using stress
-              management techniques, and employing protective appliances, we can
-              help reduce its occurrence.
-            </p>
-          </div>
-        </div>
-      </AnimatedImageTextSection>
+        questions={[
+          {
+            icon: "✦",
+            title: "What are the signs and symptoms of teeth grinding?",
+            content: (
+              <>
+                <p className="mb-2">
+                  Teeth grinding can show up in several ways, including:
+                </p>
+                <ul className="space-y-2">
+                  <li>⭐ Worn enamel</li>
+                  <li>⭐ Jaw pain</li>
+                  <li>⭐ Headaches</li>
+                  <li>⭐ Tooth sensitivity</li>
+                </ul>
+                <p className="mt-2">
+                  If you notice any of these symptoms, it's important to
+                  schedule an appointment with us.
+                </p>
+              </>
+            ),
+          },
+          {
+            icon: "✦",
+            title: "Can teeth grinding cause permanent damage?",
+            content:
+              "Yes, if untreated, teeth grinding can lead to cracked teeth, receding gums, and even tooth loss. Early intervention and appropriate treatment are vital to prevent long-term issues.",
+          },
+          {
+            icon: "✦",
+            title: "Is teeth grinding preventable?",
+            content:
+              "In some cases, teeth grinding can be prevented or minimized. By identifying and addressing the underlying causes, using stress management techniques, and employing protective appliances, we can help reduce its occurrence.",
+          },
+        ]}
+      />
     </div>
   );
 };

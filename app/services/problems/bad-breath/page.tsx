@@ -6,26 +6,63 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
+import QuestionsSection from "@/components/ui/questions-section";
+
+const questions = [
+  {
+    icon: "✦",
+    title: "What's the best way to prevent bad breath?",
+    content: (
+      <ul className="space-y-2">
+        <li>⭐ Brush and floss every day</li>
+        <li>⭐ Use a tongue scraper after you brush</li>
+        <li>⭐ Avoid cigarettes and tobacco products</li>
+        <li>⭐ Drink lots of water and keep your mouth moist</li>
+        <li>⭐ Breathe through your nose, not your mouth</li>
+        <li>⭐ Visit the dentist every 6 months for a checkup!</li>
+      </ul>
+    ),
+  },
+  {
+    icon: "✦",
+    title: "What's the best mouthwash for bad breath?",
+    content: (
+      <p>
+        If you suffer from chronic bad breath, a mouthwash won't solve the
+        problem. In fact, mouthwash often dries out your mouth and makes your
+        breath worse! Talk to your dentist and your hygienist about whether or
+        not mouthwash is the best choice for you — and if so, which one.
+      </p>
+    ),
+  },
+  {
+    icon: "✦",
+    title: "Will gum help my bad breath?",
+    content: (
+      <p>
+        While a stick of gum will provide a burst of freshness, it's not a
+        lasting solution. In fact, gum and mints are often filled with sugar,
+        which is bad for your teeth!
+      </p>
+    ),
+  },
+];
 
 const BadBreath = () => {
   const [isCausesImageVisible, setIsCausesImageVisible] = useState(false);
   const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
     useState(false);
   const [isQuestionsImageVisible, setIsQuestionsImageVisible] = useState(false);
-  const [isFaqImageVisible, setIsFaqImageVisible] = useState(false);
   const [causesParallaxOffset, setCausesParallaxOffset] = useState(0);
   const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
   const [questionsParallaxOffset, setQuestionsParallaxOffset] = useState(0);
-  const [faqParallaxOffset, setFaqParallaxOffset] = useState(0);
 
   const causesImageRef = useRef(null);
   const treatmentsImageRef = useRef(null);
   const questionsImageRef = useRef(null);
-  const faqImageRef = useRef(null);
   const causesParallaxRef = useRef(null);
   const treatmentsParallaxRef = useRef(null);
   const questionsParallaxRef = useRef(null);
-  const faqParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
@@ -41,10 +78,6 @@ const BadBreath = () => {
         ref: questionsImageRef,
         onIntersect: () => setIsQuestionsImageVisible(true),
       },
-      {
-        ref: faqImageRef,
-        onIntersect: () => setIsFaqImageVisible(true),
-      },
     ],
     parallaxTargets: [
       {
@@ -58,10 +91,6 @@ const BadBreath = () => {
       {
         ref: questionsParallaxRef,
         onScroll: (offset) => setQuestionsParallaxOffset(offset),
-      },
-      {
-        ref: faqParallaxRef,
-        onScroll: (offset) => setFaqParallaxOffset(offset),
       },
     ],
   });
@@ -193,64 +222,16 @@ const BadBreath = () => {
         </div>
       </AnimatedImageTextSection>
 
-      <AnimatedImageTextSection
-        imageRef={faqImageRef}
-        titleRef={faqParallaxRef}
-        isImageVisible={isFaqImageVisible}
-        imagePosition="right"
-        imageSrc="/placeholder.jpg"
-        imageAlt="More Bad Breath FAQs"
+      <QuestionsSection
+        theme="dark"
         title={
           <>
             Common Questions About <br />{" "}
             <span className="font-bold">Bad Breath</span>
           </>
         }
-        backgroundColor="bg-dental-navy"
-        titleColor="text-dental-accent1"
-        scrollY={faqParallaxOffset}
-        scrollFactor={1}
-      >
-        <div className="space-y-6 text-dental-accent1">
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              What&apos;s the best way to prevent bad breath?
-            </h3>
-            <ul className="space-y-2">
-              <li>⭐ Brush and floss every day</li>
-              <li>⭐ Use a tongue scraper after you brush</li>
-              <li>⭐ Avoid cigarettes and tobacco products</li>
-              <li>⭐ Drink lots of water and keep your mouth moist</li>
-              <li>⭐ Breathe through your nose, not your mouth</li>
-              <li>⭐ Visit the dentist every 6 months for a checkup!</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              What&apos;s the best mouthwash for bad breath?
-            </h3>
-            <p>
-              If you suffer from chronic bad breath, a mouthwash won&apos;t
-              solve the problem. In fact, mouthwash often dries out your mouth
-              and makes your breath worse! Talk to your dentist and your
-              hygienist about whether or not mouthwash is the best choice for
-              you — and if so, which one.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              Will gum help my bad breath?
-            </h3>
-            <p>
-              While a stick of gum will provide a burst of freshness, it&apos;s
-              not a lasting solution. In fact, gum and mints are often filled
-              with sugar, which is bad for your teeth!
-            </p>
-          </div>
-        </div>
-      </AnimatedImageTextSection>
+        questions={questions}
+      />
     </div>
   );
 };

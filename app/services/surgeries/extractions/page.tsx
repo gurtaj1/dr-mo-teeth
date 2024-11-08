@@ -7,8 +7,9 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedElement from "@/components/ui/animated-element";
+import QuestionsSection from "@/components/ui/questions-section";
 
-const DentalImplants = () => {
+const Extractions = () => {
   const [emergencyPainParallaxOffset, setEmergencyPainParallaxOffset] =
     useState(0);
   const emergencyPainParallaxRef = useRef(null);
@@ -21,6 +22,45 @@ const DentalImplants = () => {
       },
     ],
   });
+
+  const questions = [
+    {
+      icon: "✦",
+      title: "Do you remove wisdom teeth?",
+      content:
+        "Absolutely! I treat patients of all ages who need wisdom tooth extractions. Not everyone requires this procedure, and I shall help you determine if removing your wisdom teeth are necessary for your long-term health.",
+    },
+    {
+      icon: "✦",
+      title: "Does a tooth extraction hurt?",
+      content:
+        "I make sure you're completely numb and comfortable during the procedure. Afterward, I may prescribe pain medication to help manage any discomfort. An ice pack can also be used in the days following the extraction to reduce swelling.",
+    },
+    {
+      icon: "✦",
+      title: "Can I eat and drink immediately after the extraction?",
+      content: (
+        <>
+          <p>
+            I recommend sticking to soft foods for a few days following your
+            surgery. Some good options include:
+          </p>
+          <ul className="list-none mt-2">
+            <li>- Pudding</li>
+            <li>- Yogurt</li>
+            <li>- Soft vegetables</li>
+            <li>- Ice cream</li>
+            <li>- Thin soups</li>
+          </ul>
+          <p className="mt-4">
+            When drinking, avoid using a straw, as the suction can dislodge your
+            sutures and impede the healing process. The same caution applies to
+            smoking and vaping.
+          </p>
+        </>
+      ),
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -125,77 +165,21 @@ const DentalImplants = () => {
         </div>
       </section>
 
-      {/* Top Questions Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h2 className="text-4xl mb-4 text-dental-navy text-center">
-              Dr. Mo Addresses Your
-              <br />
-              <span className="font-bold">
-                Top Questions About Tooth Extractions
-              </span>
-            </h2>
-          </AnimatedElement>
-          <div className="w-0.5 h-8 bg-dental-accent1 mx-auto mb-8"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <AnimatedElement transitionSize>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
-                  <span className="text-dental-accent1">✦</span>
-                  Do you remove wisdom teeth?
-                </h3>
-                <p className="text-gray-600">
-                  Absolutely! I treat patients of all ages who need wisdom tooth
-                  extractions. Not everyone requires this procedure, and I shall
-                  help you determine if removing your wisdom teeth are necessary
-                  for your long-term health.
-                </p>
-              </div>
-            </AnimatedElement>
-            <AnimatedElement transitionSize>
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2">
-                  <span className="text-dental-accent1">✦</span>
-                  Does a tooth extraction hurt?
-                </h3>
-                <p className="text-gray-600">
-                  I make sure you&apos;re completely numb and comfortable during
-                  the procedure. Afterward, I may prescribe pain medication to
-                  help manage any discomfort. An ice pack can also be used in
-                  the days following the extraction to reduce swelling.
-                </p>
-              </div>
-            </AnimatedElement>
-            <div className="md:col-span-2">
-              <AnimatedElement transitionSize>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy flex items-center gap-2 md:justify-center">
-                  <span className="text-dental-accent1">✦</span>
-                  Can I eat and drink immediately after the extraction?
-                </h3>
-                <p className="text-gray-600 md:text-center">
-                  I recommend sticking to soft foods for a few days following
-                  your surgery. Some good options include:
-                </p>
-                <ul className="list-none mt-2 text-gray-600 md:text-center">
-                  <li>- Pudding</li>
-                  <li>- Yogurt</li>
-                  <li>- Soft vegetables</li>
-                  <li>- Ice cream</li>
-                  <li>- Thin soups</li>
-                </ul>
-                <p className="mt-4 text-gray-600 md:text-center">
-                  When drinking, avoid using a straw, as the suction can
-                  dislodge your sutures and impede the healing process. The same
-                  caution applies to smoking and vaping.
-                </p>
-              </AnimatedElement>
-            </div>
-          </div>
-        </div>
-      </section>
+      <QuestionsSection
+        theme="light"
+        title={
+          <>
+            Dr. Mo Addresses Your
+            <br />
+            <span className="font-bold">
+              Top Questions About Tooth Extractions
+            </span>
+          </>
+        }
+        questions={questions}
+      />
     </div>
   );
 };
 
-export default DentalImplants;
+export default Extractions;
