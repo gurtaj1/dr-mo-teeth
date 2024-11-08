@@ -4,8 +4,6 @@ import { useRef, useState } from "react";
 
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
 
@@ -14,20 +12,16 @@ const DentalAnxiety = () => {
   const [isEffectsImageVisible, setIsEffectsImageVisible] = useState(false);
   const [isManagementImageVisible, setIsManagementImageVisible] =
     useState(false);
-  const [isQuestionsImageVisible, setIsQuestionsImageVisible] = useState(false);
   const [reasonsParallaxOffset, setReasonsParallaxOffset] = useState(0);
   const [effectsParallaxOffset, setEffectsParallaxOffset] = useState(0);
   const [managementParallaxOffset, setManagementParallaxOffset] = useState(0);
-  const [questionsParallaxOffset, setQuestionsParallaxOffset] = useState(0);
 
   const reasonsImageRef = useRef(null);
   const effectsImageRef = useRef(null);
   const managementImageRef = useRef(null);
-  const questionsImageRef = useRef(null);
   const reasonsParallaxRef = useRef(null);
   const effectsParallaxRef = useRef(null);
   const managementParallaxRef = useRef(null);
-  const questionsParallaxRef = useRef(null);
 
   useIntersectionObservers({
     intersectionTargets: [
@@ -43,10 +37,6 @@ const DentalAnxiety = () => {
         ref: managementImageRef,
         onIntersect: () => setIsManagementImageVisible(true),
       },
-      {
-        ref: questionsImageRef,
-        onIntersect: () => setIsQuestionsImageVisible(true),
-      },
     ],
     parallaxTargets: [
       {
@@ -60,10 +50,6 @@ const DentalAnxiety = () => {
       {
         ref: managementParallaxRef,
         onScroll: (offset) => setManagementParallaxOffset(offset),
-      },
-      {
-        ref: questionsParallaxRef,
-        onScroll: (offset) => setQuestionsParallaxOffset(offset),
       },
     ],
   });
