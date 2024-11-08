@@ -1,6 +1,5 @@
 import { RefObject } from "react";
 import Image from "next/image";
-import AnimatedElement from "@/components/ui/animated-element";
 
 interface AnimatedImageTextSectionProps {
   imageRef: RefObject<HTMLDivElement>;
