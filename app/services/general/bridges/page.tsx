@@ -35,7 +35,7 @@ const Bridges = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8">
+            <h1 className="text-7xl font-bold text-center mb-8">
               Dental Bridges
             </h1>
           </AnimatedElement>

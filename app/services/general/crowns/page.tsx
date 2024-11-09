@@ -50,7 +50,7 @@ const Crowns = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl mb-8 text-dental-accent1">
+            <h1 className="text-7xl mb-8 text-dental-accent1">
               Place a crown
               <br /> <span className="font-bold">Before your tooth cracks</span>
             </h1>

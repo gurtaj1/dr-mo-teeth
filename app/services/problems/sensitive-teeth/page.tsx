@@ -62,7 +62,7 @@ const SensitiveTeeth = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl mb-8">
+            <h1 className="text-7xl mb-8">
               <span className="font-bold">Take Control</span>
               <br />
               Of Your Oral Health

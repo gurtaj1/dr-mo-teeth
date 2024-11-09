@@ -64,7 +64,7 @@ const BrokenTeeth = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl mb-8">
+            <h1 className="text-7xl mb-8">
               What Causes a <br />
               <span className="font-bold">Broken Tooth?</span>
             </h1>
