@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-dental-black text-dental-accent1 pt-12 pb-12">
+    <footer className="bg-dental-black text-white pt-12 pb-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           <div>
@@ -22,7 +22,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="md:border-l md:border-dental-accent1 md:pl-8">
+          <div className="border-t md:border-t-0 md:border-l border-dental-accent1 pt-8 md:pt-0 md:pl-8">
             <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
             <div className="flex space-x-4">
               <Link
@@ -35,7 +35,7 @@ const Footer = () => {
               {/* Add more social media icons as needed */}
             </div>
           </div>
-          <div className="md:border-l md:border-dental-accent1 md:pl-8">
+          <div className="border-t md:border-t-0 md:border-l border-dental-accent1 pt-8 md:pt-0 md:pl-8">
             <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
             <ul className="space-y-2">
               <li className="flex items-center">
@@ -77,7 +77,7 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <Button asChild className="mt-4 w-full text-dental-accent1">
+            <Button asChild className="mt-4 w-full text-white">
               <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
                 Book an Appointment
               </Link>
