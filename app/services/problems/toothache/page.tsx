@@ -120,22 +120,22 @@ const Toothache = () => {
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
-        <h3 className="text-dental-accent1 font-bold mb-2">Fillings</h3>
-        <p className="text-dental-accent1 mb-4">
+        <h3 className=" font-bold mb-2">Fillings</h3>
+        <p className=" mb-4">
           Tooth pain from decay often means there&apos;s a cavity. We can clean
           out the affected area and use fillings to restore and protect your
           tooth from further pain.
         </p>
 
-        <h3 className="text-dental-accent1 font-bold mb-2">Root Canals</h3>
-        <p className="text-dental-accent1 mb-4">
+        <h3 className=" font-bold mb-2">Root Canals</h3>
+        <p className=" mb-4">
           If a tooth is severely infected, root canal therapy may be necessary
           to save it and restore its function. We ensure a comfortable
           experience during this treatment to help ease any dental anxiety.
         </p>
 
-        <h3 className="text-dental-accent1 font-bold mb-2">Extractions</h3>
-        <p className="text-dental-accent1">
+        <h3 className=" font-bold mb-2">Extractions</h3>
+        <p className="">
           While we aim to keep your natural teeth whenever possible, sometimes
           an extraction is the best option. We offer same-day appointments for
           emergency extractions, and we&apos;ll work with you to create a plan

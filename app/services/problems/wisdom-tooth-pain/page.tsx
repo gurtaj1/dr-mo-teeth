@@ -71,23 +71,21 @@ const WisdomToothPain = () => {
         scrollY={wisdomParallaxOffset}
         scrollFactor={1}
       >
-        <h3 className="text-dental-accent1 font-bold mb-2">
-          What Causes Wisdom Tooth Pain?
-        </h3>
-        <p className="text-dental-accent1 mb-4">
+        <h3 className=" font-bold mb-2">What Causes Wisdom Tooth Pain?</h3>
+        <p className=" mb-4">
           Wisdom tooth pain is a common issue for many people. While some can
           accommodate their new molars without problems, most don&apos;t have
           enough space for them, leading to impaction. Impacted wisdom teeth can
           cause significant pain and health risks, even if they don&apos;t cause
           immediate issues.
         </p>
-        <p className="text-dental-accent1 mb-4">
+        <p className=" mb-4">
           When wisdom teeth are impacted, they can become inflamed and may lead
           to infection and swelling. Because these teeth are located near facial
           muscles, you might experience jaw pain and discomfort in your gums as
           well.
         </p>
-        <p className="text-dental-accent1">
+        <p className="">
           I can determine if your wisdom teeth are the source of your discomfort
           and help create a treatment plan to restore your oral health.
         </p>
@@ -139,10 +137,10 @@ const WisdomToothPain = () => {
         scrollY={wisdomProcessParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-dental-accent1 mb-4">
+        <p className=" mb-4">
           The extraction process typically involves the following steps:
         </p>
-        <ol className="space-y-2 text-dental-accent1">
+        <ol className="space-y-2 ">
           <li>
             1. Local Anaesthetic: We&apos;ll administer a local anaesthetic to
             ensure you don&apos;t feel any pain during the procedure.
@@ -164,7 +162,7 @@ const WisdomToothPain = () => {
             your recovery to ensure a smooth healing process.
           </li>
         </ol>
-        <p className="text-dental-accent1 mt-4">
+        <p className=" mt-4">
           With this approach, I aim to make your experience as comfortable as
           possible while ensuring your oral health is restored.
         </p>

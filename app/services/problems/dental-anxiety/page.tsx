@@ -119,7 +119,7 @@ const DentalAnxiety = () => {
         scrollY={effectsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-dental-accent1">
+        <div className="space-y-4 ">
           <p>
             While dental anxiety itself won&apos;t cause cavities, it can lead
             to missed appointments and untreated issues. Many patients avoid
@@ -167,7 +167,7 @@ const DentalAnxiety = () => {
             </h2>
           </AnimatedElement>
           <AnimatedElement>
-            <ul className="text-dental-accent1 max-w-3xl mx-auto space-y-2 text-center">
+            <ul className=" max-w-3xl mx-auto space-y-2 text-center">
               <li>
                 • No-Judgment Appointments: Feel free to discuss your concerns
                 openly

@@ -17,7 +17,7 @@ const config: Config = {
           accent2: "rgb(70,219,251)", // Bright cyan
           dark: "rgb(4,78,125)", // Dark blue
           black: "rgb(4,4,4)", // Pure black
-          navy: "rgb(12,41,57)", // Navy blue
+          navy: "rgb(20, 80, 112)", // Navy blue
           teal: "rgb(56,192,188)", // Teal
           gray: "rgb(84,84,84)", // Gray
         },

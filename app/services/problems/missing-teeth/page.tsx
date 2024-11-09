@@ -96,7 +96,7 @@ const MissingTooth = () => {
         scrollY={optionsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-dental-accent1">
+        <div className="space-y-6 ">
           <div>
             <h3 className="text-xl font-bold mb-2">Dental Implants</h3>
             <p>

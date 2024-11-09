@@ -105,7 +105,7 @@ const DentalImplants = () => {
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
-        <ul className="space-y-4 text-dental-accent1">
+        <ul className="space-y-4 ">
           <li>⭐ Strengthens your jawbone</li>
           <li>⭐ Promotes healthy gums</li>
           <li>⭐ Restores your ability to chew and speak</li>
@@ -153,12 +153,12 @@ const DentalImplants = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
+            <h2 className="text-3xl font-bold mb-6  text-center">
               Dental Implant Retained Bridges
             </h2>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className=" max-w-3xl mx-auto text-center">
               Dental implant retained bridges are a fixed option of replacing
               multiple missing teeth. Instead of using traditional bridges that
               can damage the neighbouring teeth for support, these bridges are

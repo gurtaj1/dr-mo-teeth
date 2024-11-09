@@ -82,10 +82,8 @@ export default function IVSedationPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/10 p-6 rounded-lg">
               <AnimatedElement>
-                <h3 className="text-dental-accent1 text-2xl mb-4 text-center">
-                  Before
-                </h3>
-                <ul className="text-dental-accent1 space-y-3">
+                <h3 className=" text-2xl mb-4 text-center">Before</h3>
+                <ul className=" space-y-3">
                   <li>
                     • Checks will be done (e.g medical history), and
                     measurements (e.g blood pressure) to make sure its safe to
@@ -105,10 +103,8 @@ export default function IVSedationPage() {
             </div>
             <div className="bg-white/10 p-6 rounded-lg">
               <AnimatedElement>
-                <h3 className="text-dental-accent1 text-2xl mb-4 text-center">
-                  During
-                </h3>
-                <ul className="text-dental-accent1 space-y-3">
+                <h3 className=" text-2xl mb-4 text-center">During</h3>
+                <ul className=" space-y-3">
                   <li>
                     • The dentist will explain the planned treatment and confirm
                     your understanding
@@ -134,10 +130,8 @@ export default function IVSedationPage() {
             </div>
             <div className="bg-white/10 p-6 rounded-lg">
               <AnimatedElement>
-                <h3 className="text-dental-accent1 text-2xl mb-4 text-center">
-                  After
-                </h3>
-                <ul className="text-dental-accent1 space-y-3">
+                <h3 className=" text-2xl mb-4 text-center">After</h3>
+                <ul className=" space-y-3">
                   <li>
                     • You&apos;ll be taken to a recovery area where your escort
                     will wait
@@ -159,7 +153,7 @@ export default function IVSedationPage() {
             </div>
           </div>
           <AnimatedElement>
-            <p className="text-dental-accent1 text-center mt-8">
+            <p className=" text-center mt-8">
               If your anxious about dental treatment,{" "}
               <Link
                 href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com"

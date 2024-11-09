@@ -103,7 +103,7 @@ const Veneers = () => {
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
-        <ul className="space-y-4 text-dental-accent1">
+        <ul className="space-y-4 ">
           <li>⭐ Natural-looking results</li>
           <li>⭐ Stain-resistant surface</li>
           <li>⭐ Minimal tooth reduction required</li>
@@ -143,12 +143,12 @@ const Veneers = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-5xl font-bold mb-6 text-dental-accent1 text-center">
+            <h2 className="text-5xl font-bold mb-6  text-center">
               Composite Veneers
             </h2>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className=" max-w-3xl mx-auto text-center">
               Composite veneers offer a more affordable alternative to porcelain
               veneers. Made from tooth-colored resin material, they can be
               applied in a single visit and require less removal of natural

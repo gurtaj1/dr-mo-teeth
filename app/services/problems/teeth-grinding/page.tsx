@@ -117,7 +117,7 @@ const TeethGrinding = () => {
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-dental-accent1">
+        <div className="space-y-4 ">
           <p>
             I understand how important a good night&apos;s sleep is and how
             teeth grinding can disrupt your daily life. That&apos;s why I&apos;m

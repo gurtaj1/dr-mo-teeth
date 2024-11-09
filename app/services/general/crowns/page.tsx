@@ -43,7 +43,7 @@ const Crowns = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+      <div className="text-5xl text-center  bg-dental-navy pt-8">
         <h1 className="text-8xl">Crowns</h1>
       </div>
       {/* Dental Crowns Section */}
@@ -95,7 +95,7 @@ const Crowns = () => {
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >
-        <ul className="space-y-4 text-dental-accent1">
+        <ul className="space-y-4 ">
           <li>⭐ Protects and strengthens damaged teeth</li>
           <li>⭐ Restores natural appearance</li>
           <li>⭐ Improves tooth function</li>

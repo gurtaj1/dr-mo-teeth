@@ -109,7 +109,7 @@ const SensitiveTeeth = () => {
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-dental-accent1">
+        <div className="space-y-4 ">
           <div>
             <h3 className="text-xl font-bold mb-2">Overzealous brushing</h3>
             <p>

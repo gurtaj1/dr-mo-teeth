@@ -61,19 +61,19 @@ const BleedingGums = () => {
       content: (
         <ul className="space-y-2">
           <li>
-            <span className="text-dental-accent1">⭐</span> Brush your teeth
-            twice a day for 2 minutes
+            <span className="">⭐</span> Brush your teeth twice a day for 2
+            minutes
           </li>
           <li>
-            <span className="text-dental-accent1">⭐</span> Floss once a day
+            <span className="">⭐</span> Floss once a day
           </li>
           <li>
-            <span className="text-dental-accent1">⭐</span> Avoid smoking,
-            vaping, or chewing tobacco
+            <span className="">⭐</span> Avoid smoking, vaping, or chewing
+            tobacco
           </li>
           <li>
-            <span className="text-dental-accent1">⭐</span> Visit us every 6
-            months for a professional exam and cleaning
+            <span className="">⭐</span> Visit us every 6 months for a
+            professional exam and cleaning
           </li>
         </ul>
       ),

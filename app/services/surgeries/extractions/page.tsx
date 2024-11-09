@@ -111,39 +111,35 @@ const Extractions = () => {
       {/* Reasons for Extraction Section */}
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl mb-12 text-dental-accent1 text-center">
+          <h2 className="text-3xl mb-12  text-center">
             <strong>Reasons for a Tooth Extraction </strong>
             <br />
             May Include:
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="bg-white/10 p-6 rounded-lg text-center">
-              <div className="text-dental-accent1 text-4xl mb-4">
+              <div className=" text-4xl mb-4">
                 <i className="fas fa-virus"></i>
               </div>
-              <p className="text-dental-accent1">Infected or abscessed tooth</p>
+              <p className="">Infected or abscessed tooth</p>
             </div>
             <div className="bg-white/10 p-6 rounded-lg text-center">
-              <div className="text-dental-accent1 text-4xl mb-4">
+              <div className=" text-4xl mb-4">
                 <i className="fas fa-tooth"></i>
               </div>
-              <p className="text-dental-accent1">
-                Broken or severely damaged teeth
-              </p>
+              <p className="">Broken or severely damaged teeth</p>
             </div>
             <div className="bg-white/10 p-6 rounded-lg text-center">
-              <div className="text-dental-accent1 text-4xl mb-4">
+              <div className=" text-4xl mb-4">
                 <i className="fas fa-teeth"></i>
               </div>
-              <p className="text-dental-accent1">
-                Problems caused by wisdom teeth
-              </p>
+              <p className="">Problems caused by wisdom teeth</p>
             </div>
             <div className="bg-white/10 p-6 rounded-lg text-center">
-              <div className="text-dental-accent1 text-4xl mb-4">
+              <div className=" text-4xl mb-4">
                 <i className="fas fa-arrows-alt-h"></i>
               </div>
-              <p className="text-dental-accent1">Overcrowding in the mouth</p>
+              <p className="">Overcrowding in the mouth</p>
             </div>
           </div>
         </div>

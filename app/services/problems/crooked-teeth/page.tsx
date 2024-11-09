@@ -132,7 +132,7 @@ const CrookedTeeth = () => {
         scrollY={dentalCareParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-dental-accent1">
+        <div className="space-y-4 ">
           <p>
             Crooked teeth may not be a serious issue on their own, but if you
             experience any of the following symptoms, it might be time to

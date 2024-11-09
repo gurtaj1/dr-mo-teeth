@@ -118,7 +118,7 @@ const HomePage = () => {
           <source src={"/mo-teeth-invideo.mp4"} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-dental-black bg-opacity-60"></div>
-        <div className="relative z-10 text-center text-dental-accent1">
+        <div className="relative z-10 text-center ">
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4">
             DR. MO
           </h1>
@@ -145,9 +145,7 @@ const HomePage = () => {
           <div className="mx-auto">
             <div className="space-y-4">
               <AnimatedElement className="max-w-2xl mx-auto text-center">
-                <h3 className="text-2xl font-semibold text-dental-accent1">
-                  Dr Mohsin Aslam
-                </h3>
+                <h3 className="text-2xl font-semibold ">Dr Mohsin Aslam</h3>
                 <ul className="space-y-2">
                   <li>Bachelor of Dental Surgery (BDS) – Cardiff University</li>
                   <li>
@@ -158,7 +156,7 @@ const HomePage = () => {
                 </ul>
               </AnimatedElement>
               <AnimatedElement>
-                <p className="text-dental-accent1">
+                <p className="">
                   Choosing me as your dentist means opting for a blend of
                   professional expertise, compassionate care, and a commitment
                   to your overall dental health. With years of experience and
@@ -315,12 +313,10 @@ const HomePage = () => {
                         />
                       </div>
                       <div className="flex flex-col flex-1">
-                        <h3 className="text-xl font-semibold mb-2 text-dental-accent1">
+                        <h3 className="text-xl font-semibold mb-2 ">
                           {service.title}
                         </h3>
-                        <p className="text-dental-accent1/80">
-                          {service.description}
-                        </p>
+                        <p className="/80">{service.description}</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -385,7 +381,7 @@ const HomePage = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 text-dental-accent1">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 ">
               Patient Reviews
             </h2>
           </AnimatedElement>
@@ -434,7 +430,7 @@ const HomePage = () => {
                     disabled={activeIndex === 0}
                     aria-label="Previous testimonials"
                   >
-                    <ChevronLeft className="h-4 w-4 text-dental-accent1" />
+                    <ChevronLeft className="h-4 w-4 " />
                   </Button>
                   <Button
                     variant="outline"
@@ -444,7 +440,7 @@ const HomePage = () => {
                     disabled={activeIndex === maxIndex}
                     aria-label="Next testimonials"
                   >
-                    <ChevronRight className="h-4 w-4 text-dental-accent1" />
+                    <ChevronRight className="h-4 w-4 " />
                   </Button>
                 </div>
               </div>

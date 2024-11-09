@@ -102,7 +102,7 @@ const Dentures = () => {
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
-        <ul className="space-y-4 text-dental-accent1">
+        <ul className="space-y-4 ">
           <li>⭐ Restore your natural smile</li>
           <li>⭐ Improve eating and speaking ability</li>
           <li>⭐ Support facial muscles</li>

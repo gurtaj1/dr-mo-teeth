@@ -54,7 +54,7 @@ const SmileMakeover = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+      <div className="text-8xl text-center  bg-dental-navy pt-8">
         <h1>Smile Makeover</h1>
       </div>
       <AnimatedImageTextSection
@@ -131,7 +131,7 @@ const SmileMakeover = () => {
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-dental-accent1">
+        <div className="space-y-4 ">
           <ol className="space-y-4">
             <li>
               <strong>1. Initial Consultation</strong>

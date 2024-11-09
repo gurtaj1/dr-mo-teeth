@@ -16,7 +16,7 @@ const Invisalign = () => {
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className=" max-w-3xl mx-auto text-center">
               Clear aligner therapy is a modern way to straighten teeth using a
               series of custom-made, transparent trays. These aligners gently
               shift your teeth into the desired position over time, making it a
@@ -49,7 +49,7 @@ const Invisalign = () => {
 
           <div className="text-center mt-8">
             <AnimatedElement>
-              <p className="text-dental-accent1 mb-4">
+              <p className=" mb-4">
                 Check out my presentation on clear aligners on my{" "}
                 <Link
                   href="https://instagram.com/drmosmiles"

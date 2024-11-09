@@ -54,7 +54,7 @@ const DentalFillings = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+      <div className="text-8xl text-center  bg-dental-navy pt-8">
         <h1>Dental Fillings</h1>
       </div>
 
@@ -71,7 +71,7 @@ const DentalFillings = () => {
         scrollY={heroParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-dental-accent1 mb-8">
+        <p className=" mb-8">
           A dental filling is a treatment used to restore a tooth that has been
           damaged by decay or injury. There are two common types of fillings:
           amalgam and composite. Amalgam fillings are made from a mixture of
@@ -131,7 +131,7 @@ const DentalFillings = () => {
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >
-        <ol className="space-y-4 text-dental-accent1">
+        <ol className="space-y-4 ">
           <li>1. Examination and x-rays to assess decay</li>
           <li>2. Local anesthetic to ensure comfort</li>
           <li>3. Removal of decay and cleaning of the cavity</li>

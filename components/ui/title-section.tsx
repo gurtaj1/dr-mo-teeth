@@ -27,7 +27,7 @@ const TitleSection = ({
         {bodyText.map((text, index) => (
           <AnimatedElement key={index}>
             <p
-              className={`text-dental-accent1 max-w-3xl mx-auto text-center ${
+              className={`max-w-3xl mx-auto text-center ${
                 index > 0 ? "mt-4" : ""
               }`}
             >

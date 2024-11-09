@@ -55,7 +55,7 @@ const GumTherapy = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+      <div className="text-8xl text-center  bg-dental-navy pt-8">
         <h1>Gum Therapy</h1>
       </div>
       <AnimatedImageTextSection
@@ -71,7 +71,7 @@ const GumTherapy = () => {
         scrollY={introParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-dental-accent1 mb-4">
+        <p className=" mb-4">
           Gum disease treatment is a dental procedure aimed at improving the
           health of your gums and preventing further complications. Gum disease,
           also known as periodontal disease, occurs when bacteria build up in
@@ -79,13 +79,13 @@ const GumTherapy = () => {
           peel away from the teeth and the bone structure around the teeth to
           deteriorate making the teeth loose.
         </p>
-        <p className="text-dental-accent1 mb-4">
+        <p className=" mb-4">
           Treatment typically starts with a thorough cleaning to remove plaque
           and tartar from your teeth and below the gumline, often called scaling
           and root planing. In more advanced cases, your dentist may recommend
           additional therapies, such as antibiotics or surgical options.
         </p>
-        <p className="text-dental-accent1 mb-6">
+        <p className=" mb-6">
           The goal of gum disease treatment is to restore your gum health, and
           help maintain the supporting structures of the teeth so that they
           don&apos;t become loose and help you maintain a healthy smile for
@@ -129,7 +129,7 @@ const GumTherapy = () => {
         scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >
-        <ul className="space-y-4 text-dental-accent1">
+        <ul className="space-y-4 ">
           <li>⭐ Prevents tooth loss</li>
           <li>⭐ Reduces inflammation and bleeding</li>
           <li>⭐ Eliminates bad breath</li>

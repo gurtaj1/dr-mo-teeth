@@ -97,7 +97,7 @@ const CleaningsAndExams = () => {
         scrollY={cleaningParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-dental-accent1">
+        <div className="space-y-6 ">
           <p>
             A scale and polish is a dental cleaning procedure that helps keep
             your teeth and gums healthy. During this treatment, your dentist or

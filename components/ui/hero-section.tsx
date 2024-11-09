@@ -32,11 +32,11 @@ const HeroSection = ({
         </AnimatedElement>
         <div className={"w-1/4 border-b-2 border-dental-teal mb-6"}></div>
         <AnimatedElement>
-          <p className="text-dental-accent1 mx-auto">{description}</p>
+          <p className=" mx-auto">{description}</p>
         </AnimatedElement>
         {bulletPoints && (
           <AnimatedElement>
-            <ul className="text-dental-accent1 mx-auto mt-4 space-y-2">
+            <ul className=" mx-auto mt-4 space-y-2">
               {bulletPoints.map((point, index) => (
                 <li key={index}>- {point}</li>
               ))}

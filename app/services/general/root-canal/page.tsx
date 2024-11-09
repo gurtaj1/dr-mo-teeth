@@ -42,7 +42,7 @@ const RootCanal = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
+      <div className="text-8xl text-center  bg-dental-navy pt-8">
         <h1>Root Canal Therapy</h1>
       </div>
       {/* Root Canal Section */}
@@ -59,7 +59,7 @@ const RootCanal = () => {
         scrollY={heroParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-dental-accent1 mb-8">
+        <p className=" mb-8">
           Root canals often get a bad reputation, but they&apos;re one of the
           most misunderstood procedures in dentistry. While many people find
           them intimidating, a root canal is actually a highly effective

@@ -143,7 +143,7 @@ const BadBreath = () => {
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-dental-accent1">
+        <div className="space-y-6 ">
           <ol className="space-y-2">
             <li>
               <strong>Step 1.</strong> Request Your Appointment

@@ -87,7 +87,7 @@ const TeethWhitening = () => {
         scrollY={factsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-dental-accent1">
+        <div className="space-y-6 ">
           <div>
             <h3 className="font-bold mb-2">What Causes Stained Teeth?</h3>
             <ul className="space-y-1">
