@@ -6,6 +6,7 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
+import TitleSection from "@/components/ui/title-section";
 const Veneers = () => {
   const [isProcessImageVisible, setIsProcessImageVisible] = useState(false);
   const [isBenefitsImageVisible, setIsBenefitsImageVisible] = useState(false);
@@ -43,29 +44,12 @@ const Veneers = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Veneers Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl font-bold text-center mb-8 text-dental-accent1">
-              Veneers
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              Veneers are thin, custom-made shells that are placed over the
-              front surface of your teeth to improve their appearance. They can
-              help fix issues like discoloration, chips, or gaps, giving you a
-              beautiful, natural-looking smile. Made from either porcelain or
-              resin, veneers are designed to match the colour and shape of your
-              existing teeth. The process typically involves a small amount of
-              enamel being removed to ensure a proper fit, and then the veneers
-              are securely bonded to your teeth. With proper care, veneers can
-              last for many years, making them a popular choice for those
-              looking to enhance their smile.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <TitleSection
+        titleText="Veneers"
+        bodyText={[
+          "Veneers are thin, custom-made shells that are placed over the front surface of your teeth to improve their appearance. They can help fix issues like discoloration, chips, or gaps, giving you a beautiful, natural-looking smile. Made from either porcelain or resin, veneers are designed to match the colour and shape of your existing teeth. The process typically involves a small amount of enamel being removed to ensure a proper fit, and then the veneers are securely bonded to your teeth. With proper care, veneers can last for many years, making them a popular choice for those looking to enhance their smile.",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={processImageRef}
@@ -132,7 +116,7 @@ const Veneers = () => {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-3xl font-bold mb-6 text-dental-navy text-center">
+            <h2 className="text-5xl font-bold mb-6 text-dental-navy text-center">
               Porcelain Veneers
             </h2>
           </AnimatedElement>
@@ -159,7 +143,7 @@ const Veneers = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
+            <h2 className="text-5xl font-bold mb-6 text-dental-accent1 text-center">
               Composite Veneers
             </h2>
           </AnimatedElement>

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedElement from "@/components/ui/animated-element";
 import QuestionsSection from "@/components/ui/questions-section";
-
+import TitleSection from "@/components/ui/title-section";
 const Extractions = () => {
   const [emergencyPainParallaxOffset, setEmergencyPainParallaxOffset] =
     useState(0);
@@ -65,26 +65,12 @@ const Extractions = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Extractions Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl font-bold text-center mb-8">Extractions</h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              Tooth extractions are performed in a manner to ensure your comfort
-              and safety. First, the area around the tooth is numbed with local
-              anaesthesia so you won&apos;t feel any pain during the procedure.
-              Next, carefully loosening the tooth using special tools to gently
-              remove it from its position. If the tooth is impacted or difficult
-              to reach, the dentist may need to break it into smaller pieces and
-              carefully remove some bone around the roots of the tooth for
-              easier removal. After the extraction, the area is cleaned, and you
-              are provided with care instructions to help you heal.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <TitleSection
+        titleText="Extractions"
+        bodyText={[
+          "Tooth extractions are performed in a manner to ensure your comfort and safety. First, the area around the tooth is numbed with local anaesthesia so you won't feel any pain during the procedure. Next, carefully loosening the tooth using special tools to gently remove it from its position. If the tooth is impacted or difficult to reach, the dentist may need to break it into smaller pieces and carefully remove some bone around the roots of the tooth for easier removal. After the extraction, the area is cleaned, and you are provided with care instructions to help you heal.",
+        ]}
+      />
 
       {/* Emergency Pain Section */}
       <section className="py-16">

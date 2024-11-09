@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
+import TitleSection from "@/components/ui/title-section";
 
 const Dentures = () => {
   const [isDentureTypesImageVisible, setIsDentureTypesImageVisible] =
@@ -46,32 +46,13 @@ const Dentures = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Dentures Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl font-bold text-center mb-8">Dentures</h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              Dentures are removable dental appliances designed to replace
-              missing teeth and restore your smile. They can be complete
-              dentures, which replace all your teeth, or partial dentures, which
-              fill in gaps when some natural teeth are still present. Made from
-              materials like acrylic or a combination of metal and plastic,
-              dentures are custom fitted to your mouth for comfort and
-              stability.
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
-              They not only help improve your appearance but also make it easier
-              to eat and speak. With proper care, dentures can be a long-lasting
-              solution for tooth loss, helping you regain your confidence and
-              enjoy everyday activities.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <TitleSection
+        titleText="Dentures"
+        bodyText={[
+          "Dentures are removable dental appliances designed to replace missing teeth and restore your smile. They can be complete dentures, which replace all your teeth, or partial dentures, which fill in gaps when some natural teeth are still present. Made from materials like acrylic or a combination of metal and plastic, dentures are custom fitted to your mouth for comfort and stability.",
+          "They not only help improve your appearance but also make it easier to eat and speak. With proper care, dentures can be a long-lasting solution for tooth loss, helping you regain your confidence and enjoy everyday activities.",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={dentureTypesImageRef}

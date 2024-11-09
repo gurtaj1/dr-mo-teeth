@@ -34,30 +34,12 @@ export default function IVSedationPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* IV Sedation Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-3xl font-bold mb-6 text-center">
-              Intravenous (IV) Sedation
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              IV sedation is a highly effective option for patients experiencing
-              dental anxiety, allowing them to receive the necessary treatments
-              in a relaxed and comfortable state. It involves administering
-              sedative medication directly into the bloodstream, which helps
-              patients feel calm and at ease during their dental procedures.
-              Unlike general anaesthesia, IV sedation keeps patients conscious
-              but deeply relaxed, enabling them to respond to questions and
-              instructions while remaining unaware of the procedure itself. This
-              can significantly reduce anxiety and fear associated with dental
-              visits, making it an ideal solution for those who have difficulty
-              coping with traditional dental treatments.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <TitleSection
+        titleText="Intravenous (IV) Sedation"
+        bodyText={[
+          "IV sedation is a highly effective option for patients experiencing dental anxiety, allowing them to receive the necessary treatments in a relaxed and comfortable state. It involves administering sedative medication directly into the bloodstream, which helps patients feel calm and at ease during their dental procedures. Unlike general anaesthesia, IV sedation keeps patients conscious but deeply relaxed, enabling them to respond to questions and instructions while remaining unaware of the procedure itself. This can significantly reduce anxiety and fear associated with dental visits, making it an ideal solution for those who have difficulty coping with traditional dental treatments.",
+        ]}
+      />
 
       {/* Who Needs IV Sedation Section */}
       <AnimatedImageTextSection

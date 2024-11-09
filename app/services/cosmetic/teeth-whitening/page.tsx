@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
+import TitleSection from "../../../../components/ui/title-section";
 
 const TeethWhitening = () => {
   const [isLightenImageVisible, setIsLightenImageVisible] = useState(false);
@@ -44,28 +44,12 @@ const TeethWhitening = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Teeth Whitening Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl font-bold text-center mb-8">
-              Teeth Whitening
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              Teeth whitening is a popular dental treatment that brightens your
-              smile. It works by using safe bleaching agents that lighten the
-              enamel, helping to restore your teeth to a more radiant shade.
-              There are different options for teeth whitening, including
-              in-surgery treatments done by your dentist for quick results, or
-              take-home kits that allow you to whiten at your own pace. Whether
-              you want to enhance your smile for a special occasion or simply
-              boost your confidence, teeth whitening can give you a brighter,
-              whiter smile.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <TitleSection
+        titleText="Teeth Whitening"
+        bodyText={[
+          "Teeth whitening is a popular dental treatment that brightens your smile. It works by using safe bleaching agents that lighten the enamel, helping to restore your teeth to a more radiant shade. There are different options for teeth whitening, including in-surgery treatments done by your dentist for quick results, or take-home kits that allow you to whiten at your own pace. Whether you want to enhance your smile for a special occasion or simply boost your confidence, teeth whitening can give you a brighter, whiter smile.",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={lightenImageRef}

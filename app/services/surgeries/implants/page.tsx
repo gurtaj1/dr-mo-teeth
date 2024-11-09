@@ -6,7 +6,7 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
-
+import TitleSection from "@/components/ui/title-section";
 const DentalImplants = () => {
   const [isImplantJourneyImageVisible, setIsImplantJourneyImageVisible] =
     useState(false);
@@ -46,27 +46,12 @@ const DentalImplants = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Dental Implants Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl font-bold text-center mb-8">
-              Dental Implants
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              Dental implants are a reliable way to replace missing teeth. These
-              small titanium screws are placed into your jawbone, acting like
-              the root of a tooth. Once they integrate with the bone, they
-              provide a sturdy base for a custom-made crown that looks and
-              functions like a natural tooth. Dental implants not only enhance
-              your smile but also help restore your ability to chew and speak
-              comfortably, making them a great long-term solution for tooth
-              loss.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <TitleSection
+        titleText="Dental Implants"
+        bodyText={[
+          "Dental implants are a reliable way to replace missing teeth. These small titanium screws are placed into your jawbone, acting like the root of a tooth. Once they integrate with the bone, they provide a sturdy base for a custom-made crown that looks and functions like a natural tooth. Dental implants not only enhance your smile but also help restore your ability to chew and speak comfortably, making them a great long-term solution for tooth loss.",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={implantJourneyImageRef}

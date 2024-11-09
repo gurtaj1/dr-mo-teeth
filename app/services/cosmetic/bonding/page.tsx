@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
+import TitleSection from "../../../../components/ui/title-section";
 
 const Bonding = () => {
   const [isProcessImageVisible, setIsProcessImageVisible] = useState(false);
@@ -44,28 +44,12 @@ const Bonding = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Composite Bonding Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl font-bold text-center mb-8">
-              Composite Bonding
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              Composite bonding is a dental procedure used to improve the
-              appearance of your teeth by applying a tooth-coloured resin
-              material. This process can help fix chips, gaps, or discoloration,
-              giving you a more even and natural-looking smile. During the
-              procedure, your dentist will match the resin to the colour of your
-              teeth, then apply it and shape it to achieve the desired look. The
-              material is then hardened using a special light. Composite bonding
-              is a quick, effective, and often painless way to enhance your
-              smile, and it can usually be completed in just one visit.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <TitleSection
+        titleText="Composite Bonding"
+        bodyText={[
+          "Composite bonding is a dental procedure used to improve the appearance of your teeth by applying a tooth-coloured resin material. This process can help fix chips, gaps, or discoloration, giving you a more even and natural-looking smile. During the procedure, your dentist will match the resin to the colour of your teeth, then apply it and shape it to achieve the desired look. The material is then hardened using a special light. Composite bonding is a quick, effective, and often painless way to enhance your smile, and it can usually be completed in just one visit.",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={processImageRef}

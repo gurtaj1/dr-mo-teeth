@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
+import TitleSection from "@/components/ui/title-section";
 import QuestionsSection from "@/components/ui/questions-section";
 
 const CleaningsAndExams = () => {
@@ -45,32 +45,13 @@ const CleaningsAndExams = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Examination Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl font-bold text-center mb-8">
-              Dental Examination
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              A dental examination is a routine check-up that helps ensure your
-              teeth and gums are healthy. During the exam, your dentist will
-              carefully look at your mouth, teeth, and gums to check for any
-              signs of cavities, gum disease, or other dental issues. They may
-              also take X-rays to get a better view of what&apos;s happening
-              below the surface.
-            </p>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
-              The exam is an important part of maintaining your oral health, as
-              it allows your dentist to catch any problems early and provide
-              recommendations for care or treatment. Regular examinations help
-              you keep your smile healthy and prevent bigger issues down the
-              road.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <TitleSection
+        titleText="Dental Examination"
+        bodyText={[
+          "A dental examination is a routine check-up that helps ensure your teeth and gums are healthy. During the exam, your dentist will carefully look at your mouth, teeth, and gums to check for any signs of cavities, gum disease, or other dental issues. They may also take X-rays to get a better view of what's happening below the surface.",
+          "The exam is an important part of maintaining your oral health, as it allows your dentist to catch any problems early and provide recommendations for care or treatment. Regular examinations help you keep your smile healthy and prevent bigger issues down the road.",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={examImageRef}

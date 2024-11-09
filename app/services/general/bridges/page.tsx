@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
+import TitleSection from "../../../../components/ui/title-section";
 import QuestionsSection from "@/components/ui/questions-section";
 
 const Bridges = () => {
@@ -32,30 +32,13 @@ const Bridges = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Dental Bridges Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl font-bold text-center mb-8">
-              Dental Bridges
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
-              Have you lost one or more teeth? A dental bridge might be the
-              perfect solution for you. Made from high-quality porcelain, a
-              well-crafted bridge mimics the appearance of your natural teeth
-              and restores your smile&apos;s health and function.
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
-              As the name implies, this treatment &quot;bridges&quot; the gap
-              left by a missing tooth, anchored securely by the healthy teeth on
-              either side.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <TitleSection
+        titleText="Dental Bridges"
+        bodyText={[
+          "Have you lost one or more teeth? A dental bridge might be the perfect solution for you. Made from high-quality porcelain, a well-crafted bridge mimics the appearance of your natural teeth and restores your smile's health and function.",
+          'As the name implies, this treatment "bridges" the gap left by a missing tooth, anchored securely by the healthy teeth on either side.',
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={bridgesImageRef}
