@@ -101,13 +101,13 @@ const BadBreath = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+            <h1 className="text-4xl mb-8 text-dental-accent1">
               Why Does My Breath <br />
               Smell So Bad?
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className="text-dental-accent1 mx-auto">
               It&apos;s normal to have bad breath occasionally, for example
               after eating strong foods or when you wake up in the morning.
               However, about 25% of people experience chronic bad breath, known

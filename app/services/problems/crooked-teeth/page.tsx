@@ -61,12 +61,13 @@ const CrookedTeeth = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-              Why Crooked Teeth Can Be a Dental Concern
+            <h1 className="text-4xl mb-8 text-dental-accent1">
+              Why Crooked Teeth Can Be a <br />
+              <span className="font-bold">Dental Concern</span>
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className="text-dental-accent1 mx-auto">
               Crooked teeth refer to any misalignment in your smile, which can
               manifest as overcrowding, gaps from lost teeth, or other
               irregularities. While having crooked teeth isn&apos;t necessarily
@@ -74,7 +75,7 @@ const CrookedTeeth = () => {
             </p>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
+            <p className="text-dental-accent1 mx-auto mt-4">
               Misaligned teeth can affect your ability to chew properly,
               potentially causing pain during meals and leading to digestive
               issues. Additionally, they may create hard-to-clean areas,
@@ -85,7 +86,7 @@ const CrookedTeeth = () => {
             </p>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
+            <p className="text-dental-accent1 mx-auto mt-4">
               I provide personalised treatments to help you correct crooked
               teeth and achieve a healthy, confident smile.
             </p>

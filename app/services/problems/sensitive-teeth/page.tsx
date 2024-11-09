@@ -62,19 +62,21 @@ const SensitiveTeeth = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-              Take Control of Your Oral Health
+            <h1 className="text-4xl mb-8 text-dental-accent1">
+              <span className="font-bold">Take Control</span>
+              <br />
+              Of Your Oral Health
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className="text-dental-accent1 mx-auto">
               Are you tired of feeling discomfort when enjoying hot drinks or
               your favourite treats? I understand how frustrating tooth
               sensitivity can be.
             </p>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
+            <p className="text-dental-accent1 mx-auto mt-4">
               I take a thorough approach to identify the root cause of your
               tooth sensitivity and offer tailored solutions.
             </p>

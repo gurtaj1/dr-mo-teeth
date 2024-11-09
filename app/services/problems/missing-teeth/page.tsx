@@ -49,12 +49,13 @@ const MissingTooth = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-              Smile Again with Confidence
+            <h1 className="text-4xl mb-8 text-dental-accent1">
+              Smile Again <br />
+              <span className="font-bold">With Confidence</span>
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className="text-dental-accent1 mx-auto">
               Losing teeth can be a tough experience, affecting not just your
               oral health but also your everyday life. If you&apos;re missing
               teeth, you might find it hard to chew certain foods, which can
@@ -63,7 +64,7 @@ const MissingTooth = () => {
             </p>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center mt-4">
+            <p className="text-dental-accent1 mx-auto mt-4">
               I understand how missing teeth can affect your life, which is why
               I offer effective treatment options to help you restore your smile
               and confidence. Together, we&apos;ll find the best solution for

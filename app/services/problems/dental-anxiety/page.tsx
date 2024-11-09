@@ -60,12 +60,13 @@ const DentalAnxiety = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-              Don&apos;t Suffer Through Dental Anxiety
+            <h1 className="text-4xl mb-8 text-dental-accent1">
+              Don&apos;t Suffer Through <br />
+              <span className="font-bold">Dental Anxiety</span>
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className="text-dental-accent1 mx-auto">
               Feeling nervous before a dentist appointment? You&apos;re not
               alone. Dental anxiety is very common among people of all ages. No
               matter what&apos;s causing your anxiety, I&apos;m here to help you

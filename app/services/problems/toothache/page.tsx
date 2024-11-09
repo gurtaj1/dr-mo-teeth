@@ -61,12 +61,13 @@ const Toothache = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-              Common Causes of Tooth Pain
+            <h1 className="text-4xl mb-8 text-dental-accent1">
+              Common Causes of <br />
+              <span className="font-bold">Tooth Pain</span>
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className="text-dental-accent1 mx-auto">
               Tooth pain is a widespread issue that can significantly affect
               your overall health and daily life. Understanding what might be
               causing your discomfort is the first step toward finding relief.

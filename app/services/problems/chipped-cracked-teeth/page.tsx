@@ -64,19 +64,20 @@ const BrokenTeeth = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-              What Causes a Broken Tooth?
+            <h1 className="text-4xl mb-8 text-dental-accent1">
+              What Causes a <br />
+              <span className="font-bold">Broken Tooth?</span>
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
+            <p className="text-dental-accent1 mx-auto">
               A cracked, chipped, or broken tooth is a common dental issue that
               can be quite painful and lead to further problems like tooth decay
               and gum disease. Here are some common causes:
             </p>
           </AnimatedElement>
           <AnimatedElement>
-            <ul className="text-dental-accent1 max-w-3xl mx-auto mt-4 space-y-2">
+            <ul className="text-dental-accent1 mx-auto mt-4 space-y-2">
               <li>
                 - Injury: A fall or blow to the face can easily damage a tooth.
               </li>
