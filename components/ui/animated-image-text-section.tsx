@@ -63,7 +63,7 @@ const AnimatedImageTextSection = ({
           <div className="w-full md:w-1/2">
             <h2
               ref={titleRef}
-              className={`text-3xl md:text-5xl lg:text-7xl mb-6 ${
+              className={`text-3xl md:text-5xl lg:text-6xl mb-6 ${
                 isDark ? "text-white" : "text-dental-navy"
               }`}
               style={
