@@ -65,11 +65,8 @@ const WisdomToothPain = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Wisdom Tooth Pain"
-        title={
-          <>
-            Its Wise To <br /> <span className="font-bold">Remove Them</span>
-          </>
-        }
+        titleLineOne="Its Wise To"
+        titleLineTwo="Remove Them"
         isDark
         scrollY={wisdomParallaxOffset}
         scrollFactor={1}
@@ -103,12 +100,8 @@ const WisdomToothPain = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Benefits of Wisdom Tooth Removal"
-        title={
-          <>
-            Benefits of <br />{" "}
-            <span className="font-bold">Wisdom Tooth Removal</span>
-          </>
-        }
+        titleLineOne="Benefits of"
+        titleLineTwo="Wisdom Tooth Removal"
         scrollY={wisdomBenefitsParallaxOffset}
         scrollFactor={1}
       >
@@ -140,12 +133,8 @@ const WisdomToothPain = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Wisdom Teeth Removal Process"
-        title={
-          <>
-            How Are <br />{" "}
-            <span className="font-bold">Wisdom Teeth Removed?</span>
-          </>
-        }
+        titleLineOne="How Are"
+        titleLineTwo="Wisdom Teeth Removed?"
         isDark
         scrollY={wisdomProcessParallaxOffset}
         scrollFactor={1}

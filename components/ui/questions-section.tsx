@@ -25,8 +25,8 @@ const QuestionsSection = ({
       <div className="container mx-auto px-6">
         <AnimatedElement>
           <h2
-            className={`text-4xl mb-4 ${
-              isDark ? "text-dental-accent1" : "text-dental-navy"
+            className={`text-5xl mb-4 ${
+              isDark ? "text-white" : "text-dental-navy"
             } text-center`}
           >
             {title}
@@ -34,7 +34,7 @@ const QuestionsSection = ({
         </AnimatedElement>
         <div
           className={`w-0.5 h-8 ${
-            isDark ? "bg-white" : "bg-dental-accent1"
+            isDark ? "bg-dental-teal" : "bg-dental-accent1"
           } mx-auto mb-8`}
         ></div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -58,7 +58,7 @@ const QuestionsSection = ({
                     >
                       <span
                         className={
-                          isDark ? "text-white" : "text-dental-accent1"
+                          isDark ? "text-dental-teal" : "text-dental-accent1"
                         }
                       >
                         {question.icon}

@@ -64,11 +64,9 @@ const SmileMakeover = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Smile Makeover Hero"
-        title={
-          <>
-            <span className="font-bold">Enhance</span> <br /> Your Current Smile
-          </>
-        }
+        titleLineOne="Enhance"
+        titleLineTwo="Your Current Smile"
+        isTitleLineOneBold
         isDark
         scrollY={heroParallaxOffset}
         scrollFactor={1}
@@ -98,12 +96,8 @@ const SmileMakeover = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Smile Makeover Process"
-        title={
-          <>
-            Common Treatments in a <br />
-            <span className="font-bold">Smile Makeover</span>
-          </>
-        }
+        titleLineOne="Common Treatments in a"
+        titleLineTwo="Smile Makeover"
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >
@@ -131,13 +125,8 @@ const SmileMakeover = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Smile Makeover Journey"
-        title={
-          <>
-            Your Smile Makeover Journey
-            <br />
-            <span className="font-bold">The Process</span>
-          </>
-        }
+        titleLineOne="Your Smile Makeover Journey"
+        titleLineTwo="The Process"
         isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}

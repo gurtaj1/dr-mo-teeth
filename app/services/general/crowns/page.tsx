@@ -75,11 +75,8 @@ const Crowns = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Dental Crown Procedure"
-        title={
-          <>
-            The Crown <br /> <span className="font-bold">Process</span>
-          </>
-        }
+        titleLineOne="The Crown"
+        titleLineTwo="Process"
         scrollY={crownsParallaxOffset}
         scrollFactor={1}
       >
@@ -104,11 +101,8 @@ const Crowns = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Crown Benefits"
-        title={
-          <>
-            Benefits of <br /> <span className="font-bold">Dental Crowns</span>
-          </>
-        }
+        titleLineOne="Benefits of"
+        titleLineTwo="Dental Crowns"
         isDark
         scrollY={processParallaxOffset}
         scrollFactor={1}

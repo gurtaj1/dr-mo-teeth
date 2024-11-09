@@ -65,12 +65,8 @@ const GumTherapy = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Gum Disease Overview"
-        title={
-          <>
-            Stop Your Teeth From
-            <br /> <span className="font-bold">Falling Out</span>
-          </>
-        }
+        titleLineOne="Stop Your Teeth From"
+        titleLineTwo="Falling Out"
         isDark
         scrollY={introParallaxOffset}
         scrollFactor={1}
@@ -103,11 +99,8 @@ const GumTherapy = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Gum Disease Treatment"
-        title={
-          <>
-            Understanding <br /> <span className="font-bold">Gum Disease</span>
-          </>
-        }
+        titleLineOne="Understanding"
+        titleLineTwo="Gum Disease"
         scrollY={gumTherapyParallaxOffset}
         scrollFactor={1}
       >
@@ -130,11 +123,8 @@ const GumTherapy = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Gum Treatment Benefits"
-        title={
-          <>
-            Benefits of <br /> <span className="font-bold">Gum Therapy</span>
-          </>
-        }
+        titleLineOne="Benefits of"
+        titleLineTwo="Gum Therapy"
         isDark
         scrollY={treatmentParallaxOffset}
         scrollFactor={1}

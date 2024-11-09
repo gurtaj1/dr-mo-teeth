@@ -53,12 +53,8 @@ const RootCanal = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Root Canal Treatment Hero"
-        title={
-          <>
-            Stop the Pain and <br />{" "}
-            <span className="font-bold">Save the Tooth</span>
-          </>
-        }
+        titleLineOne="Stop the Pain and"
+        titleLineTwo="Save the Tooth"
         isDark
         scrollY={heroParallaxOffset}
         scrollFactor={1}
@@ -78,12 +74,8 @@ const RootCanal = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Root Canal Treatment"
-        title={
-          <>
-            Understanding <br />{" "}
-            <span className="font-bold">Root Canal Treatment</span>
-          </>
-        }
+        titleLineOne="Understanding"
+        titleLineTwo="Root Canal Treatment"
         scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >

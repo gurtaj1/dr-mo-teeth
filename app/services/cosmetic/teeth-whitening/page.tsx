@@ -74,13 +74,9 @@ const TeethWhitening = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Teeth Whitening Results"
-        title={
-          <>
-            <span className="font-bold">Lighten Your Smile</span>
-            <br />
-            by Two Shades or More
-          </>
-        }
+        titleLineOne="Lighten Your Smile"
+        titleLineTwo="by Two Shades or More"
+        isTitleLineOneBold
         scrollY={lightenParallaxOffset}
         scrollFactor={1}
       >
@@ -101,12 +97,8 @@ const TeethWhitening = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Teeth Whitening Facts"
-        title={
-          <>
-            Facts About <br />{" "}
-            <span className="font-bold">Teeth Whitening</span>
-          </>
-        }
+        titleLineOne="Facts About"
+        titleLineTwo="Teeth Whitening"
         isDark
         scrollY={factsParallaxOffset}
         scrollFactor={1}

@@ -78,12 +78,8 @@ const CleaningsAndExams = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Dental Examination Process"
-        title={
-          <>
-            What&apos;s Included in a<br />{" "}
-            <span className="font-bold">Dental Exam</span>
-          </>
-        }
+        titleLineOne="What's Included in a"
+        titleLineTwo="Dental Exam"
         scrollY={examParallaxOffset}
         scrollFactor={1}
       >
@@ -113,12 +109,8 @@ const CleaningsAndExams = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Scale and Polish"
-        title={
-          <>
-            Professional
-            <br /> <span className="font-bold">Scale and Polish</span>
-          </>
-        }
+        titleLineOne="Professional"
+        titleLineTwo="Scale and Polish"
         isDark
         scrollY={cleaningParallaxOffset}
         scrollFactor={1}

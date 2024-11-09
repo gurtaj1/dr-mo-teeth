@@ -101,11 +101,8 @@ const CrookedTeeth = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Causes of Crooked Teeth"
-        title={
-          <>
-            What Causes <br /> <span className="font-bold">Crooked Teeth?</span>
-          </>
-        }
+        titleLineOne="What Causes"
+        titleLineTwo="Crooked Teeth?"
         scrollY={causesParallaxOffset}
         scrollFactor={1}
       >
@@ -149,12 +146,8 @@ const CrookedTeeth = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="When to See a Dentist"
-        title={
-          <>
-            When to See a Dentist <br />{" "}
-            <span className="font-bold">About Crooked Teeth</span>
-          </>
-        }
+        titleLineOne="When to See a Dentist"
+        titleLineTwo="About Crooked Teeth"
         isDark
         scrollY={dentalCareParallaxOffset}
         scrollFactor={1}
@@ -181,12 +174,8 @@ const CrookedTeeth = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Treatment Process"
-        title={
-          <>
-            The Process for <br />
-            <span className="font-bold">Correcting Crooked Teeth</span>
-          </>
-        }
+        titleLineOne="The Process for"
+        titleLineTwo="Correcting Crooked Teeth"
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >

@@ -65,12 +65,8 @@ const DentalFillings = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Dental Filling Treatment"
-        title={
-          <>
-            Fill your tooth
-            <br /> <span className="font-bold">Before it fails</span>
-          </>
-        }
+        titleLineOne="Fill your tooth"
+        titleLineTwo="Before it fails"
         isDark
         scrollY={heroParallaxOffset}
         scrollFactor={1}
@@ -95,11 +91,8 @@ const DentalFillings = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Types of Dental Fillings"
-        title={
-          <>
-            Types of <br /> <span className="font-bold">Dental Fillings</span>
-          </>
-        }
+        titleLineOne="Types of"
+        titleLineTwo="Dental Fillings"
         scrollY={typesParallaxOffset}
         scrollFactor={1}
       >
@@ -132,11 +125,8 @@ const DentalFillings = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Filling Process"
-        title={
-          <>
-            The Filling <br /> <span className="font-bold">Process</span>
-          </>
-        }
+        titleLineOne="The Filling"
+        titleLineTwo="Process"
         isDark
         scrollY={processParallaxOffset}
         scrollFactor={1}

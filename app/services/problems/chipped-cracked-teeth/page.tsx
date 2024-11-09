@@ -113,12 +113,8 @@ const BrokenTeeth = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Poor Dental Care"
-        title={
-          <>
-            Does Poor Dental Care <br />{" "}
-            <span className="font-bold">Contribute to Chipped Teeth?</span>
-          </>
-        }
+        titleLineOne="Does Poor Dental Care"
+        titleLineTwo="Contribute to Chipped Teeth?"
         scrollY={dentalCareParallaxOffset}
         scrollFactor={1}
       >
@@ -138,17 +134,13 @@ const BrokenTeeth = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Managing at Home"
-        title={
-          <>
-            Managing a <br />{" "}
-            <span className="font-bold">Broken Tooth at Home</span>
-          </>
-        }
+        titleLineOne="Managing a "
+        titleLineTwo="Broken Tooth at Home"
         isDark
         scrollY={homeManagementParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-dental-accent1">
+        <div className="space-y-4">
           <p>
             If you have a broken tooth and can&apos;t see a dentist right away,
             here are some steps you can take at home to ease discomfort and
@@ -175,14 +167,8 @@ const BrokenTeeth = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Treatment Process"
-        title={
-          <>
-            What&apos;s the Dentist&apos;s Process for <br />
-            <span className="font-bold">
-              Repairing a Broken or Cracked Tooth?
-            </span>
-          </>
-        }
+        titleLineOne="What's the Dentist's Process for"
+        titleLineTwo="Repairing a Broken or Cracked Tooth?"
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >

@@ -64,12 +64,8 @@ const Bridges = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Dental Bridge"
-        title={
-          <>
-            A Great Solution for <br />{" "}
-            <span className="font-bold">Missing Teeth</span>
-          </>
-        }
+        titleLineOne="A Great Solution for"
+        titleLineTwo="Missing Teeth"
         scrollY={bridgesParallaxOffset}
         scrollFactor={1}
       >

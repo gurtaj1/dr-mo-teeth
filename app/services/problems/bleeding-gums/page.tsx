@@ -110,12 +110,8 @@ const BleedingGums = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Treatment Steps"
-        title={
-          <>
-            Steps to Evaluate <br />{" "}
-            <span className="font-bold">Your Gum Health</span>
-          </>
-        }
+        titleLineOne="Steps to Evaluate"
+        titleLineTwo="Your Gum Health"
         scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >

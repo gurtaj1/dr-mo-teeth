@@ -81,12 +81,8 @@ const MissingTooth = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Renewing Your Smile"
-        title={
-          <>
-            Renewing Your <br />{" "}
-            <span className="font-bold">Smile&apos;s Functionality</span>
-          </>
-        }
+        titleLineOne="Renewing Your"
+        titleLineTwo="Smile's Functionality"
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
@@ -107,11 +103,8 @@ const MissingTooth = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Treatment Options"
-        title={
-          <>
-            Your Treatment <br /> <span className="font-bold">Options</span>
-          </>
-        }
+        titleLineOne="Your Treatment"
+        titleLineTwo="Options"
         isDark
         scrollY={optionsParallaxOffset}
         scrollFactor={1}

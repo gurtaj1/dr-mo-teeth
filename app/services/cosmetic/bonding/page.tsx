@@ -74,11 +74,8 @@ const Bonding = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Bonding Process"
-        title={
-          <>
-            The Bonding <br /> <span className="font-bold">Process</span>
-          </>
-        }
+        titleLineOne="The Bonding"
+        titleLineTwo="Process"
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >
@@ -111,12 +108,8 @@ const Bonding = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Bonding Benefits"
-        title={
-          <>
-            Benefits of <br />{" "}
-            <span className="font-bold">Composite Bonding</span>
-          </>
-        }
+        titleLineOne="Benefits of"
+        titleLineTwo="Composite Bonding"
         isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}

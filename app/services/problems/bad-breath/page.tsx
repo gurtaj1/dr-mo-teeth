@@ -125,12 +125,8 @@ const BadBreath = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Bad Breath Causes"
-        title={
-          <>
-            Bad Breath Isn&apos;t Always a<br />{" "}
-            <span className="font-bold">Dental Concern</span>
-          </>
-        }
+        titleLineOne="Bad Breath Isn't Always a"
+        titleLineTwo="Dental Concern"
         scrollY={causesParallaxOffset}
         scrollFactor={1}
       >
@@ -151,11 +147,9 @@ const BadBreath = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Bad Breath Treatment"
-        title={
-          <>
-            <span className="font-bold">How to Fix</span> <br /> Bad Breath
-          </>
-        }
+        titleLineOne="How to Fix"
+        titleLineTwo="Bad Breath"
+        isTitleLineOneBold
         isDark
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
@@ -189,12 +183,8 @@ const BadBreath = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Bad Breath FAQs"
-        title={
-          <>
-            Common Treatments for <br />{" "}
-            <span className="font-bold">Halitosis</span>
-          </>
-        }
+        titleLineOne="Common Treatments for"
+        titleLineTwo="Halitosis"
         scrollY={questionsParallaxOffset}
         scrollFactor={1}
       >

@@ -80,12 +80,8 @@ const TeethGrinding = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Shield Against Teeth Grinding"
-        title={
-          <>
-            Your Shield Against <br />{" "}
-            <span className="font-bold">Teeth Grinding</span>
-          </>
-        }
+        titleLineOne="Your Shield Against"
+        titleLineTwo="Teeth Grinding"
         scrollY={shieldParallaxOffset}
         scrollFactor={1}
       >
@@ -125,12 +121,8 @@ const TeethGrinding = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Dream Without Grinding"
-        title={
-          <>
-            We&apos;ll Help You <br />{" "}
-            <span className="font-bold">Dream Without Grinding</span>
-          </>
-        }
+        titleLineOne="We'll Help You"
+        titleLineTwo="Dream Without Grinding"
         isDark
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}

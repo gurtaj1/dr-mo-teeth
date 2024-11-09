@@ -67,11 +67,8 @@ export default function IVSedationPage() {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="IV Sedation Patient"
-        title={
-          <>
-            Who Needs <br /> <span className="font-bold">IV Sedation?</span>
-          </>
-        }
+        titleLineOne="Who Needs"
+        titleLineTwo="IV Sedation?"
         scrollY={ivSedationParallaxOffset}
         scrollFactor={1}
       >

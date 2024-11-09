@@ -82,11 +82,8 @@ const Dentures = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Types of Dentures"
-        title={
-          <>
-            Types of <br /> <span className="font-bold">Dentures</span>
-          </>
-        }
+        titleLineOne="Types of"
+        titleLineTwo="Dentures"
         scrollY={dentureTypesParallaxOffset}
         scrollFactor={1}
       >
@@ -120,11 +117,8 @@ const Dentures = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Denture Benefits"
-        title={
-          <>
-            Benefits of <br /> <span className="font-bold">Dentures</span>
-          </>
-        }
+        titleLineOne="Benefits of"
+        titleLineTwo="Dentures"
         isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}

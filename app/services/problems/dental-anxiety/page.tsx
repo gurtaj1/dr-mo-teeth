@@ -84,12 +84,8 @@ const DentalAnxiety = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Common Reasons for Dental Anxiety"
-        title={
-          <>
-            Common Reasons for <br />{" "}
-            <span className="font-bold">Dental Anxiety</span>
-          </>
-        }
+        titleLineOne="Common Reasons for"
+        titleLineTwo="Dental Anxiety"
         scrollY={reasonsParallaxOffset}
         scrollFactor={1}
       >
@@ -126,12 +122,8 @@ const DentalAnxiety = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Effects of Dental Anxiety"
-        title={
-          <>
-            How Does Dental Anxiety <br />{" "}
-            <span className="font-bold">Affect Oral Health?</span>
-          </>
-        }
+        titleLineOne="How Does Dental Anxiety"
+        titleLineTwo="Affect Oral Health?"
         isDark
         scrollY={effectsParallaxOffset}
         scrollFactor={1}
@@ -154,11 +146,8 @@ const DentalAnxiety = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Managing Dental Anxiety"
-        title={
-          <>
-            Managing <br /> <span className="font-bold">Dental Anxiety</span>
-          </>
-        }
+        titleLineOne="Managing"
+        titleLineTwo="Dental Anxiety"
         scrollY={managementParallaxOffset}
         scrollFactor={1}
       >

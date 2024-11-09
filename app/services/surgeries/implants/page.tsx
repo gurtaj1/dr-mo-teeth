@@ -75,12 +75,8 @@ const DentalImplants = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Dental Implant Procedure"
-        title={
-          <>
-            Your Dental <br />{" "}
-            <span className="font-bold">Implant Journey</span>:
-          </>
-        }
+        titleLineOne="Your Dental"
+        titleLineTwo="Implant Journey:"
         scrollY={implantJourneyParallaxOffset}
         scrollFactor={1}
       >
@@ -118,12 +114,8 @@ const DentalImplants = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Dental Implant Benefits"
-        title={
-          <>
-            Amazing Benefits of <br />{" "}
-            <span className="font-bold">Dental Implants</span>:
-          </>
-        }
+        titleLineOne="Amazing Benefits of"
+        titleLineTwo="Dental Implants:"
         isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}

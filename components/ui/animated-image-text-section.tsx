@@ -8,7 +8,9 @@ interface AnimatedImageTextSectionProps {
   imagePosition: "left" | "right";
   imageSrc: string;
   imageAlt: string;
-  title: string | React.ReactNode;
+  titleLineOne: string;
+  titleLineTwo: string;
+  isTitleLineOneBold?: boolean;
   isDark?: boolean;
   scrollY?: number;
   scrollFactor?: number;
@@ -22,7 +24,9 @@ const AnimatedImageTextSection = ({
   imagePosition,
   imageSrc,
   imageAlt,
-  title,
+  titleLineOne,
+  titleLineTwo,
+  isTitleLineOneBold = false,
   isDark = false,
   scrollY = 0,
   scrollFactor = 0,
@@ -68,16 +72,26 @@ const AnimatedImageTextSection = ({
                   : undefined
               }
             >
-              {title}
+              {isTitleLineOneBold ? (
+                <>
+                  <span className="font-bold">{titleLineOne}</span>
+                  <br />
+                  {titleLineTwo}
+                </>
+              ) : (
+                <>
+                  {titleLineOne}
+                  <br />
+                  <span className="font-bold">{titleLineTwo}</span>
+                </>
+              )}
             </h2>
             <div
               className={`w-1/4 border-b-2 ${
                 isDark ? "border-dental-teal" : "border-dental-accent1"
               } mb-6`}
             ></div>
-            <span
-              className={`${isDark ? "text-dental-accent1" : "text-gray-600"}`}
-            >
+            <span className={`${isDark ? "text-white" : "text-gray-600"}`}>
               {children}
             </span>
           </div>

@@ -74,11 +74,8 @@ const Veneers = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Veneer Procedure"
-        title={
-          <>
-            The Veneer <br /> <span className="font-bold">Process</span>
-          </>
-        }
+        titleLineOne="The Veneer"
+        titleLineTwo="Process"
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >
@@ -116,11 +113,8 @@ const Veneers = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Veneer Benefits"
-        title={
-          <>
-            Benefits of <br /> <span className="font-bold">Dental Veneers</span>
-          </>
-        }
+        titleLineOne="Benefits of"
+        titleLineTwo="Dental Veneers"
         isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}

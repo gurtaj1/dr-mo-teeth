@@ -83,12 +83,8 @@ const Toothache = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Common Causes of Tooth Pain"
-        title={
-          <>
-            Understanding Your <br />{" "}
-            <span className="font-bold">Tooth Pain</span>
-          </>
-        }
+        titleLineOne="Understanding Your"
+        titleLineTwo="Tooth Pain"
         scrollY={causesParallaxOffset}
         scrollFactor={1}
       >
@@ -119,12 +115,8 @@ const Toothache = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Tooth Pain Treatments"
-        title={
-          <>
-            Common Treatments for <br />{" "}
-            <span className="font-bold">Tooth Pain</span>
-          </>
-        }
+        titleLineOne="Common Treatments for"
+        titleLineTwo="Tooth Pain"
         isDark
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
@@ -159,11 +151,8 @@ const Toothache = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Preventing Tooth Pain"
-        title={
-          <>
-            How to <br /> <span className="font-bold">Prevent Tooth Pain</span>
-          </>
-        }
+        titleLineOne="How to"
+        titleLineTwo="Prevent Tooth Pain"
         scrollY={preventionParallaxOffset}
         scrollFactor={1}
       >

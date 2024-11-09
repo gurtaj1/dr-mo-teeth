@@ -91,11 +91,8 @@ const SensitiveTeeth = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Understanding Tooth Sensitivity"
-        title={
-          <>
-            The Science of <br /> <span className="font-bold">Comfort</span>
-          </>
-        }
+        titleLineOne="The Science of"
+        titleLineTwo="Comfort"
         scrollY={comfortParallaxOffset}
         scrollFactor={1}
       >
@@ -114,11 +111,8 @@ const SensitiveTeeth = () => {
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Sensitivity Treatments"
-        title={
-          <>
-            Causes Of <br /> <span className="font-bold">Sensitive Teeth</span>
-          </>
-        }
+        titleLineOne="Causes Of"
+        titleLineTwo="Sensitive Teeth"
         isDark
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
@@ -171,12 +165,8 @@ const SensitiveTeeth = () => {
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Understanding Tooth Sensitivity"
-        title={
-          <>
-            Steps To Prevent <br />{" "}
-            <span className="font-bold">Sensitive Teeth</span>
-          </>
-        }
+        titleLineOne="Steps To Prevent"
+        titleLineTwo="Sensitive Teeth"
         scrollY={preventionParallaxOffset}
         scrollFactor={1}
       >
