@@ -48,7 +48,7 @@ const Crowns = () => {
       </div>
       {/* Dental Crowns Section */}
       <section className="py-16 bg-dental-navy">
-        <div className="container max-w-3xl mx-auto px-6">
+        <div className="container mx-auto px-6">
           <AnimatedElement>
             <h1 className="text-4xl mb-8 text-dental-accent1">
               Place a crown
@@ -56,7 +56,7 @@ const Crowns = () => {
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 text-center">
+            <p className="text-dental-accent1">
               A dental crown is a cap that fits over a damaged or weakened tooth
               to restore its shape, size, strength, and appearance. Crowns are
               often used after a tooth has been significantly decayed, cracked,

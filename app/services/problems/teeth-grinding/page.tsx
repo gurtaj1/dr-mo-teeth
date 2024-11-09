@@ -47,7 +47,7 @@ const TeethGrinding = () => {
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="py-16 bg-dental-navy">
-        <div className="container max-w-3xl mx-auto px-6">
+        <div className="container mx-auto px-6">
           <AnimatedElement>
             <h1 className="text-4xl mb-8 text-dental-accent1">
               Stop Wearing your
@@ -55,7 +55,7 @@ const TeethGrinding = () => {
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 text-center">
+            <p className="text-dental-accent1">
               Bruxism is the grinding or clenching of teeth. The effects of
               teeth grinding, such as worn enamel, jaw pain, headaches, and even
               cracked teeth can be difficult to deal with. But don&apos;t worry,
@@ -63,7 +63,7 @@ const TeethGrinding = () => {
             </p>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 text-center mt-4">
+            <p className="text-dental-accent1 mt-4">
               By focusing on the root causes of bruxism, I can provide lasting
               relief and prevent further damage to your teeth and overall oral
               health. My goal is to restore your smile, improve your quality of

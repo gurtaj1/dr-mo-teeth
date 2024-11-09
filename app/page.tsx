@@ -185,7 +185,7 @@ const HomePage = () => {
           </AnimatedElement>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimatedElement transitionSize>
-              <div className="text-center p-6 rounded-lg transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group">
+              <div className="text-center p-6 rounded-lg border-2 border-dental-teal/20 transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group h-64 flex flex-col justify-between">
                 <div className="mb-4">
                   <svg
                     className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
@@ -199,12 +199,16 @@ const HomePage = () => {
                   TECHNOLOGY
                 </h3>
                 <p className="text-gray-600 transition-colors duration-300 group-hover:text-dental-navy">
-                  The latest tools for a modern experience
+                  The Latest Technology
+                  <br />
+                  providing Precision,
+                  <br />
+                  Efficiency and Comfort
                 </p>
               </div>
             </AnimatedElement>
             <AnimatedElement transitionSize>
-              <div className="text-center p-6 rounded-lg transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group">
+              <div className="text-center p-6 rounded-lg border-2 border-dental-teal/20 transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group h-64 flex flex-col justify-between">
                 <div className="mb-4">
                   <svg
                     className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
@@ -218,12 +222,14 @@ const HomePage = () => {
                   QUALITY
                 </h3>
                 <p className="text-gray-600 transition-colors duration-300 group-hover:text-dental-navy">
-                  High quality dentistry, guided by science
+                  High Quality Dentistry,
+                  <br />
+                  Guided By Science
                 </p>
               </div>
             </AnimatedElement>
             <AnimatedElement transitionSize>
-              <div className="text-center p-6 rounded-lg transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group">
+              <div className="text-center p-6 rounded-lg border-2 border-dental-teal/20 transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group h-64 flex flex-col justify-between">
                 <div className="mb-4">
                   <svg
                     className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
@@ -234,10 +240,12 @@ const HomePage = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
-                  PERSONAL
+                  BESPOKE
                 </h3>
                 <p className="text-gray-600 transition-colors duration-300 group-hover:text-dental-navy">
-                  100% personalised care
+                  Personalised Care,
+                  <br />
+                  Tailored To You
                 </p>
               </div>
             </AnimatedElement>
@@ -293,13 +301,15 @@ const HomePage = () => {
             ].map((service, index) => (
               <AnimatedElement transitionSize key={index}>
                 <Link href={service.link} className="h-full">
-                  <Card className="bg-dental-primary/10 hover:bg-dental-primary/20 transition-colors border-dental-accent1/20 h-full flex flex-col">
+                  <Card className="bg-dental-primary/10 hover:bg-dental-primary/20 transition-colors border-dental-accent1/20 h-full flex flex-col group">
                     <CardContent className="p-6 flex flex-col flex-1">
-                      <img
-                        src={`/service-${index + 1}.jpg`}
-                        alt={service.title}
-                        className="w-full h-48 object-cover rounded-lg mb-4"
-                      />
+                      <div className="overflow-hidden rounded-lg mb-4">
+                        <img
+                          src={`/service-${index + 1}.jpg`}
+                          alt={service.title}
+                          className="w-full h-48 object-cover transition-transform duration-1000 group-hover:scale-110"
+                        />
+                      </div>
                       <div className="flex flex-col flex-1">
                         <h3 className="text-xl font-semibold mb-2 text-dental-accent1">
                           {service.title}
@@ -415,22 +425,22 @@ const HomePage = () => {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-full -ml-4"
+                    className="rounded-full -ml-4 bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
                     onClick={prevTestimonial}
                     disabled={activeIndex === 0}
                     aria-label="Previous testimonials"
                   >
-                    <ChevronLeft className="h-4 w-4" />
+                    <ChevronLeft className="h-4 w-4 text-dental-accent1" />
                   </Button>
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-full -mr-4"
+                    className="rounded-full -mr-4 bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
                     onClick={nextTestimonial}
                     disabled={activeIndex === maxIndex}
                     aria-label="Next testimonials"
                   >
-                    <ChevronRight className="h-4 w-4" />
+                    <ChevronRight className="h-4 w-4 text-dental-accent1" />
                   </Button>
                 </div>
               </div>

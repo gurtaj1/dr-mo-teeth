@@ -84,7 +84,7 @@ const BleedingGums = () => {
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="py-16 bg-dental-navy">
-        <div className="container max-w-3xl mx-auto px-6">
+        <div className="container mx-auto px-6">
           <AnimatedElement>
             <h1 className="text-4xl mb-8 text-dental-accent1">
               My Gums
@@ -92,7 +92,7 @@ const BleedingGums = () => {
             </h1>
           </AnimatedElement>
           <AnimatedElement>
-            <p className="text-dental-accent1 text-center">
+            <p className="text-dental-accent1">
               Bleeding gums can be caused by a variety of things such as
               brushing and flossing too vigorously. But if your gums won&apos;t
               stop bleeding, or they always look and feel swollen, it&apos;s
