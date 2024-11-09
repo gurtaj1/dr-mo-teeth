@@ -20,7 +20,7 @@ const HeroSection = ({
     <section className={`py-16 bg-dental-navy ${className}`}>
       <div className="container mx-auto px-6">
         <AnimatedElement>
-          <h1 className="text-7xl mb-8 text-white">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl mb-8 text-white">
             <span className={title.isFirstLineBold ? "font-bold" : ""}>
               {title.lineOne}
             </span>

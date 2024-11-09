@@ -17,10 +17,13 @@ const TitleSection = ({
     >
       <div className="container mx-auto px-6">
         <AnimatedElement>
-          <h1 className="text-7xl font-bold text-center mb-8 text-dental-accent1">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center mb-8">
             {titleText}
           </h1>
         </AnimatedElement>
+        <div
+          className={"w-1/4 mx-auto border-b-2 border-dental-teal mb-6"}
+        ></div>
         {bodyText.map((text, index) => (
           <AnimatedElement key={index}>
             <p

@@ -119,7 +119,9 @@ const HomePage = () => {
         </video>
         <div className="absolute inset-0 bg-dental-black bg-opacity-60"></div>
         <div className="relative z-10 text-center text-dental-accent1">
-          <h1 className="text-9xl font-bold mb-4">DR. MO</h1>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4">
+            DR. MO
+          </h1>
           <Button
             asChild
             size="lg"
@@ -136,7 +138,7 @@ const HomePage = () => {
       <section id="about" className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-7xl font-bold text-center mb-8 text-white">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 text-white">
               About Me
             </h2>
           </AnimatedElement>
@@ -181,7 +183,7 @@ const HomePage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-7xl font-bold text-center mb-12 text-dental-navy">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 text-dental-navy">
               My Approach to Dental Care
             </h2>
           </AnimatedElement>
@@ -259,7 +261,7 @@ const HomePage = () => {
       <section id="services" className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-7xl font-bold text-center mb-8">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
               Our Services
             </h2>
           </AnimatedElement>
@@ -333,7 +335,7 @@ const HomePage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-7xl font-bold text-center mb-12 text-dental-navy">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 text-dental-navy">
               3 SIMPLE STEPS FOR ACHIEVING YOUR BEST SMILE
             </h2>
           </AnimatedElement>
@@ -383,7 +385,7 @@ const HomePage = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-7xl font-bold text-center mb-8 text-dental-accent1">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 text-dental-accent1">
               Patient Reviews
             </h2>
           </AnimatedElement>
