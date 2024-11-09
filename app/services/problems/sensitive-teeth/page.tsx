@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
+import HeroSection from "@/components/ui/hero-section";
 
 const SensitiveTeeth = () => {
   const [isComfortImageVisible, setIsComfortImageVisible] = useState(false);
@@ -59,30 +59,22 @@ const SensitiveTeeth = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Sensitive Teeth Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl mb-8">
-              <span className="font-bold">Take Control</span>
-              <br />
-              Of Your Oral Health
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 mx-auto">
-              Are you tired of feeling discomfort when enjoying hot drinks or
-              your favourite treats? I understand how frustrating tooth
-              sensitivity can be.
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 mx-auto mt-4">
-              I take a thorough approach to identify the root cause of your
-              tooth sensitivity and offer tailored solutions.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <HeroSection
+        title={{
+          lineOne: "What Causes",
+          lineTwo: "Sensitive Teeth?",
+          isFirstLineBold: false,
+        }}
+        description="Tooth sensitivity can make everyday activities like eating, drinking, and even breathing uncomfortable. When you have sensitive teeth, things like hot drinks, cold foods, and sweet treats can trigger sharp pain or discomfort. Understanding the cause is the first step to finding relief."
+        bulletPoints={[
+          "Worn Enamel: Aggressive brushing or acidic foods can wear down tooth enamel",
+          "Exposed Roots: Receding gums can leave sensitive root surfaces exposed",
+          "Cracked Teeth: Small cracks can expose sensitive inner layers",
+          "Recent Dental Work: Temporary sensitivity after procedures is common",
+          "Tooth Grinding: Clenching and grinding can wear down protective enamel",
+          "Tooth Decay: Cavities and decay can cause increased sensitivity",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={comfortImageRef}

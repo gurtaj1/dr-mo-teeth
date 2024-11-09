@@ -5,8 +5,8 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
 import QuestionsSection from "@/components/ui/questions-section";
+import HeroSection from "@/components/ui/hero-section";
 
 const TeethGrinding = () => {
   const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
@@ -46,32 +46,22 @@ const TeethGrinding = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl mb-8">
-              Stop Wearing your
-              <br /> <span className="font-bold">Teeth Away</span>
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1">
-              Bruxism is the grinding or clenching of teeth. The effects of
-              teeth grinding, such as worn enamel, jaw pain, headaches, and even
-              cracked teeth can be difficult to deal with. But don&apos;t worry,
-              I&apos;m here to help.
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 mt-4">
-              By focusing on the root causes of bruxism, I can provide lasting
-              relief and prevent further damage to your teeth and overall oral
-              health. My goal is to restore your smile, improve your quality of
-              sleep, and enhance your well-being.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <HeroSection
+        title={{
+          lineOne: "Stop Wearing your",
+          lineTwo: "Teeth Away",
+          isFirstLineBold: false,
+        }}
+        description="Bruxism is the grinding or clenching of teeth. The effects of teeth grinding, such as worn enamel, jaw pain, headaches, and even cracked teeth can be difficult to deal with. But don't worry, I'm here to help."
+        bulletPoints={[
+          "Worn Enamel: Grinding can wear down your tooth enamel over time",
+          "Jaw Pain: Clenching puts strain on jaw muscles and joints",
+          "Headaches: Tension from grinding often leads to headaches",
+          "Cracked Teeth: Excessive force can cause teeth to crack or chip",
+          "Sleep Issues: Grinding disrupts quality sleep",
+          "Treatment Options: We offer solutions to protect your teeth",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={shieldImageRef}

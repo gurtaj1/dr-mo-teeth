@@ -7,6 +7,8 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
 import QuestionsSection from "@/components/ui/questions-section";
+import HeroSection from "@/components/ui/hero-section";
+
 const DentalAnxiety = () => {
   const [isReasonsImageVisible, setIsReasonsImageVisible] = useState(false);
   const [isEffectsImageVisible, setIsEffectsImageVisible] = useState(false);
@@ -57,25 +59,14 @@ const DentalAnxiety = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Dental Anxiety Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl mb-8 text-dental-accent1">
-              Don&apos;t Suffer Through <br />
-              <span className="font-bold">Dental Anxiety</span>
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 mx-auto">
-              Feeling nervous before a dentist appointment? You&apos;re not
-              alone. Dental anxiety is very common among people of all ages. No
-              matter what&apos;s causing your anxiety, I&apos;m here to help you
-              feel at ease. My goal is to ensure you can receive the treatment
-              you need with confidence.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <HeroSection
+        title={{
+          lineOne: "Don't Suffer Through",
+          lineTwo: "Dental Anxiety",
+          isFirstLineBold: false,
+        }}
+        description="Feeling nervous before a dentist appointment? You're not alone. Dental anxiety is very common among people of all ages. No matter what's causing your anxiety, I'm here to help you feel at ease. My goal is to ensure you can receive the treatment you need with confidence."
+      />
 
       <AnimatedImageTextSection
         imageRef={reasonsImageRef}

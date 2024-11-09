@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
+import HeroSection from "@/components/ui/hero-section";
 
 const CrookedTeeth = () => {
   const [isCausesImageVisible, setIsCausesImageVisible] = useState(false);
@@ -58,41 +58,21 @@ const CrookedTeeth = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl mb-8">
-              Why Crooked Teeth Can Be a <br />
-              <span className="font-bold">Dental Concern</span>
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 mx-auto">
-              Crooked teeth refer to any misalignment in your smile, which can
-              manifest as overcrowding, gaps from lost teeth, or other
-              irregularities. While having crooked teeth isn&apos;t necessarily
-              a problem in itself, it can lead to various health issues.
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 mx-auto mt-4">
-              Misaligned teeth can affect your ability to chew properly,
-              potentially causing pain during meals and leading to digestive
-              issues. Additionally, they may create hard-to-clean areas,
-              increasing the risk of periodontal disease, which can damage your
-              gums and bone structure. Crooked teeth can also impact your speech
-              and may lower your self-esteem, making you feel self-conscious
-              about your smile.
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 mx-auto mt-4">
-              I provide personalised treatments to help you correct crooked
-              teeth and achieve a healthy, confident smile.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <HeroSection
+        title={{
+          lineOne: "What Causes a",
+          lineTwo: "Crooked Smile?",
+          isFirstLineBold: false,
+        }}
+        description="Crooked teeth refer to any misalignment in your smile, which can manifest as overcrowding, gaps from lost teeth, or other irregularities. While having crooked teeth isn't necessarily a problem in itself, it can lead to various health issues."
+        bulletPoints={[
+          "Chewing Problems: Misaligned teeth can affect your ability to chew properly, causing pain during meals and digestive issues.",
+          "Oral Health Risks: Hard-to-clean areas increase risk of periodontal disease, damaging gums and bone structure.",
+          "Speech Impact: Crooked teeth can affect speech clarity and pronunciation.",
+          "Self-Esteem: Many people feel self-conscious about their misaligned smile.",
+          "Treatment Options: We provide personalized treatments to help achieve a healthy, confident smile.",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={causesImageRef}

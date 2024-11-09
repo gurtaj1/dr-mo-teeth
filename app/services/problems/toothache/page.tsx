@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
+import HeroSection from "@/components/ui/hero-section";
 
 const Toothache = () => {
   const [isCausesImageVisible, setIsCausesImageVisible] = useState(false);
@@ -58,23 +58,22 @@ const Toothache = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Toothache Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl mb-8">
-              Common Causes of <br />
-              <span className="font-bold">Tooth Pain</span>
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 mx-auto">
-              Tooth pain is a widespread issue that can significantly affect
-              your overall health and daily life. Understanding what might be
-              causing your discomfort is the first step toward finding relief.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <HeroSection
+        title={{
+          lineOne: "Common Causes of",
+          lineTwo: "Tooth Pain",
+          isFirstLineBold: false,
+        }}
+        description="Tooth pain is a widespread issue that can significantly affect your overall health and daily life. Understanding what might be causing your discomfort is the first step toward finding relief."
+        bulletPoints={[
+          "Tooth Decay: Cavities can cause sensitivity and pain",
+          "Gum Disease: Infected gums lead to tooth and jaw pain",
+          "Grinding: Excessive pressure damages teeth over time",
+          "Injury: Physical trauma can cause immediate pain",
+          "Infection: Abscesses cause severe, throbbing pain",
+          "Treatment Options: We offer solutions for all types of tooth pain",
+        ]}
+      />
 
       <AnimatedImageTextSection
         imageRef={causesImageRef}

@@ -5,8 +5,8 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
 import QuestionsSection from "@/components/ui/questions-section";
+import HeroSection from "@/components/ui/hero-section";
 
 const BleedingGums = () => {
   const [isTreatmentImageVisible, setIsTreatmentImageVisible] = useState(false);
@@ -83,25 +83,14 @@ const BleedingGums = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl mb-8">
-              My Gums
-              <br /> <span className="font-bold">Are Bleeding</span>
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1">
-              Bleeding gums can be caused by a variety of things such as
-              brushing and flossing too vigorously. But if your gums won&apos;t
-              stop bleeding, or they always look and feel swollen, it&apos;s
-              likely a sign that you&apos;re suffering from one of the most
-              common oral health issues which is gum disease.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <HeroSection
+        title={{
+          lineOne: "My Gums",
+          lineTwo: "Are Bleeding",
+          isFirstLineBold: false,
+        }}
+        description="Bleeding gums can be caused by a variety of things such as brushing and flossing too vigorously. But if your gums won't stop bleeding, or they always look and feel swollen, it's likely a sign that you're suffering from one of the most common oral health issues which is gum disease."
+      />
 
       <AnimatedImageTextSection
         imageRef={treatmentImageRef}

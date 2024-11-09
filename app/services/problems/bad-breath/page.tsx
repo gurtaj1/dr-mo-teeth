@@ -5,8 +5,8 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
 import QuestionsSection from "@/components/ui/questions-section";
+import HeroSection from "@/components/ui/hero-section";
 
 const questions = [
   {
@@ -98,25 +98,14 @@ const BadBreath = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl mb-8">
-              Why Does My Breath <br />
-              <span className="font-bold">Smell So Bad?</span>
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1 mx-auto">
-              It&apos;s normal to have bad breath occasionally, for example
-              after eating strong foods or when you wake up in the morning.
-              However, about 25% of people experience chronic bad breath, known
-              as halitosis. This type of bad breath can&apos;t be fixed just by
-              brushing, flossing, drinking water, or chewing gum.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <HeroSection
+        title={{
+          lineOne: "Why Does My Breath",
+          lineTwo: "Smell So Bad?",
+          isFirstLineBold: false,
+        }}
+        description="It's normal to have bad breath occasionally, for example after eating strong foods or when you wake up in the morning. However, about 25% of people experience chronic bad breath, known as halitosis. This type of bad breath can't be fixed just by brushing, flossing, drinking water, or chewing gum."
+      />
 
       <AnimatedImageTextSection
         imageRef={causesImageRef}

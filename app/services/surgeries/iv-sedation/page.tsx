@@ -7,6 +7,7 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import AnimatedElement from "@/components/ui/animated-element";
 import AnimatedImageTextSection from "@/components/ui/animated-image-text-section";
 import Link from "next/link";
+import TitleSection from "@/components/ui/title-section";
 
 export default function IVSedationPage() {
   const [isIVSedationImageVisible, setIsIVSedationImageVisible] =

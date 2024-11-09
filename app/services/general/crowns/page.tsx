@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
+import HeroSection from "@/components/ui/hero-section";
 
 const Crowns = () => {
   const [isCrownsImageVisible, setIsCrownsImageVisible] = useState(false);
@@ -44,29 +44,17 @@ const Crowns = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <div className="text-5xl text-center text-dental-accent1 bg-dental-navy pt-8">
-        <h1>Crowns</h1>
+        <h1 className="text-8xl">Crowns</h1>
       </div>
       {/* Dental Crowns Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h1 className="text-7xl mb-8 text-dental-accent1">
-              Place a crown
-              <br /> <span className="font-bold">Before your tooth cracks</span>
-            </h1>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-dental-accent1">
-              A dental crown is a cap that fits over a damaged or weakened tooth
-              to restore its shape, size, strength, and appearance. Crowns are
-              often used after a tooth has been significantly decayed, cracked,
-              or after root canal treatment. Made from materials like porcelain,
-              metal, or a combination of both, crowns are designed to look and
-              feel like natural teeth.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <HeroSection
+        title={{
+          lineOne: "Place a crown",
+          lineTwo: "Before your tooth cracks",
+          isFirstLineBold: false,
+        }}
+        description="A dental crown is a cap that fits over a damaged or weakened tooth to restore its shape, size, strength, and appearance. Crowns are often used after a tooth has been significantly decayed, cracked, or after root canal treatment. Made from materials like porcelain, metal, or a combination of both, crowns are designed to look and feel like natural teeth."
+      />
 
       <AnimatedImageTextSection
         imageRef={crownsImageRef}
