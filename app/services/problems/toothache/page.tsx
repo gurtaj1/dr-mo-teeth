@@ -89,12 +89,11 @@ const Toothache = () => {
             <span className="font-bold">Tooth Pain</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={causesParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">Your tooth pain could be due to:</p>
-        <ul className="space-y-2 text-gray-600">
+        <p className="mb-4">Your tooth pain could be due to:</p>
+        <ul className="space-y-2 ">
           <li>• Tooth decay/cavities</li>
           <li>• Gum disease</li>
           <li>• Grinding (bruxism)</li>
@@ -105,7 +104,7 @@ const Toothache = () => {
           <li>• Cracked teeth</li>
           <li>• Broken filling</li>
         </ul>
-        <p className="text-gray-600 mt-4">
+        <p className="mt-4">
           If attending for a pain appointment, I will discuss your pain&apos;s
           history and severity and perform a thorough oral exam. I may also take
           X-rays to pinpoint the cause of your discomfort. After identifying the
@@ -126,8 +125,7 @@ const Toothache = () => {
             <span className="font-bold">Tooth Pain</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
@@ -166,16 +164,15 @@ const Toothache = () => {
             How to <br /> <span className="font-bold">Prevent Tooth Pain</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={preventionParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
+        <p className="mb-4">
           Tooth pain can arise from various factors, but you can adopt some
           habits to lower your risk of developing pain and other oral health
           issues:
         </p>
-        <ul className="space-y-2 text-gray-600">
+        <ul className="space-y-2 ">
           <li>
             • Maintain good oral hygiene by brushing twice a day, flossing
             daily, and using a gentle mouthwash.

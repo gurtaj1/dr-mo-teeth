@@ -80,14 +80,11 @@ const Crowns = () => {
             The Crown <br /> <span className="font-bold">Process</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={crownsParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
-          The process typically involves two visits:
-        </p>
-        <ol className="space-y-2 text-gray-600">
+        <p className="mb-4">The process typically involves two visits:</p>
+        <ol className="space-y-2">
           <li>
             <strong>First Visit:</strong> Your dentist will prepare the tooth
             and take impressions to create space for the crown, take impressions
@@ -112,8 +109,7 @@ const Crowns = () => {
             Benefits of <br /> <span className="font-bold">Dental Crowns</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >

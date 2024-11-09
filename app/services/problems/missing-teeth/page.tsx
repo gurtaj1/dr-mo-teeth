@@ -87,11 +87,10 @@ const MissingTooth = () => {
             <span className="font-bold">Smile&apos;s Functionality</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-gray-600">
+        <div className="space-y-4 ">
           <p>
             I provide a range of treatments for missing teeth, including dental
             implants, dentures, and bridges. We know that everyone has different
@@ -113,8 +112,7 @@ const MissingTooth = () => {
             Your Treatment <br /> <span className="font-bold">Options</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={optionsParallaxOffset}
         scrollFactor={1}
       >

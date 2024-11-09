@@ -71,8 +71,7 @@ const GumTherapy = () => {
             <br /> <span className="font-bold">Falling Out</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={introParallaxOffset}
         scrollFactor={1}
       >
@@ -109,15 +108,14 @@ const GumTherapy = () => {
             Understanding <br /> <span className="font-bold">Gum Disease</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={gumTherapyParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
+        <p className="mb-4">
           Early detection and treatment of gum disease is crucial. Here are the
           signs to watch for:
         </p>
-        <ul className="space-y-2 text-gray-600">
+        <ul className="space-y-2">
           <li>• Bleeding gums during brushing or flossing</li>
           <li>• Red, swollen, or tender gums</li>
           <li>• Receding gums</li>
@@ -137,8 +135,7 @@ const GumTherapy = () => {
             Benefits of <br /> <span className="font-bold">Gum Therapy</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >

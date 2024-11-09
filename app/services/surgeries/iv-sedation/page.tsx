@@ -72,14 +72,11 @@ export default function IVSedationPage() {
             Who Needs <br /> <span className="font-bold">IV Sedation?</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={ivSedationParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
-          Intravenous Sedation can benefit people with:
-        </p>
-        <ul className="space-y-2 text-gray-600">
+        <p className="mb-4">Intravenous Sedation can benefit people with:</p>
+        <ul className="space-y-2">
           <li>• Dental anxiety</li>
           <li>• Fear of visiting the dentist</li>
           <li>• Overly sensitive gag reflex</li>

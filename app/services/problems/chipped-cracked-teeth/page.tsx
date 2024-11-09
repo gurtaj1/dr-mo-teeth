@@ -119,11 +119,10 @@ const BrokenTeeth = () => {
             <span className="font-bold">Contribute to Chipped Teeth?</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={dentalCareParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600">
+        <p>
           While many broken teeth result from accidents, poor dental hygiene can
           make your teeth more vulnerable. Inconsistent brushing and flossing
           allow plaque and bacteria to build up, which can weaken enamel and
@@ -145,8 +144,7 @@ const BrokenTeeth = () => {
             <span className="font-bold">Broken Tooth at Home</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={homeManagementParallaxOffset}
         scrollFactor={1}
       >
@@ -185,11 +183,10 @@ const BrokenTeeth = () => {
             </span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-gray-600">
+        <div className="space-y-6">
           <div>
             <ol className="space-y-2">
               <li>

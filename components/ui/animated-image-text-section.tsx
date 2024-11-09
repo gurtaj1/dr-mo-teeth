@@ -3,14 +3,13 @@ import Image from "next/image";
 
 interface AnimatedImageTextSectionProps {
   imageRef: RefObject<HTMLDivElement>;
-  titleRef?: RefObject<HTMLHeadingElement>; // Add new prop for title ref
+  titleRef?: RefObject<HTMLHeadingElement>;
   isImageVisible: boolean;
   imagePosition: "left" | "right";
   imageSrc: string;
   imageAlt: string;
   title: string | React.ReactNode;
-  titleColor: string;
-  backgroundColor?: string;
+  isDark?: boolean;
   scrollY?: number;
   scrollFactor?: number;
   children: React.ReactNode;
@@ -18,14 +17,13 @@ interface AnimatedImageTextSectionProps {
 
 const AnimatedImageTextSection = ({
   imageRef,
-  titleRef, // Add new prop
+  titleRef,
   isImageVisible,
   imagePosition,
   imageSrc,
   imageAlt,
   title,
-  titleColor,
-  backgroundColor = "transparent",
+  isDark = false,
   scrollY = 0,
   scrollFactor = 0,
   children,
@@ -52,7 +50,7 @@ const AnimatedImageTextSection = ({
   );
 
   return (
-    <section className={`py-16 ${backgroundColor}`}>
+    <section className={isDark ? "bg-dental-navy py-16" : "py-16"}>
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {imagePosition === "left" && (
@@ -60,8 +58,10 @@ const AnimatedImageTextSection = ({
           )}
           <div className="w-full md:w-1/2">
             <h2
-              ref={titleRef} // Apply the ref
-              className={`text-3xl mb-6 ${titleColor}`}
+              ref={titleRef}
+              className={`text-7xl mb-6 ${
+                isDark ? "text-white" : "text-dental-navy"
+              }`}
               style={
                 scrollFactor
                   ? { transform: `translateY(${scrollY * scrollFactor}px)` }
@@ -70,7 +70,16 @@ const AnimatedImageTextSection = ({
             >
               {title}
             </h2>
-            {children}
+            <div
+              className={`w-1/4 border-b-2 ${
+                isDark ? "border-dental-teal" : "border-dental-accent1"
+              } mb-6`}
+            ></div>
+            <span
+              className={`${isDark ? "text-dental-accent1" : "text-gray-600"}`}
+            >
+              {children}
+            </span>
           </div>
           {imagePosition === "right" && (
             <div className="w-full md:w-1/2">{imageContent}</div>

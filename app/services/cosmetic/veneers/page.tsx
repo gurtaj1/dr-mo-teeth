@@ -79,15 +79,14 @@ const Veneers = () => {
             The Veneer <br /> <span className="font-bold">Process</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
+        <p className=" mb-4">
           The journey to your perfect smile involves several carefully planned
           steps:
         </p>
-        <ol className="space-y-2 text-gray-600">
+        <ol className="space-y-2">
           <li>
             <strong>Step 1.</strong> Initial consultation and smile design
             planning
@@ -122,8 +121,7 @@ const Veneers = () => {
             Benefits of <br /> <span className="font-bold">Dental Veneers</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >

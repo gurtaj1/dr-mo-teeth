@@ -106,11 +106,10 @@ const CrookedTeeth = () => {
             What Causes <br /> <span className="font-bold">Crooked Teeth?</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={causesParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-gray-600">
+        <div className="space-y-4 ">
           <p>
             Perfectly aligned teeth are rare, and many factors contribute to
             crookedness. Some common causes include:
@@ -156,8 +155,7 @@ const CrookedTeeth = () => {
             <span className="font-bold">About Crooked Teeth</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={dentalCareParallaxOffset}
         scrollFactor={1}
       >
@@ -189,11 +187,10 @@ const CrookedTeeth = () => {
             <span className="font-bold">Correcting Crooked Teeth</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-gray-600">
+        <div className="space-y-6">
           <div>
             <ol className="space-y-2">
               <li>1. Request Your Appointment</li>

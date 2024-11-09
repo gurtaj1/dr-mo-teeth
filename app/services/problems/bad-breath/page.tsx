@@ -131,11 +131,10 @@ const BadBreath = () => {
             <span className="font-bold">Dental Concern</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={causesParallaxOffset}
         scrollFactor={1}
       >
-        <div className="text-gray-600">
+        <div>
           <p>
             Sometimes, bad breath can indicate a health issue, such as a sinus
             infection, acid reflux, or problems with your liver or kidneys. If
@@ -157,8 +156,7 @@ const BadBreath = () => {
             <span className="font-bold">How to Fix</span> <br /> Bad Breath
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
@@ -197,11 +195,10 @@ const BadBreath = () => {
             <span className="font-bold">Halitosis</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={questionsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-gray-600">
+        <div className="space-y-6">
           <div>
             <ul className="space-y-2">
               <li>

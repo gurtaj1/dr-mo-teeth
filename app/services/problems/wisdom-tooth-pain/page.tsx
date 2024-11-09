@@ -70,8 +70,7 @@ const WisdomToothPain = () => {
             Its Wise To <br /> <span className="font-bold">Remove Them</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={wisdomParallaxOffset}
         scrollFactor={1}
       >
@@ -110,25 +109,24 @@ const WisdomToothPain = () => {
             <span className="font-bold">Wisdom Tooth Removal</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={wisdomBenefitsParallaxOffset}
         scrollFactor={1}
       >
-        <h3 className="text-gray-600 font-bold mb-2">No More Pain</h3>
-        <p className="text-gray-600 mb-4">
+        <h3 className="font-bold mb-2">No More Pain</h3>
+        <p className=" mb-4">
           If you&apos;re dealing with wisdom tooth pain, having them removed can
           relieve your symptoms, making chewing and talking more comfortable.
         </p>
 
-        <h3 className="text-gray-600 font-bold mb-2">Improved Oral Health</h3>
-        <p className="text-gray-600 mb-4">
+        <h3 className=" font-bold mb-2">Improved Oral Health</h3>
+        <p className=" mb-4">
           Wisdom teeth are located far back in the mouth, making them hard to
           clean properly. This can lead to plaque build up, increasing your risk
           for gum disease and other oral health issues.
         </p>
 
-        <h3 className="text-gray-600 font-bold mb-2">Better Breath</h3>
-        <p className="text-gray-600">
+        <h3 className=" font-bold mb-2">Better Breath</h3>
+        <p>
           Impacted wisdom teeth can contribute to bad breath. When the
           surrounding gum tissue is compromised, bacteria can become trapped,
           leading to unpleasant odours and potential health risks.
@@ -148,8 +146,7 @@ const WisdomToothPain = () => {
             <span className="font-bold">Wisdom Teeth Removed?</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={wisdomProcessParallaxOffset}
         scrollFactor={1}
       >

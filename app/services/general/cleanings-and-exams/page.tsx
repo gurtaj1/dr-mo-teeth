@@ -84,11 +84,10 @@ const CleaningsAndExams = () => {
             <span className="font-bold">Dental Exam</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={examParallaxOffset}
         scrollFactor={1}
       >
-        <ul className="space-y-2 text-gray-600">
+        <ul className="space-y-2">
           <li>✓ An assessment of your dental and medical history</li>
           <li>
             ✓ An extra oral and intra oral examination including all soft and
@@ -120,8 +119,7 @@ const CleaningsAndExams = () => {
             <br /> <span className="font-bold">Scale and Polish</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={cleaningParallaxOffset}
         scrollFactor={1}
       >

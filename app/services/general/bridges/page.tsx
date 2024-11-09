@@ -70,11 +70,10 @@ const Bridges = () => {
             <span className="font-bold">Missing Teeth</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={bridgesParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
+        <p className="mb-4">
           Unlike removable partial dentures, dental bridges are fixed in place,
           making them a preferred choice for many patients. We&apos;ll help you
           determine if this option is right for you.

@@ -87,14 +87,13 @@ const Dentures = () => {
             Types of <br /> <span className="font-bold">Dentures</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={dentureTypesParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
+        <p className="mb-4">
           We offer different types of dentures to suit your specific needs:
         </p>
-        <ul className="space-y-2 text-gray-600">
+        <ul className="space-y-2">
           <li>
             <strong>Complete Dentures:</strong> Replace all teeth in upper or
             lower jaw
@@ -126,8 +125,7 @@ const Dentures = () => {
             Benefits of <br /> <span className="font-bold">Dentures</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >

@@ -69,13 +69,12 @@ const SmileMakeover = () => {
             <span className="font-bold">Enhance</span> <br /> Your Current Smile
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={heroParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6">
-          <p className="text-dental-accent1">
+          <p>
             A radiant, confident smile is one of the first things people notice.
             If you&apos;re unhappy with the appearance of your teeth, a Smile
             Makeover can provide the transformation you&apos;ve been dreaming
@@ -105,11 +104,10 @@ const SmileMakeover = () => {
             <span className="font-bold">Smile Makeover</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-gray-600">
+        <div className="space-y-6">
           <p>
             Depending on your needs, a Smile Makeover may include one or more of
             the following procedures:
@@ -140,8 +138,7 @@ const SmileMakeover = () => {
             <span className="font-bold">The Process</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >

@@ -81,11 +81,10 @@ const TeethWhitening = () => {
             by Two Shades or More
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={lightenParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600">
+        <p>
           Maintaining the whiteness of your teeth can be challenging. Daily
           culprits like coffee, and certain foods can stain your teeth, making
           it tough to keep them looking their best, even with good dental care.
@@ -108,8 +107,7 @@ const TeethWhitening = () => {
             <span className="font-bold">Teeth Whitening</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={factsParallaxOffset}
         scrollFactor={1}
       >

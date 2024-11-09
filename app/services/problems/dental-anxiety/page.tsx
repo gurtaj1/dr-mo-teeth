@@ -90,11 +90,10 @@ const DentalAnxiety = () => {
             <span className="font-bold">Dental Anxiety</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={reasonsParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-gray-600">
+        <div className="space-y-4">
           <ul className="space-y-2">
             <li className="flex items-start">
               <span className="mr-2 flex-shrink-0">✓</span>
@@ -133,8 +132,7 @@ const DentalAnxiety = () => {
             <span className="font-bold">Affect Oral Health?</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={effectsParallaxOffset}
         scrollFactor={1}
       >
@@ -161,11 +159,10 @@ const DentalAnxiety = () => {
             Managing <br /> <span className="font-bold">Dental Anxiety</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={managementParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-gray-600">
+        <div className="space-y-4">
           <p>
             If you&apos;re feeling anxious about your dental visit, please let
             the team know before your appointment or when you arrive. I have

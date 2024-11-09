@@ -116,11 +116,10 @@ const BleedingGums = () => {
             <span className="font-bold">Your Gum Health</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-6 text-gray-600">
+        <div className="space-y-6">
           <ol className="space-y-4">
             <li>
               <strong>Step 1.</strong> Request your appointment

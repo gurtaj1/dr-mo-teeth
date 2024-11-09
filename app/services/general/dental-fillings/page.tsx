@@ -71,8 +71,7 @@ const DentalFillings = () => {
             <br /> <span className="font-bold">Before it fails</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={heroParallaxOffset}
         scrollFactor={1}
       >
@@ -101,11 +100,10 @@ const DentalFillings = () => {
             Types of <br /> <span className="font-bold">Dental Fillings</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={typesParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-gray-600">
+        <div className="space-y-4">
           <div>
             <h3 className="font-bold mb-2">Amalgam Fillings:</h3>
             <ul className="space-y-2">
@@ -139,8 +137,7 @@ const DentalFillings = () => {
             The Filling <br /> <span className="font-bold">Process</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >

@@ -86,11 +86,10 @@ const TeethGrinding = () => {
             <span className="font-bold">Teeth Grinding</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={shieldParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-gray-600">
+        <div className="space-y-4 ">
           <p>
             I offer a range of treatments designed to tackle teeth grinding from
             different angles, ensuring effective solutions tailored to your
@@ -132,8 +131,7 @@ const TeethGrinding = () => {
             <span className="font-bold">Dream Without Grinding</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >

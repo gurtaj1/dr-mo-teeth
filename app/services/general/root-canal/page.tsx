@@ -59,8 +59,7 @@ const RootCanal = () => {
             <span className="font-bold">Save the Tooth</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={heroParallaxOffset}
         scrollFactor={1}
       >
@@ -85,18 +84,17 @@ const RootCanal = () => {
             <span className="font-bold">Root Canal Treatment</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
+        <p className="mb-4">
           Root canal treatment is a dental procedure designed to save a tooth
           that is infected or severely damaged. During the treatment, your
           dentist will remove the infected nerve from inside the tooth, clean
           and disinfect the space, and then fill it with a special material to
           seal it.
         </p>
-        <p className="text-gray-600">
+        <p>
           This helps prevent further infection and preserves the natural tooth,
           allowing you to continue using it for biting and chewing. While many
           people worry about root canals, they are often no more painful than

@@ -96,11 +96,10 @@ const SensitiveTeeth = () => {
             The Science of <br /> <span className="font-bold">Comfort</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={comfortParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
+        <p className="mb-4">
           I provide a variety of effective treatments to help alleviate tooth
           sensitivity and restore your oral health. After identifying the cause:
           whether it&apos;s enamel erosion, gum recession, tooth grinding, or
@@ -120,8 +119,7 @@ const SensitiveTeeth = () => {
             Causes Of <br /> <span className="font-bold">Sensitive Teeth</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
@@ -179,11 +177,10 @@ const SensitiveTeeth = () => {
             <span className="font-bold">Sensitive Teeth</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={preventionParallaxOffset}
         scrollFactor={1}
       >
-        <div className="space-y-4 text-gray-600">
+        <div className="space-y-4 ">
           <ul className="space-y-2">
             <li className="flex items-start">
               <span className="mr-2 flex-shrink-0">✓</span>

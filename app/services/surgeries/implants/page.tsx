@@ -81,15 +81,14 @@ const DentalImplants = () => {
             <span className="font-bold">Implant Journey</span>:
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={implantJourneyParallaxOffset}
         scrollFactor={1}
       >
-        <p className="text-gray-600 mb-4">
+        <p className="mb-4">
           I collaborate closely with you to detail every step of your treatment,
           making sure you know what to expect at each stage:
         </p>
-        <ol className="space-y-2 text-gray-600">
+        <ol className="space-y-2 ">
           <li>
             <strong>Step 1.</strong> Assessment and treatment planning. Bespoke
             solutions tailored for you using Advanced 3D imaging technology
@@ -125,8 +124,7 @@ const DentalImplants = () => {
             <span className="font-bold">Dental Implants</span>:
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >

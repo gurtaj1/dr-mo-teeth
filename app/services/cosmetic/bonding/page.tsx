@@ -79,11 +79,10 @@ const Bonding = () => {
             The Bonding <br /> <span className="font-bold">Process</span>
           </>
         }
-        titleColor="text-dental-navy"
         scrollY={processParallaxOffset}
         scrollFactor={1}
       >
-        <ol className="space-y-2 text-gray-600">
+        <ol className="space-y-2">
           <li>
             <strong>Step 1.</strong> Consultation and shade matching to ensure
             natural results
@@ -118,12 +117,11 @@ const Bonding = () => {
             <span className="font-bold">Composite Bonding</span>
           </>
         }
-        titleColor="text-dental-accent1"
-        backgroundColor="bg-dental-navy"
+        isDark
         scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
-        <ul className="space-y-4 text-dental-accent1">
+        <ul className="space-y-4">
           <li>⭐ Quick and minimally invasive procedure</li>
           <li>⭐ Natural-looking results</li>
           <li>⭐ Can fix multiple cosmetic issues</li>
