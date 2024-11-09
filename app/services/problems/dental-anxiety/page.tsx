@@ -171,7 +171,7 @@ const DentalAnxiety = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
+            <h2 className="text-3xl font-bold mb-6 text-center">
               How I Help You Through Dental Anxiety
             </h2>
           </AnimatedElement>

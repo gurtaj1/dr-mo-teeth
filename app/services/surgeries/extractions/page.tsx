@@ -68,9 +68,7 @@ const Extractions = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
-              Extractions
-            </h1>
+            <h1 className="text-4xl font-bold text-center mb-8">Extractions</h1>
           </AnimatedElement>
           <AnimatedElement>
             <p className="text-dental-accent1 max-w-3xl mx-auto text-center">

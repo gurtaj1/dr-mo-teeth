@@ -11,6 +11,7 @@ interface AnimatedElementProps {
 
 const AnimatedElement = ({
   children,
+  className,
   threshold = 0.1,
   transitionSize = false,
 }: AnimatedElementProps) => {
@@ -37,7 +38,8 @@ const AnimatedElement = ({
           ? "scale-100"
           : !isVisible && transitionSize
           ? "scale-95"
-          : ""
+          : "",
+        className ? className : ""
       )}
     >
       {children}

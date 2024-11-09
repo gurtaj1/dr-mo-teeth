@@ -101,9 +101,9 @@ const BadBreath = () => {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h1 className="text-4xl mb-8 text-dental-accent1">
+            <h1 className="text-4xl mb-8">
               Why Does My Breath <br />
-              Smell So Bad?
+              <span className="font-bold">Smell So Bad?</span>
             </h1>
           </AnimatedElement>
           <AnimatedElement>

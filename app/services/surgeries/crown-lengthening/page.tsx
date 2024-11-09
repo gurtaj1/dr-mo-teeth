@@ -9,9 +9,9 @@ const CrownLengthening = () => {
       <section className="flex-grow py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-4xl font-bold text-center mb-8 text-dental-accent1">
+            <h1 className="text-4xl font-bold text-center mb-81">
               Crown Lengthening
-            </h2>
+            </h1>
           </AnimatedElement>
           <AnimatedElement>
             <p className="text-dental-accent1 max-w-3xl mx-auto text-center">

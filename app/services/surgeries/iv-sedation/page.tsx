@@ -37,9 +37,9 @@ export default function IVSedationPage() {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-3xl font-bold mb-6 text-dental-accent1 text-center">
+            <h1 className="text-3xl font-bold mb-6 text-center">
               Intravenous (IV) Sedation
-            </h2>
+            </h1>
           </AnimatedElement>
           <AnimatedElement>
             <p className="text-dental-accent1 max-w-3xl mx-auto text-center">
@@ -90,7 +90,7 @@ export default function IVSedationPage() {
       <section className="py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
-            <h2 className="text-3xl mb-12 text-dental-accent1 text-center">
+            <h2 className="text-3xl mb-12 text-center">
               <strong>
                 What Happens Before, During and After IV Sedation?
               </strong>
