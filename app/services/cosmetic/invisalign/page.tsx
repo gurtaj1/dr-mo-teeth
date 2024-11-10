@@ -50,6 +50,7 @@ const Invisalign = () => {
                   autoplay={true}
                   boxShadowColor="dental-primary"
                   hideSideButtons
+                  autoplayInterval={8000}
                 />
               </div>
             </AnimatedElement>
