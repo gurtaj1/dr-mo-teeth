@@ -67,16 +67,6 @@ const HomePage = () => {
     }
   }, []); // Run once when component mounts
 
-  // const autoRotateInterval = 5000;
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setActiveIndex((current) => (current < maxIndex ? current + 1 : 0));
-  //   }, autoRotateInterval);
-
-  //   return () => clearInterval(timer);
-  // }, [maxIndex, autoRotateInterval]);
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
