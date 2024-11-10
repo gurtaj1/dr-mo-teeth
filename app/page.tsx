@@ -233,7 +233,7 @@ const HomePage = () => {
         <div className="container mx-auto px-6">
           <AnimatedElement>
             <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
-              Our Services
+              My Services
             </h2>
           </AnimatedElement>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
