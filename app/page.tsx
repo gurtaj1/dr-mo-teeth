@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedElement from "@/components/ui/animated-element";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import SmartCarousel from "@/components/ui/smart-carousel";
 
 import { navBarHeight } from "./globals/constants";
 
@@ -47,6 +48,17 @@ const HomePage = () => {
   ];
 
   const maxIndex = Math.max(0, testimonials.length - slidesPerView);
+
+  const carouselItems = testimonials.map((testimonial, index) => (
+    <Card key={index} className="h-full border-none shadow-lg">
+      <CardContent className="p-6 flex flex-col justify-between h-full">
+        <p className="text-gray-600 mb-4 text-lg italic">
+          &quot;{testimonial.text}&quot;
+        </p>
+        <p className="font-semibold text-right">{testimonial.name}</p>
+      </CardContent>
+    </Card>
+  ));
 
   useEffect(() => {
     // Check if there's a hash in the URL
@@ -386,65 +398,11 @@ const HomePage = () => {
             </h2>
           </AnimatedElement>
           <AnimatedElement transitionSize>
-            <div className="w-full max-w-6xl mx-auto px-4 py-8">
-              <div className="relative">
-                <div
-                  className="overflow-hidden"
-                  onTouchStart={handleTouchStart}
-                  onTouchMove={handleTouchMove}
-                  onTouchEnd={handleTouchEnd}
-                >
-                  <div
-                    className="flex transition-transform duration-300 ease-in-out"
-                    style={{
-                      transform: `translateX(-${
-                        activeIndex * (100 / slidesPerView)
-                      }%)`,
-                    }}
-                  >
-                    {testimonials.map((testimonial, index) => (
-                      <div
-                        key={index}
-                        className={`w-full sm:w-1/3 flex-shrink-0 px-2`}
-                      >
-                        <Card className="h-full border-none shadow-lg">
-                          <CardContent className="p-6 flex flex-col justify-between h-full">
-                            <p className="text-gray-600 mb-4 text-lg italic">
-                              &quot;{testimonial.text}&quot;
-                            </p>
-                            <p className="font-semibold text-right">
-                              {testimonial.name}
-                            </p>
-                          </CardContent>
-                        </Card>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full -ml-4 bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
-                    onClick={prevTestimonial}
-                    disabled={activeIndex === 0}
-                    aria-label="Previous testimonials"
-                  >
-                    <ChevronLeft className="h-4 w-4 " />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full -mr-4 bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
-                    onClick={nextTestimonial}
-                    disabled={activeIndex === maxIndex}
-                    aria-label="Next testimonials"
-                  >
-                    <ChevronRight className="h-4 w-4 " />
-                  </Button>
-                </div>
-              </div>
-            </div>
+            <SmartCarousel
+              items={carouselItems}
+              slidesToShow={3}
+              autoplay={true}
+            />
           </AnimatedElement>
         </div>
       </section>
