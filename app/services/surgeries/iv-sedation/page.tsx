@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import dynamic from "next/dynamic";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import AnimatedElement from "@/components/ui/animated-element";
 import AnimatedImageTextSection from "@/components/ui/animated-image-text-section";
