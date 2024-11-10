@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface AnimatedElementProps {
   children: React.ReactNode;
@@ -29,21 +30,18 @@ const AnimatedElement = ({
   });
 
   return (
-    <div
+    <motion.div
       ref={elementRef}
-      className={cn(
-        "transition-all duration-500 ease-in-out will-change-transform will-change-opacity origin-center",
-        isVisible ? "opacity-100" : "opacity-50",
-        isVisible && transitionSize
-          ? "scale-100"
-          : !isVisible && transitionSize
-          ? "scale-95"
-          : "",
-        className ? className : ""
-      )}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{
+        opacity: isVisible ? 1 : 0.5,
+        scale: isVisible && transitionSize ? 1 : 0.95,
+      }}
+      transition={{ duration: 0.1, ease: "easeInOut" }}
+      className={cn("origin-center", className ? className : "")}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
