@@ -1,8 +1,10 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
+import Loading from "./loading";
 
 import "./globals.css";
 
@@ -39,7 +41,7 @@ export default function RootLayout({
           className="flex-grow flex flex-col"
           style={{ paddingTop: navBarHeight }}
         >
-          {children}
+          <Suspense fallback={<Loading />}>{children}</Suspense>
         </main>
         <Footer />
       </body>
