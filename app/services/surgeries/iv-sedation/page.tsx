@@ -7,14 +7,7 @@ import AnimatedElement from "@/components/ui/animated-element";
 import AnimatedImageTextSection from "@/components/ui/animated-image-text-section";
 import Link from "next/link";
 import TitleSection from "@/components/ui/title-section";
-
-// Dynamically import SmartCarousel
-const SmartCarousel = dynamic(() => import("@/components/ui/smart-carousel"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full aspect-video bg-gray-100 animate-pulse rounded-lg"></div>
-  ),
-});
+import SmartCarousel from "@/components/ui/smart-carousel";
 
 const imageSlides = [
   "/iv-slide-1.png",
@@ -49,31 +42,6 @@ export default function IVSedationPage() {
       },
     ],
   });
-
-  // Move the carousel section to a separate component
-  const CarouselSection = () => (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-6">
-        <AnimatedElement>
-          <h2 className="text-3xl mb-12 text-dental-navy text-center">
-            <strong>What you Need to Know</strong>
-          </h2>
-        </AnimatedElement>
-        <AnimatedElement transitionSize>
-          <div className="max-w-3xl mx-auto">
-            <SmartCarousel
-              items={imageSlides}
-              slidesToShow={1}
-              autoplay={true}
-              boxShadowColor="white"
-              hideSideButtons
-              autoplayInterval={8000}
-            />
-          </div>
-        </AnimatedElement>
-      </div>
-    </section>
-  );
 
   return (
     <div className="min-h-screen bg-white">
@@ -210,7 +178,29 @@ export default function IVSedationPage() {
         </div>
       </section>
 
-      <CarouselSection />
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <AnimatedElement>
+            <h2 className="text-3xl mb-12 text-dental-navy text-center">
+              <strong>What you Need to Know</strong>
+            </h2>
+          </AnimatedElement>
+          <div className="mt-8">
+            <AnimatedElement transitionSize>
+              <div className="max-w-3xl mx-auto">
+                <SmartCarousel
+                  items={imageSlides}
+                  slidesToShow={1}
+                  autoplay={true}
+                  boxShadowColor="white"
+                  hideSideButtons
+                  autoplayInterval={8000}
+                />
+              </div>
+            </AnimatedElement>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
