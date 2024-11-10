@@ -1,8 +1,8 @@
 import { RefObject } from "react";
-
-import Image from "next/image";
 import { motion } from "framer-motion";
 
+import Image from "next/image";
+import AnimatedElement from "./animated-element";
 interface AnimatedImageTextSectionProps {
   imageRef: RefObject<HTMLDivElement>;
   titleRef?: RefObject<HTMLHeadingElement>;
@@ -102,9 +102,11 @@ const AnimatedImageTextSection = ({
                 isDark ? "border-dental-teal" : "border-dental-accent1"
               } mb-6 origin-left`}
             ></motion.div>
-            <span className={`${isDark ? "text-white" : "text-gray-600"}`}>
-              {children}
-            </span>
+            <AnimatedElement>
+              <span className={`${isDark ? "text-white" : "text-gray-600"}`}>
+                {children}
+              </span>
+            </AnimatedElement>
           </div>
           {imagePosition === "right" && (
             <div className="w-full md:w-1/2">{imageContent}</div>

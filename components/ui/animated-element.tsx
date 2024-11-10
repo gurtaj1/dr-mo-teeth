@@ -32,12 +32,12 @@ const AnimatedElement = ({
   return (
     <motion.div
       ref={elementRef}
-      initial={{ opacity: 0, scale: 0.95 }}
+      initial={{ opacity: 0, scale: 0.98 }}
       animate={{
         opacity: isVisible ? 1 : 0.5,
-        scale: isVisible && transitionSize ? 1 : 0.95,
+        scale: isVisible && transitionSize ? 1 : 0.98,
       }}
-      transition={{ duration: 0.1, ease: "easeInOut" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
       className={cn("origin-center", className ? className : "")}
     >
       {children}
