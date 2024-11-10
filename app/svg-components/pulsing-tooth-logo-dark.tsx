@@ -8,7 +8,7 @@ const svgVariants = {
       duration: 2, // Total duration for one pulse
       ease: "easeInOut",
       repeat: Infinity, // Indefinite looping
-      repeatType: "loop", // Ensures it loops continuously
+      repeatType: "loop" as const, // Ensures it loops continuously
     },
   },
 };
