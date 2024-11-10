@@ -42,19 +42,16 @@ const Invisalign = () => {
           </AnimatedElement>
 
           <div className="mt-8">
-            <AnimatedElement>
-              <h2 className="text-2xl font-bold text-center mb-4">
-                Advantages of Clear Aligners and Fixed Braces:
-              </h2>
-            </AnimatedElement>
             <AnimatedElement transitionSize>
-              <SmartCarousel
-                items={imageSlides}
-                slidesToShow={1}
-                autoplay={true}
-                boxShadowColor="dental-primary"
-                hideSideButtons
-              />
+              <div className="max-w-3xl mx-auto">
+                <SmartCarousel
+                  items={imageSlides}
+                  slidesToShow={1}
+                  autoplay={true}
+                  boxShadowColor="dental-primary"
+                  hideSideButtons
+                />
+              </div>
             </AnimatedElement>
           </div>
 
