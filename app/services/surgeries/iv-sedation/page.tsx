@@ -8,6 +8,17 @@ import AnimatedElement from "@/components/ui/animated-element";
 import AnimatedImageTextSection from "@/components/ui/animated-image-text-section";
 import Link from "next/link";
 import TitleSection from "@/components/ui/title-section";
+import SmartCarousel from "@/components/ui/smart-carousel";
+const imageSlides = [
+  "/iv-slide-1.png",
+  "/iv-slide-2.png",
+  "/iv-slide-3.png",
+  "/iv-slide-4.png",
+  "/iv-slide-5.png",
+  "/iv-slide-6.png",
+  "/iv-slide-7.png",
+  "/iv-slide-8.png",
+];
 
 export default function IVSedationPage() {
   const [isIVSedationImageVisible, setIsIVSedationImageVisible] =
@@ -164,6 +175,28 @@ export default function IVSedationPage() {
               to see how I can help with IV Sedation.
             </p>
           </AnimatedElement>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <AnimatedElement>
+            <h2 className="text-3xl mb-12 text-dental-navy text-center">
+              <strong>What you Need to Know</strong>
+            </h2>
+          </AnimatedElement>
+          <AnimatedElement transitionSize>
+            <div className="max-w-3xl mx-auto">
+              <SmartCarousel
+                items={imageSlides}
+                slidesToShow={1}
+                autoplay={true}
+                boxShadowColor="white"
+                hideSideButtons
+                autoplayInterval={8000}
+              />
+            </div>
+          </AnimatedElement>{" "}
         </div>
       </section>
     </div>

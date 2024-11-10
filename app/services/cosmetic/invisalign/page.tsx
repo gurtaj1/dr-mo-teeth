@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import AnimatedElement from "@/components/ui/animated-element";
 import SmartCarousel from "@/components/ui/smart-carousel";
+
 const imageSlides = [
   "/invisalign-slide-1.png",
   "/invisalign-slide-2.png",
