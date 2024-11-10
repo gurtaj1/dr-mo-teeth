@@ -1,25 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
-
-import { useMediaQuery } from "@/hooks/use-media-query";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedElement from "@/components/ui/animated-element";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import SmartCarousel from "@/components/ui/smart-carousel";
 
 import { navBarHeight } from "./globals/constants";
 
 const HomePage = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
-  const isMobile = useMediaQuery("(max-width: 640px)");
-  const slidesPerView = isMobile ? 1 : 3;
-
   const testimonials = [
     {
       name: "John Doe",
@@ -46,8 +37,6 @@ const HomePage = () => {
       text: "Life-changing results! So happy I chose Dr Mo for my treatment.",
     },
   ];
-
-  const maxIndex = Math.max(0, testimonials.length - slidesPerView);
 
   const carouselItems = testimonials.map((testimonial, index) => (
     <Card key={index} className="h-full border-none shadow-lg">
@@ -87,34 +76,6 @@ const HomePage = () => {
 
   //   return () => clearInterval(timer);
   // }, [maxIndex, autoRotateInterval]);
-
-  const nextTestimonial = () => {
-    setActiveIndex((current) => Math.min(current + 1, maxIndex));
-  };
-
-  const prevTestimonial = () => {
-    setActiveIndex((current) => Math.max(current - 1, 0));
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    const minSwipeDistance = 50;
-    if (touchStart - touchEnd > minSwipeDistance) {
-      // Swiped left
-      nextTestimonial();
-    }
-    if (touchEnd - touchStart > minSwipeDistance) {
-      // Swiped right
-      prevTestimonial();
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white">
