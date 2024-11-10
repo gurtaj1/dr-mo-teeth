@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
-import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
+import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -12,13 +12,21 @@ interface SmartCarouselProps {
   autoplayInterval?: number;
 }
 
+type CarouselOptions = {
+  align: "start" | "center" | "end";
+  containScroll: "trimSnaps" | "keepSnaps" | false;
+  dragFree: boolean;
+  loop: boolean;
+  slidesToScroll: number;
+};
+
 export default function SmartCarousel({
   items,
   slidesToShow = 3,
   autoplay = false,
   autoplayInterval = 5000,
 }: SmartCarouselProps) {
-  const options: EmblaOptionsType = {
+  const options: CarouselOptions = {
     align: "start",
     containScroll: "trimSnaps",
     dragFree: true,
