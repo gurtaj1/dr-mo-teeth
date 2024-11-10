@@ -58,8 +58,6 @@ const hexToRgb = (color: string): string => {
 
   // If not a Tailwind class or RGB, try as hex
   const hex = color.replace("#", "");
-
-  // Handle both short (3 chars) and full (6 chars) hex
   const fullHex =
     hex.length === 3
       ? hex
@@ -73,22 +71,13 @@ const hexToRgb = (color: string): string => {
     const g = parseInt(fullHex.substring(2, 4), 16);
     const b = parseInt(fullHex.substring(4, 6), 16);
 
-    // Check if the conversion produced valid numbers
     if (isNaN(r) || isNaN(g) || isNaN(b)) {
-      throw new Error("Invalid hex color");
+      return "0, 0, 0";
     }
 
     return `${r}, ${g}, ${b}`;
   } catch (e) {
-    // If hex parsing fails, try as a named color
-    const tempEl = document.createElement("div");
-    tempEl.style.color = color;
-    document.body.appendChild(tempEl);
-    const rgbColor = window.getComputedStyle(tempEl).color;
-    document.body.removeChild(tempEl);
-
-    const rgbMatch = rgbColor.match(/\(([^)]+)\)/);
-    return rgbMatch ? rgbMatch[1] : "0, 0, 0";
+    return "0, 0, 0";
   }
 };
 
@@ -111,6 +100,7 @@ export default function SmartCarousel({
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [rgbColor, setRgbColor] = useState<string>("0, 0, 0");
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
@@ -149,6 +139,27 @@ export default function SmartCarousel({
     }
   }, [autoplay, autoplayInterval, emblaApi]);
 
+  useEffect(() => {
+    if (boxShadowColor) {
+      // Only run browser-specific color parsing in useEffect
+      if (
+        typeof window !== "undefined" &&
+        !boxShadowColor.startsWith("#") &&
+        !getTailwindColor(boxShadowColor)
+      ) {
+        const tempEl = document.createElement("div");
+        tempEl.style.color = boxShadowColor;
+        document.body.appendChild(tempEl);
+        const rgbColor = window.getComputedStyle(tempEl).color;
+        document.body.removeChild(tempEl);
+        const rgbMatch = rgbColor.match(/\(([^)]+)\)/);
+        setRgbColor(rgbMatch ? rgbMatch[1] : "0, 0, 0");
+      } else {
+        setRgbColor(hexToRgb(boxShadowColor));
+      }
+    }
+  }, [boxShadowColor]);
+
   return (
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
@@ -168,11 +179,7 @@ export default function SmartCarousel({
                     className="absolute inset-0 rounded-lg"
                     style={{
                       boxShadow: boxShadowColor
-                        ? `inset ${boxShadowVariables.spread} ${
-                            boxShadowColor.startsWith("#")
-                              ? boxShadowColor
-                              : `rgb(${hexToRgb(boxShadowColor)})`
-                          }`
+                        ? `inset ${boxShadowVariables.spread} rgb(${rgbColor})`
                         : "none",
                     }}
                   />
