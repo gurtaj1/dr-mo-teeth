@@ -13,13 +13,12 @@ const svgVariants = {
   },
 };
 
-const ToothLogoDark = (props) => (
+const ToothLogoDark = () => (
   <motion.svg
     xmlns="http://www.w3.org/2000/svg"
     id="Layer_2"
     data-name="Layer 2"
     viewBox="0 0 399.43 530.03"
-    {...props}
     variants={svgVariants}
     initial="initial"
     animate="animate"

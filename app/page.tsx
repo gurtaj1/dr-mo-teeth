@@ -80,7 +80,7 @@ const HomePage = () => {
         >
           <source src={"/mo-teeth-invideo.mp4"} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-dental-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         <div className="relative z-10 text-center ">
           <h1 className="font-newsreader text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 text-white">
             DR. MO

@@ -44,7 +44,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-black bg-opacity-95 shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-deepBlue bg-opacity-90 shadow-md">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/" className="text-2xl font-bold text-white">
@@ -99,9 +99,9 @@ const Navigation = () => {
               </button>
               {/* Add bridge for main menu */}
               <div className="absolute -bottom-2 left-0 w-full h-2" />
-              <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-black mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
+              <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-deepBlue mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
                 <div className="relative group/sub">
-                  <button className="w-full text-left px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light flex items-center justify-between">
+                  <button className="w-full text-left px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light flex items-center justify-between">
                     General
                     <span className="ml-2">›</span>
                   </button>
@@ -109,57 +109,57 @@ const Navigation = () => {
                   <div className="absolute -left-8 top-0 w-8 h-full" />
                   {/* Add peer class to detect hover */}
                   <div
-                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-black py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-deepBlue py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
                     [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
                   >
                     {/* Add a hidden element to detect if menu should flip */}
                     <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
                     <Link
                       href="/services/general/cleanings-and-exams"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Examinations and Hygiene
                     </Link>
                     <Link
                       href="/services/general/crowns"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Crowns
                     </Link>
                     <Link
                       href="/services/general/gum-therapy"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Gum Therapy
                     </Link>
                     <Link
                       href="/services/general/dental-fillings"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Dental Fillings
                     </Link>
                     <Link
                       href="/services/general/dentures"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Dentures
                     </Link>
                     <Link
                       href="/services/general/bridges"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Bridges
                     </Link>
                     <Link
                       href="/services/general/root-canal"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Root Canal Therapy
                     </Link>
                   </div>
                 </div>
                 <div className="relative group/sub">
-                  <button className="w-full text-left px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light flex items-center justify-between">
+                  <button className="w-full text-left px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light flex items-center justify-between">
                     Surgical
                     <span className="ml-2">›</span>
                   </button>
@@ -167,45 +167,45 @@ const Navigation = () => {
                   <div className="absolute -left-8 top-0 w-8 h-full" />
                   {/* Add peer class to detect hover */}
                   <div
-                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-black py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-deepBlue py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
                     [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
                   >
                     {/* Add a hidden element to detect if menu should flip */}
                     <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
                     <Link
                       href="/services/surgeries/implants"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Implants
                     </Link>
                     <Link
                       href="/services/surgeries/iv-sedation"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       IV Sedation
                     </Link>
                     <Link
                       href="/services/surgeries/extractions"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Extractions
                     </Link>
                     <Link
                       href="/services/surgeries/bone-grafts"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Bone Grafts
                     </Link>
                     <Link
                       href="/services/surgeries/crown-lengthening"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Crown Lengthening
                     </Link>
                   </div>
                 </div>
                 <div className="relative group/sub">
-                  <button className="w-full text-left px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light flex items-center justify-between">
+                  <button className="w-full text-left px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light flex items-center justify-between">
                     Cosmetic
                     <span className="ml-2">›</span>
                   </button>
@@ -213,38 +213,38 @@ const Navigation = () => {
                   <div className="absolute -left-8 top-0 w-8 h-full" />
                   {/* Add peer class to detect hover */}
                   <div
-                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-black py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-deepBlue py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
                     [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
                   >
                     {/* Add a hidden element to detect if menu should flip */}
                     <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
                     <Link
                       href="/services/cosmetic/invisalign"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Invisalign
                     </Link>
                     <Link
                       href="/services/cosmetic/teeth-whitening"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Teeth Whitening
                     </Link>
                     <Link
                       href="/services/cosmetic/bonding"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Bonding
                     </Link>
                     <Link
                       href="/services/cosmetic/veneers"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Veneers
                     </Link>
                     <Link
                       href="/services/cosmetic/smile-makeover"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                     >
                       Smile Makeover
                     </Link>
@@ -258,70 +258,70 @@ const Navigation = () => {
               </button>
               {/* Add bridge for main menu */}
               <div className="absolute -bottom-2 left-0 w-full h-2" />
-              <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-black mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
+              <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-deepBlue mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
                 <Link
                   href="/services/problems/chipped-cracked-teeth"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Chipped or Cracked Teeth
                 </Link>
                 <Link
                   href="/services/problems/wisdom-tooth-pain"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Wisdom Tooth Pain
                 </Link>
                 <Link
                   href="/services/problems/missing-teeth"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Missing Teeth
                 </Link>
                 <Link
                   href="/services/problems/toothache"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Toothache
                 </Link>
                 <Link
                   href="/services/problems/teeth-grinding"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Teeth Grinding
                 </Link>
                 <Link
                   href="/services/cosmetic/teeth-whitening"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Stained Teeth
                 </Link>
                 <Link
                   href="/services/problems/crooked-teeth"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Crooked Teeth
                 </Link>
                 <Link
                   href="/services/problems/bleeding-gums"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Bleeding Gums
                 </Link>
                 <Link
                   href="/services/problems/bad-breath"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Bad Breath
                 </Link>
                 <Link
                   href="/services/problems/dental-anxiety"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Dental Anxiety
                 </Link>
                 <Link
                   href="/services/problems/sensitive-teeth"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   Sensitive Teeth
                 </Link>
@@ -352,12 +352,12 @@ const Navigation = () => {
             </SheetTrigger>
             <SheetContent
               side="bottom"
-              className="w-full h-[90vh] bg-dental-black p-0"
+              className="w-full h-[90vh] bg-dental-deepBlue p-0"
             >
               <div className="flex flex-col h-full overflow-y-auto">
                 <Link
                   href="#about"
-                  className="px-6 py-4 text-white hover:text-dental-accent2 hover:bg-dental-black-light"
+                  className="px-6 py-4 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
                 >
                   About
                 </Link>
