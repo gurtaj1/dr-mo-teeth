@@ -119,7 +119,7 @@ const HomePage = () => {
         </video>
         <div className="absolute inset-0 bg-dental-black bg-opacity-60"></div>
         <div className="relative z-10 text-center ">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4">
+          <h1 className="font-newsreader text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4">
             DR. MO
           </h1>
           <Button
@@ -135,7 +135,7 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-dental-navy">
+      <section id="about" className="font-newsreader py-16 bg-dental-navy">
         <div className="container mx-auto px-6">
           <AnimatedElement>
             <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 text-white">
