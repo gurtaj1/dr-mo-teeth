@@ -7,7 +7,7 @@ export default function Loading() {
     <div className="flex-grow flex items-center justify-center h-full w-full bg-background/80 backdrop-blur-sm">
       <div className="text-center">
         {/* <ReloadIcon className="h-16 w-16 animate-spin text-primary mx-auto" /> */}
-        <ToothLogoDark className="h-16 w-16 mx-auto" />
+        <ToothLogoDark />
         <h2 className="mt-4 text-xl font-semibold text-foreground">
           Loading...
         </h2>
