@@ -3,6 +3,17 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import AnimatedElement from "@/components/ui/animated-element";
+import SmartCarousel from "@/components/ui/smart-carousel";
+const imageSlides = [
+  "/invisalign-slide-1.png",
+  "/invisalign-slide-2.png",
+  "/invisalign-slide-3.png",
+  "/invisalign-slide-4.png",
+  "/invisalign-slide-5.png",
+  "/invisalign-slide-6.png",
+  "/invisalign-slide-7.png",
+  "/invisalign-slide-8.png",
+];
 
 const Invisalign = () => {
   return (
@@ -37,13 +48,13 @@ const Invisalign = () => {
               </h2>
             </AnimatedElement>
             <AnimatedElement transitionSize>
-              <div className="flex justify-center">
-                <img
-                  src="/placeholder.jpg"
-                  alt="Clear aligners and braces comparison"
-                  className="max-w-2xl w-full rounded-lg"
-                />
-              </div>
+              <SmartCarousel
+                items={imageSlides}
+                slidesToShow={1}
+                autoplay={true}
+                boxShadowColor="dental-primary"
+                hideSideButtons
+              />
             </AnimatedElement>
           </div>
 
