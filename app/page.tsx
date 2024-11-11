@@ -8,8 +8,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedElement from "@/components/ui/animated-element";
 import SmartCarousel from "@/components/ui/smart-carousel";
-
-import { navBarHeight } from "./globals/constants";
+import TechnologyIcon from "@/app/svg-components/technology-icon";
+import QualityIcon from "@/app/svg-components/quality-icon";
+import BespokeIcon from "@/app/svg-components/bespoke-icon";
+import {
+  navBarHeight,
+  homeIconVariants,
+  homeCardVariants,
+} from "./globals/constants";
 
 const HomePage = () => {
   const testimonials = [
@@ -171,100 +177,85 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimatedElement transitionSize>
               <motion.div
-                className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                }}
-                whileTap={{
-                  scale: 0.95, // Slightly reduce scale on tap
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Optional: Change shadow on tap
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
+                initial="initial"
+                whileHover="whileHover"
+                whileTap="whileTap"
               >
-                <div className="mb-4">
-                  <svg
-                    className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
-                  TECHNOLOGY
-                </h3>
-                <p className="text-gray-600">
-                  The Latest Technology
-                  <br />
-                  providing Precision,
-                  <br />
-                  Efficiency and Comfort
-                </p>
+                <motion.div
+                  className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
+                  variants={homeCardVariants}
+                >
+                  <div className="mb-4">
+                    <TechnologyIcon
+                      className="w-16 h-16 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
+                      variants={homeIconVariants}
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
+                    TECHNOLOGY
+                  </h3>
+                  <p className="text-gray-600">
+                    The Latest Technology
+                    <br />
+                    providing Precision,
+                    <br />
+                    Efficiency and Comfort
+                  </p>
+                </motion.div>
               </motion.div>
             </AnimatedElement>
             <AnimatedElement transitionSize>
               <motion.div
-                className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                }}
-                whileTap={{
-                  scale: 0.95, // Slightly reduce scale on tap
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Optional: Change shadow on tap
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
+                initial="initial"
+                whileHover="whileHover"
+                whileTap="whileTap"
               >
-                <div className="mb-4">
-                  <svg
-                    className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
-                  QUALITY
-                </h3>
-                <p className="text-gray-600">
-                  High Quality Dentistry,
-                  <br />
-                  Guided By Science
-                </p>
+                <motion.div
+                  className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
+                  variants={homeCardVariants}
+                >
+                  <div className="mb-4">
+                    <QualityIcon
+                      className="w-16 h-16 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
+                      variants={homeIconVariants}
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
+                    QUALITY
+                  </h3>
+                  <p className="text-gray-600">
+                    High Quality Dentistry,
+                    <br />
+                    Guided By Science
+                  </p>
+                </motion.div>
               </motion.div>
             </AnimatedElement>
             <AnimatedElement transitionSize>
               <motion.div
-                className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                }}
-                whileTap={{
-                  scale: 0.95, // Slightly reduce scale on tap
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Optional: Change shadow on tap
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
+                initial="initial"
+                whileHover="whileHover"
+                whileTap="whileTap"
               >
-                <div className="mb-4">
-                  <svg
-                    className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
-                  BESPOKE
-                </h3>
-                <p className="text-gray-600">
-                  Personalised Care,
-                  <br />
-                  Tailored To You
-                </p>
+                <motion.div
+                  className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
+                  variants={homeCardVariants}
+                >
+                  <div className="mb-4">
+                    <BespokeIcon
+                      className="w-16 h-16 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
+                      variants={homeIconVariants}
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
+                    BESPOKE
+                  </h3>
+                  <p className="text-gray-600">
+                    Personalised Care,
+                    <br />
+                    Tailored To You
+                  </p>
+                </motion.div>
               </motion.div>
             </AnimatedElement>
           </div>
