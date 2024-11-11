@@ -1,15 +1,21 @@
+"use client";
+
 import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
+import { linkFramerVariants } from "@/app/globals/constants";
 const Footer = () => {
   return (
-    <footer className="bg-dental-dirtyGold text-white pt-12 pb-12">
+    <footer className="bg-dental-deepBlue text-white pt-12 pb-12 border-t-4 border-dental-teal">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-dental-teal">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/">Home</Link>
@@ -22,8 +28,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="border-t md:border-t-0 md:border-l border-dental-accent1 pt-8 md:pt-0 md:pl-8">
-            <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
+          <div className="border-t md:border-t-0 md:border-l border-dental-teal pt-8 md:pt-0 md:pl-8">
+            <h3 className="text-lg font-semibold mb-4 text-dental-teal">
+              Follow Me
+            </h3>
             <div className="flex space-x-4">
               <Link
                 href="https://instagram.com/drmosmiles"
@@ -35,8 +43,10 @@ const Footer = () => {
               {/* Add more social media icons as needed */}
             </div>
           </div>
-          <div className="border-t md:border-t-0 md:border-l border-dental-accent1 pt-8 md:pt-0 md:pl-8">
-            <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
+          <div className="border-t md:border-t-0 md:border-l border-dental-teal pt-8 md:pt-0 md:pl-8">
+            <h3 className="text-lg font-semibold mb-4 text-dental-teal">
+              Get In Touch
+            </h3>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Phone className="mr-2" size={18} />
@@ -77,11 +87,20 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <Button asChild className="mt-4 w-full text-white">
-              <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
-                Book an Appointment
-              </Link>
-            </Button>
+            <motion.div
+              variants={linkFramerVariants}
+              initial="initial"
+              whileHover="whileHover"
+            >
+              <Button
+                asChild
+                className="mt-4 w-full text-black bg-white hover:bg-dental-accent2"
+              >
+                <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+                  Book an Appointment
+                </Link>
+              </Button>
+            </motion.div>
           </div>
         </div>
       </div>
