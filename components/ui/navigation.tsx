@@ -566,10 +566,6 @@ const Navigation = () => {
                     href="/services/problems/chipped-cracked-teeth"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
-                    {/* <ChippedCrackedTeethIcon
-                      className="w-8 h-8"
-                      variants={iconVariants}
-                    /> */}
                     Chipped or Cracked Teeth
                   </Link>
                 </motion.div>
@@ -582,10 +578,6 @@ const Navigation = () => {
                     href="/services/problems/wisdom-tooth-pain"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
-                    {/* <WisdomToothPainIcon
-                      className="w-8 h-8"
-                      variants={iconVariants}
-                    /> */}
                     Wisdom Tooth Pain
                   </Link>
                 </motion.div>
@@ -598,10 +590,6 @@ const Navigation = () => {
                     href="/services/problems/missing-teeth"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
-                    {/* <MissingTeethIcon
-                      className="w-8 h-8"
-                      variants={iconVariants}
-                    /> */}
                     Missing Teeth
                   </Link>
                 </motion.div>
@@ -614,10 +602,6 @@ const Navigation = () => {
                     href="/services/problems/toothache"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
-                    {/* <ToothacheIcon
-                      className="w-8 h-8"
-                      variants={iconVariants}
-                    /> */}
                     Toothache
                   </Link>
                 </motion.div>
@@ -630,10 +614,6 @@ const Navigation = () => {
                     href="/services/problems/teeth-grinding"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
-                    {/* <TeethGrindingIcon
-                      className="w-8 h-8"
-                      variants={iconVariants}
-                    /> */}
                     Teeth Grinding
                   </Link>
                 </motion.div>
@@ -646,10 +626,6 @@ const Navigation = () => {
                     href="/services/cosmetic/teeth-whitening"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
-                    {/* <StainedTeethIcon
-                      className="w-8 h-8"
-                      variants={iconVariants}
-                    /> */}
                     Stained Teeth
                   </Link>
                 </motion.div>
@@ -662,10 +638,6 @@ const Navigation = () => {
                     href="/services/problems/crooked-teeth"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
-                    {/* <CrookedTeethIcon
-                      className="w-8 h-8"
-                      variants={iconVariants}
-                    /> */}
                     Crooked Teeth
                   </Link>
                 </motion.div>
@@ -764,9 +736,15 @@ const Navigation = () => {
                       initial="initial"
                       whileHover="whileHover"
                       whileTap="whileTap"
-                      className="px-6 py-4 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      className="px-6 py-4 text-white"
                     >
-                      <Link href="#about">About</Link>
+                      <Link href="#about" className="flex items-center gap-2">
+                        <AboutSectionIcon
+                          className="w-8 h-8"
+                          variants={iconVariants}
+                        />
+                        About
+                      </Link>
                     </motion.div>
 
                     {/* Services Section */}
@@ -781,7 +759,13 @@ const Navigation = () => {
                           onClick={() => toggleMobileMenu("services")}
                           className="w-full px-6 py-4 text-white flex items-center justify-between"
                         >
-                          Services
+                          <span className="flex items-center gap-2">
+                            <ServicesSectionIcon
+                              className="w-8 h-8"
+                              variants={iconVariants}
+                            />
+                            Services
+                          </span>
                           <span className="ml-2">
                             {mobileSubMenus.services ? "−" : "+"}
                           </span>
@@ -822,8 +806,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/cleanings-and-exams"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <ExaminationsIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Examinations and Hygiene
                             </Link>
                           </motion.div>
@@ -835,8 +823,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/crowns"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <CrownsIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Crowns
                             </Link>
                           </motion.div>
@@ -848,8 +840,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/gum-therapy"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <GumTherapyIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Gum Therapy
                             </Link>
                           </motion.div>
@@ -861,8 +857,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/dental-fillings"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <DentalFillingsIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Dental Fillings
                             </Link>
                           </motion.div>
@@ -874,8 +874,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/dentures"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <DenturesIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Dentures
                             </Link>
                           </motion.div>
@@ -887,8 +891,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/bridges"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <BridgesIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Bridges
                             </Link>
                           </motion.div>
@@ -900,8 +908,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/root-canal"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <RootCanalIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Root Canal Therapy
                             </Link>
                           </motion.div>
@@ -937,8 +949,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/implants"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <ImplantsIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Implants
                             </Link>
                           </motion.div>
@@ -950,8 +966,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/iv-sedation"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <IVSedationIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               IV Sedation
                             </Link>
                           </motion.div>
@@ -963,8 +983,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/extractions"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <ExtractionsIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Extractions
                             </Link>
                           </motion.div>
@@ -976,8 +1000,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/bone-grafts"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <BoneGraftingIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Bone Grafts
                             </Link>
                           </motion.div>
@@ -989,8 +1017,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/crown-lengthening"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <CrownLengtheningIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Crown Lengthening
                             </Link>
                           </motion.div>
@@ -1026,8 +1058,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/invisalign"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <InvisalignIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Invisalign
                             </Link>
                           </motion.div>
@@ -1039,8 +1075,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/teeth-whitening"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <TeethWhiteningIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Teeth Whitening
                             </Link>
                           </motion.div>
@@ -1052,8 +1092,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/bonding"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <BondingIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Bonding
                             </Link>
                           </motion.div>
@@ -1065,8 +1109,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/veneers"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <VeneersIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Veneers
                             </Link>
                           </motion.div>
@@ -1078,8 +1126,12 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/smile-makeover"
-                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
                             >
+                              <SmileMakeoverIcon
+                                className="w-6 h-6"
+                                variants={iconVariants}
+                              />
                               Smile Makeover
                             </Link>
                           </motion.div>
@@ -1099,7 +1151,13 @@ const Navigation = () => {
                           onClick={() => toggleMobileMenu("problems")}
                           className="w-full px-6 py-4 text-white flex items-center justify-between"
                         >
-                          Problems I Treat
+                          <span className="flex items-center gap-2">
+                            <ProblemsSectionIcon
+                              className="w-8 h-8"
+                              variants={iconVariants}
+                            />
+                            Problems I Treat
+                          </span>
                           <span className="ml-2">
                             {mobileSubMenus.problems ? "−" : "+"}
                           </span>
