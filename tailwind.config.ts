@@ -17,9 +17,10 @@ const config: Config = {
           accent2: "rgb(70,219,251)", // Bright cyan
           dark: "rgb(4,78,125)", // Dark blue
           black: "rgb(4,4,4)", // Pure black
-          deepBlue: "rgb(1, 5, 48)", // Pure black
+          deepBlue: "rgb(1, 5, 48)", // dark blue
+          dirtyGold: "rgb(56, 50, 2)", // dirty gold
           navy: "rgb(20, 80, 112)", // Navy blue
-          teal: "rgb(56,192,188)", // Teal
+          teal: "rgb(56,192,188)", // Teals
           gray: "rgb(84,84,84)", // Gray
         },
         background: "hsl(var(--background))",

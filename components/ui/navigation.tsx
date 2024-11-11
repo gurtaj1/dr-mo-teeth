@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -10,6 +11,16 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 import { navBarHeight } from "@/app/globals/constants";
+
+const variants = {
+  initial: { scale: 1 },
+  whileHover: {
+    scale: 1.05,
+  },
+  whileTap: {
+    scale: 0.95, // Scale down effect on tap
+  },
+};
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -44,287 +55,498 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-deepBlue bg-opacity-90 shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-dirtyGold bg-opacity-95 shadow-m font-newsreader">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <Link href="/" className="text-2xl font-bold text-white">
-            <Image
-              src="/logo-mark-white.png"
-              alt="Dr Mo Smiles"
-              width={180}
-              height={48}
-              className="h-12 w-auto"
-              priority
-            />
-          </Link>
-          <Link href="/" className="text-2xl font-bold text-white">
-            <Image
-              src="/logo-type-white.png"
-              alt="Dr Mo Smiles"
-              width={180}
-              height={48}
-              className="h-12 w-auto"
-              priority
-            />
-          </Link>
+          <motion.div
+            variants={variants}
+            initial="initial"
+            whileHover="whileHover"
+          >
+            <Link href="/" className="text-2xl font-bold text-white">
+              <Image
+                src="/logo-mark-white.png"
+                alt="Dr Mo Smiles"
+                width={180}
+                height={48}
+                className="h-12 w-auto"
+                priority
+              />
+            </Link>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="initial"
+            whileHover="whileHover"
+          >
+            <Link href="/" className="text-2xl font-bold text-white">
+              <Image
+                src="/logo-type-white.png"
+                alt="Dr Mo Smiles"
+                width={180}
+                height={48}
+                className="h-12 w-auto"
+                priority
+              />
+            </Link>
+          </motion.div>
           {/* Desktop Navigation - hide on mobile */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="w-5"></div>
-            <Link
-              href="/#about"
-              className="text-white hover:text-dental-accent2"
-              onClick={(e) => {
-                // Only handle the scroll behavior if we're already on the home page
-                if (pathname === "/") {
-                  e.preventDefault();
-                  const element = document.getElementById("about");
-                  const elementPosition =
-                    element?.getBoundingClientRect().top ?? 0;
-                  const offsetPosition =
-                    elementPosition + window.pageYOffset - navBarHeight;
-
-                  window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth",
-                  });
-                }
-                // If we're not on the home page, let the default navigation happen
-              }}
+            <motion.div
+              variants={variants}
+              initial="initial"
+              whileHover="whileHover"
             >
-              About
-            </Link>
+              <Link
+                href="/#about"
+                className="text-2xl text-white "
+                onClick={(e) => {
+                  // Only handle the scroll behavior if we're already on the home page
+                  if (pathname === "/") {
+                    e.preventDefault();
+                    const element = document.getElementById("about");
+                    const elementPosition =
+                      element?.getBoundingClientRect().top ?? 0;
+                    const offsetPosition =
+                      elementPosition + window.pageYOffset - navBarHeight;
+
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                  // If we're not on the home page, let the default navigation happen
+                }}
+              >
+                About
+              </Link>
+            </motion.div>
             <div className="relative group">
-              <button className="text-white hover:text-dental-accent2 flex items-center">
+              <motion.button
+                variants={variants}
+                initial="initial"
+                whileHover="whileHover"
+                className="text-2xl text-white  flex items-center"
+              >
                 Services
-              </button>
+              </motion.button>
               {/* Add bridge for main menu */}
               <div className="absolute -bottom-2 left-0 w-full h-2" />
-              <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-deepBlue mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
+              <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-dirtyGold mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
                 <div className="relative group/sub">
-                  <button className="w-full text-left px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light flex items-center justify-between">
+                  <motion.button
+                    variants={variants}
+                    initial="initial"
+                    whileHover="whileHover"
+                    className="w-full text-left px-4 py-2 text-white hover:bg-dental-gray flex items-center justify-between"
+                  >
                     General
                     <span className="ml-2">›</span>
-                  </button>
+                  </motion.button>
                   {/* Make the bridge wider and taller */}
                   <div className="absolute -left-8 top-0 w-8 h-full" />
                   {/* Add peer class to detect hover */}
                   <div
-                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-deepBlue py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-dirtyGold py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
                     [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
                   >
                     {/* Add a hidden element to detect if menu should flip */}
                     <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
-                    <Link
-                      href="/services/general/cleanings-and-exams"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Examinations and Hygiene
-                    </Link>
-                    <Link
-                      href="/services/general/crowns"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/general/cleanings-and-exams"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Examinations and Hygiene
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Crowns
-                    </Link>
-                    <Link
-                      href="/services/general/gum-therapy"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/general/crowns"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Crowns
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Gum Therapy
-                    </Link>
-                    <Link
-                      href="/services/general/dental-fillings"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/general/gum-therapy"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Gum Therapy
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Dental Fillings
-                    </Link>
-                    <Link
-                      href="/services/general/dentures"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/general/dental-fillings"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Dental Fillings
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Dentures
-                    </Link>
-                    <Link
-                      href="/services/general/bridges"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/general/dentures"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Dentures
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Bridges
-                    </Link>
-                    <Link
-                      href="/services/general/root-canal"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/general/bridges"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Bridges
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Root Canal Therapy
-                    </Link>
+                      <Link
+                        href="/services/general/root-canal"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Root Canal Therapy
+                      </Link>
+                    </motion.div>
                   </div>
                 </div>
                 <div className="relative group/sub">
-                  <button className="w-full text-left px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light flex items-center justify-between">
+                  <motion.button
+                    variants={variants}
+                    initial="initial"
+                    whileHover="whileHover"
+                    className="w-full text-left px-4 py-2 text-white  hover:bg-dental-gray flex items-center justify-between"
+                  >
                     Surgical
                     <span className="ml-2">›</span>
-                  </button>
+                  </motion.button>
                   {/* Make the bridge wider and taller */}
                   <div className="absolute -left-8 top-0 w-8 h-full" />
                   {/* Add peer class to detect hover */}
                   <div
-                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-deepBlue py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-dirtyGold py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
                     [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
                   >
                     {/* Add a hidden element to detect if menu should flip */}
                     <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
-                    <Link
-                      href="/services/surgeries/implants"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Implants
-                    </Link>
-                    <Link
-                      href="/services/surgeries/iv-sedation"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/surgeries/implants"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Implants
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      IV Sedation
-                    </Link>
-                    <Link
-                      href="/services/surgeries/extractions"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/surgeries/iv-sedation"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        IV Sedation
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Extractions
-                    </Link>
-                    <Link
-                      href="/services/surgeries/bone-grafts"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/surgeries/extractions"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Extractions
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Bone Grafts
-                    </Link>
-                    <Link
-                      href="/services/surgeries/crown-lengthening"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/surgeries/bone-grafts"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Bone Grafts
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Crown Lengthening
-                    </Link>
+                      <Link
+                        href="/services/surgeries/crown-lengthening"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Crown Lengthening
+                      </Link>
+                    </motion.div>
                   </div>
                 </div>
                 <div className="relative group/sub">
-                  <button className="w-full text-left px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light flex items-center justify-between">
+                  <motion.button
+                    className="w-full text-left px-4 py-2 text-white  hover:bg-dental-gray flex items-center justify-between"
+                    variants={variants}
+                    initial="initial"
+                    whileHover="whileHover"
+                  >
                     Cosmetic
                     <span className="ml-2">›</span>
-                  </button>
+                  </motion.button>
                   {/* Make the bridge wider and taller */}
                   <div className="absolute -left-8 top-0 w-8 h-full" />
                   {/* Add peer class to detect hover */}
                   <div
-                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-deepBlue py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
+                    className="peer absolute left-full top-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible w-64 bg-dental-dirtyGold py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out
                     [&:has(+.submenu-right)]:left-full [&:has(+.submenu-right)]:right-auto"
                   >
                     {/* Add a hidden element to detect if menu should flip */}
                     <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
-                    <Link
-                      href="/services/cosmetic/invisalign"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Invisalign
-                    </Link>
-                    <Link
-                      href="/services/cosmetic/teeth-whitening"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/cosmetic/invisalign"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Invisalign
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Teeth Whitening
-                    </Link>
-                    <Link
-                      href="/services/cosmetic/bonding"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/cosmetic/teeth-whitening"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Teeth Whitening
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Bonding
-                    </Link>
-                    <Link
-                      href="/services/cosmetic/veneers"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/cosmetic/bonding"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Bonding
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Veneers
-                    </Link>
-                    <Link
-                      href="/services/cosmetic/smile-makeover"
-                      className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                      <Link
+                        href="/services/cosmetic/veneers"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Veneers
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
                     >
-                      Smile Makeover
-                    </Link>
+                      <Link
+                        href="/services/cosmetic/smile-makeover"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                      >
+                        Smile Makeover
+                      </Link>
+                    </motion.div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="relative group">
-              <button className="text-white hover:text-dental-accent2 flex items-center">
+              <motion.button
+                variants={variants}
+                initial="initial"
+                whileHover="whileHover"
+                className="text-2xl text-white  flex items-center"
+              >
                 Problems I Treat
-              </button>
+              </motion.button>
               {/* Add bridge for main menu */}
               <div className="absolute -bottom-2 left-0 w-full h-2" />
-              <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-deepBlue mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
-                <Link
-                  href="/services/problems/chipped-cracked-teeth"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+              <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-dirtyGold mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Chipped or Cracked Teeth
-                </Link>
-                <Link
-                  href="/services/problems/wisdom-tooth-pain"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/problems/chipped-cracked-teeth"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Chipped or Cracked Teeth
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Wisdom Tooth Pain
-                </Link>
-                <Link
-                  href="/services/problems/missing-teeth"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/problems/wisdom-tooth-pain"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Wisdom Tooth Pain
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Missing Teeth
-                </Link>
-                <Link
-                  href="/services/problems/toothache"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/problems/missing-teeth"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Missing Teeth
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Toothache
-                </Link>
-                <Link
-                  href="/services/problems/teeth-grinding"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/problems/toothache"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Toothache
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Teeth Grinding
-                </Link>
-                <Link
-                  href="/services/cosmetic/teeth-whitening"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/problems/teeth-grinding"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Teeth Grinding
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Stained Teeth
-                </Link>
-                <Link
-                  href="/services/problems/crooked-teeth"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/cosmetic/teeth-whitening"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Stained Teeth
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Crooked Teeth
-                </Link>
-                <Link
-                  href="/services/problems/bleeding-gums"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/problems/crooked-teeth"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Crooked Teeth
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Bleeding Gums
-                </Link>
-                <Link
-                  href="/services/problems/bad-breath"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/problems/bleeding-gums"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Bleeding Gums
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Bad Breath
-                </Link>
-                <Link
-                  href="/services/problems/dental-anxiety"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/problems/bad-breath"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Bad Breath
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Dental Anxiety
-                </Link>
-                <Link
-                  href="/services/problems/sensitive-teeth"
-                  className="block px-4 py-2 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                  <Link
+                    href="/services/problems/dental-anxiety"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Dental Anxiety
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={variants}
+                  initial="initial"
+                  whileHover="whileHover"
                 >
-                  Sensitive Teeth
-                </Link>
+                  <Link
+                    href="/services/problems/sensitive-teeth"
+                    className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                  >
+                    Sensitive Teeth
+                  </Link>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -332,14 +554,20 @@ const Navigation = () => {
 
         {/* Schedule Button - Show on desktop only */}
         <div className="hidden md:block">
-          <Button
-            asChild
-            className="bg-dental-primary hover:bg-dental-secondary text-white"
+          <motion.div
+            variants={variants}
+            initial="initial"
+            whileHover="whileHover"
           >
-            <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
-              Get in touch
-            </Link>
-          </Button>
+            <Button
+              asChild
+              className="bg-white hover:bg-dental-primary text-black"
+            >
+              <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+                Get in touch
+              </Link>
+            </Button>
+          </motion.div>
         </div>
 
         {/* Mobile Navigation */}
@@ -350,271 +578,523 @@ const Navigation = () => {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent
-              side="bottom"
-              className="w-full h-[90vh] bg-dental-deepBlue p-0"
+            <motion.div
+              initial={{ translateY: "100%" }} // Start off-screen
+              animate={{ translateY: isMobileMenuOpen ? "0%" : "100%" }} // Animate to/from off-screen
+              transition={{ type: "spring", stiffness: 300 }} // Customize the transition
             >
-              <div className="flex flex-col h-full overflow-y-auto">
-                <Link
-                  href="#about"
-                  className="px-6 py-4 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+              <div className="flex flex-col h-full overflow-y-auto bg-dental-dirtyGold rounded-lg shadow-lg">
+                <SheetContent
+                  side="bottom"
+                  className="w-full h-[90vh] bg-dental-dirtyGold p-0"
                 >
-                  About
-                </Link>
+                  <div className="flex flex-col h-full overflow-y-auto">
+                    <motion.div
+                      variants={variants}
+                      initial="initial"
+                      whileHover="whileHover"
+                      whileTap="whileTap"
+                      className="px-6 py-4 text-white hover:text-dental-accent2 hover:bg-dental-deepBlue-light"
+                    >
+                      <Link href="#about">About</Link>
+                    </motion.div>
 
-                {/* Services Section */}
-                <div className="border-t border-dental-black-light">
-                  <div className="w-full px-6 py-4 text-white flex items-center justify-between">
-                    Services
-                  </div>
-                  <div className="pl-4">
-                    {/* General Services */}
-                    <button
-                      onClick={() => toggleMobileMenu("general")}
-                      className="w-full px-6 py-2 text-sm text-white flex items-center justify-between"
-                    >
-                      General
-                      <span className="ml-2">
-                        {mobileSubMenus.general ? "−" : "+"}
-                      </span>
-                    </button>
-                    <div
-                      className={`pl-4 ${
-                        mobileSubMenus.general ? "block" : "hidden"
-                      }`}
-                    >
-                      <Link
-                        href="/services/general/cleanings-and-exams"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                    {/* Services Section */}
+                    <div className="border-t border-dental-black-light">
+                      <motion.div
+                        variants={variants}
+                        initial="initial"
+                        whileHover="whileHover"
+                        whileTap="whileTap"
                       >
-                        Examinations and Hygiene
-                      </Link>
-                      <Link
-                        href="/services/general/crowns"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                        <button
+                          onClick={() => toggleMobileMenu("services")}
+                          className="w-full px-6 py-4 text-white flex items-center justify-between"
+                        >
+                          Services
+                          <span className="ml-2">
+                            {mobileSubMenus.services ? "−" : "+"}
+                          </span>
+                        </button>
+                      </motion.div>
+                      <div
+                        className={`pl-4 ${
+                          mobileSubMenus.services ? "block" : "hidden"
+                        }`}
                       >
-                        Crowns
-                      </Link>
-                      <Link
-                        href="/services/general/gum-therapy"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Gum Therapy
-                      </Link>
-                      <Link
-                        href="/services/general/dental-fillings"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Dental Fillings
-                      </Link>
-                      <Link
-                        href="/services/general/dentures"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Dentures
-                      </Link>
-                      <Link
-                        href="/services/general/bridges"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Bridges
-                      </Link>
-                      <Link
-                        href="/services/general/root-canal"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Root Canal Therapy
-                      </Link>
+                        {/* General Services */}
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <button
+                            onClick={() => toggleMobileMenu("general")}
+                            className="w-full px-6 py-2 text-sm text-white flex items-center justify-between"
+                          >
+                            General
+                            <span className="ml-2">
+                              {mobileSubMenus.general ? "−" : "+"}
+                            </span>
+                          </button>
+                        </motion.div>
+                        <div
+                          className={`pl-4 ${
+                            mobileSubMenus.general ? "block" : "hidden"
+                          }`}
+                        >
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/general/cleanings-and-exams"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Examinations and Hygiene
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/general/crowns"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Crowns
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/general/gum-therapy"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Gum Therapy
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/general/dental-fillings"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Dental Fillings
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/general/dentures"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Dentures
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/general/bridges"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Bridges
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/general/root-canal"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Root Canal Therapy
+                            </Link>
+                          </motion.div>
+                        </div>
+
+                        {/* Surgical Services */}
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <button
+                            onClick={() => toggleMobileMenu("surgical")}
+                            className="w-full px-6 py-2 text-sm text-white flex items-center justify-between"
+                          >
+                            Surgical
+                            <span className="ml-2">
+                              {mobileSubMenus.surgical ? "−" : "+"}
+                            </span>
+                          </button>
+                        </motion.div>
+                        <div
+                          className={`pl-4 ${
+                            mobileSubMenus.surgical ? "block" : "hidden"
+                          }`}
+                        >
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/surgeries/implants"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Implants
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/surgeries/iv-sedation"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              IV Sedation
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/surgeries/extractions"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Extractions
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/surgeries/bone-grafts"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Bone Grafts
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/surgeries/crown-lengthening"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Crown Lengthening
+                            </Link>
+                          </motion.div>
+                        </div>
+
+                        {/* Cosmetic Services */}
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <button
+                            onClick={() => toggleMobileMenu("cosmetic")}
+                            className="w-full px-6 py-2 text-sm text-white flex items-center justify-between"
+                          >
+                            Cosmetic
+                            <span className="ml-2">
+                              {mobileSubMenus.cosmetic ? "−" : "+"}
+                            </span>
+                          </button>
+                        </motion.div>
+                        <div
+                          className={`pl-4 ${
+                            mobileSubMenus.cosmetic ? "block" : "hidden"
+                          }`}
+                        >
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/cosmetic/invisalign"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Invisalign
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/cosmetic/teeth-whitening"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Teeth Whitening
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/cosmetic/bonding"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Bonding
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/cosmetic/veneers"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Veneers
+                            </Link>
+                          </motion.div>
+                          <motion.div
+                            variants={variants}
+                            initial="initial"
+                            whileHover="whileHover"
+                            whileTap="whileTap"
+                          >
+                            <Link
+                              href="/services/cosmetic/smile-makeover"
+                              className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            >
+                              Smile Makeover
+                            </Link>
+                          </motion.div>
+                        </div>
+                      </div>
                     </div>
 
-                    {/* Surgical Services */}
-                    <button
-                      onClick={() => toggleMobileMenu("surgical")}
-                      className="w-full px-6 py-2 text-sm text-white flex items-center justify-between"
-                    >
-                      Surgical
-                      <span className="ml-2">
-                        {mobileSubMenus.surgical ? "−" : "+"}
-                      </span>
-                    </button>
-                    <div
-                      className={`pl-4 ${
-                        mobileSubMenus.surgical ? "block" : "hidden"
-                      }`}
-                    >
-                      <Link
-                        href="/services/surgeries/implants"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                    {/* Problems I Treat Section */}
+                    <div className="border-t border-dental-black-light">
+                      <motion.div
+                        variants={variants}
+                        initial="initial"
+                        whileHover="whileHover"
+                        whileTap="whileTap"
                       >
-                        Implants
-                      </Link>
-                      <Link
-                        href="/services/surgeries/iv-sedation"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                        <button
+                          onClick={() => toggleMobileMenu("problems")}
+                          className="w-full px-6 py-4 text-white flex items-center justify-between"
+                        >
+                          Problems I Treat
+                          <span className="ml-2">
+                            {mobileSubMenus.problems ? "−" : "+"}
+                          </span>
+                        </button>
+                      </motion.div>
+                      <div
+                        className={`pl-4 ${
+                          mobileSubMenus.problems ? "block" : "hidden"
+                        }`}
                       >
-                        IV Sedation
-                      </Link>
-                      <Link
-                        href="/services/surgeries/extractions"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Extractions
-                      </Link>
-                      <Link
-                        href="/services/surgeries/bone-grafts"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Bone Grafts
-                      </Link>
-                      <Link
-                        href="/services/surgeries/crown-lengthening"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Crown Lengthening
-                      </Link>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/problems/chipped-cracked-teeth"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Chipped or Cracked Teeth
+                          </Link>
+                        </motion.div>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/problems/toothache"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Toothache
+                          </Link>
+                        </motion.div>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/problems/teeth-grinding"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Teeth Grinding
+                          </Link>
+                        </motion.div>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/cosmetic/teeth-whitening"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Stained Teeth
+                          </Link>
+                        </motion.div>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/problems/crooked-teeth"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Crooked Teeth
+                          </Link>
+                        </motion.div>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/problems/bleeding-gums"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Bleeding Gums
+                          </Link>
+                        </motion.div>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/problems/bad-breath"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Bad Breath
+                          </Link>
+                        </motion.div>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/problems/dental-anxiety"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Dental Anxiety
+                          </Link>
+                        </motion.div>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/problems/sensitive-teeth"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Sensitive Teeth
+                          </Link>
+                        </motion.div>
+                        <motion.div
+                          variants={variants}
+                          initial="initial"
+                          whileHover="whileHover"
+                          whileTap="whileTap"
+                        >
+                          <Link
+                            href="/services/problems/missing-teeth"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                          >
+                            Missing Teeth
+                          </Link>
+                        </motion.div>
+                      </div>
                     </div>
 
-                    {/* Cosmetic Services */}
-                    <button
-                      onClick={() => toggleMobileMenu("cosmetic")}
-                      className="w-full px-6 py-2 text-sm text-white flex items-center justify-between"
-                    >
-                      Cosmetic
-                      <span className="ml-2">
-                        {mobileSubMenus.cosmetic ? "−" : "+"}
-                      </span>
-                    </button>
-                    <div
-                      className={`pl-4 ${
-                        mobileSubMenus.cosmetic ? "block" : "hidden"
-                      }`}
-                    >
-                      <Link
-                        href="/services/cosmetic/invisalign"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                    {/* Schedule Button */}
+                    <div className="mt-auto p-6">
+                      <motion.div
+                        variants={variants}
+                        initial="initial"
+                        whileHover="whileHover"
+                        whileTap="whileTap"
                       >
-                        Invisalign
-                      </Link>
-                      <Link
-                        href="/services/cosmetic/teeth-whitening"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Teeth Whitening
-                      </Link>
-                      <Link
-                        href="/services/cosmetic/bonding"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Bonding
-                      </Link>
-                      <Link
-                        href="/services/cosmetic/veneers"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Veneers
-                      </Link>
-                      <Link
-                        href="/services/cosmetic/smile-makeover"
-                        className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                      >
-                        Smile Makeover
-                      </Link>
+                        <Button
+                          asChild
+                          className="w-full bg-white hover:bg-dental-primary text-black"
+                        >
+                          <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+                            Get in touch
+                          </Link>
+                        </Button>
+                      </motion.div>
                     </div>
                   </div>
-                </div>
-
-                {/* Problems I Treat Section */}
-                <div className="border-t border-dental-black-light">
-                  <button
-                    onClick={() => toggleMobileMenu("problems")}
-                    className="w-full px-6 py-4 text-white flex items-center justify-between"
-                  >
-                    Problems I Treat
-                    <span className="ml-2">
-                      {mobileSubMenus.problems ? "−" : "+"}
-                    </span>
-                  </button>
-                  <div
-                    className={`pl-4 ${
-                      mobileSubMenus.problems ? "block" : "hidden"
-                    }`}
-                  >
-                    <Link
-                      href="/services/problems/chipped-cracked-teeth"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Chipped or Cracked Teeth
-                    </Link>
-                    <Link
-                      href="/services/problems/toothache"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Toothache
-                    </Link>
-                    <Link
-                      href="/services/problems/teeth-grinding"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Teeth Grinding
-                    </Link>
-                    <Link
-                      href="/services/cosmetic/teeth-whitening"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Stained Teeth
-                    </Link>
-                    <Link
-                      href="/services/problems/crooked-teeth"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Crooked Teeth
-                    </Link>
-                    <Link
-                      href="/services/problems/bleeding-gums"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Bleeding Gums
-                    </Link>
-                    <Link
-                      href="/services/problems/bad-breath"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Bad Breath
-                    </Link>
-                    <Link
-                      href="/services/problems/dental-anxiety"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Dental Anxiety
-                    </Link>
-                    <Link
-                      href="/services/problems/sensitive-teeth"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Sensitive Teeth
-                    </Link>
-                    <Link
-                      href="/services/problems/missing-teeth"
-                      className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
-                    >
-                      Missing Teeth
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Schedule Button */}
-                <div className="mt-auto p-6">
-                  <Button
-                    asChild
-                    className="w-full bg-dental-primary hover:bg-dental-secondary text-white"
-                  >
-                    <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
-                      Get in touch
-                    </Link>
-                  </Button>
-                </div>
+                </SheetContent>
               </div>
-            </SheetContent>
+            </motion.div>
           </Sheet>
         </div>
       </div>
