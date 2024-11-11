@@ -29,7 +29,9 @@ import ProblemsSectionIcon from "@/app/svg-components/problems-section-icon";
 import VeneersIcon from "@/app/svg-components/veneers-icon";
 import SmileMakeoverIcon from "@/app/svg-components/smile-makeover-icon";
 import BondingIcon from "@/app/svg-components/bonding-icon";
+
 import { navBarHeight } from "@/app/globals/constants";
+import { colors } from "@/constants";
 
 const linkVariants = {
   initial: { scale: 1 },
@@ -47,7 +49,7 @@ const iconVariants = {
     filter: "drop-shadow(0px 0px 0px rgba(229, 185, 77, 0))",
   },
   whileHover: {
-    fill: ["#E5B94D", "#C4A043", "#E5B94D"],
+    fill: [colors.dental.gold, colors.dental.lightGold, colors.dental.gold],
     filter: "drop-shadow(0px 0px 2px rgba(229, 185, 77, 0.5))",
     transition: {
       fill: {
@@ -63,7 +65,7 @@ const iconVariants = {
     },
   },
   whileTap: {
-    fill: ["#E5B94D", "#C4A043", "#E5B94D"],
+    fill: [colors.dental.gold, colors.dental.lightGold, colors.dental.gold],
     filter: "drop-shadow(0px 0px 5px rgba(229, 185, 77, 0.7))",
     transition: {
       fill: {

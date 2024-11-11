@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+import { colors } from "./constants";
+
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -11,17 +13,19 @@ const config: Config = {
     extend: {
       colors: {
         dental: {
-          primary: "rgb(26,110,164)", // Deep blue
-          secondary: "rgb(64,163,221)", // Bright blue
-          accent1: "rgb(173,233,238)", // Light cyan
-          accent2: "rgb(70,219,251)", // Bright cyan
-          dark: "rgb(4,78,125)", // Dark blue
-          black: "rgb(4,4,4)", // Pure black
-          deepBlue: "rgb(1, 5, 48)", // dark blue
-          dirtyGold: "rgb(56, 50, 2)", // dirty gold
-          navy: "rgb(20, 80, 112)", // Navy blue
-          teal: "rgb(56,192,188)", // Teals
-          gray: "rgb(84,84,84)", // Gray
+          primary: colors.dental.primary, // Deep blue
+          secondary: colors.dental.secondary, // Bright blue
+          accent1: colors.dental.accent1, // Light cyan
+          accent2: colors.dental.accent2, // Bright cyan
+          dark: colors.dental.dark, // Dark blue
+          black: colors.dental.black, // Pure black
+          deepBlue: colors.dental.deepBlue, // dark blue
+          navy: colors.dental.navy, // Navy blue
+          teal: colors.dental.teal, // Teals
+          gray: colors.dental.gray, // Gray
+          dirtyGold: colors.dental.dirtyGold, // dirty gold
+          gold: colors.dental.gold,
+          lightGold: colors.dental.lightGold,
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
