@@ -1,10 +1,11 @@
 "use client";
 
 import TitleSection from "../../../../components/ui/title-section";
+import DoubleImage from "../../../../components/ui/double-image";
 
 const BoneGrafts = () => {
   return (
-    <div className="flex-grow flex flex-col min-h-screen bg-white overflow-x-hidden">
+    <div className="flex-grow flex flex-col min-h-screen bg-dental-navy overflow-x-hidden">
       {/* Bone Grafts Section */}
       <TitleSection
         titleText="Bone Grafts"
@@ -13,6 +14,13 @@ const BoneGrafts = () => {
           "Over time, your body will grow new bone around the graft, strengthening the area. Bone grafts can help ensure that dental implants have a stable foundation.",
         ]}
         isFullPageHeight
+      />
+
+      <DoubleImage
+        images={[
+          { imageSrc: "/bone-grafting-1.jpg", imageAlt: "Bone Grafts Image 1" },
+          { imageSrc: "/bone-grafting-2.jpg", imageAlt: "Bone Grafts Image 2" },
+        ]}
       />
     </div>
   );
