@@ -11,7 +11,7 @@ const RootCanal = () => {
       {/* Root Canal Section */}
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/root-canal-1.jpg"
         imageAlt="Root Canal Treatment Hero"
         titleLineOne="Stop the Pain and"
         titleLineTwo="Save the Tooth"
@@ -28,7 +28,7 @@ const RootCanal = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/root-canal-2.jpg"
         imageAlt="Root Canal Treatment"
         titleLineOne="Understanding"
         titleLineTwo="Root Canal Treatment"

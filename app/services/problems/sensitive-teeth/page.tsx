@@ -26,7 +26,7 @@ const SensitiveTeeth = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/sensitive-teeth-1.jpg"
         imageAlt="Understanding Tooth Sensitivity"
         titleLineOne="The Science of"
         titleLineTwo="Comfort"
@@ -42,7 +42,7 @@ const SensitiveTeeth = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/sensitive-teeth-2.jpg"
         imageAlt="Sensitivity Treatments"
         titleLineOne="Causes Of"
         titleLineTwo="Sensitive Teeth"

@@ -25,7 +25,7 @@ const MissingTooth = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/missing-teeth-1.jpg"
         imageAlt="Renewing Your Smile"
         titleLineOne="Renewing Your"
         titleLineTwo="Smile's Functionality"
@@ -43,7 +43,7 @@ const MissingTooth = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/missing-teeth-2.jpg"
         imageAlt="Treatment Options"
         titleLineOne="Your Treatment"
         titleLineTwo="Options"

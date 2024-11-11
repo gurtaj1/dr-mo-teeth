@@ -16,7 +16,7 @@ const TeethWhitening = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/teeth-whitening-1.jpg"
         imageAlt="Teeth Whitening Results"
         titleLineOne="Lighten Your Smile"
         titleLineTwo="by Two Shades or More"
@@ -35,7 +35,7 @@ const TeethWhitening = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/teeth-whitening-2.jpg"
         imageAlt="Teeth Whitening Facts"
         titleLineOne="Facts About"
         titleLineTwo="Teeth Whitening"

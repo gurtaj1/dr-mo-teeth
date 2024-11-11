@@ -16,7 +16,7 @@ const DentalImplants = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/dental-implants-1.jpg"
         imageAlt="Dental Implant Procedure"
         titleLineOne="Your Dental"
         titleLineTwo="Implant Journey:"
@@ -51,7 +51,7 @@ const DentalImplants = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/dental-implants-2.jpg"
         imageAlt="Dental Implant Benefits"
         titleLineOne="Amazing Benefits of"
         titleLineTwo="Dental Implants:"

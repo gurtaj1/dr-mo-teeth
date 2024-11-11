@@ -27,7 +27,7 @@ const TeethGrinding = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/teeth-grinding-1.jpg"
         imageAlt="Shield Against Teeth Grinding"
         titleLineOne="Your Shield Against"
         titleLineTwo="Teeth Grinding"
@@ -64,7 +64,7 @@ const TeethGrinding = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/teeth-grinding-2.jpg"
         imageAlt="Dream Without Grinding"
         titleLineOne="We'll Help You"
         titleLineTwo="Dream Without Grinding"

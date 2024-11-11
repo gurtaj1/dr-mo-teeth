@@ -6,6 +6,7 @@ import AnimatedElement from "@/components/ui/animated-element";
 import SmartCarousel from "@/components/ui/smart-carousel";
 
 const imageSlides = [
+  "/invisalign-title-slide.jpg",
   "/invisalign-slide-1.png",
   "/invisalign-slide-2.png",
   "/invisalign-slide-3.png",

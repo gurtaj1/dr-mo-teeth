@@ -25,7 +25,7 @@ const CrookedTeeth = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/crooked-teeth-1.jpg"
         imageAlt="Causes of Crooked Teeth"
         titleLineOne="What Causes"
         titleLineTwo="Crooked Teeth?"
@@ -66,7 +66,7 @@ const CrookedTeeth = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/crooked-teeth-2.jpg"
         imageAlt="When to See a Dentist"
         titleLineOne="When to See a Dentist"
         titleLineTwo="About Crooked Teeth"
@@ -90,7 +90,7 @@ const CrookedTeeth = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/crooked-teeth-3.jpg"
         imageAlt="Treatment Process"
         titleLineOne="The Process for"
         titleLineTwo="Correcting Crooked Teeth"

@@ -69,7 +69,7 @@ const BleedingGums = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/bleeding-gums-1.jpg"
         imageAlt="Treatment Steps"
         titleLineOne="Steps to Evaluate"
         titleLineTwo="Your Gum Health"

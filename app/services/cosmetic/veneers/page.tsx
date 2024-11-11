@@ -16,7 +16,7 @@ const Veneers = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/veneers-1.jpg"
         imageAlt="Veneer Procedure"
         titleLineOne="The Veneer"
         titleLineTwo="Process"
@@ -51,7 +51,7 @@ const Veneers = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/veneers-2.jpg"
         imageAlt="Veneer Benefits"
         titleLineOne="Benefits of"
         titleLineTwo="Dental Veneers"
@@ -68,52 +68,46 @@ const Veneers = () => {
       </AnimatedImageTextSection>
 
       {/* Types of Veneers Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h2 className="text-5xl font-bold mb-6 text-dental-navy text-center">
-              Porcelain Veneers
-            </h2>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-gray-600 max-w-3xl mx-auto text-center">
-              Porcelain veneers are the gold standard in cosmetic dentistry.
-              They offer superior durability, stain resistance, and the most
-              natural-looking results. These custom-crafted shells are designed
-              to perfectly match your natural teeth while providing the
-              improvements you desire.
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-gray-600 max-w-3xl mx-auto text-center mt-4">
-              The porcelain material reflects light similarly to natural tooth
-              enamel, ensuring your smile looks completely natural. With proper
-              care, porcelain veneers can last 10-15 years or more.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <AnimatedImageTextSection
+        imagePosition="left"
+        imageSrc="/veneers-3.jpg"
+        imageAlt="Porcelain Veneers"
+        titleLineOne="Porcelain"
+        titleLineTwo="Veneers"
+        scrollFactor={1}
+      >
+        <p className="mb-4">
+          Porcelain veneers are the gold standard in cosmetic dentistry. They
+          offer superior durability, stain resistance, and the most
+          natural-looking results. These custom-crafted shells are designed to
+          perfectly match your natural teeth while providing the improvements
+          you desire.
+        </p>
+        <p>
+          The porcelain material reflects light similarly to natural tooth
+          enamel, ensuring your smile looks completely natural. With proper
+          care, porcelain veneers can last 10-15 years or more.
+        </p>
+      </AnimatedImageTextSection>
 
       {/* Composite Veneers Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h2 className="text-5xl font-bold mb-6  text-center">
-              Composite Veneers
-            </h2>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className=" max-w-3xl mx-auto text-center">
-              Composite veneers offer a more affordable alternative to porcelain
-              veneers. Made from tooth-colored resin material, they can be
-              applied in a single visit and require less removal of natural
-              tooth structure. While they may not last as long as porcelain
-              veneers, they provide excellent results and can be easily repaired
-              if needed.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <AnimatedImageTextSection
+        imagePosition="right"
+        imageSrc="/veneers-4.jpg"
+        imageAlt="Composite Veneers"
+        titleLineOne="Composite"
+        titleLineTwo="Veneers"
+        isDark
+        scrollFactor={1}
+      >
+        <p>
+          Composite veneers offer a more affordable alternative to porcelain
+          veneers. Made from tooth-colored resin material, they can be applied
+          in a single visit and require less removal of natural tooth structure.
+          While they may not last as long as porcelain veneers, they provide
+          excellent results and can be easily repaired if needed.
+        </p>
+      </AnimatedImageTextSection>
     </div>
   );
 };

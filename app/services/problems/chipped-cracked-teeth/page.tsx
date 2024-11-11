@@ -27,7 +27,7 @@ const BrokenTeeth = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/broken-tooth-1.jpg"
         imageAlt="Poor Dental Care"
         titleLineOne="Does Poor Dental Care"
         titleLineTwo="Contribute to Chipped Teeth?"
@@ -44,7 +44,7 @@ const BrokenTeeth = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/broken-tooth-2.jpg"
         imageAlt="Managing at Home"
         titleLineOne="Managing a "
         titleLineTwo="Broken Tooth at Home"
@@ -73,7 +73,7 @@ const BrokenTeeth = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/broken-tooth-3.jpg"
         imageAlt="Treatment Process"
         titleLineOne="What's the Dentist's Process for"
         titleLineTwo="Repairing a Broken or Cracked Tooth?"

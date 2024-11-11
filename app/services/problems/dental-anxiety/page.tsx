@@ -20,7 +20,7 @@ const DentalAnxiety = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/dental-anxiety-1.jpg"
         imageAlt="Common Reasons for Dental Anxiety"
         titleLineOne="Common Reasons for"
         titleLineTwo="Dental Anxiety"
@@ -54,7 +54,7 @@ const DentalAnxiety = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/dental-anxiety-2.jpg"
         imageAlt="Effects of Dental Anxiety"
         titleLineOne="How Does Dental Anxiety"
         titleLineTwo="Affect Oral Health?"
@@ -74,7 +74,7 @@ const DentalAnxiety = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/dental-anxiety-3.jpg"
         imageAlt="Managing Dental Anxiety"
         titleLineOne="Managing"
         titleLineTwo="Dental Anxiety"

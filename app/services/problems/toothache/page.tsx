@@ -25,7 +25,7 @@ const Toothache = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/toothache-1.jpg"
         imageAlt="Common Causes of Tooth Pain"
         titleLineOne="Understanding Your"
         titleLineTwo="Tooth Pain"
@@ -53,7 +53,7 @@ const Toothache = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/toothache-2.jpg"
         imageAlt="Tooth Pain Treatments"
         titleLineOne="Common Treatments for"
         titleLineTwo="Tooth Pain"
@@ -85,7 +85,7 @@ const Toothache = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/toothache-3.jpg"
         imageAlt="Preventing Tooth Pain"
         titleLineOne="How to"
         titleLineTwo="Prevent Tooth Pain"

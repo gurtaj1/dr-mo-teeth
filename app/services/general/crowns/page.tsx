@@ -21,7 +21,7 @@ const Crowns = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/crowns-1.jpg"
         imageAlt="Dental Crown Procedure"
         titleLineOne="The Crown"
         titleLineTwo="Process"
@@ -43,7 +43,7 @@ const Crowns = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/crowns-2.jpg"
         imageAlt="Crown Benefits"
         titleLineOne="Benefits of"
         titleLineTwo="Dental Crowns"

@@ -7,7 +7,7 @@ const WisdomToothPain = () => {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/wisdom-tooth-pain-1.jpg"
         imageAlt="Wisdom Tooth Pain"
         titleLineOne="Its Wise To"
         titleLineTwo="Remove Them"
@@ -36,7 +36,7 @@ const WisdomToothPain = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/wisdom-tooth-pain-2.jpg"
         imageAlt="Benefits of Wisdom Tooth Removal"
         titleLineOne="Benefits of"
         titleLineTwo="Wisdom Tooth Removal"
@@ -65,7 +65,7 @@ const WisdomToothPain = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/wisdom-tooth-pain-3.jpg"
         imageAlt="Wisdom Teeth Removal Process"
         titleLineOne="How Are"
         titleLineTwo="Wisdom Teeth Removed?"
