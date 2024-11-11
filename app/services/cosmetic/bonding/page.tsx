@@ -16,7 +16,7 @@ const Bonding = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/bonding-1.jpg"
         imageAlt="Bonding Process"
         titleLineOne="The Bonding"
         titleLineTwo="Process"
@@ -46,7 +46,7 @@ const Bonding = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/bonding-2.jpg"
         imageAlt="Bonding Benefits"
         titleLineOne="Benefits of"
         titleLineTwo="Composite Bonding"

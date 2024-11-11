@@ -1,28 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import AnimatedElement from "@/components/ui/animated-element";
+import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
 import TitleSection from "@/components/ui/title-section";
+
 const Extractions = () => {
-  const [emergencyPainParallaxOffset, setEmergencyPainParallaxOffset] =
-    useState(0);
-  const emergencyPainParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    parallaxTargets: [
-      {
-        ref: emergencyPainParallaxRef,
-        onScroll: (offset) => setEmergencyPainParallaxOffset(offset),
-      },
-    ],
-  });
-
   const questions = [
     {
       icon: "✦",
@@ -73,44 +57,44 @@ const Extractions = () => {
       />
 
       {/* Emergency Pain Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col">
-            <div className="w-full">
-              <h2
-                ref={emergencyPainParallaxRef}
-                className="text-3xl mb-6 text-dental-navy"
-                style={{
-                  transform: `translateY(${emergencyPainParallaxOffset}px)`,
-                }}
-              >
-                Are You in Pain? <br />{" "}
-                <span className="font-bold">Get Help ASAP</span>
-              </h2>
-              <p className="text-gray-600 mb-8">
-                If you&apos;re experiencing pain and need a tooth extraction
-                urgently, I&apos;ll prioritize your appointment and ensure you
-                have a positive and efficient experience.
-              </p>
-              <AnimatedElement transitionSize>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
-                >
-                  <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
-                    Book an Emergency Appointment
-                  </Link>
-                </Button>
-              </AnimatedElement>
-            </div>
-          </div>
+      <AnimatedImageTextSection
+        imagePosition="right"
+        imageSrc="/extractions-1.jpg"
+        imageAlt="Emergency Pain Hero"
+        titleLineOne="Are You in Pain?"
+        titleLineTwo="Get Help ASAP"
+        scrollFactor={1}
+      >
+        <div className="space-y-6">
+          <p>
+            If you&apos;re experiencing pain and need a tooth extraction
+            urgently, I&apos;ll prioritize your appointment and ensure you have
+            a positive and efficient experience.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+          >
+            <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+              Book an Emergency Appointment
+            </Link>
+          </Button>
         </div>
-      </section>
+      </AnimatedImageTextSection>
 
       {/* Reasons for Extraction Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
+      <section
+        className="py-16 bg-dental-navy relative"
+        style={{
+          backgroundImage: `url('/extractions-2.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-70" />
+        <div className="container mx-auto px-6 relative">
           <h2 className="text-3xl mb-12  text-center">
             <strong>Reasons for a Tooth Extraction </strong>
             <br />

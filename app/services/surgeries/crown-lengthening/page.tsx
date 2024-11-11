@@ -1,10 +1,11 @@
 "use client";
 
 import TitleSection from "@/components/ui/title-section";
+import DoubleImage from "../../../../components/ui/double-image";
 
 const CrownLengthening = () => {
   return (
-    <div className="flex-grow flex flex-col min-h-screen bg-white overflow-x-hidden">
+    <div className="flex-grow flex flex-col min-h-screen bg-dental-navy overflow-x-hidden">
       {/* Crown Lengthening Section */}
       <TitleSection
         titleText="Crown Lengthening"
@@ -13,6 +14,19 @@ const CrownLengthening = () => {
           "By increasing the visible portion of the tooth, crown lengthening helps ensure a better fit for restorations and improves the overall appearance of your smile. It's a simple procedure that can make a big difference in both function and aesthetics.",
         ]}
         isFullPageHeight
+      />
+
+      <DoubleImage
+        images={[
+          {
+            imageSrc: "/crown-lengthening-1.jpg",
+            imageAlt: "Crown Lengthening Image 1",
+          },
+          {
+            imageSrc: "/crown-lengthening-2.jpg",
+            imageAlt: "Crown Lengthening Image 2",
+          },
+        ]}
       />
     </div>
   );

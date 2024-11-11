@@ -10,7 +10,7 @@ const SmileMakeover = () => {
       </div>
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/smile-makeover-1.jpg"
         imageAlt="Smile Makeover Hero"
         titleLineOne="Enhance"
         titleLineTwo="Your Current Smile"
@@ -38,7 +38,7 @@ const SmileMakeover = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/smile-makeover-2.jpg"
         imageAlt="Smile Makeover Process"
         titleLineOne="Common Treatments in a"
         titleLineTwo="Smile Makeover"
@@ -63,7 +63,7 @@ const SmileMakeover = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/smile-makeover-3.jpg"
         imageAlt="Smile Makeover Journey"
         titleLineOne="Your Smile Makeover Journey"
         titleLineTwo="The Process"
