@@ -8,41 +8,6 @@ import AnimatedImageTextSection from "../../../../components/ui/animated-image-t
 import TitleSection from "@/components/ui/title-section";
 
 const Dentures = () => {
-  const [isDentureTypesImageVisible, setIsDentureTypesImageVisible] =
-    useState(false);
-  const [isBenefitsImageVisible, setIsBenefitsImageVisible] = useState(false);
-  const [dentureTypesParallaxOffset, setDentureTypesParallaxOffset] =
-    useState(0);
-  const [benefitsParallaxOffset, setBenefitsParallaxOffset] = useState(0);
-
-  const dentureTypesImageRef = useRef(null);
-  const benefitsImageRef = useRef(null);
-  const dentureTypesParallaxRef = useRef(null);
-  const benefitsParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: dentureTypesImageRef,
-        onIntersect: () => setIsDentureTypesImageVisible(true),
-      },
-      {
-        ref: benefitsImageRef,
-        onIntersect: () => setIsBenefitsImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: dentureTypesParallaxRef,
-        onScroll: (offset) => setDentureTypesParallaxOffset(offset),
-      },
-      {
-        ref: benefitsParallaxRef,
-        onScroll: (offset) => setBenefitsParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Dentures Section */}
@@ -55,15 +20,11 @@ const Dentures = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={dentureTypesImageRef}
-        titleRef={dentureTypesParallaxRef}
-        isImageVisible={isDentureTypesImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/dentures-1.jpg"
         imageAlt="Types of Dentures"
         titleLineOne="Types of"
         titleLineTwo="Dentures"
-        scrollY={dentureTypesParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">
@@ -90,16 +51,12 @@ const Dentures = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={benefitsImageRef}
-        titleRef={benefitsParallaxRef}
-        isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/dentures-2.jpg"
         imageAlt="Denture Benefits"
         titleLineOne="Benefits of"
         titleLineTwo="Dentures"
         isDark
-        scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
         <ul className="space-y-4 ">

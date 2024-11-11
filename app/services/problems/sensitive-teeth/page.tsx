@@ -1,61 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import HeroSection from "@/components/ui/hero-section";
 
 const SensitiveTeeth = () => {
-  const [isComfortImageVisible, setIsComfortImageVisible] = useState(false);
-  const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
-    useState(false);
-  const [comfortParallaxOffset, setComfortParallaxOffset] = useState(0);
-  const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
-
-  const comfortImageRef = useRef(null);
-  const treatmentsImageRef = useRef(null);
-  const comfortParallaxRef = useRef(null);
-  const treatmentsParallaxRef = useRef(null);
-
-  const preventionImageRef = useRef(null);
-  const preventionParallaxRef = useRef(null);
-  const [isPreventionImageVisible, setIsPreventionImageVisible] =
-    useState(false);
-  const [preventionParallaxOffset, setPreventionParallaxOffset] = useState(0);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: comfortImageRef,
-        onIntersect: () => setIsComfortImageVisible(true),
-      },
-      {
-        ref: treatmentsImageRef,
-        onIntersect: () => setIsTreatmentsImageVisible(true),
-      },
-      {
-        ref: preventionImageRef,
-        onIntersect: () => setIsPreventionImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: comfortParallaxRef,
-        onScroll: (offset) => setComfortParallaxOffset(offset),
-      },
-      {
-        ref: treatmentsParallaxRef,
-        onScroll: (offset) => setTreatmentsParallaxOffset(offset),
-      },
-      {
-        ref: preventionParallaxRef,
-        onScroll: (offset) => setPreventionParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Sensitive Teeth Section */}
@@ -77,15 +25,11 @@ const SensitiveTeeth = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={comfortImageRef}
-        titleRef={comfortParallaxRef}
-        isImageVisible={isComfortImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Understanding Tooth Sensitivity"
         titleLineOne="The Science of"
         titleLineTwo="Comfort"
-        scrollY={comfortParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">
@@ -97,16 +41,12 @@ const SensitiveTeeth = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={treatmentsImageRef}
-        titleRef={treatmentsParallaxRef}
-        isImageVisible={isTreatmentsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Sensitivity Treatments"
         titleLineOne="Causes Of"
         titleLineTwo="Sensitive Teeth"
         isDark
-        scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4 ">
@@ -151,15 +91,11 @@ const SensitiveTeeth = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={preventionImageRef}
-        titleRef={preventionParallaxRef}
-        isImageVisible={isPreventionImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Understanding Tooth Sensitivity"
         titleLineOne="Steps To Prevent"
         titleLineTwo="Sensitive Teeth"
-        scrollY={preventionParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4 ">

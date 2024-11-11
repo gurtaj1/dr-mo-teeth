@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import { cn } from "@/lib/utils";

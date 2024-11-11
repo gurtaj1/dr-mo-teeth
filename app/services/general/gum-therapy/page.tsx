@@ -1,74 +1,20 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 const GumTherapy = () => {
-  const [isGumTherapyImageVisible, setIsGumTherapyImageVisible] =
-    useState(false);
-  const [isTreatmentImageVisible, setIsTreatmentImageVisible] = useState(false);
-  const [isIntroImageVisible, setIsIntroImageVisible] = useState(false);
-  const [gumTherapyParallaxOffset, setGumTherapyParallaxOffset] = useState(0);
-  const [treatmentParallaxOffset, setTreatmentParallaxOffset] = useState(0);
-  const [introParallaxOffset, setIntroParallaxOffset] = useState(0);
-
-  const gumTherapyImageRef = useRef(null);
-  const treatmentImageRef = useRef(null);
-  const introImageRef = useRef(null);
-  const gumTherapyParallaxRef = useRef(null);
-  const treatmentParallaxRef = useRef(null);
-  const introParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: gumTherapyImageRef,
-        onIntersect: () => setIsGumTherapyImageVisible(true),
-      },
-      {
-        ref: treatmentImageRef,
-        onIntersect: () => setIsTreatmentImageVisible(true),
-      },
-      {
-        ref: introImageRef,
-        onIntersect: () => setIsIntroImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: gumTherapyParallaxRef,
-        onScroll: (offset) => setGumTherapyParallaxOffset(offset),
-      },
-      {
-        ref: treatmentParallaxRef,
-        onScroll: (offset) => setTreatmentParallaxOffset(offset),
-      },
-      {
-        ref: introParallaxRef,
-        onScroll: (offset) => setIntroParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <div className="text-8xl text-center  bg-dental-navy pt-8">
         <h1>Gum Therapy</h1>
       </div>
       <AnimatedImageTextSection
-        imageRef={introImageRef}
-        titleRef={introParallaxRef}
-        isImageVisible={isIntroImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/gum-therapy-1.jpg"
         imageAlt="Gum Disease Overview"
         titleLineOne="Stop Your Teeth From"
         titleLineTwo="Falling Out"
         isDark
-        scrollY={introParallaxOffset}
         scrollFactor={1}
       >
         <p className=" mb-4">
@@ -93,15 +39,11 @@ const GumTherapy = () => {
         </p>
       </AnimatedImageTextSection>
       <AnimatedImageTextSection
-        imageRef={gumTherapyImageRef}
-        titleRef={gumTherapyParallaxRef}
-        isImageVisible={isGumTherapyImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/gum-therapy-2.jpg"
         imageAlt="Gum Disease Treatment"
         titleLineOne="Understanding"
         titleLineTwo="Gum Disease"
-        scrollY={gumTherapyParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">
@@ -117,16 +59,12 @@ const GumTherapy = () => {
         </ul>
       </AnimatedImageTextSection>
       <AnimatedImageTextSection
-        imageRef={treatmentImageRef}
-        titleRef={treatmentParallaxRef}
-        isImageVisible={isTreatmentImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/gum-therapy-3.jpg"
         imageAlt="Gum Treatment Benefits"
         titleLineOne="Benefits of"
         titleLineTwo="Gum Therapy"
         isDark
-        scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >
         <ul className="space-y-4 ">

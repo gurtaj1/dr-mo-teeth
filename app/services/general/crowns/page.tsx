@@ -1,46 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import HeroSection from "@/components/ui/hero-section";
 
 const Crowns = () => {
-  const [isCrownsImageVisible, setIsCrownsImageVisible] = useState(false);
-  const [isProcessImageVisible, setIsProcessImageVisible] = useState(false);
-  const [crownsParallaxOffset, setCrownsParallaxOffset] = useState(0);
-  const [processParallaxOffset, setProcessParallaxOffset] = useState(0);
-
-  const crownsImageRef = useRef(null);
-  const processImageRef = useRef(null);
-  const crownsParallaxRef = useRef(null);
-  const processParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: crownsImageRef,
-        onIntersect: () => setIsCrownsImageVisible(true),
-      },
-      {
-        ref: processImageRef,
-        onIntersect: () => setIsProcessImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: crownsParallaxRef,
-        onScroll: (offset) => setCrownsParallaxOffset(offset),
-      },
-      {
-        ref: processParallaxRef,
-        onScroll: (offset) => setProcessParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <div className="text-5xl text-center  bg-dental-navy pt-8">
@@ -57,15 +20,11 @@ const Crowns = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={crownsImageRef}
-        titleRef={crownsParallaxRef}
-        isImageVisible={isCrownsImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Dental Crown Procedure"
         titleLineOne="The Crown"
         titleLineTwo="Process"
-        scrollY={crownsParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">The process typically involves two visits:</p>
@@ -83,16 +42,12 @@ const Crowns = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={processImageRef}
-        titleRef={processParallaxRef}
-        isImageVisible={isProcessImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Crown Benefits"
         titleLineOne="Benefits of"
         titleLineTwo="Dental Crowns"
         isDark
-        scrollY={processParallaxOffset}
         scrollFactor={1}
       >
         <ul className="space-y-4 ">

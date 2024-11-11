@@ -1,45 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
 const RootCanal = () => {
-  const [isTreatmentImageVisible, setIsTreatmentImageVisible] = useState(false);
-  const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
-  const [treatmentParallaxOffset, setTreatmentParallaxOffset] = useState(0);
-  const [heroParallaxOffset, setHeroParallaxOffset] = useState(0);
-
-  const treatmentImageRef = useRef(null);
-  const heroImageRef = useRef(null);
-  const treatmentParallaxRef = useRef(null);
-  const heroParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: treatmentImageRef,
-        onIntersect: () => setIsTreatmentImageVisible(true),
-      },
-      {
-        ref: heroImageRef,
-        onIntersect: () => setIsHeroImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: treatmentParallaxRef,
-        onScroll: (offset) => setTreatmentParallaxOffset(offset),
-      },
-      {
-        ref: heroParallaxRef,
-        onScroll: (offset) => setHeroParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <div className="text-8xl text-center  bg-dental-navy pt-8">
@@ -47,16 +10,12 @@ const RootCanal = () => {
       </div>
       {/* Root Canal Section */}
       <AnimatedImageTextSection
-        imageRef={heroImageRef}
-        titleRef={heroParallaxRef}
-        isImageVisible={isHeroImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Root Canal Treatment Hero"
         titleLineOne="Stop the Pain and"
         titleLineTwo="Save the Tooth"
         isDark
-        scrollY={heroParallaxOffset}
         scrollFactor={1}
       >
         <p className=" mb-8">
@@ -68,15 +27,11 @@ const RootCanal = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={treatmentImageRef}
-        titleRef={treatmentParallaxRef}
-        isImageVisible={isTreatmentImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Root Canal Treatment"
         titleLineOne="Understanding"
         titleLineTwo="Root Canal Treatment"
-        scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">

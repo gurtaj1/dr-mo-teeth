@@ -1,46 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import TitleSection from "../../../../components/ui/title-section";
 
 const Bonding = () => {
-  const [isProcessImageVisible, setIsProcessImageVisible] = useState(false);
-  const [isBenefitsImageVisible, setIsBenefitsImageVisible] = useState(false);
-  const [processParallaxOffset, setProcessParallaxOffset] = useState(0);
-  const [benefitsParallaxOffset, setBenefitsParallaxOffset] = useState(0);
-
-  const processImageRef = useRef(null);
-  const benefitsImageRef = useRef(null);
-  const processParallaxRef = useRef(null);
-  const benefitsParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: processImageRef,
-        onIntersect: () => setIsProcessImageVisible(true),
-      },
-      {
-        ref: benefitsImageRef,
-        onIntersect: () => setIsBenefitsImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: processParallaxRef,
-        onScroll: (offset) => setProcessParallaxOffset(offset),
-      },
-      {
-        ref: benefitsParallaxRef,
-        onScroll: (offset) => setBenefitsParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Composite Bonding Section */}
@@ -52,15 +15,11 @@ const Bonding = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={processImageRef}
-        titleRef={processParallaxRef}
-        isImageVisible={isProcessImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Bonding Process"
         titleLineOne="The Bonding"
         titleLineTwo="Process"
-        scrollY={processParallaxOffset}
         scrollFactor={1}
       >
         <ol className="space-y-2">
@@ -86,16 +45,12 @@ const Bonding = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={benefitsImageRef}
-        titleRef={benefitsParallaxRef}
-        isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Bonding Benefits"
         titleLineOne="Benefits of"
         titleLineTwo="Composite Bonding"
         isDark
-        scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
         <ul className="space-y-4">

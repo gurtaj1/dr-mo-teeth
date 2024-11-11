@@ -1,61 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
 import QuestionsSection from "@/components/ui/questions-section";
 import HeroSection from "@/components/ui/hero-section";
 
 const DentalAnxiety = () => {
-  const [isReasonsImageVisible, setIsReasonsImageVisible] = useState(false);
-  const [isEffectsImageVisible, setIsEffectsImageVisible] = useState(false);
-  const [isManagementImageVisible, setIsManagementImageVisible] =
-    useState(false);
-  const [reasonsParallaxOffset, setReasonsParallaxOffset] = useState(0);
-  const [effectsParallaxOffset, setEffectsParallaxOffset] = useState(0);
-  const [managementParallaxOffset, setManagementParallaxOffset] = useState(0);
-
-  const reasonsImageRef = useRef(null);
-  const effectsImageRef = useRef(null);
-  const managementImageRef = useRef(null);
-  const reasonsParallaxRef = useRef(null);
-  const effectsParallaxRef = useRef(null);
-  const managementParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: reasonsImageRef,
-        onIntersect: () => setIsReasonsImageVisible(true),
-      },
-      {
-        ref: effectsImageRef,
-        onIntersect: () => setIsEffectsImageVisible(true),
-      },
-      {
-        ref: managementImageRef,
-        onIntersect: () => setIsManagementImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: reasonsParallaxRef,
-        onScroll: (offset) => setReasonsParallaxOffset(offset),
-      },
-      {
-        ref: effectsParallaxRef,
-        onScroll: (offset) => setEffectsParallaxOffset(offset),
-      },
-      {
-        ref: managementParallaxRef,
-        onScroll: (offset) => setManagementParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Dental Anxiety Section */}
@@ -69,15 +19,11 @@ const DentalAnxiety = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={reasonsImageRef}
-        titleRef={reasonsParallaxRef}
-        isImageVisible={isReasonsImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Common Reasons for Dental Anxiety"
         titleLineOne="Common Reasons for"
         titleLineTwo="Dental Anxiety"
-        scrollY={reasonsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4">
@@ -107,16 +53,12 @@ const DentalAnxiety = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={effectsImageRef}
-        titleRef={effectsParallaxRef}
-        isImageVisible={isEffectsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Effects of Dental Anxiety"
         titleLineOne="How Does Dental Anxiety"
         titleLineTwo="Affect Oral Health?"
         isDark
-        scrollY={effectsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4 ">
@@ -131,15 +73,11 @@ const DentalAnxiety = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={managementImageRef}
-        titleRef={managementParallaxRef}
-        isImageVisible={isManagementImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Managing Dental Anxiety"
         titleLineOne="Managing"
         titleLineTwo="Dental Anxiety"
-        scrollY={managementParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4">

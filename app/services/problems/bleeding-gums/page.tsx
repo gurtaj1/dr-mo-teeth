@@ -1,35 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
 import HeroSection from "@/components/ui/hero-section";
 
 const BleedingGums = () => {
-  const [isTreatmentImageVisible, setIsTreatmentImageVisible] = useState(false);
-  const [treatmentParallaxOffset, setTreatmentParallaxOffset] = useState(0);
-
-  const treatmentImageRef = useRef(null);
-  const treatmentParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: treatmentImageRef,
-        onIntersect: () => setIsTreatmentImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: treatmentParallaxRef,
-        onScroll: (offset) => setTreatmentParallaxOffset(offset),
-      },
-    ],
-  });
-
   const questions = [
     {
       icon: "✦",
@@ -93,15 +68,11 @@ const BleedingGums = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={treatmentImageRef}
-        titleRef={treatmentParallaxRef}
-        isImageVisible={isTreatmentImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Treatment Steps"
         titleLineOne="Steps to Evaluate"
         titleLineTwo="Your Gum Health"
-        scrollY={treatmentParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6">

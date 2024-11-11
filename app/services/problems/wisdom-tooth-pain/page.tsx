@@ -1,74 +1,17 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 const WisdomToothPain = () => {
-  const [isWisdomImageVisible, setIsWisdomImageVisible] = useState(false);
-  const [isWisdomBenefitsImageVisible, setIsWisdomBenefitsImageVisible] =
-    useState(false);
-  const [isWisdomProcessImageVisible, setIsWisdomProcessImageVisible] =
-    useState(false);
-  const [wisdomParallaxOffset, setWisdomParallaxOffset] = useState(0);
-  const [wisdomBenefitsParallaxOffset, setWisdomBenefitsParallaxOffset] =
-    useState(0);
-  const [wisdomProcessParallaxOffset, setWisdomProcessParallaxOffset] =
-    useState(0);
-
-  const wisdomImageRef = useRef(null);
-  const wisdomBenefitsImageRef = useRef(null);
-  const wisdomProcessImageRef = useRef(null);
-  const wisdomParallaxRef = useRef(null);
-  const wisdomBenefitsParallaxRef = useRef(null);
-  const wisdomProcessParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: wisdomImageRef,
-        onIntersect: () => setIsWisdomImageVisible(true),
-      },
-      {
-        ref: wisdomBenefitsImageRef,
-        onIntersect: () => setIsWisdomBenefitsImageVisible(true),
-      },
-      {
-        ref: wisdomProcessImageRef,
-        onIntersect: () => setIsWisdomProcessImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: wisdomParallaxRef,
-        onScroll: (offset) => setWisdomParallaxOffset(offset),
-      },
-      {
-        ref: wisdomBenefitsParallaxRef,
-        onScroll: (offset) => setWisdomBenefitsParallaxOffset(offset),
-      },
-      {
-        ref: wisdomProcessParallaxRef,
-        onScroll: (offset) => setWisdomProcessParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <AnimatedImageTextSection
-        imageRef={wisdomImageRef}
-        titleRef={wisdomParallaxRef}
-        isImageVisible={isWisdomImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Wisdom Tooth Pain"
         titleLineOne="Its Wise To"
         titleLineTwo="Remove Them"
         isDark
-        scrollY={wisdomParallaxOffset}
         scrollFactor={1}
       >
         <h3 className=" font-bold mb-2">What Causes Wisdom Tooth Pain?</h3>
@@ -92,15 +35,11 @@ const WisdomToothPain = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={wisdomBenefitsImageRef}
-        titleRef={wisdomBenefitsParallaxRef}
-        isImageVisible={isWisdomBenefitsImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Benefits of Wisdom Tooth Removal"
         titleLineOne="Benefits of"
         titleLineTwo="Wisdom Tooth Removal"
-        scrollY={wisdomBenefitsParallaxOffset}
         scrollFactor={1}
       >
         <h3 className="font-bold mb-2">No More Pain</h3>
@@ -125,16 +64,12 @@ const WisdomToothPain = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={wisdomProcessImageRef}
-        titleRef={wisdomProcessParallaxRef}
-        isImageVisible={isWisdomProcessImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Wisdom Teeth Removal Process"
         titleLineOne="How Are"
         titleLineTwo="Wisdom Teeth Removed?"
         isDark
-        scrollY={wisdomProcessParallaxOffset}
         scrollFactor={1}
       >
         <p className=" mb-4">

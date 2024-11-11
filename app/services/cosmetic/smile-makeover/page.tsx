@@ -1,66 +1,14 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 const SmileMakeover = () => {
-  const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
-  const [isProcessImageVisible, setIsProcessImageVisible] = useState(false);
-  const [isBenefitsImageVisible, setIsBenefitsImageVisible] = useState(false);
-  const [heroParallaxOffset, setHeroParallaxOffset] = useState(0);
-  const [processParallaxOffset, setProcessParallaxOffset] = useState(0);
-  const [benefitsParallaxOffset, setBenefitsParallaxOffset] = useState(0);
-
-  const heroImageRef = useRef(null);
-  const processImageRef = useRef(null);
-  const benefitsImageRef = useRef(null);
-  const heroParallaxRef = useRef(null);
-  const processParallaxRef = useRef(null);
-  const benefitsParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: heroImageRef,
-        onIntersect: () => setIsHeroImageVisible(true),
-      },
-      {
-        ref: processImageRef,
-        onIntersect: () => setIsProcessImageVisible(true),
-      },
-      {
-        ref: benefitsImageRef,
-        onIntersect: () => setIsBenefitsImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: heroParallaxRef,
-        onScroll: (offset) => setHeroParallaxOffset(offset),
-      },
-      {
-        ref: processParallaxRef,
-        onScroll: (offset) => setProcessParallaxOffset(offset),
-      },
-      {
-        ref: benefitsParallaxRef,
-        onScroll: (offset) => setBenefitsParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <div className="text-8xl text-center  bg-dental-navy pt-8">
         <h1>Smile Makeover</h1>
       </div>
       <AnimatedImageTextSection
-        imageRef={heroImageRef}
-        titleRef={heroParallaxRef}
-        isImageVisible={isHeroImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Smile Makeover Hero"
@@ -68,7 +16,6 @@ const SmileMakeover = () => {
         titleLineTwo="Your Current Smile"
         isTitleLineOneBold
         isDark
-        scrollY={heroParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6">
@@ -90,15 +37,11 @@ const SmileMakeover = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={processImageRef}
-        titleRef={processParallaxRef}
-        isImageVisible={isProcessImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Smile Makeover Process"
         titleLineOne="Common Treatments in a"
         titleLineTwo="Smile Makeover"
-        scrollY={processParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6">
@@ -119,16 +62,12 @@ const SmileMakeover = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={benefitsImageRef}
-        titleRef={benefitsParallaxRef}
-        isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Smile Makeover Journey"
         titleLineOne="Your Smile Makeover Journey"
         titleLineTwo="The Process"
         isDark
-        scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4 ">

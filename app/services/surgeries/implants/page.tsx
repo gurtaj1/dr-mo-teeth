@@ -1,48 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import AnimatedElement from "@/components/ui/animated-element";
 import TitleSection from "@/components/ui/title-section";
 const DentalImplants = () => {
-  const [isImplantJourneyImageVisible, setIsImplantJourneyImageVisible] =
-    useState(false);
-  const [isBenefitsImageVisible, setIsBenefitsImageVisible] = useState(false);
-  const [implantJourneyParallaxOffset, setImplantJourneyParallaxOffset] =
-    useState(0);
-  const [benefitsParallaxOffset, setBenefitsParallaxOffset] = useState(0);
-
-  const implantJourneyImageRef = useRef(null);
-  const benefitsImageRef = useRef(null);
-  const implantJourneyParallaxRef = useRef(null);
-  const benefitsParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: implantJourneyImageRef,
-        onIntersect: () => setIsImplantJourneyImageVisible(true),
-      },
-      {
-        ref: benefitsImageRef,
-        onIntersect: () => setIsBenefitsImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: implantJourneyParallaxRef,
-        onScroll: (offset) => setImplantJourneyParallaxOffset(offset),
-      },
-      {
-        ref: benefitsParallaxRef,
-        onScroll: (offset) => setBenefitsParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Dental Implants Section */}
@@ -54,15 +15,11 @@ const DentalImplants = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={implantJourneyImageRef}
-        titleRef={implantJourneyParallaxRef}
-        isImageVisible={isImplantJourneyImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Dental Implant Procedure"
         titleLineOne="Your Dental"
         titleLineTwo="Implant Journey:"
-        scrollY={implantJourneyParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">
@@ -93,16 +50,12 @@ const DentalImplants = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={benefitsImageRef}
-        titleRef={benefitsParallaxRef}
-        isImageVisible={isBenefitsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Dental Implant Benefits"
         titleLineOne="Amazing Benefits of"
         titleLineTwo="Dental Implants:"
         isDark
-        scrollY={benefitsParallaxOffset}
         scrollFactor={1}
       >
         <ul className="space-y-4 ">

@@ -1,57 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 const DentalFillings = () => {
-  const [isTypesImageVisible, setIsTypesImageVisible] = useState(false);
-  const [isProcessImageVisible, setIsProcessImageVisible] = useState(false);
-  const [isHeroImageVisible, setIsHeroImageVisible] = useState(false);
-  const [typesParallaxOffset, setTypesParallaxOffset] = useState(0);
-  const [processParallaxOffset, setProcessParallaxOffset] = useState(0);
-  const [heroParallaxOffset, setHeroParallaxOffset] = useState(0);
-
-  const typesImageRef = useRef(null);
-  const processImageRef = useRef(null);
-  const heroImageRef = useRef(null);
-  const typesParallaxRef = useRef(null);
-  const processParallaxRef = useRef(null);
-  const heroParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: typesImageRef,
-        onIntersect: () => setIsTypesImageVisible(true),
-      },
-      {
-        ref: processImageRef,
-        onIntersect: () => setIsProcessImageVisible(true),
-      },
-      {
-        ref: heroImageRef,
-        onIntersect: () => setIsHeroImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: typesParallaxRef,
-        onScroll: (offset) => setTypesParallaxOffset(offset),
-      },
-      {
-        ref: processParallaxRef,
-        onScroll: (offset) => setProcessParallaxOffset(offset),
-      },
-      {
-        ref: heroParallaxRef,
-        onScroll: (offset) => setHeroParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <div className="text-8xl text-center  bg-dental-navy pt-8">
@@ -59,16 +10,12 @@ const DentalFillings = () => {
       </div>
 
       <AnimatedImageTextSection
-        imageRef={heroImageRef}
-        titleRef={heroParallaxRef}
-        isImageVisible={isHeroImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/fillings-1.jpg"
         imageAlt="Dental Filling Treatment"
         titleLineOne="Fill your tooth"
         titleLineTwo="Before it fails"
         isDark
-        scrollY={heroParallaxOffset}
         scrollFactor={1}
       >
         <p className=" mb-8">
@@ -85,15 +32,11 @@ const DentalFillings = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={typesImageRef}
-        titleRef={typesParallaxRef}
-        isImageVisible={isTypesImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/fillings-2.jpg"
         imageAlt="Types of Dental Fillings"
         titleLineOne="Types of"
         titleLineTwo="Dental Fillings"
-        scrollY={typesParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4">
@@ -119,16 +62,12 @@ const DentalFillings = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={processImageRef}
-        titleRef={processParallaxRef}
-        isImageVisible={isProcessImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/fillings-3.jpg"
         imageAlt="Filling Process"
         titleLineOne="The Filling"
         titleLineTwo="Process"
         isDark
-        scrollY={processParallaxOffset}
         scrollFactor={1}
       >
         <ol className="space-y-4 ">

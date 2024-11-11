@@ -1,7 +1,5 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import AnimatedElement from "@/components/ui/animated-element";
 import AnimatedImageTextSection from "@/components/ui/animated-image-text-section";
 import Link from "next/link";
@@ -20,28 +18,6 @@ const imageSlides = [
 ];
 
 export default function IVSedationPage() {
-  const [isIVSedationImageVisible, setIsIVSedationImageVisible] =
-    useState(false);
-  const [ivSedationParallaxOffset, setIvSedationParallaxOffset] = useState(0);
-
-  const ivSedationImageRef = useRef(null);
-  const ivSedationParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: ivSedationImageRef,
-        onIntersect: () => setIsIVSedationImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: ivSedationParallaxRef,
-        onScroll: (offset) => setIvSedationParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white">
       {/* IV Sedation Section */}
@@ -54,15 +30,11 @@ export default function IVSedationPage() {
 
       {/* Who Needs IV Sedation Section */}
       <AnimatedImageTextSection
-        imageRef={ivSedationImageRef}
-        titleRef={ivSedationParallaxRef}
-        isImageVisible={isIVSedationImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/iv-1.jpg"
         imageAlt="IV Sedation Patient"
         titleLineOne="Who Needs"
         titleLineTwo="IV Sedation?"
-        scrollY={ivSedationParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">Intravenous Sedation can benefit people with:</p>

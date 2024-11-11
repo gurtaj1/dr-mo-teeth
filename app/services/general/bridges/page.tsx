@@ -1,34 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import TitleSection from "../../../../components/ui/title-section";
 import QuestionsSection from "@/components/ui/questions-section";
 
 const Bridges = () => {
-  const [isBridgesImageVisible, setIsBridgesImageVisible] = useState(false);
-  const [bridgesParallaxOffset, setBridgesParallaxOffset] = useState(0);
-
-  const bridgesImageRef = useRef(null);
-  const bridgesParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: bridgesImageRef,
-        onIntersect: () => setIsBridgesImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: bridgesParallaxRef,
-        onScroll: (offset) => setBridgesParallaxOffset(offset),
-      },
-    ],
-  });
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Dental Bridges Section */}
@@ -41,15 +17,11 @@ const Bridges = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={bridgesImageRef}
-        titleRef={bridgesParallaxRef}
-        isImageVisible={isBridgesImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/bridges-1.jpg"
         imageAlt="Dental Bridge"
         titleLineOne="A Great Solution for"
         titleLineTwo="Missing Teeth"
-        scrollY={bridgesParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">

@@ -1,9 +1,5 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
 import HeroSection from "@/components/ui/hero-section";
@@ -49,52 +45,6 @@ const questions = [
 ];
 
 const BadBreath = () => {
-  const [isCausesImageVisible, setIsCausesImageVisible] = useState(false);
-  const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
-    useState(false);
-  const [isQuestionsImageVisible, setIsQuestionsImageVisible] = useState(false);
-  const [causesParallaxOffset, setCausesParallaxOffset] = useState(0);
-  const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
-  const [questionsParallaxOffset, setQuestionsParallaxOffset] = useState(0);
-
-  const causesImageRef = useRef(null);
-  const treatmentsImageRef = useRef(null);
-  const questionsImageRef = useRef(null);
-  const causesParallaxRef = useRef(null);
-  const treatmentsParallaxRef = useRef(null);
-  const questionsParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: causesImageRef,
-        onIntersect: () => setIsCausesImageVisible(true),
-      },
-      {
-        ref: treatmentsImageRef,
-        onIntersect: () => setIsTreatmentsImageVisible(true),
-      },
-      {
-        ref: questionsImageRef,
-        onIntersect: () => setIsQuestionsImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: causesParallaxRef,
-        onScroll: (offset) => setCausesParallaxOffset(offset),
-      },
-      {
-        ref: treatmentsParallaxRef,
-        onScroll: (offset) => setTreatmentsParallaxOffset(offset),
-      },
-      {
-        ref: questionsParallaxRef,
-        onScroll: (offset) => setQuestionsParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
@@ -108,15 +58,11 @@ const BadBreath = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={causesImageRef}
-        titleRef={causesParallaxRef}
-        isImageVisible={isCausesImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Bad Breath Causes"
         titleLineOne="Bad Breath Isn't Always a"
         titleLineTwo="Dental Concern"
-        scrollY={causesParallaxOffset}
         scrollFactor={1}
       >
         <div>
@@ -130,9 +76,6 @@ const BadBreath = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={treatmentsImageRef}
-        titleRef={treatmentsParallaxRef}
-        isImageVisible={isTreatmentsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Bad Breath Treatment"
@@ -140,7 +83,6 @@ const BadBreath = () => {
         titleLineTwo="Bad Breath"
         isTitleLineOneBold
         isDark
-        scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6 ">
@@ -166,15 +108,11 @@ const BadBreath = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={questionsImageRef}
-        titleRef={questionsParallaxRef}
-        isImageVisible={isQuestionsImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Bad Breath FAQs"
         titleLineOne="Common Treatments for"
         titleLineTwo="Halitosis"
-        scrollY={questionsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6">

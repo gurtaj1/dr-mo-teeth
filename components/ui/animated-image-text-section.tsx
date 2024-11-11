@@ -1,12 +1,13 @@
-import { RefObject } from "react";
+"use client";
+
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
+
+import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import Image from "next/image";
 import AnimatedElement from "./animated-element";
 interface AnimatedImageTextSectionProps {
-  imageRef: RefObject<HTMLDivElement>;
-  titleRef?: RefObject<HTMLHeadingElement>;
-  isImageVisible: boolean;
   imagePosition: "left" | "right";
   imageSrc: string;
   imageAlt: string;
@@ -14,15 +15,11 @@ interface AnimatedImageTextSectionProps {
   titleLineTwo: string;
   isTitleLineOneBold?: boolean;
   isDark?: boolean;
-  scrollY?: number;
   scrollFactor?: number;
   children: React.ReactNode;
 }
 
 const AnimatedImageTextSection = ({
-  imageRef,
-  titleRef,
-  isImageVisible,
   imagePosition,
   imageSrc,
   imageAlt,
@@ -30,10 +27,30 @@ const AnimatedImageTextSection = ({
   titleLineTwo,
   isTitleLineOneBold = false,
   isDark = false,
-  scrollY = 0,
   scrollFactor = 0,
   children,
 }: AnimatedImageTextSectionProps) => {
+  const [isImageVisible, setIsImageVisible] = useState(false);
+
+  const [titleParallaxOffset, setTitleParallaxOffset] = useState(0);
+
+  const imageRef = useRef(null);
+  const titleRef = useRef(null);
+
+  useIntersectionObservers({
+    intersectionTargets: [
+      {
+        ref: imageRef,
+        onIntersect: () => setIsImageVisible(true),
+      },
+    ],
+    parallaxTargets: [
+      {
+        ref: titleRef,
+        onScroll: (offset) => setTitleParallaxOffset(offset),
+      },
+    ],
+  });
   const imageContent = (
     <motion.div
       ref={imageRef}
@@ -64,7 +81,9 @@ const AnimatedImageTextSection = ({
           <div className="w-full md:w-1/2">
             <motion.div
               initial={{ y: 0 }}
-              animate={{ y: scrollFactor ? scrollY * scrollFactor : 0 }}
+              animate={{
+                y: scrollFactor ? titleParallaxOffset * scrollFactor : 0,
+              }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <h2

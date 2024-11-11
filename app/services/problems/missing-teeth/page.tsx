@@ -1,49 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 
 import QuestionsSection from "@/components/ui/questions-section";
 import HeroSection from "@/components/ui/hero-section";
 
 const MissingTooth = () => {
-  const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
-    useState(false);
-  const [isOptionsImageVisible, setIsOptionsImageVisible] = useState(false);
-  const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
-  const [optionsParallaxOffset, setOptionsParallaxOffset] = useState(0);
-
-  const treatmentsImageRef = useRef(null);
-  const optionsImageRef = useRef(null);
-  const treatmentsParallaxRef = useRef(null);
-  const optionsParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: treatmentsImageRef,
-        onIntersect: () => setIsTreatmentsImageVisible(true),
-      },
-      {
-        ref: optionsImageRef,
-        onIntersect: () => setIsOptionsImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: treatmentsParallaxRef,
-        onScroll: (offset) => setTreatmentsParallaxOffset(offset),
-      },
-      {
-        ref: optionsParallaxRef,
-        onScroll: (offset) => setOptionsParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
@@ -62,15 +24,11 @@ const MissingTooth = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={treatmentsImageRef}
-        titleRef={treatmentsParallaxRef}
-        isImageVisible={isTreatmentsImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Renewing Your Smile"
         titleLineOne="Renewing Your"
         titleLineTwo="Smile's Functionality"
-        scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4 ">
@@ -84,16 +42,12 @@ const MissingTooth = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={optionsImageRef}
-        titleRef={optionsParallaxRef}
-        isImageVisible={isOptionsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Treatment Options"
         titleLineOne="Your Treatment"
         titleLineTwo="Options"
         isDark
-        scrollY={optionsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6 ">

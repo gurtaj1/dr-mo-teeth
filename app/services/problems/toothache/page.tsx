@@ -1,60 +1,8 @@
 "use client";
-
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import HeroSection from "@/components/ui/hero-section";
 
 const Toothache = () => {
-  const [isCausesImageVisible, setIsCausesImageVisible] = useState(false);
-  const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
-    useState(false);
-  const [isPreventionImageVisible, setIsPreventionImageVisible] =
-    useState(false);
-  const [causesParallaxOffset, setCausesParallaxOffset] = useState(0);
-  const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
-  const [preventionParallaxOffset, setPreventionParallaxOffset] = useState(0);
-
-  const causesImageRef = useRef(null);
-  const treatmentsImageRef = useRef(null);
-  const preventionImageRef = useRef(null);
-  const causesParallaxRef = useRef(null);
-  const treatmentsParallaxRef = useRef(null);
-  const preventionParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: causesImageRef,
-        onIntersect: () => setIsCausesImageVisible(true),
-      },
-      {
-        ref: treatmentsImageRef,
-        onIntersect: () => setIsTreatmentsImageVisible(true),
-      },
-      {
-        ref: preventionImageRef,
-        onIntersect: () => setIsPreventionImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: causesParallaxRef,
-        onScroll: (offset) => setCausesParallaxOffset(offset),
-      },
-      {
-        ref: treatmentsParallaxRef,
-        onScroll: (offset) => setTreatmentsParallaxOffset(offset),
-      },
-      {
-        ref: preventionParallaxRef,
-        onScroll: (offset) => setPreventionParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Toothache Section */}
@@ -76,15 +24,11 @@ const Toothache = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={causesImageRef}
-        titleRef={causesParallaxRef}
-        isImageVisible={isCausesImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Common Causes of Tooth Pain"
         titleLineOne="Understanding Your"
         titleLineTwo="Tooth Pain"
-        scrollY={causesParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">Your tooth pain could be due to:</p>
@@ -108,16 +52,12 @@ const Toothache = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={treatmentsImageRef}
-        titleRef={treatmentsParallaxRef}
-        isImageVisible={isTreatmentsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Tooth Pain Treatments"
         titleLineOne="Common Treatments for"
         titleLineTwo="Tooth Pain"
         isDark
-        scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
         <h3 className=" font-bold mb-2">Fillings</h3>
@@ -144,15 +84,11 @@ const Toothache = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={preventionImageRef}
-        titleRef={preventionParallaxRef}
-        isImageVisible={isPreventionImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Preventing Tooth Pain"
         titleLineOne="How to"
         titleLineTwo="Prevent Tooth Pain"
-        scrollY={preventionParallaxOffset}
         scrollFactor={1}
       >
         <p className="mb-4">

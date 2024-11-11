@@ -1,60 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import HeroSection from "@/components/ui/hero-section";
 
 const CrookedTeeth = () => {
-  const [isCausesImageVisible, setIsCausesImageVisible] = useState(false);
-  const [isDentalCareImageVisible, setIsDentalCareImageVisible] =
-    useState(false);
-  const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
-    useState(false);
-  const [causesParallaxOffset, setCausesParallaxOffset] = useState(0);
-  const [dentalCareParallaxOffset, setDentalCareParallaxOffset] = useState(0);
-  const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
-
-  const causesImageRef = useRef(null);
-  const dentalCareImageRef = useRef(null);
-  const treatmentsImageRef = useRef(null);
-  const causesParallaxRef = useRef(null);
-  const dentalCareParallaxRef = useRef(null);
-  const treatmentsParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: causesImageRef,
-        onIntersect: () => setIsCausesImageVisible(true),
-      },
-      {
-        ref: dentalCareImageRef,
-        onIntersect: () => setIsDentalCareImageVisible(true),
-      },
-      {
-        ref: treatmentsImageRef,
-        onIntersect: () => setIsTreatmentsImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: causesParallaxRef,
-        onScroll: (offset) => setCausesParallaxOffset(offset),
-      },
-      {
-        ref: dentalCareParallaxRef,
-        onScroll: (offset) => setDentalCareParallaxOffset(offset),
-      },
-      {
-        ref: treatmentsParallaxRef,
-        onScroll: (offset) => setTreatmentsParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
@@ -75,15 +24,11 @@ const CrookedTeeth = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={causesImageRef}
-        titleRef={causesParallaxRef}
-        isImageVisible={isCausesImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Causes of Crooked Teeth"
         titleLineOne="What Causes"
         titleLineTwo="Crooked Teeth?"
-        scrollY={causesParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4 ">
@@ -120,16 +65,12 @@ const CrookedTeeth = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={dentalCareImageRef}
-        titleRef={dentalCareParallaxRef}
-        isImageVisible={isDentalCareImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="When to See a Dentist"
         titleLineOne="When to See a Dentist"
         titleLineTwo="About Crooked Teeth"
         isDark
-        scrollY={dentalCareParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4 ">
@@ -148,15 +89,11 @@ const CrookedTeeth = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={treatmentsImageRef}
-        titleRef={treatmentsParallaxRef}
-        isImageVisible={isTreatmentsImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Treatment Process"
         titleLineOne="The Process for"
         titleLineTwo="Correcting Crooked Teeth"
-        scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6">

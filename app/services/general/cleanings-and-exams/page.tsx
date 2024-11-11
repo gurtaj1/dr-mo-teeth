@@ -1,47 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import TitleSection from "@/components/ui/title-section";
 import QuestionsSection from "@/components/ui/questions-section";
 
 const CleaningsAndExams = () => {
-  const [isExamImageVisible, setIsExamImageVisible] = useState(false);
-  const [isCleaningImageVisible, setIsCleaningImageVisible] = useState(false);
-  const [examParallaxOffset, setExamParallaxOffset] = useState(0);
-  const [cleaningParallaxOffset, setCleaningParallaxOffset] = useState(0);
-
-  const examImageRef = useRef(null);
-  const cleaningImageRef = useRef(null);
-  const examParallaxRef = useRef(null);
-  const cleaningParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: examImageRef,
-        onIntersect: () => setIsExamImageVisible(true),
-      },
-      {
-        ref: cleaningImageRef,
-        onIntersect: () => setIsCleaningImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: examParallaxRef,
-        onScroll: (offset) => setExamParallaxOffset(offset),
-      },
-      {
-        ref: cleaningParallaxRef,
-        onScroll: (offset) => setCleaningParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Examination Section */}
@@ -54,15 +17,11 @@ const CleaningsAndExams = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={examImageRef}
-        titleRef={examParallaxRef}
-        isImageVisible={isExamImageVisible}
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/examination-1.jpg"
         imageAlt="Dental Examination Process"
         titleLineOne="What's Included in a"
         titleLineTwo="Dental Exam"
-        scrollY={examParallaxOffset}
         scrollFactor={1}
       >
         <ul className="space-y-2">
@@ -85,16 +44,12 @@ const CleaningsAndExams = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={cleaningImageRef}
-        titleRef={cleaningParallaxRef}
-        isImageVisible={isCleaningImageVisible}
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/examination-2.jpg"
         imageAlt="Scale and Polish"
         titleLineOne="Professional"
         titleLineTwo="Scale and Polish"
         isDark
-        scrollY={cleaningParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6 ">

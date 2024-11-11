@@ -1,48 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
 import HeroSection from "@/components/ui/hero-section";
 
 const TeethGrinding = () => {
-  const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
-    useState(false);
-  const [isShieldImageVisible, setIsShieldImageVisible] = useState(false);
-  const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
-  const [shieldParallaxOffset, setShieldParallaxOffset] = useState(0);
-
-  const treatmentsImageRef = useRef(null);
-  const shieldImageRef = useRef(null);
-  const treatmentsParallaxRef = useRef(null);
-  const shieldParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: treatmentsImageRef,
-        onIntersect: () => setIsTreatmentsImageVisible(true),
-      },
-      {
-        ref: shieldImageRef,
-        onIntersect: () => setIsShieldImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: treatmentsParallaxRef,
-        onScroll: (offset) => setTreatmentsParallaxOffset(offset),
-      },
-      {
-        ref: shieldParallaxRef,
-        onScroll: (offset) => setShieldParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
@@ -64,15 +26,11 @@ const TeethGrinding = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={shieldImageRef}
-        titleRef={shieldParallaxRef}
-        isImageVisible={isShieldImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Shield Against Teeth Grinding"
         titleLineOne="Your Shield Against"
         titleLineTwo="Teeth Grinding"
-        scrollY={shieldParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4 ">
@@ -105,16 +63,12 @@ const TeethGrinding = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={treatmentsImageRef}
-        titleRef={treatmentsParallaxRef}
-        isImageVisible={isTreatmentsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Dream Without Grinding"
         titleLineOne="We'll Help You"
         titleLineTwo="Dream Without Grinding"
         isDark
-        scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4 ">

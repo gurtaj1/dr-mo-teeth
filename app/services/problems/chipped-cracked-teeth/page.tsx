@@ -1,63 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
 import HeroSection from "@/components/ui/hero-section";
 
 const BrokenTeeth = () => {
-  const [isDentalCareImageVisible, setIsDentalCareImageVisible] =
-    useState(false);
-  const [isHomeManagementImageVisible, setIsHomeManagementImageVisible] =
-    useState(false);
-  const [isTreatmentsImageVisible, setIsTreatmentsImageVisible] =
-    useState(false);
-  const [dentalCareParallaxOffset, setDentalCareParallaxOffset] = useState(0);
-  const [homeManagementParallaxOffset, setHomeManagementParallaxOffset] =
-    useState(0);
-  const [treatmentsParallaxOffset, setTreatmentsParallaxOffset] = useState(0);
-
-  const dentalCareImageRef = useRef(null);
-  const homeManagementImageRef = useRef(null);
-  const treatmentsImageRef = useRef(null);
-  const dentalCareParallaxRef = useRef(null);
-  const homeManagementParallaxRef = useRef(null);
-  const treatmentsParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: dentalCareImageRef,
-        onIntersect: () => setIsDentalCareImageVisible(true),
-      },
-      {
-        ref: homeManagementImageRef,
-        onIntersect: () => setIsHomeManagementImageVisible(true),
-      },
-      {
-        ref: treatmentsImageRef,
-        onIntersect: () => setIsTreatmentsImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: dentalCareParallaxRef,
-        onScroll: (offset) => setDentalCareParallaxOffset(offset),
-      },
-      {
-        ref: homeManagementParallaxRef,
-        onScroll: (offset) => setHomeManagementParallaxOffset(offset),
-      },
-      {
-        ref: treatmentsParallaxRef,
-        onScroll: (offset) => setTreatmentsParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
@@ -79,15 +26,11 @@ const BrokenTeeth = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={dentalCareImageRef}
-        titleRef={dentalCareParallaxRef}
-        isImageVisible={isDentalCareImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Poor Dental Care"
         titleLineOne="Does Poor Dental Care"
         titleLineTwo="Contribute to Chipped Teeth?"
-        scrollY={dentalCareParallaxOffset}
         scrollFactor={1}
       >
         <p>
@@ -100,16 +43,12 @@ const BrokenTeeth = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={homeManagementImageRef}
-        titleRef={homeManagementParallaxRef}
-        isImageVisible={isHomeManagementImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Managing at Home"
         titleLineOne="Managing a "
         titleLineTwo="Broken Tooth at Home"
         isDark
-        scrollY={homeManagementParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-4">
@@ -133,15 +72,11 @@ const BrokenTeeth = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={treatmentsImageRef}
-        titleRef={treatmentsParallaxRef}
-        isImageVisible={isTreatmentsImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Treatment Process"
         titleLineOne="What's the Dentist's Process for"
         titleLineTwo="Repairing a Broken or Cracked Tooth?"
-        scrollY={treatmentsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6">

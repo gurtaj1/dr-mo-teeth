@@ -1,46 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-
-import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
-
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import TitleSection from "../../../../components/ui/title-section";
 
 const TeethWhitening = () => {
-  const [isLightenImageVisible, setIsLightenImageVisible] = useState(false);
-  const [isFactsImageVisible, setIsFactsImageVisible] = useState(false);
-  const [lightenParallaxOffset, setLightenParallaxOffset] = useState(0);
-  const [factsParallaxOffset, setFactsParallaxOffset] = useState(0);
-
-  const lightenImageRef = useRef(null);
-  const factsImageRef = useRef(null);
-  const lightenParallaxRef = useRef(null);
-  const factsParallaxRef = useRef(null);
-
-  useIntersectionObservers({
-    intersectionTargets: [
-      {
-        ref: lightenImageRef,
-        onIntersect: () => setIsLightenImageVisible(true),
-      },
-      {
-        ref: factsImageRef,
-        onIntersect: () => setIsFactsImageVisible(true),
-      },
-    ],
-    parallaxTargets: [
-      {
-        ref: lightenParallaxRef,
-        onScroll: (offset) => setLightenParallaxOffset(offset),
-      },
-      {
-        ref: factsParallaxRef,
-        onScroll: (offset) => setFactsParallaxOffset(offset),
-      },
-    ],
-  });
-
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Teeth Whitening Section */}
@@ -52,16 +15,12 @@ const TeethWhitening = () => {
       />
 
       <AnimatedImageTextSection
-        imageRef={lightenImageRef}
-        titleRef={lightenParallaxRef}
-        isImageVisible={isLightenImageVisible}
         imagePosition="left"
         imageSrc="/placeholder.jpg"
         imageAlt="Teeth Whitening Results"
         titleLineOne="Lighten Your Smile"
         titleLineTwo="by Two Shades or More"
         isTitleLineOneBold
-        scrollY={lightenParallaxOffset}
         scrollFactor={1}
       >
         <p>
@@ -75,16 +34,12 @@ const TeethWhitening = () => {
       </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
-        imageRef={factsImageRef}
-        titleRef={factsParallaxRef}
-        isImageVisible={isFactsImageVisible}
         imagePosition="right"
         imageSrc="/placeholder.jpg"
         imageAlt="Teeth Whitening Facts"
         titleLineOne="Facts About"
         titleLineTwo="Teeth Whitening"
         isDark
-        scrollY={factsParallaxOffset}
         scrollFactor={1}
       >
         <div className="space-y-6 ">
