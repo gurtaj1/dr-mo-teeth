@@ -101,6 +101,7 @@ export default function SmartCarousel({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const [rgbColor, setRgbColor] = useState<string>("0, 0, 0");
+  const [currentSlidesToShow, setCurrentSlidesToShow] = useState<number>(3);
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
@@ -160,6 +161,18 @@ export default function SmartCarousel({
     }
   }, [boxShadowColor]);
 
+  // Function to determine slides to show based on window size
+  const updateSlidesToShow = () => {
+    const width = window.innerWidth;
+    setCurrentSlidesToShow(width < 640 ? 1 : slidesToShow); // Show 1 slide on mobile, otherwise use slidesToShow
+  };
+
+  useEffect(() => {
+    updateSlidesToShow(); // Initial check
+    window.addEventListener("resize", updateSlidesToShow); // Update on resize
+    return () => window.removeEventListener("resize", updateSlidesToShow); // Cleanup
+  }, [slidesToShow]);
+
   return (
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
@@ -169,7 +182,7 @@ export default function SmartCarousel({
               key={index}
               className="flex-[0_0_auto] min-w-0 pl-4 w-full sm:w-1/2 md:w-1/3"
               style={{
-                flex: `0 0 ${100 / slidesToShow}%`,
+                flex: `0 0 ${100 / currentSlidesToShow}%`,
               }}
             >
               {typeof item === "string" ? (
