@@ -275,7 +275,7 @@ const HomePage = () => {
                           className="w-full h-48 object-cover transition-transform duration-1000 group-hover:scale-110"
                         />
                       </div>
-                      <div className="flex flex-col flex-1">
+                      <div className="flex flex-col flex-1 text-white">
                         <h3 className="text-xl font-semibold mb-2 ">
                           {service.title}
                         </h3>
