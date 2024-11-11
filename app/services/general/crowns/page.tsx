@@ -25,7 +25,6 @@ const Crowns = () => {
         imageAlt="Dental Crown Procedure"
         titleLineOne="The Crown"
         titleLineTwo="Process"
-        scrollFactor={1}
       >
         <p className="mb-4">The process typically involves two visits:</p>
         <ol className="space-y-2">
@@ -48,7 +47,6 @@ const Crowns = () => {
         titleLineOne="Benefits of"
         titleLineTwo="Dental Crowns"
         isDark
-        scrollFactor={1}
       >
         <ul className="space-y-4 ">
           <li>⭐ Protects and strengthens damaged teeth</li>

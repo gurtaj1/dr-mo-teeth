@@ -16,7 +16,6 @@ const SmileMakeover = () => {
         titleLineTwo="Your Current Smile"
         isTitleLineOneBold
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-6">
           <p>
@@ -42,7 +41,6 @@ const SmileMakeover = () => {
         imageAlt="Smile Makeover Process"
         titleLineOne="Common Treatments in a"
         titleLineTwo="Smile Makeover"
-        scrollFactor={1}
       >
         <div className="space-y-6">
           <p>
@@ -68,7 +66,6 @@ const SmileMakeover = () => {
         titleLineOne="Your Smile Makeover Journey"
         titleLineTwo="The Process"
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-4 ">
           <ol className="space-y-4">

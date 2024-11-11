@@ -30,7 +30,6 @@ const SensitiveTeeth = () => {
         imageAlt="Understanding Tooth Sensitivity"
         titleLineOne="The Science of"
         titleLineTwo="Comfort"
-        scrollFactor={1}
       >
         <p className="mb-4">
           I provide a variety of effective treatments to help alleviate tooth
@@ -47,7 +46,6 @@ const SensitiveTeeth = () => {
         titleLineOne="Causes Of"
         titleLineTwo="Sensitive Teeth"
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-4 ">
           <div>
@@ -96,7 +94,6 @@ const SensitiveTeeth = () => {
         imageAlt="Understanding Tooth Sensitivity"
         titleLineOne="Steps To Prevent"
         titleLineTwo="Sensitive Teeth"
-        scrollFactor={1}
       >
         <div className="space-y-4 ">
           <ul className="space-y-2">

@@ -20,7 +20,6 @@ const Veneers = () => {
         imageAlt="Veneer Procedure"
         titleLineOne="The Veneer"
         titleLineTwo="Process"
-        scrollFactor={1}
       >
         <p className=" mb-4">
           The journey to your perfect smile involves several carefully planned
@@ -56,7 +55,6 @@ const Veneers = () => {
         titleLineOne="Benefits of"
         titleLineTwo="Dental Veneers"
         isDark
-        scrollFactor={1}
       >
         <ul className="space-y-4 ">
           <li>⭐ Natural-looking results</li>
@@ -74,7 +72,6 @@ const Veneers = () => {
         imageAlt="Porcelain Veneers"
         titleLineOne="Porcelain"
         titleLineTwo="Veneers"
-        scrollFactor={1}
       >
         <p className="mb-4">
           Porcelain veneers are the gold standard in cosmetic dentistry. They
@@ -98,7 +95,6 @@ const Veneers = () => {
         titleLineOne="Composite"
         titleLineTwo="Veneers"
         isDark
-        scrollFactor={1}
       >
         <p>
           Composite veneers offer a more affordable alternative to porcelain

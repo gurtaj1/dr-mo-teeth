@@ -24,7 +24,6 @@ const DentalAnxiety = () => {
         imageAlt="Common Reasons for Dental Anxiety"
         titleLineOne="Common Reasons for"
         titleLineTwo="Dental Anxiety"
-        scrollFactor={1}
       >
         <div className="space-y-4">
           <ul className="space-y-2">
@@ -59,7 +58,6 @@ const DentalAnxiety = () => {
         titleLineOne="How Does Dental Anxiety"
         titleLineTwo="Affect Oral Health?"
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-4 ">
           <p>
@@ -78,7 +76,6 @@ const DentalAnxiety = () => {
         imageAlt="Managing Dental Anxiety"
         titleLineOne="Managing"
         titleLineTwo="Dental Anxiety"
-        scrollFactor={1}
       >
         <div className="space-y-4">
           <p>

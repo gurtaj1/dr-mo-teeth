@@ -20,7 +20,6 @@ const DentalImplants = () => {
         imageAlt="Dental Implant Procedure"
         titleLineOne="Your Dental"
         titleLineTwo="Implant Journey:"
-        scrollFactor={1}
       >
         <p className="mb-4">
           I collaborate closely with you to detail every step of your treatment,
@@ -56,7 +55,6 @@ const DentalImplants = () => {
         titleLineOne="Amazing Benefits of"
         titleLineTwo="Dental Implants:"
         isDark
-        scrollFactor={1}
       >
         <ul className="space-y-4 ">
           <li>⭐ Strengthens your jawbone</li>

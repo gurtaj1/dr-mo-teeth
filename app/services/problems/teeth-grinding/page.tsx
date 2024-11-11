@@ -31,7 +31,6 @@ const TeethGrinding = () => {
         imageAlt="Shield Against Teeth Grinding"
         titleLineOne="Your Shield Against"
         titleLineTwo="Teeth Grinding"
-        scrollFactor={1}
       >
         <div className="space-y-4 ">
           <p>
@@ -69,7 +68,6 @@ const TeethGrinding = () => {
         titleLineOne="We'll Help You"
         titleLineTwo="Dream Without Grinding"
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-4 ">
           <p>

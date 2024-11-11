@@ -29,7 +29,6 @@ const CrookedTeeth = () => {
         imageAlt="Causes of Crooked Teeth"
         titleLineOne="What Causes"
         titleLineTwo="Crooked Teeth?"
-        scrollFactor={1}
       >
         <div className="space-y-4 ">
           <p>
@@ -71,7 +70,6 @@ const CrookedTeeth = () => {
         titleLineOne="When to See a Dentist"
         titleLineTwo="About Crooked Teeth"
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-4 ">
           <p>
@@ -94,7 +92,6 @@ const CrookedTeeth = () => {
         imageAlt="Treatment Process"
         titleLineOne="The Process for"
         titleLineTwo="Correcting Crooked Teeth"
-        scrollFactor={1}
       >
         <div className="space-y-6">
           <div>

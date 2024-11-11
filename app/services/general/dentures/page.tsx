@@ -21,7 +21,6 @@ const Dentures = () => {
         imageAlt="Types of Dentures"
         titleLineOne="Types of"
         titleLineTwo="Dentures"
-        scrollFactor={1}
       >
         <p className="mb-4">
           We offer different types of dentures to suit your specific needs:
@@ -53,7 +52,6 @@ const Dentures = () => {
         titleLineOne="Benefits of"
         titleLineTwo="Dentures"
         isDark
-        scrollFactor={1}
       >
         <ul className="space-y-4 ">
           <li>⭐ Restore your natural smile</li>

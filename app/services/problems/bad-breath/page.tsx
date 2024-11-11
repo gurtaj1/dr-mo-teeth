@@ -63,7 +63,6 @@ const BadBreath = () => {
         imageAlt="Bad Breath Causes"
         titleLineOne="Bad Breath Isn't Always a"
         titleLineTwo="Dental Concern"
-        scrollFactor={1}
       >
         <div>
           <p>
@@ -83,7 +82,6 @@ const BadBreath = () => {
         titleLineTwo="Bad Breath"
         isTitleLineOneBold
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-6 ">
           <ol className="space-y-2">
@@ -113,7 +111,6 @@ const BadBreath = () => {
         imageAlt="Bad Breath FAQs"
         titleLineOne="Common Treatments for"
         titleLineTwo="Halitosis"
-        scrollFactor={1}
       >
         <div className="space-y-6">
           <div>

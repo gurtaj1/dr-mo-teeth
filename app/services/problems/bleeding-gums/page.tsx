@@ -73,7 +73,6 @@ const BleedingGums = () => {
         imageAlt="Treatment Steps"
         titleLineOne="Steps to Evaluate"
         titleLineTwo="Your Gum Health"
-        scrollFactor={1}
       >
         <div className="space-y-6">
           <ol className="space-y-4">

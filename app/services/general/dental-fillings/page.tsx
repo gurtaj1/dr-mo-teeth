@@ -16,7 +16,6 @@ const DentalFillings = () => {
         titleLineOne="Fill your tooth"
         titleLineTwo="Before it fails"
         isDark
-        scrollFactor={1}
       >
         <p className=" mb-8">
           A dental filling is a treatment used to restore a tooth that has been
@@ -37,7 +36,6 @@ const DentalFillings = () => {
         imageAlt="Types of Dental Fillings"
         titleLineOne="Types of"
         titleLineTwo="Dental Fillings"
-        scrollFactor={1}
       >
         <div className="space-y-4">
           <div>
@@ -68,7 +66,6 @@ const DentalFillings = () => {
         titleLineOne="The Filling"
         titleLineTwo="Process"
         isDark
-        scrollFactor={1}
       >
         <ol className="space-y-4 ">
           <li>1. Examination and x-rays to assess decay</li>

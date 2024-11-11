@@ -29,7 +29,6 @@ const Toothache = () => {
         imageAlt="Common Causes of Tooth Pain"
         titleLineOne="Understanding Your"
         titleLineTwo="Tooth Pain"
-        scrollFactor={1}
       >
         <p className="mb-4">Your tooth pain could be due to:</p>
         <ul className="space-y-2 ">
@@ -58,7 +57,6 @@ const Toothache = () => {
         titleLineOne="Common Treatments for"
         titleLineTwo="Tooth Pain"
         isDark
-        scrollFactor={1}
       >
         <h3 className=" font-bold mb-2">Fillings</h3>
         <p className=" mb-4">
@@ -89,7 +87,6 @@ const Toothache = () => {
         imageAlt="Preventing Tooth Pain"
         titleLineOne="How to"
         titleLineTwo="Prevent Tooth Pain"
-        scrollFactor={1}
       >
         <p className="mb-4">
           Tooth pain can arise from various factors, but you can adopt some

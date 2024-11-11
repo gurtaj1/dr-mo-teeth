@@ -12,7 +12,6 @@ const WisdomToothPain = () => {
         titleLineOne="Its Wise To"
         titleLineTwo="Remove Them"
         isDark
-        scrollFactor={1}
       >
         <h3 className=" font-bold mb-2">What Causes Wisdom Tooth Pain?</h3>
         <p className=" mb-4">
@@ -40,7 +39,6 @@ const WisdomToothPain = () => {
         imageAlt="Benefits of Wisdom Tooth Removal"
         titleLineOne="Benefits of"
         titleLineTwo="Wisdom Tooth Removal"
-        scrollFactor={1}
       >
         <h3 className="font-bold mb-2">No More Pain</h3>
         <p className=" mb-4">
@@ -70,7 +68,6 @@ const WisdomToothPain = () => {
         titleLineOne="How Are"
         titleLineTwo="Wisdom Teeth Removed?"
         isDark
-        scrollFactor={1}
       >
         <p className=" mb-4">
           The extraction process typically involves the following steps:

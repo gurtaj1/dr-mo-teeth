@@ -27,7 +27,7 @@ const AnimatedImageTextSection = ({
   titleLineTwo,
   isTitleLineOneBold = false,
   isDark = false,
-  scrollFactor = 0,
+  scrollFactor = 0.8,
   children,
 }: AnimatedImageTextSectionProps) => {
   const [isImageVisible, setIsImageVisible] = useState(false);
@@ -84,7 +84,7 @@ const AnimatedImageTextSection = ({
               animate={{
                 y: scrollFactor ? titleParallaxOffset * scrollFactor : 0,
               }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              style={{ willChange: "transform" }}
             >
               <h2
                 ref={titleRef}

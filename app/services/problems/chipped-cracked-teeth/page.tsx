@@ -31,7 +31,6 @@ const BrokenTeeth = () => {
         imageAlt="Poor Dental Care"
         titleLineOne="Does Poor Dental Care"
         titleLineTwo="Contribute to Chipped Teeth?"
-        scrollFactor={1}
       >
         <p>
           While many broken teeth result from accidents, poor dental hygiene can
@@ -49,7 +48,6 @@ const BrokenTeeth = () => {
         titleLineOne="Managing a "
         titleLineTwo="Broken Tooth at Home"
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-4">
           <p>
@@ -77,7 +75,6 @@ const BrokenTeeth = () => {
         imageAlt="Treatment Process"
         titleLineOne="What's the Dentist's Process for"
         titleLineTwo="Repairing a Broken or Cracked Tooth?"
-        scrollFactor={1}
       >
         <div className="space-y-6">
           <div>

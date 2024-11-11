@@ -29,7 +29,6 @@ const MissingTooth = () => {
         imageAlt="Renewing Your Smile"
         titleLineOne="Renewing Your"
         titleLineTwo="Smile's Functionality"
-        scrollFactor={1}
       >
         <div className="space-y-4 ">
           <p>
@@ -48,7 +47,6 @@ const MissingTooth = () => {
         titleLineOne="Your Treatment"
         titleLineTwo="Options"
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-6 ">
           <div>

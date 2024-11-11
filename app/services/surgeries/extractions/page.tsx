@@ -63,7 +63,6 @@ const Extractions = () => {
         imageAlt="Emergency Pain Hero"
         titleLineOne="Are You in Pain?"
         titleLineTwo="Get Help ASAP"
-        scrollFactor={1}
       >
         <div className="space-y-6">
           <p>

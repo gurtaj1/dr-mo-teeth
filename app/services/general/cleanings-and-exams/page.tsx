@@ -22,7 +22,6 @@ const CleaningsAndExams = () => {
         imageAlt="Dental Examination Process"
         titleLineOne="What's Included in a"
         titleLineTwo="Dental Exam"
-        scrollFactor={1}
       >
         <ul className="space-y-2">
           <li>✓ An assessment of your dental and medical history</li>
@@ -50,7 +49,6 @@ const CleaningsAndExams = () => {
         titleLineOne="Professional"
         titleLineTwo="Scale and Polish"
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-6 ">
           <p>

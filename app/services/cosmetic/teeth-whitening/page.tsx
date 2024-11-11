@@ -21,7 +21,6 @@ const TeethWhitening = () => {
         titleLineOne="Lighten Your Smile"
         titleLineTwo="by Two Shades or More"
         isTitleLineOneBold
-        scrollFactor={1}
       >
         <p>
           Maintaining the whiteness of your teeth can be challenging. Daily
@@ -40,7 +39,6 @@ const TeethWhitening = () => {
         titleLineOne="Facts About"
         titleLineTwo="Teeth Whitening"
         isDark
-        scrollFactor={1}
       >
         <div className="space-y-6 ">
           <div>

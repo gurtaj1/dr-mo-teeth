@@ -16,7 +16,6 @@ const RootCanal = () => {
         titleLineOne="Stop the Pain and"
         titleLineTwo="Save the Tooth"
         isDark
-        scrollFactor={1}
       >
         <p className=" mb-8">
           Root canals often get a bad reputation, but they&apos;re one of the
@@ -32,7 +31,6 @@ const RootCanal = () => {
         imageAlt="Root Canal Treatment"
         titleLineOne="Understanding"
         titleLineTwo="Root Canal Treatment"
-        scrollFactor={1}
       >
         <p className="mb-4">
           Root canal treatment is a dental procedure designed to save a tooth

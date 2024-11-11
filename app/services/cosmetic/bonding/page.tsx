@@ -20,7 +20,6 @@ const Bonding = () => {
         imageAlt="Bonding Process"
         titleLineOne="The Bonding"
         titleLineTwo="Process"
-        scrollFactor={1}
       >
         <ol className="space-y-2">
           <li>
@@ -51,7 +50,6 @@ const Bonding = () => {
         titleLineOne="Benefits of"
         titleLineTwo="Composite Bonding"
         isDark
-        scrollFactor={1}
       >
         <ul className="space-y-4">
           <li>⭐ Quick and minimally invasive procedure</li>

@@ -15,7 +15,6 @@ const GumTherapy = () => {
         titleLineOne="Stop Your Teeth From"
         titleLineTwo="Falling Out"
         isDark
-        scrollFactor={1}
       >
         <p className=" mb-4">
           Gum disease treatment is a dental procedure aimed at improving the
@@ -44,7 +43,6 @@ const GumTherapy = () => {
         imageAlt="Gum Disease Treatment"
         titleLineOne="Understanding"
         titleLineTwo="Gum Disease"
-        scrollFactor={1}
       >
         <p className="mb-4">
           Early detection and treatment of gum disease is crucial. Here are the
@@ -65,7 +63,6 @@ const GumTherapy = () => {
         titleLineOne="Benefits of"
         titleLineTwo="Gum Therapy"
         isDark
-        scrollFactor={1}
       >
         <ul className="space-y-4 ">
           <li>⭐ Prevents tooth loss</li>

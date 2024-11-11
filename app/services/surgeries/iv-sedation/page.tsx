@@ -35,7 +35,6 @@ export default function IVSedationPage() {
         imageAlt="IV Sedation Patient"
         titleLineOne="Who Needs"
         titleLineTwo="IV Sedation?"
-        scrollFactor={1}
       >
         <p className="mb-4">Intravenous Sedation can benefit people with:</p>
         <ul className="space-y-2">

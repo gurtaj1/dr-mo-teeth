@@ -22,7 +22,6 @@ const Bridges = () => {
         imageAlt="Dental Bridge"
         titleLineOne="A Great Solution for"
         titleLineTwo="Missing Teeth"
-        scrollFactor={1}
       >
         <p className="mb-4">
           Unlike removable partial dentures, dental bridges are fixed in place,
