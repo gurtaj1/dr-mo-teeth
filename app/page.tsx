@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -150,7 +151,14 @@ const HomePage = () => {
           </AnimatedElement>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimatedElement transitionSize>
-              <div className="text-center p-6 rounded-lg border-2 border-dental-teal/20 transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group h-64 flex flex-col justify-between">
+              <motion.div
+                className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="mb-4">
                   <svg
                     className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
@@ -163,17 +171,24 @@ const HomePage = () => {
                 <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
                   TECHNOLOGY
                 </h3>
-                <p className="text-gray-600 transition-colors duration-300 group-hover:text-dental-navy">
+                <p className="text-gray-600">
                   The Latest Technology
                   <br />
                   providing Precision,
                   <br />
                   Efficiency and Comfort
                 </p>
-              </div>
+              </motion.div>
             </AnimatedElement>
             <AnimatedElement transitionSize>
-              <div className="text-center p-6 rounded-lg border-2 border-dental-teal/20 transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group h-64 flex flex-col justify-between">
+              <motion.div
+                className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="mb-4">
                   <svg
                     className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
@@ -186,15 +201,22 @@ const HomePage = () => {
                 <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
                   QUALITY
                 </h3>
-                <p className="text-gray-600 transition-colors duration-300 group-hover:text-dental-navy">
+                <p className="text-gray-600">
                   High Quality Dentistry,
                   <br />
                   Guided By Science
                 </p>
-              </div>
+              </motion.div>
             </AnimatedElement>
             <AnimatedElement transitionSize>
-              <div className="text-center p-6 rounded-lg border-2 border-dental-teal/20 transition-all duration-300 hover:bg-dental-accent1/5 hover:transform hover:scale-105 hover:shadow-lg group h-64 flex flex-col justify-between">
+              <motion.div
+                className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="mb-4">
                   <svg
                     className="w-12 h-12 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
@@ -207,12 +229,12 @@ const HomePage = () => {
                 <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
                   BESPOKE
                 </h3>
-                <p className="text-gray-600 transition-colors duration-300 group-hover:text-dental-navy">
+                <p className="text-gray-600">
                   Personalised Care,
                   <br />
                   Tailored To You
                 </p>
-              </div>
+              </motion.div>
             </AnimatedElement>
           </div>
         </div>
@@ -265,14 +287,26 @@ const HomePage = () => {
               },
             ].map((service, index) => (
               <AnimatedElement transitionSize key={index}>
-                <Link href={service.link} className="h-full">
-                  <Card className="bg-dental-primary/10 hover:bg-dental-primary/20 transition-colors border-dental-accent1/20 h-full flex flex-col group">
+                <Link href={service.link} className="h-full cursor-pointer">
+                  <motion.div
+                    className="bg-dental-primary/10 rounded-lg hover:bg-dental-primary/20 transition-colors border-dental-accent1/20 h-full flex flex-col group"
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                    }}
+                    transition={{
+                      duration: 0.2,
+                      type: "spring",
+                      stiffness: 300,
+                    }}
+                    // transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <CardContent className="p-6 flex flex-col flex-1">
                       <div className="overflow-hidden rounded-lg mb-4">
                         <img
                           src={`/service-${index + 1}.jpg`}
                           alt={service.title}
-                          className="w-full h-48 object-cover transition-transform duration-1000 group-hover:scale-110"
+                          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                       </div>
                       <div className="flex flex-col flex-1 text-white">
@@ -282,7 +316,7 @@ const HomePage = () => {
                         <p className="/80">{service.description}</p>
                       </div>
                     </CardContent>
-                  </Card>
+                  </motion.div>
                 </Link>
               </AnimatedElement>
             ))}
@@ -303,26 +337,35 @@ const HomePage = () => {
               {
                 step: 1,
                 text: "Schedule an exam",
-                image: "/placeholder-2.jpg",
+                image: "/simple-step-1.jpg",
               },
               {
                 step: 2,
                 text: "Speak with a dentist about your goals",
-                image: "/placeholder-2.jpg",
+                image: "/simple-step-2.jpg",
               },
               {
                 step: 3,
                 text: "Create a plan and start your smile journey",
-                image: "/placeholder-2.jpg",
+                image: "/simple-step-3.jpg",
               },
             ].map((step, index) => (
               <AnimatedElement transitionSize key={index}>
-                <div className="relative">
+                <motion.div
+                  className="relative"
+                  whileHover={{
+                    scale: 1.05,
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
                   <div className="relative">
-                    <img
+                    <motion.img
                       src={step.image}
                       alt={`Step ${step.step}`}
                       className="w-full h-64 object-cover rounded-lg"
+                      whileHover={{
+                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                      }}
                     />
                     <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-dental-teal flex items-center justify-center">
                       <span className="text-2xl font-bold text-white">
@@ -333,7 +376,7 @@ const HomePage = () => {
                   <p className="text-dental-navy text-xl font-semibold mt-8 text-center">
                     {step.text}
                   </p>
-                </div>
+                </motion.div>
               </AnimatedElement>
             ))}
           </div>
