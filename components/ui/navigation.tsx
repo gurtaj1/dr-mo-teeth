@@ -9,16 +9,74 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-
+import AboutSectionIcon from "@/app/svg-components/about-section-icon";
+import ServicesSectionIcon from "@/app/svg-components/services-section-icon";
+import ExaminationsIcon from "@/app/svg-components/examinations-icon";
+import CrownsIcon from "@/app/svg-components/crowns-icon";
+import GumTherapyIcon from "@/app/svg-components/gum-therapy-icon";
+import DentalFillingsIcon from "@/app/svg-components/dental-fillings-icon";
+import DenturesIcon from "@/app/svg-components/dentures-icon";
+import BridgesIcon from "@/app/svg-components/bridges-icon";
+import ExtractionsIcon from "@/app/svg-components/extractions-icon";
+import InvisalignIcon from "@/app/svg-components/invisalign-icon";
+import IVSedationIcon from "@/app/svg-components/iv-sedation-icon";
+import TeethWhiteningIcon from "@/app/svg-components/teeth-whitening-icon";
+import CrownLengtheningIcon from "@/app/svg-components/crown-lengthening-icon";
+import ImplantsIcon from "@/app/svg-components/implants-icon";
+import RootCanalIcon from "@/app/svg-components/root-canal-icon";
+import BoneGraftingIcon from "@/app/svg-components/bone-grafting-icon";
+import ProblemsSectionIcon from "@/app/svg-components/problems-section-icon";
+import VeneersIcon from "@/app/svg-components/veneers-icon";
+import SmileMakeoverIcon from "@/app/svg-components/smile-makeover-icon";
+import BondingIcon from "@/app/svg-components/bonding-icon";
 import { navBarHeight } from "@/app/globals/constants";
 
-const variants = {
+const linkVariants = {
   initial: { scale: 1 },
   whileHover: {
     scale: 1.05,
   },
   whileTap: {
     scale: 0.95, // Scale down effect on tap
+  },
+};
+
+const iconVariants = {
+  initial: {
+    fill: "white",
+    filter: "drop-shadow(0px 0px 0px rgba(229, 185, 77, 0))",
+  },
+  whileHover: {
+    fill: ["#E5B94D", "#C4A043", "#E5B94D"],
+    filter: "drop-shadow(0px 0px 2px rgba(229, 185, 77, 0.5))",
+    transition: {
+      fill: {
+        duration: 2,
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatType: "loop" as const,
+      },
+      filter: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+  },
+  whileTap: {
+    fill: ["#E5B94D", "#C4A043", "#E5B94D"],
+    filter: "drop-shadow(0px 0px 5px rgba(229, 185, 77, 0.7))",
+    transition: {
+      fill: {
+        duration: 2,
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatType: "loop" as const,
+      },
+      filter: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
   },
 };
 
@@ -59,7 +117,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <motion.div
-            variants={variants}
+            variants={linkVariants}
             initial="initial"
             whileHover="whileHover"
           >
@@ -75,7 +133,7 @@ const Navigation = () => {
             </Link>
           </motion.div>
           <motion.div
-            variants={variants}
+            variants={linkVariants}
             initial="initial"
             whileHover="whileHover"
           >
@@ -94,49 +152,61 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <div className="w-5"></div>
             <motion.div
-              variants={variants}
               initial="initial"
               whileHover="whileHover"
+              whileTap="WhileTap"
             >
-              <Link
-                href="/#about"
-                className="text-2xl text-white "
-                onClick={(e) => {
-                  // Only handle the scroll behavior if we're already on the home page
-                  if (pathname === "/") {
-                    e.preventDefault();
-                    const element = document.getElementById("about");
-                    const elementPosition =
-                      element?.getBoundingClientRect().top ?? 0;
-                    const offsetPosition =
-                      elementPosition + window.pageYOffset - navBarHeight;
+              <motion.div variants={linkVariants}>
+                <Link
+                  href="/#about"
+                  className="text-2xl text-white flex items-center gap-2"
+                  onClick={(e) => {
+                    // Only handle the scroll behavior if we're already on the home page
+                    if (pathname === "/") {
+                      e.preventDefault();
+                      const element = document.getElementById("about");
+                      const elementPosition =
+                        element?.getBoundingClientRect().top ?? 0;
+                      const offsetPosition =
+                        elementPosition + window.pageYOffset - navBarHeight;
 
-                    window.scrollTo({
-                      top: offsetPosition,
-                      behavior: "smooth",
-                    });
-                  }
-                  // If we're not on the home page, let the default navigation happen
-                }}
-              >
-                About
-              </Link>
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth",
+                      });
+                    }
+                    // If we're not on the home page, let the default navigation happen
+                  }}
+                >
+                  <AboutSectionIcon
+                    className="w-8 h-8"
+                    variants={iconVariants}
+                  />
+                  About
+                </Link>
+              </motion.div>
             </motion.div>
             <div className="relative group">
               <motion.button
-                variants={variants}
                 initial="initial"
                 whileHover="whileHover"
-                className="text-2xl text-white  flex items-center"
+                whileTap="whileTap"
+                variants={linkVariants}
+                className="text-2xl text-white  flex items-center gap-2"
               >
+                <ServicesSectionIcon
+                  className="w-8 h-8"
+                  variants={iconVariants}
+                />
                 Services
               </motion.button>
+
               {/* Add bridge for main menu */}
               <div className="absolute -bottom-2 left-0 w-full h-2" />
               <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-dirtyGold mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
                 <div className="relative group/sub">
                   <motion.button
-                    variants={variants}
+                    variants={linkVariants}
                     initial="initial"
                     whileHover="whileHover"
                     className="w-full text-left px-4 py-2 text-white hover:bg-dental-gray flex items-center justify-between"
@@ -154,86 +224,114 @@ const Navigation = () => {
                     {/* Add a hidden element to detect if menu should flip */}
                     <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/general/cleanings-and-exams"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <ExaminationsIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Examinations and Hygiene
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/general/crowns"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <CrownsIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Crowns
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/general/gum-therapy"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <GumTherapyIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Gum Therapy
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/general/dental-fillings"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <DentalFillingsIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Dental Fillings
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/general/dentures"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <DenturesIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Dentures
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/general/bridges"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <BridgesIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Bridges
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/general/root-canal"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <RootCanalIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Root Canal Therapy
                       </Link>
                     </motion.div>
@@ -241,7 +339,7 @@ const Navigation = () => {
                 </div>
                 <div className="relative group/sub">
                   <motion.button
-                    variants={variants}
+                    variants={linkVariants}
                     initial="initial"
                     whileHover="whileHover"
                     className="w-full text-left px-4 py-2 text-white  hover:bg-dental-gray flex items-center justify-between"
@@ -259,62 +357,82 @@ const Navigation = () => {
                     {/* Add a hidden element to detect if menu should flip */}
                     <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/surgeries/implants"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <ImplantsIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Implants
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/surgeries/iv-sedation"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <IVSedationIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         IV Sedation
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/surgeries/extractions"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <ExtractionsIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Extractions
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/surgeries/bone-grafts"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <BoneGraftingIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Bone Grafts
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/surgeries/crown-lengthening"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <CrownLengtheningIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Crown Lengthening
                       </Link>
                     </motion.div>
@@ -323,7 +441,7 @@ const Navigation = () => {
                 <div className="relative group/sub">
                   <motion.button
                     className="w-full text-left px-4 py-2 text-white  hover:bg-dental-gray flex items-center justify-between"
-                    variants={variants}
+                    variants={linkVariants}
                     initial="initial"
                     whileHover="whileHover"
                   >
@@ -340,62 +458,82 @@ const Navigation = () => {
                     {/* Add a hidden element to detect if menu should flip */}
                     <div className="submenu-right absolute invisible w-1 h-1 -left-1" />
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/cosmetic/invisalign"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <InvisalignIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Invisalign
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/cosmetic/teeth-whitening"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <TeethWhiteningIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Teeth Whitening
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/cosmetic/bonding"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <BondingIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Bonding
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/cosmetic/veneers"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <VeneersIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Veneers
                       </Link>
                     </motion.div>
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                     >
                       <Link
                         href="/services/cosmetic/smile-makeover"
-                        className="block px-4 py-2 text-white  hover:bg-dental-gray"
+                        className="block px-4 py-2 text-white  hover:bg-dental-gray flex items-center gap-2"
                       >
+                        <SmileMakeoverIcon
+                          className="w-6 h-6"
+                          variants={iconVariants}
+                        />
                         Smile Makeover
                       </Link>
                     </motion.div>
@@ -405,18 +543,22 @@ const Navigation = () => {
             </div>
             <div className="relative group">
               <motion.button
-                variants={variants}
+                variants={linkVariants}
                 initial="initial"
                 whileHover="whileHover"
-                className="text-2xl text-white  flex items-center"
+                className="text-2xl text-white  flex items-center gap-2"
               >
+                <ProblemsSectionIcon
+                  className="w-8 h-8"
+                  variants={iconVariants}
+                />
                 Problems I Treat
               </motion.button>
               {/* Add bridge for main menu */}
               <div className="absolute -bottom-2 left-0 w-full h-2" />
               <div className="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible w-64 bg-dental-dirtyGold mt-2 py-2 rounded-md shadow-lg transition-all duration-200 ease-in-out">
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -424,11 +566,15 @@ const Navigation = () => {
                     href="/services/problems/chipped-cracked-teeth"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
+                    {/* <ChippedCrackedTeethIcon
+                      className="w-8 h-8"
+                      variants={iconVariants}
+                    /> */}
                     Chipped or Cracked Teeth
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -436,11 +582,15 @@ const Navigation = () => {
                     href="/services/problems/wisdom-tooth-pain"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
+                    {/* <WisdomToothPainIcon
+                      className="w-8 h-8"
+                      variants={iconVariants}
+                    /> */}
                     Wisdom Tooth Pain
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -448,11 +598,15 @@ const Navigation = () => {
                     href="/services/problems/missing-teeth"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
+                    {/* <MissingTeethIcon
+                      className="w-8 h-8"
+                      variants={iconVariants}
+                    /> */}
                     Missing Teeth
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -460,11 +614,15 @@ const Navigation = () => {
                     href="/services/problems/toothache"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
+                    {/* <ToothacheIcon
+                      className="w-8 h-8"
+                      variants={iconVariants}
+                    /> */}
                     Toothache
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -472,11 +630,15 @@ const Navigation = () => {
                     href="/services/problems/teeth-grinding"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
+                    {/* <TeethGrindingIcon
+                      className="w-8 h-8"
+                      variants={iconVariants}
+                    /> */}
                     Teeth Grinding
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -484,11 +646,15 @@ const Navigation = () => {
                     href="/services/cosmetic/teeth-whitening"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
+                    {/* <StainedTeethIcon
+                      className="w-8 h-8"
+                      variants={iconVariants}
+                    /> */}
                     Stained Teeth
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -496,11 +662,15 @@ const Navigation = () => {
                     href="/services/problems/crooked-teeth"
                     className="block px-4 py-2 text-white  hover:bg-dental-gray"
                   >
+                    {/* <CrookedTeethIcon
+                      className="w-8 h-8"
+                      variants={iconVariants}
+                    /> */}
                     Crooked Teeth
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -512,7 +682,7 @@ const Navigation = () => {
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -524,7 +694,7 @@ const Navigation = () => {
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -536,7 +706,7 @@ const Navigation = () => {
                   </Link>
                 </motion.div>
                 <motion.div
-                  variants={variants}
+                  variants={linkVariants}
                   initial="initial"
                   whileHover="whileHover"
                 >
@@ -555,7 +725,7 @@ const Navigation = () => {
         {/* Schedule Button - Show on desktop only */}
         <div className="hidden md:block">
           <motion.div
-            variants={variants}
+            variants={linkVariants}
             initial="initial"
             whileHover="whileHover"
           >
@@ -590,7 +760,7 @@ const Navigation = () => {
                 >
                   <div className="flex flex-col h-full overflow-y-auto">
                     <motion.div
-                      variants={variants}
+                      variants={linkVariants}
                       initial="initial"
                       whileHover="whileHover"
                       whileTap="whileTap"
@@ -602,7 +772,7 @@ const Navigation = () => {
                     {/* Services Section */}
                     <div className="border-t border-dental-black-light">
                       <motion.div
-                        variants={variants}
+                        variants={linkVariants}
                         initial="initial"
                         whileHover="whileHover"
                         whileTap="whileTap"
@@ -624,7 +794,7 @@ const Navigation = () => {
                       >
                         {/* General Services */}
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -645,7 +815,7 @@ const Navigation = () => {
                           }`}
                         >
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -658,7 +828,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -671,7 +841,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -684,7 +854,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -697,7 +867,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -710,7 +880,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -723,7 +893,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -739,7 +909,7 @@ const Navigation = () => {
 
                         {/* Surgical Services */}
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -760,7 +930,7 @@ const Navigation = () => {
                           }`}
                         >
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -773,7 +943,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -786,7 +956,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -799,7 +969,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -812,7 +982,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -828,7 +998,7 @@ const Navigation = () => {
 
                         {/* Cosmetic Services */}
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -849,7 +1019,7 @@ const Navigation = () => {
                           }`}
                         >
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -862,7 +1032,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -875,7 +1045,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -888,7 +1058,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -901,7 +1071,7 @@ const Navigation = () => {
                             </Link>
                           </motion.div>
                           <motion.div
-                            variants={variants}
+                            variants={linkVariants}
                             initial="initial"
                             whileHover="whileHover"
                             whileTap="whileTap"
@@ -920,7 +1090,7 @@ const Navigation = () => {
                     {/* Problems I Treat Section */}
                     <div className="border-t border-dental-black-light">
                       <motion.div
-                        variants={variants}
+                        variants={linkVariants}
                         initial="initial"
                         whileHover="whileHover"
                         whileTap="whileTap"
@@ -941,7 +1111,7 @@ const Navigation = () => {
                         }`}
                       >
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -954,7 +1124,7 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -967,7 +1137,7 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -980,7 +1150,7 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -993,7 +1163,7 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -1006,7 +1176,7 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -1019,7 +1189,7 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -1032,7 +1202,7 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -1045,7 +1215,7 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -1058,7 +1228,7 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                         <motion.div
-                          variants={variants}
+                          variants={linkVariants}
                           initial="initial"
                           whileHover="whileHover"
                           whileTap="whileTap"
@@ -1076,7 +1246,7 @@ const Navigation = () => {
                     {/* Schedule Button */}
                     <div className="mt-auto p-6">
                       <motion.div
-                        variants={variants}
+                        variants={linkVariants}
                         initial="initial"
                         whileHover="whileHover"
                         whileTap="whileTap"

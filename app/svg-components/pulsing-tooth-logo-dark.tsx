@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import type { MotionSVGProps } from "./types";
 
 const svgVariants = {
   initial: { opacity: 0 },
@@ -13,7 +14,7 @@ const svgVariants = {
   },
 };
 
-const ToothLogoDark = () => (
+const ToothLogoDark = (props: MotionSVGProps) => (
   <motion.svg
     xmlns="http://www.w3.org/2000/svg"
     id="Layer_2"
@@ -22,6 +23,7 @@ const ToothLogoDark = () => (
     variants={svgVariants}
     initial="initial"
     animate="animate"
+    {...props}
   >
     <defs>
       <style>{".cls-4{fill:#4dbaf9}"}</style>
