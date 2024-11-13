@@ -82,7 +82,7 @@ const AnimatedImageTextSection = ({
             <motion.div
               initial={{ y: 0 }}
               animate={{
-                y: scrollFactor ? titleParallaxOffset * scrollFactor : 0,
+                y: scrollFactor ? titleParallaxOffset * scrollFactor - 10 : 0,
               }}
               style={{ willChange: "transform" }}
             >
