@@ -18,7 +18,7 @@ export const iconFramerVariants = {
     filter: "drop-shadow(0px 0px 0px rgba(229, 185, 77, 0))",
   },
   whileHover: {
-    fill: [colors.dental.accent2, colors.dental.teal, colors.dental.accent2],
+    fill: [colors.dental.gold, colors.dental.lightGold, colors.dental.gold],
     filter: "drop-shadow(0px 0px 2px rgba(229, 185, 77, 0.5))",
     transition: {
       fill: {
@@ -34,7 +34,7 @@ export const iconFramerVariants = {
     },
   },
   whileTap: {
-    fill: [colors.dental.accent2, colors.dental.teal, colors.dental.accent2],
+    fill: [colors.dental.gold, colors.dental.lightGold, colors.dental.gold],
     filter: "drop-shadow(0px 0px 5px rgba(229, 185, 77, 0.7))",
     transition: {
       fill: {

@@ -69,7 +69,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-deepBlue/70 bg-opacity-95 shadow-m font-newsreader border-b-2 border-dental-teal">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-deepBlue/70 bg-opacity-95 shadow-m font-newsreader border-b-2 border-dental-gold">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <motion.div
@@ -115,7 +115,7 @@ const Navigation = () => {
               <motion.div variants={linkFramerVariants}>
                 <Link
                   href="/#about"
-                  className="text-2xl text-white flex items-center gap-2"
+                  className="text-2xl text-white flex items-center gap-2 hover:text-dental-gold"
                   onClick={(e) => {
                     // Only handle the scroll behavior if we're already on the home page
                     if (pathname === "/") {
@@ -144,7 +144,7 @@ const Navigation = () => {
                 whileHover="whileHover"
                 whileTap="whileTap"
                 variants={linkFramerVariants}
-                className="text-2xl text-white  flex items-center gap-2"
+                className="text-2xl text-white  flex items-center gap-2 hover:text-dental-gold"
               >
                 Services
               </motion.button>
@@ -157,7 +157,7 @@ const Navigation = () => {
                     variants={linkFramerVariants}
                     initial="initial"
                     whileHover="whileHover"
-                    className="w-full text-left px-4 py-2 text-white hover:bg-dental-navy flex items-center justify-between"
+                    className="w-full text-left px-4 py-2 text-white hover:bg-dental-black/50 hover:text-dental-gold flex items-center justify-between"
                   >
                     General
                     <span className="ml-2">›</span>
@@ -178,7 +178,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/general/cleanings-and-exams"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <ExaminationsIcon
                           className="w-6 h-6"
@@ -194,7 +194,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/general/crowns"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <CrownsIcon
                           className="w-6 h-6"
@@ -210,7 +210,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/general/gum-therapy"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <GumTherapyIcon
                           className="w-6 h-6"
@@ -226,7 +226,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/general/dental-fillings"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <DentalFillingsIcon
                           className="w-6 h-6"
@@ -242,7 +242,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/general/dentures"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <DenturesIcon
                           className="w-6 h-6"
@@ -258,7 +258,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/general/bridges"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <BridgesIcon
                           className="w-6 h-6"
@@ -274,7 +274,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/general/root-canal"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <RootCanalIcon
                           className="w-6 h-6"
@@ -290,7 +290,7 @@ const Navigation = () => {
                     variants={linkFramerVariants}
                     initial="initial"
                     whileHover="whileHover"
-                    className="w-full text-left px-4 py-2 text-white  hover:bg-dental-navy flex items-center justify-between"
+                    className="w-full text-left px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center justify-between"
                   >
                     Surgical
                     <span className="ml-2">›</span>
@@ -311,7 +311,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/surgeries/implants"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <ImplantsIcon
                           className="w-6 h-6"
@@ -327,7 +327,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/surgeries/iv-sedation"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <IVSedationIcon
                           className="w-6 h-6"
@@ -343,7 +343,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/surgeries/extractions"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <ExtractionsIcon
                           className="w-6 h-6"
@@ -359,7 +359,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/surgeries/bone-grafts"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <BoneGraftingIcon
                           className="w-6 h-6"
@@ -375,7 +375,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/surgeries/crown-lengthening"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <CrownLengtheningIcon
                           className="w-6 h-6"
@@ -388,7 +388,7 @@ const Navigation = () => {
                 </div>
                 <div className="relative group/sub">
                   <motion.button
-                    className="w-full text-left px-4 py-2 text-white  hover:bg-dental-navy flex items-center justify-between"
+                    className="w-full text-left px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center justify-between"
                     variants={linkFramerVariants}
                     initial="initial"
                     whileHover="whileHover"
@@ -412,7 +412,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/cosmetic/invisalign"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <InvisalignIcon
                           className="w-6 h-6"
@@ -428,7 +428,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/cosmetic/teeth-whitening"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <TeethWhiteningIcon
                           className="w-6 h-6"
@@ -444,7 +444,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/cosmetic/bonding"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <BondingIcon
                           className="w-6 h-6"
@@ -460,7 +460,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/cosmetic/veneers"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <VeneersIcon
                           className="w-6 h-6"
@@ -476,7 +476,7 @@ const Navigation = () => {
                     >
                       <Link
                         href="/services/cosmetic/smile-makeover"
-                        className="block px-4 py-2 text-white  hover:bg-dental-navy flex items-center gap-2"
+                        className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold flex items-center gap-2"
                       >
                         <SmileMakeoverIcon
                           className="w-6 h-6"
@@ -494,7 +494,7 @@ const Navigation = () => {
                 variants={linkFramerVariants}
                 initial="initial"
                 whileHover="whileHover"
-                className="text-2xl text-white  flex items-center gap-2"
+                className="text-2xl text-white  flex items-center gap-2 hover:text-dental-gold"
               >
                 Problems I Treat
               </motion.button>
@@ -508,7 +508,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/chipped-cracked-teeth"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Chipped or Cracked Teeth
                   </Link>
@@ -520,7 +520,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/wisdom-tooth-pain"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Wisdom Tooth Pain
                   </Link>
@@ -532,7 +532,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/missing-teeth"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Missing Teeth
                   </Link>
@@ -544,7 +544,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/toothache"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Toothache
                   </Link>
@@ -556,7 +556,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/teeth-grinding"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Teeth Grinding
                   </Link>
@@ -568,7 +568,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/cosmetic/teeth-whitening"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Stained Teeth
                   </Link>
@@ -580,7 +580,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/crooked-teeth"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Crooked Teeth
                   </Link>
@@ -592,7 +592,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/bleeding-gums"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Bleeding Gums
                   </Link>
@@ -604,7 +604,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/bad-breath"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Bad Breath
                   </Link>
@@ -616,7 +616,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/dental-anxiety"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Dental Anxiety
                   </Link>
@@ -628,7 +628,7 @@ const Navigation = () => {
                 >
                   <Link
                     href="/services/problems/sensitive-teeth"
-                    className="block px-4 py-2 text-white  hover:bg-dental-navy"
+                    className="block px-4 py-2 text-white  hover:bg-dental-black/50 hover:text-dental-gold"
                   >
                     Sensitive Teeth
                   </Link>
@@ -647,7 +647,7 @@ const Navigation = () => {
           >
             <Button
               asChild
-              className="bg-white hover:bg-dental-accent2 text-black"
+              className="bg-white hover:bg-dental-gold text-black"
             >
               <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
                 Get in touch
@@ -682,7 +682,10 @@ const Navigation = () => {
                       whileTap="whileTap"
                       className="px-6 py-4 text-white"
                     >
-                      <Link href="#about" className="flex items-center gap-2">
+                      <Link
+                        href="#about"
+                        className="flex items-center gap-2 hover:text-dental-gold"
+                      >
                         <AboutSectionIcon
                           className="w-8 h-8"
                           variants={iconFramerVariants}
@@ -701,7 +704,7 @@ const Navigation = () => {
                       >
                         <button
                           onClick={() => toggleMobileMenu("services")}
-                          className="w-full px-6 py-4 text-white flex items-center justify-between"
+                          className="w-full px-6 py-4 text-white flex items-center justify-between hover:text-dental-gold"
                         >
                           <span className="flex items-center gap-2">
                             <ServicesSectionIcon
@@ -729,7 +732,7 @@ const Navigation = () => {
                         >
                           <button
                             onClick={() => toggleMobileMenu("general")}
-                            className="w-full px-6 py-2 text-sm text-white flex items-center justify-between"
+                            className="w-full px-6 py-2 text-sm text-white flex items-center justify-between hover:text-dental-gold"
                           >
                             General
                             <span className="ml-2">
@@ -750,7 +753,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/cleanings-and-exams"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <ExaminationsIcon
                                 className="w-6 h-6"
@@ -767,7 +770,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/crowns"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <CrownsIcon
                                 className="w-6 h-6"
@@ -784,7 +787,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/gum-therapy"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <GumTherapyIcon
                                 className="w-6 h-6"
@@ -801,7 +804,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/dental-fillings"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <DentalFillingsIcon
                                 className="w-6 h-6"
@@ -818,7 +821,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/dentures"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <DenturesIcon
                                 className="w-6 h-6"
@@ -835,7 +838,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/bridges"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <BridgesIcon
                                 className="w-6 h-6"
@@ -852,7 +855,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/general/root-canal"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <RootCanalIcon
                                 className="w-6 h-6"
@@ -872,7 +875,7 @@ const Navigation = () => {
                         >
                           <button
                             onClick={() => toggleMobileMenu("surgical")}
-                            className="w-full px-6 py-2 text-sm text-white flex items-center justify-between"
+                            className="w-full px-6 py-2 text-sm text-white flex items-center justify-between hover:text-dental-gold"
                           >
                             Surgical
                             <span className="ml-2">
@@ -893,7 +896,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/implants"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <ImplantsIcon
                                 className="w-6 h-6"
@@ -910,7 +913,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/iv-sedation"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <IVSedationIcon
                                 className="w-6 h-6"
@@ -927,7 +930,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/extractions"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <ExtractionsIcon
                                 className="w-6 h-6"
@@ -944,7 +947,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/bone-grafts"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <BoneGraftingIcon
                                 className="w-6 h-6"
@@ -961,7 +964,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/surgeries/crown-lengthening"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <CrownLengtheningIcon
                                 className="w-6 h-6"
@@ -1002,7 +1005,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/invisalign"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <InvisalignIcon
                                 className="w-6 h-6"
@@ -1019,7 +1022,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/teeth-whitening"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <TeethWhiteningIcon
                                 className="w-6 h-6"
@@ -1036,7 +1039,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/bonding"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <BondingIcon
                                 className="w-6 h-6"
@@ -1053,7 +1056,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/veneers"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <VeneersIcon
                                 className="w-6 h-6"
@@ -1070,7 +1073,7 @@ const Navigation = () => {
                           >
                             <Link
                               href="/services/cosmetic/smile-makeover"
-                              className="block px-6 py-2 text-sm text-white flex items-center gap-2"
+                              className="block px-6 py-2 text-sm text-white flex items-center gap-2 hover:text-dental-gold"
                             >
                               <SmileMakeoverIcon
                                 className="w-6 h-6"
@@ -1093,7 +1096,7 @@ const Navigation = () => {
                       >
                         <button
                           onClick={() => toggleMobileMenu("problems")}
-                          className="w-full px-6 py-4 text-white flex items-center justify-between"
+                          className="w-full px-6 py-4 text-white flex items-center justify-between hover:text-dental-gold"
                         >
                           <span className="flex items-center gap-2">
                             <ProblemsSectionIcon
@@ -1120,7 +1123,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/problems/chipped-cracked-teeth"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Chipped or Cracked Teeth
                           </Link>
@@ -1133,7 +1136,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/problems/toothache"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Toothache
                           </Link>
@@ -1146,7 +1149,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/problems/teeth-grinding"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Teeth Grinding
                           </Link>
@@ -1159,7 +1162,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/cosmetic/teeth-whitening"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Stained Teeth
                           </Link>
@@ -1172,7 +1175,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/problems/crooked-teeth"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Crooked Teeth
                           </Link>
@@ -1185,7 +1188,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/problems/bleeding-gums"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Bleeding Gums
                           </Link>
@@ -1198,7 +1201,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/problems/bad-breath"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Bad Breath
                           </Link>
@@ -1211,7 +1214,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/problems/dental-anxiety"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Dental Anxiety
                           </Link>
@@ -1224,7 +1227,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/problems/sensitive-teeth"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Sensitive Teeth
                           </Link>
@@ -1237,7 +1240,7 @@ const Navigation = () => {
                         >
                           <Link
                             href="/services/problems/missing-teeth"
-                            className="block px-6 py-2 text-sm text-white hover:text-dental-accent2"
+                            className="block px-6 py-2 text-sm text-white hover:text-dental-gold"
                           >
                             Missing Teeth
                           </Link>
@@ -1255,7 +1258,7 @@ const Navigation = () => {
                       >
                         <Button
                           asChild
-                          className="w-full bg-white hover:bg-dental-accent2 text-black"
+                          className="w-full bg-white hover:bg-dental-gold text-black"
                         >
                           <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
                             Get in touch
