@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { ReactLenis } from "lenis/dist/lenis-react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
@@ -36,14 +37,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <Navigation />
-        <main
-          className="flex-grow flex flex-col"
-          style={{ paddingTop: navBarHeight }}
-        >
-          <Suspense fallback={<Loading />}>{children}</Suspense>
-        </main>
-        <Footer />
+        <ReactLenis root>
+          <Navigation />
+          <main
+            className="flex-grow flex flex-col"
+            style={{ paddingTop: navBarHeight }}
+          >
+            <Suspense fallback={<Loading />}>{children}</Suspense>
+          </main>
+          <Footer />
+        </ReactLenis>
       </body>
     </html>
   );
