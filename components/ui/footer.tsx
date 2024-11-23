@@ -1,15 +1,65 @@
 "use client";
 
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+
 import { Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 import { linkFramerVariants } from "@/app/globals/constants";
 const Footer = () => {
+  const pathname = usePathname();
+  const [animationKey, setAnimationKey] = useState(0);
+  const [isTopBorderVisible, setIsTopBorderVisible] = useState(true);
+
+  const [isFirstDividerVisible, setIsFirstDividerVisible] = useState(false);
+  const [isSecondDividerVisible, setIsSecondDividerVisible] = useState(false);
+
+  const topBorderRef = useRef(null);
+  const firstDividerRef = useRef(null);
+  const secondDividerRef = useRef(null);
+
+  useEffect(() => {
+    setAnimationKey((prev) => prev + 1);
+    setIsTopBorderVisible(false);
+    setIsFirstDividerVisible(false);
+    setIsSecondDividerVisible(false);
+  }, [pathname]);
+
+  useIntersectionObservers({
+    intersectionTargets: [
+      {
+        ref: topBorderRef,
+        onIntersect: () => setIsTopBorderVisible(true),
+      },
+      {
+        ref: firstDividerRef,
+        onIntersect: () => setIsFirstDividerVisible(true),
+      },
+      {
+        ref: secondDividerRef,
+        onIntersect: () => setIsSecondDividerVisible(true),
+      },
+    ],
+  });
+
   return (
-    <footer className="bg-dental-deepBlue text-white pt-12 pb-12 border-t-2 border-dental-gold">
+    <footer className="bg-dental-deepBlue text-white pt-12 pb-12 relative">
+      <motion.div
+        key={animationKey}
+        ref={topBorderRef}
+        initial={{ scaleX: 0 }}
+        animate={{
+          scaleX: isTopBorderVisible ? 1 : 0,
+        }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="absolute top-0 left-0 right-0 h-0.5 bg-dental-gold origin-left"
+      />
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           <div>
@@ -34,7 +84,27 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="border-t md:border-t-0 md:border-l border-dental-gold pt-8 md:pt-0 md:pl-8">
+          <div className="pt-8 md:pt-0 md:pl-8 relative">
+            <motion.div
+              key={`${animationKey + 1}`}
+              ref={firstDividerRef}
+              initial={{
+                scaleY: 0,
+                scaleX: 0,
+              }}
+              animate={{
+                scaleY: isFirstDividerVisible ? 1 : 0,
+                scaleX: isFirstDividerVisible ? 1 : 0,
+              }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="absolute md:left-0 md:top-0 left-0 right-0 
+                md:w-0.5 md:h-full w-full h-0.5 
+                bg-dental-gold 
+                md:origin-top origin-left
+                block
+                -top-3 md:top-0
+                mb-3"
+            />
             <h3 className="text-lg font-semibold mb-4 text-dental-gold">
               Follow Me
             </h3>
@@ -49,7 +119,27 @@ const Footer = () => {
               {/* Add more social media icons as needed */}
             </div>
           </div>
-          <div className="border-t md:border-t-0 md:border-l border-dental-gold pt-8 md:pt-0 md:pl-8">
+          <div className="pt-8 md:pt-0 md:pl-8 relative">
+            <motion.div
+              key={`${animationKey + 2}`}
+              ref={secondDividerRef}
+              initial={{
+                scaleY: 0,
+                scaleX: 0,
+              }}
+              animate={{
+                scaleY: isSecondDividerVisible ? 1 : 0,
+                scaleX: isSecondDividerVisible ? 1 : 0,
+              }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="absolute md:left-0 md:top-0 left-0 right-0
+                md:w-0.5 md:h-full w-full h-0.5
+                bg-dental-gold 
+                md:origin-top origin-left
+                block
+                -top-3 md:top-0
+                mb-3"
+            />
             <h3 className="text-lg font-semibold mb-4 text-dental-gold">
               Get In Touch
             </h3>

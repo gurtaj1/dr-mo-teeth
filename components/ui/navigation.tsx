@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -48,6 +49,31 @@ const Navigation = () => {
     transformation: false,
     problems: false, // Parent menu
   });
+  const [animationKey, setAnimationKey] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const borderRef = useRef(null);
+
+  useIntersectionObservers({
+    intersectionTargets: [
+      {
+        ref: borderRef,
+        onIntersect: () => setIsVisible(true),
+      },
+    ],
+  });
+
+  useEffect(() => {
+    // Increment key to force remount of motion.div
+    setAnimationKey((prev) => prev + 1);
+    setIsVisible(false);
+
+    // Small delay before showing
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 50);
+
+    return () => clearTimeout(timeout);
+  }, [pathname]);
 
   // Add this effect to reset menu state on route changes
   useEffect(() => {
@@ -69,7 +95,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-deepBlue/70 bg-opacity-95 shadow-m font-newsreader border-b-2 border-dental-gold">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-deepBlue/70 bg-opacity-95 shadow-m font-newsreader">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <motion.div
@@ -1273,6 +1299,20 @@ const Navigation = () => {
           </Sheet>
         </div>
       </div>
+      <motion.div
+        key={animationKey}
+        ref={borderRef}
+        initial={{ scaleX: 0 }}
+        animate={{
+          scaleX: isVisible ? 1 : 0,
+          height: 2,
+          transition: {
+            duration: 0.7,
+            ease: "easeOut",
+          },
+        }}
+        className="w-full border-b-2 border-dental-gold origin-left"
+      />
     </nav>
   );
 };
