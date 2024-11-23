@@ -134,10 +134,6 @@ const Navigation = () => {
                     // If we're not on the home page, let the default navigation happen
                   }}
                 >
-                  <AboutSectionIcon
-                    className="w-8 h-8"
-                    variants={iconFramerVariants}
-                  />
                   About
                 </Link>
               </motion.div>
@@ -150,10 +146,6 @@ const Navigation = () => {
                 variants={linkFramerVariants}
                 className="text-2xl text-white  flex items-center gap-2"
               >
-                <ServicesSectionIcon
-                  className="w-8 h-8"
-                  variants={iconFramerVariants}
-                />
                 Services
               </motion.button>
 
@@ -504,10 +496,6 @@ const Navigation = () => {
                 whileHover="whileHover"
                 className="text-2xl text-white  flex items-center gap-2"
               >
-                <ProblemsSectionIcon
-                  className="w-8 h-8"
-                  variants={iconFramerVariants}
-                />
                 Problems I Treat
               </motion.button>
               {/* Add bridge for main menu */}
