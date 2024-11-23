@@ -441,6 +441,7 @@ const HomePage = () => {
                 items={carouselItems}
                 slidesToShow={3}
                 autoplay={true}
+                isDark
               />
             </AnimatedElement>
           </div>

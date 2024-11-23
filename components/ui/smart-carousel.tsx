@@ -12,6 +12,7 @@ interface SmartCarouselProps {
   autoplayInterval?: number;
   boxShadowColor?: string;
   hideSideButtons?: boolean;
+  isDark?: boolean;
 }
 
 type CarouselOptions = {
@@ -88,6 +89,7 @@ export default function SmartCarousel({
   autoplayInterval = 5000,
   boxShadowColor,
   hideSideButtons = false,
+  isDark = false,
 }: SmartCarouselProps) {
   const options: CarouselOptions = {
     align: "start",
@@ -215,7 +217,11 @@ export default function SmartCarousel({
           <Button
             variant="outline"
             size="icon"
-            className="absolute top-1/2 -left-12 -translate-y-1/2 rounded-lg bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
+            className={`absolute top-1/2 -left-12 -translate-y-1/2 ${
+              isDark
+                ? "rounded-lg bg-dental-gold/20 border-dental-gold hover:bg-dental-gold/40 hover:border-dental-gold"
+                : "rounded-lg bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
+            }`}
             onClick={scrollPrev}
           >
             <ChevronLeft className="h-4 w-4" />
@@ -223,7 +229,11 @@ export default function SmartCarousel({
           <Button
             variant="outline"
             size="icon"
-            className="absolute top-1/2 -right-12 -translate-y-1/2 rounded-lg bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
+            className={`absolute top-1/2 -right-12 -translate-y-1/2 ${
+              isDark
+                ? "rounded-lg bg-dental-gold/20 border-dental-gold hover:bg-dental-gold/40 hover:border-dental-gold"
+                : "rounded-lg bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
+            }`}
             onClick={scrollNext}
           >
             <ChevronRight className="h-4 w-4" />
