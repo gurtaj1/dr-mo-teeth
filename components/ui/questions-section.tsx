@@ -67,7 +67,7 @@ const QuestionsSection = ({
           animate={{ height: isVisible ? "2rem" : 0 }}
           transition={{ duration: 1 }}
           className={`w-0.5 ${
-            isDark ? "bg-dental-teal" : "bg-dental-accent1"
+            isDark ? "bg-dental-gold" : "bg-dental-accent1"
           } mx-auto mb-8`}
         ></motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -84,14 +84,16 @@ const QuestionsSection = ({
                   <div>
                     <h3
                       className={`text-xl font-bold mb-2 ${
-                        isDark ? "text-dental-accent1" : "text-dental-navy"
+                        isDark ? "text-dental-gold" : "text-dental-navy"
                       } flex items-center gap-2 ${
                         shouldSpanFull ? "md:justify-center" : ""
                       }`}
                     >
                       <span
                         className={
-                          isDark ? "text-dental-teal" : "text-dental-accent1"
+                          isDark
+                            ? "text-dental-lightGold"
+                            : "text-dental-accent1"
                         }
                       >
                         {question.icon}

@@ -62,7 +62,7 @@ const TitleSection = ({
             },
           }}
           className={
-            "w-1/4 mx-auto border-b-2 border-dental-teal mb-6 origin-left"
+            "w-1/4 mx-auto border-b-2 border-dental-gold mb-6 origin-left"
           }
         ></motion.div>
         {bodyText.map((text, index) => (

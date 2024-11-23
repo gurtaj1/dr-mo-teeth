@@ -44,7 +44,7 @@ const HeroSection = ({
                 ease: "easeOut",
               },
             }}
-            className={"w-1/4 border-b-2 border-dental-teal mb-6 origin-left"}
+            className={"w-1/4 border-b-2 border-dental-gold mb-6 origin-left"}
           ></motion.div>
         </div>
 
