@@ -69,7 +69,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-deepBlue bg-opacity-95 shadow-m font-newsreader border-b-4 border-dental-teal">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-deepBlue/70 bg-opacity-95 shadow-m font-newsreader border-b-2 border-dental-teal">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <motion.div
