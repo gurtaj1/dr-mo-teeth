@@ -188,7 +188,7 @@ const HomePage = () => {
                     <p className="text-gray-600">
                       The Latest Technology
                       <br />
-                      providing Precision,
+                      Providing Precision,
                       <br />
                       Efficiency and Comfort
                     </p>
@@ -305,7 +305,7 @@ const HomePage = () => {
                 <AnimatedElement transitionSize key={index}>
                   <Link href={service.link} className="h-full cursor-pointer">
                     <motion.div
-                      className="bg-dental-primary/10 rounded-lg hover:bg-dental-primary/20 transition-colors border-dental-accent1/20 h-full flex flex-col group"
+                      className="bg-dental-deepBlue rounded-lg hover:bg-dental-primary/20 transition-colors border-dental-teal border h-full flex flex-col group"
                       whileHover={{
                         scale: 1.05,
                         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
@@ -321,7 +321,7 @@ const HomePage = () => {
                       }}
                     >
                       <CardContent className="p-6 flex flex-col flex-1">
-                        <div className="overflow-hidden rounded-lg mb-4">
+                        <div className="overflow-hidden rounded-lg mb-4  group-hover:border group-hover:border-white">
                           <img
                             src={`/service-${index + 1}.jpg`}
                             alt={service.title}
@@ -332,6 +332,19 @@ const HomePage = () => {
                           <h3 className="text-xl font-semibold mb-2 ">
                             {service.title}
                           </h3>
+                          <motion.div
+                            initial={{ scaleX: 0, originX: 0 }}
+                            whileInView={{
+                              scaleX: 1,
+                              transition: {
+                                duration: 0.7,
+                                ease: "easeOut",
+                                delay: 0.2,
+                              },
+                            }}
+                            viewport={{ once: false }}
+                            className="w-full h-0.5 bg-dental-teal group-hover:bg-dental-accent2 origin-left mb-4"
+                          />
                           <p className="/80">{service.description}</p>
                         </div>
                       </CardContent>
