@@ -118,7 +118,7 @@ const AnimatedImageTextSection = ({
                 },
               }}
               className={`w-1/4 border-b-2 ${
-                isDark ? "border-dental-gold" : "border-dental-accent1"
+                isDark ? "border-dental-teal" : "border-dental-accent1"
               } mb-6 origin-left`}
             ></motion.div>
             <AnimatedElement>

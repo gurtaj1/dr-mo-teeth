@@ -58,27 +58,27 @@ const Footer = () => {
           scaleX: isTopBorderVisible ? 1 : 0,
         }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="absolute top-0 left-0 right-0 h-0.5 bg-dental-gold origin-left"
+        className="absolute top-0 left-0 right-0 h-0.5 bg-dental-accent2 origin-left"
       />
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-dental-gold">
+            <h3 className="text-lg font-semibold mb-4 text-dental-accent2">
               Quick Links
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:text-dental-gold">
+                <Link href="/" className="hover:text-dental-accent2">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/#about" className="hover:text-dental-gold">
+                <Link href="/#about" className="hover:text-dental-accent2">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-dental-gold">
+                <Link href="#services" className="hover:text-dental-accent2">
                   Services
                 </Link>
               </li>
@@ -99,19 +99,19 @@ const Footer = () => {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="absolute md:left-0 md:top-0 left-0 right-0 
                 md:w-0.5 md:h-full w-full h-0.5 
-                bg-dental-gold 
+                bg-dental-accent2 
                 md:origin-top origin-left
                 block
                 -top-3 md:top-0
                 mb-3"
             />
-            <h3 className="text-lg font-semibold mb-4 text-dental-gold">
+            <h3 className="text-lg font-semibold mb-4 text-dental-accent2">
               Follow Me
             </h3>
             <div className="flex space-x-4">
               <Link
                 href="https://instagram.com/drmosmiles"
-                className="hover:text-dental-gold"
+                className="hover:text-dental-accent2"
               >
                 <Instagram />
                 <span className="sr-only">Instagram</span>
@@ -134,32 +134,32 @@ const Footer = () => {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="absolute md:left-0 md:top-0 left-0 right-0
                 md:w-0.5 md:h-full w-full h-0.5
-                bg-dental-gold 
+                bg-dental-accent2 
                 md:origin-top origin-left
                 block
                 -top-3 md:top-0
                 mb-3"
             />
-            <h3 className="text-lg font-semibold mb-4 text-dental-gold">
+            <h3 className="text-lg font-semibold mb-4 text-dental-accent2">
               Get In Touch
             </h3>
             <ul className="space-y-2">
               <li className="flex items-center space-x-2 group">
                 <Phone
-                  className="mr-2 group-hover:text-dental-gold"
+                  className="mr-2 group-hover:text-dental-accent2"
                   size={18}
                 />
                 <div className="flex space-x-2">
                   <Link
                     href="tel:01482898362"
-                    className="hover:text-dental-gold"
+                    className="hover:text-dental-accent2"
                   >
                     01482 898362
                   </Link>
                   <span>/</span>
                   <Link
                     href="tel:01482871704"
-                    className="hover:text-dental-gold"
+                    className="hover:text-dental-accent2"
                   >
                     01482 871704
                   </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com"
-                  className="flex items-center hover:text-dental-gold"
+                  className="flex items-center hover:text-dental-accent2"
                 >
                   <Mail className="mr-2" size={18} />
                   <span>implantclinician@outlook.com</span>
@@ -177,13 +177,13 @@ const Footer = () => {
               <li>
                 <Link
                   href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com"
-                  className="flex items-center hover:text-dental-gold"
+                  className="flex items-center hover:text-dental-accent2"
                 >
                   <Mail className="mr-2" size={18} />
                   <span>drmohsinaslam@outlook.com</span>
                 </Link>
               </li>
-              <li className="flex items-center hover:text-dental-gold">
+              <li className="flex items-center hover:text-dental-accent2">
                 <Link href="https://maps.app.goo.gl/dbgXNq8s5xRRJCPW7">
                   <MapPin className="mr-2" size={18} />
                 </Link>
@@ -191,7 +191,7 @@ const Footer = () => {
                   10 Soutter Gate, Hedon, Hull HU12 8JS
                 </Link>
               </li>
-              <li className="flex items-center hover:text-dental-gold">
+              <li className="flex items-center hover:text-dental-accent2">
                 <Link href="https://maps.app.goo.gl/5qfbALW59Bgx3VvWA">
                   <MapPin className="mr-2" size={18} />
                 </Link>
@@ -207,7 +207,7 @@ const Footer = () => {
             >
               <Button
                 asChild
-                className="mt-4 w-full text-black bg-white hover:bg-dental-gold"
+                className="mt-4 w-full text-black bg-white hover:bg-dental-accent2"
               >
                 <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
                   Book an Appointment

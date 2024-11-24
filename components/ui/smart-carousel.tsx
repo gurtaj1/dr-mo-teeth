@@ -219,7 +219,7 @@ export default function SmartCarousel({
             size="icon"
             className={`absolute top-1/2 -left-12 -translate-y-1/2 ${
               isDark
-                ? "rounded-lg bg-dental-gold/20 border-dental-gold hover:bg-dental-gold/40 hover:border-dental-gold"
+                ? "rounded-lg bg-dental-accent2/20 border-dental-accent2 hover:bg-dental-accent2/40 hover:border-dental-accent2"
                 : "rounded-lg bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
             }`}
             onClick={scrollPrev}
@@ -231,7 +231,7 @@ export default function SmartCarousel({
             size="icon"
             className={`absolute top-1/2 -right-12 -translate-y-1/2 ${
               isDark
-                ? "rounded-lg bg-dental-gold/20 border-dental-gold hover:bg-dental-gold/40 hover:border-dental-gold"
+                ? "rounded-lg bg-dental-accent2/20 border-dental-accent2 hover:bg-dental-accent2/40 hover:border-dental-accent2"
                 : "rounded-lg bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
             }`}
             onClick={scrollNext}
