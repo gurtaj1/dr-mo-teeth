@@ -65,64 +65,57 @@ const DentalImplants = () => {
       </AnimatedImageTextSection>
 
       {/* Implant Retained Dentures Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h2 className="text-3xl font-bold mb-6 text-dental-navy text-center">
-              Dental Implant Retained Dentures
-            </h2>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-gray-600 max-w-3xl mx-auto text-center">
-              Dental implant retained dentures are a removeable option to
-              replace missing teeth, they are dentures supported by implants
-              which act like screws placed in the jawbone. They are a secure and
-              comfortable way to replace missing teeth.
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-gray-600 max-w-3xl mx-auto text-center mt-4">
-              Instead of relying on traditional dentures that sit on your gums,
-              these dentures are anchored to dental implants placed in your
-              jawbone with magnetic like attachments. The implants provide
-              stability, preventing the dentures from shifting or slipping while
-              eating or speaking.
-            </p>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className="text-gray-600 max-w-3xl mx-auto text-center mt-4">
-              This solution not only enhances your confidence but also improves
-              your ability to enjoy your favourite foods. With implant retained
-              dentures, you can smile and live life without the worry of loose
-              or uncomfortable dentures.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <AnimatedImageTextSection
+        imagePosition="left"
+        imageSrc="/dental-implants-4.jpg"
+        imageAlt="Dental Implant Retained Dentures"
+        titleLineOne="Dental Implant"
+        titleLineTwo="Retained Dentures"
+      >
+        <p className="mb-4">
+          Dental implant retained dentures are a removeable option to replace
+          missing teeth, they are dentures supported by implants which act like
+          screws placed in the jawbone. They are a secure and comfortable way to
+          replace missing teeth.
+        </p>
+        <p className="mb-4">
+          Instead of relying on traditional dentures that sit on your gums,
+          these dentures are anchored to dental implants placed in your jawbone
+          with magnetic like attachments. The implants provide stability,
+          preventing the dentures from shifting or slipping while eating or
+          speaking.
+        </p>
+        <p>
+          This solution not only enhances your confidence but also improves your
+          ability to enjoy your favourite foods. With implant retained dentures,
+          you can smile and live life without the worry of loose or
+          uncomfortable dentures.
+        </p>
+      </AnimatedImageTextSection>
 
       {/* Implant Retained Bridges Section */}
-      <section className="py-16 bg-dental-navy">
-        <div className="container mx-auto px-6">
-          <AnimatedElement>
-            <h2 className="text-3xl font-bold mb-6  text-center">
-              Dental Implant Retained Bridges
-            </h2>
-          </AnimatedElement>
-          <AnimatedElement>
-            <p className=" max-w-3xl mx-auto text-center">
-              Dental implant retained bridges are a fixed option of replacing
-              multiple missing teeth. Instead of using traditional bridges that
-              can damage the neighbouring teeth for support, these bridges are
-              anchored securely to dental implants which act like screws placed
-              in your jawbone. The implants provide a strong foundation,
-              allowing the bridge to stay in place while you eat and speak.
-              Dental implant retained bridges can replace multiple missing teeth
-              in one area of your mouth and can also replace all your missing
-              teeth if you have no teeth at all.
-            </p>
-          </AnimatedElement>
-        </div>
-      </section>
+      <AnimatedImageTextSection
+        imagePosition="right"
+        imageSrc="/dental-implants-5.jpg"
+        imageAlt="Dental Implant Retained Bridges"
+        titleLineOne="Dental Implant"
+        titleLineTwo="Retained Bridges"
+        isDark
+      >
+        <p className="mb-4">
+          Dental implant retained bridges are a fixed option of replacing
+          multiple missing teeth. Instead of using traditional bridges that can
+          damage the neighbouring teeth for support, these bridges are anchored
+          securely to dental implants which act like screws placed in your
+          jawbone.
+        </p>
+        <p>
+          The implants provide a strong foundation, allowing the bridge to stay
+          in place while you eat and speak. Dental implant retained bridges can
+          replace multiple missing teeth in one area of your mouth and can also
+          replace all your missing teeth if you have no teeth at all.
+        </p>
+      </AnimatedImageTextSection>
     </div>
   );
 };
