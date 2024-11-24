@@ -110,14 +110,7 @@ const HomePage = () => {
       <section
         id="about"
         className="font-newsreader py-16 bg-dental-navy relative"
-        style={{
-          backgroundImage: `url('/home-background.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-70" />
         <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
           <div className="container mx-auto px-6 relative">
             <AnimatedElement>
@@ -164,16 +157,7 @@ const HomePage = () => {
       </section>
 
       {/* My Approach Section */}
-      <section
-        className="py-16 bg-white relative"
-        style={{
-          backgroundImage: `url('/home-background.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="absolute inset-0 bg-white bg-opacity-60" />
+      <section className="py-16 bg-white relative">
         <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
           <div className="container mx-auto px-6 relative">
             <AnimatedElement>
