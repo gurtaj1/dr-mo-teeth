@@ -5,7 +5,7 @@ import DoubleImage from "../../../../components/ui/double-image";
 
 const CrownLengthening = () => {
   return (
-    <div className="flex-grow flex flex-col min-h-screen bg-dental-navy overflow-x-hidden">
+    <div className="flex-grow flex flex-col min-h-screen bg-white overflow-x-hidden">
       {/* Crown Lengthening Section */}
       <TitleSection
         titleText="Crown Lengthening"

@@ -36,7 +36,7 @@ const DoubleImage = ({ images }: DoubleImageProps) => {
 
   return (
     <div className="container mx-auto px-6 py-16">
-      <div className="flex flex-col md:flex-row items-center gap-8">
+      <div className="flex flex-col md:flex-row items-stretch gap-8">
         <motion.div
           ref={leftImageRef}
           initial={{ opacity: 0, x: -16 }}
@@ -45,14 +45,14 @@ const DoubleImage = ({ images }: DoubleImageProps) => {
             x: isLeftImageVisible ? 0 : -16,
           }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full md:w-1/2"
+          className="w-full md:w-1/2 relative aspect-[3/2]"
         >
           <Image
             src={images[0].imageSrc}
             width={600}
             height={400}
             alt={images[0].imageAlt}
-            className="rounded-lg shadow-lg w-full h-auto object-cover"
+            className="rounded-lg shadow-lg w-full h-full object-cover absolute inset-0"
           />
         </motion.div>
         <motion.div
@@ -63,14 +63,14 @@ const DoubleImage = ({ images }: DoubleImageProps) => {
             x: isRightImageVisible ? 0 : 16,
           }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full md:w-1/2"
+          className="w-full md:w-1/2 relative aspect-[3/2]"
         >
           <Image
             src={images[1].imageSrc}
             width={600}
             height={400}
             alt={images[1].imageAlt}
-            className="rounded-lg shadow-lg w-full h-auto object-cover"
+            className="rounded-lg shadow-lg w-full h-full object-cover absolute inset-0"
           />
         </motion.div>
       </div>
