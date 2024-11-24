@@ -1,7 +1,6 @@
 "use client";
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import AnimatedElement from "@/components/ui/animated-element";
 import TitleSection from "@/components/ui/title-section";
 const DentalImplants = () => {
   return (
