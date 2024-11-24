@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
@@ -116,7 +116,13 @@ const Footer = () => {
                 <Instagram />
                 <span className="sr-only">Instagram</span>
               </Link>
-              {/* Add more social media icons as needed */}
+              <Link
+                href="https://uk.linkedin.com/in/mohsin-aslam-b99a9918a"
+                className="hover:text-dental-accent2"
+              >
+                <Linkedin />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
             </div>
           </div>
           <div className="pt-8 md:pt-0 md:pl-8 relative">
