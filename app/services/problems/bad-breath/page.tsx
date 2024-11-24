@@ -59,7 +59,7 @@ const BadBreath = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/bad-breath-1.jpg"
         imageAlt="Bad Breath Causes"
         titleLineOne="Bad Breath Isn't Always a"
         titleLineTwo="Dental Concern"
@@ -76,7 +76,7 @@ const BadBreath = () => {
 
       <AnimatedImageTextSection
         imagePosition="right"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/bad-breath-2.jpg"
         imageAlt="Bad Breath Treatment"
         titleLineOne="How to Fix"
         titleLineTwo="Bad Breath"
@@ -107,7 +107,7 @@ const BadBreath = () => {
 
       <AnimatedImageTextSection
         imagePosition="left"
-        imageSrc="/placeholder.jpg"
+        imageSrc="/bad-breath-3.jpg"
         imageAlt="Bad Breath FAQs"
         titleLineOne="Common Treatments for"
         titleLineTwo="Halitosis"

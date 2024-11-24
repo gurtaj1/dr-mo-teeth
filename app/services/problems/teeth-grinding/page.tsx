@@ -2,28 +2,46 @@
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
-import HeroSection from "@/components/ui/hero-section";
 
 const TeethGrinding = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <HeroSection
-        title={{
-          lineOne: "Stop Wearing your",
-          lineTwo: "Teeth Away",
-          isFirstLineBold: false,
-        }}
-        description="Bruxism is the grinding or clenching of teeth. The effects of teeth grinding, such as worn enamel, jaw pain, headaches, and even cracked teeth can be difficult to deal with. But don't worry, I'm here to help."
-        bulletPoints={[
-          "Worn Enamel: Grinding can wear down your tooth enamel over time",
-          "Jaw Pain: Clenching puts strain on jaw muscles and joints",
-          "Headaches: Tension from grinding often leads to headaches",
-          "Cracked Teeth: Excessive force can cause teeth to crack or chip",
-          "Sleep Issues: Grinding disrupts quality sleep",
-          "Treatment Options: We offer solutions to protect your teeth",
-        ]}
-      />
+      <AnimatedImageTextSection
+        imagePosition="right"
+        imageSrc="/teeth-grinding-3.jpg"
+        imageAlt="Effects of Teeth Grinding"
+        titleLineOne="Stop Wearing your"
+        titleLineTwo="Teeth Away"
+        isDark
+      >
+        <div className="space-y-4">
+          <p>
+            Bruxism is the grinding or clenching of teeth. The effects of teeth
+            grinding, such as worn enamel, jaw pain, headaches, and even cracked
+            teeth can be difficult to deal with. But don't worry, I'm here to
+            help.
+          </p>
+          <ul className="space-y-2">
+            <li>
+              ⭐ Worn Enamel: Grinding can wear down your tooth enamel over time
+            </li>
+            <li>
+              ⭐ Jaw Pain: Clenching puts strain on jaw muscles and joints
+            </li>
+            <li>
+              ⭐ Headaches: Tension from grinding often leads to headaches
+            </li>
+            <li>
+              ⭐ Cracked Teeth: Excessive force can cause teeth to crack or chip
+            </li>
+            <li>⭐ Sleep Issues: Grinding disrupts quality sleep</li>
+            <li>
+              ⭐ Treatment Options: We offer solutions to protect your teeth
+            </li>
+          </ul>
+        </div>
+      </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
         imagePosition="left"

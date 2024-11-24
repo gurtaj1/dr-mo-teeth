@@ -2,28 +2,51 @@
 
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
-import HeroSection from "@/components/ui/hero-section";
 
 const BrokenTeeth = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <HeroSection
-        title={{
-          lineOne: "What Causes a",
-          lineTwo: "Broken Tooth?",
-          isFirstLineBold: false,
-        }}
-        description="A cracked, chipped, or broken tooth is a common dental issue that can be quite painful and lead to further problems like tooth decay and gum disease. Here are some common causes:"
-        bulletPoints={[
-          "Injury: A fall or blow to the face can easily damage a tooth.",
-          "Hard Foods: Biting into hard items, such as candy or ice, can cause chips or cracks.",
-          "Chewing Habits: Compulsive habits, like chewing ice or pens, can weaken teeth over time.",
-          "Bruxism: Grinding or clenching your teeth excessively can lead to damage.",
-          "Tooth Decay: Weakened teeth from decay are more likely to break.",
-          "Health Conditions: Certain health issues and medications can weaken tooth structure.",
-        ]}
-      />
+      <AnimatedImageTextSection
+        imagePosition="right"
+        imageSrc="/broken-tooth-4.jpg"
+        imageAlt="Common Causes of Broken Teeth"
+        titleLineOne="What Causes a"
+        titleLineTwo="Broken Tooth?"
+        isDark
+      >
+        <div className="space-y-4">
+          <p>
+            A cracked, chipped, or broken tooth is a common dental issue that
+            can be quite painful and lead to further problems like tooth decay
+            and gum disease. Here are some common causes:
+          </p>
+          <ul className="space-y-2">
+            <li>
+              • Injury: A fall or blow to the face can easily damage a tooth.
+            </li>
+            <li>
+              • Hard Foods: Biting into hard items, such as candy or ice, can
+              cause chips or cracks.
+            </li>
+            <li>
+              • Chewing Habits: Compulsive habits, like chewing ice or pens, can
+              weaken teeth over time.
+            </li>
+            <li>
+              • Bruxism: Grinding or clenching your teeth excessively can lead
+              to damage.
+            </li>
+            <li>
+              • Tooth Decay: Weakened teeth from decay are more likely to break.
+            </li>
+            <li>
+              • Health Conditions: Certain health issues and medications can
+              weaken tooth structure.
+            </li>
+          </ul>
+        </div>
+      </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
         imagePosition="left"

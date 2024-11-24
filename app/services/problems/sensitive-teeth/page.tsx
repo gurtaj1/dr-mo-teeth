@@ -42,58 +42,10 @@ const SensitiveTeeth = () => {
       <AnimatedImageTextSection
         imagePosition="right"
         imageSrc="/sensitive-teeth-2.jpg"
-        imageAlt="Sensitivity Treatments"
-        titleLineOne="Causes Of"
-        titleLineTwo="Sensitive Teeth"
-        isDark
-      >
-        <div className="space-y-4 ">
-          <div>
-            <h3 className="text-xl font-bold mb-2">Overzealous brushing</h3>
-            <p>
-              You can have too much of a good thing. Brushing your teeth with
-              too much force, or with a hard-bristle toothbrush, may wear down
-              tooth enamel, expose the cementum or dentin and cause tooth
-              sensitivity.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-2">Tooth grinding</h3>
-            <p>
-              Grinding your teeth can cause the enamel to wear away and leave
-              the dentin exposed.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              Dental cleanings or treatments
-            </h3>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-2">
-              Temporary tooth sensitivity
-            </h3>
-            <p>
-              Which can occur after a professional teeth-whitening treatment,
-              but usually goes away shortly after the procedure ends.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-2">Gum disease</h3>
-            <p>
-              Inflamed gum tissue pulls away from the tooth, leaving vulnerable
-              areas exposed.
-            </p>
-          </div>
-        </div>
-      </AnimatedImageTextSection>
-
-      <AnimatedImageTextSection
-        imagePosition="left"
-        imageSrc="/placeholder.jpg"
         imageAlt="Understanding Tooth Sensitivity"
         titleLineOne="Steps To Prevent"
         titleLineTwo="Sensitive Teeth"
+        isDark
       >
         <div className="space-y-4 ">
           <ul className="space-y-2">

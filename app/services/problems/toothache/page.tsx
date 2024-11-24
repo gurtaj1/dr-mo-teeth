@@ -1,27 +1,37 @@
 "use client";
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
-import HeroSection from "@/components/ui/hero-section";
 
 const Toothache = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Toothache Section */}
-      <HeroSection
-        title={{
-          lineOne: "Common Causes of",
-          lineTwo: "Tooth Pain",
-          isFirstLineBold: false,
-        }}
-        description="Tooth pain is a widespread issue that can significantly affect your overall health and daily life. Understanding what might be causing your discomfort is the first step toward finding relief."
-        bulletPoints={[
-          "Tooth Decay: Cavities can cause sensitivity and pain",
-          "Gum Disease: Infected gums lead to tooth and jaw pain",
-          "Grinding: Excessive pressure damages teeth over time",
-          "Injury: Physical trauma can cause immediate pain",
-          "Infection: Abscesses cause severe, throbbing pain",
-          "Treatment Options: We offer solutions for all types of tooth pain",
-        ]}
-      />
+      <AnimatedImageTextSection
+        imagePosition="right"
+        imageSrc="/toothache-4.jpg"
+        imageAlt="Common Causes of Tooth Pain"
+        titleLineOne="Common Causes of"
+        titleLineTwo="Tooth Pain"
+        isDark
+      >
+        <div className="space-y-4">
+          <p>
+            Tooth pain is a widespread issue that can significantly affect your
+            overall health and daily life. Understanding what might be causing
+            your discomfort is the first step toward finding relief.
+          </p>
+          <ul className="space-y-2">
+            <li>⭐ Tooth Decay: Cavities can cause sensitivity and pain</li>
+            <li>⭐ Gum Disease: Infected gums lead to tooth and jaw pain</li>
+            <li>⭐ Grinding: Excessive pressure damages teeth over time</li>
+            <li>⭐ Injury: Physical trauma can cause immediate pain</li>
+            <li>⭐ Infection: Abscesses cause severe, throbbing pain</li>
+            <li>
+              ⭐ Treatment Options: We offer solutions for all types of tooth
+              pain
+            </li>
+          </ul>
+        </div>
+      </AnimatedImageTextSection>
 
       <AnimatedImageTextSection
         imagePosition="left"
