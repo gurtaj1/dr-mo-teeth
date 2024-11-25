@@ -80,7 +80,9 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section
+        className={`relative h-[calc(100vh-${navBarHeight}px)] flex items-center justify-center`}
+      >
         {/* place below code back when a video has been made */}
         {/* <video
           className="absolute inset-0 w-full h-full object-cover"
