@@ -114,8 +114,16 @@ const HomePage = () => {
         <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
           <div className="container mx-auto px-6 relative">
             <AnimatedElement>
-              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 text-white">
-                About Me
+              <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
+                <span className="relative">
+                  About Me
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                  />
+                </span>
               </h2>
             </AnimatedElement>
             <div className="mx-auto">
@@ -161,8 +169,16 @@ const HomePage = () => {
         <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
           <div className="container mx-auto px-6 relative">
             <AnimatedElement>
-              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 text-dental-navy">
-                My Approach to Dental Care
+              <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 text-dental-navy">
+                <span className="relative">
+                  My Approach to Dental Care
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                  />
+                </span>
               </h2>
             </AnimatedElement>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -259,8 +275,16 @@ const HomePage = () => {
         <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
           <div className="container mx-auto px-6">
             <AnimatedElement>
-              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
-                My Services
+              <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
+                <span className="relative">
+                  My Services
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                  />
+                </span>
               </h2>
             </AnimatedElement>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
@@ -362,8 +386,16 @@ const HomePage = () => {
         <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
           <div className="container mx-auto px-6">
             <AnimatedElement>
-              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 text-dental-navy">
-                3 SIMPLE STEPS FOR ACHIEVING YOUR BEST SMILE
+              <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 text-dental-navy">
+                <span className="relative">
+                  3 SIMPLE STEPS FOR ACHIEVING YOUR BEST SMILE
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="absolute bottom-0 left-40 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                  />
+                </span>
               </h2>
             </AnimatedElement>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -429,8 +461,16 @@ const HomePage = () => {
         <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
           <div className="container mx-auto px-6">
             <AnimatedElement>
-              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 ">
-                Patient Reviews
+              <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
+                <span className="relative">
+                  Patient Reviews
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                  />
+                </span>
               </h2>
             </AnimatedElement>
             <AnimatedElement transitionSize>
