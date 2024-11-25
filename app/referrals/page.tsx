@@ -8,7 +8,7 @@ import { linkFramerVariants } from "@/app/globals/constants";
 
 export default function ReferralsPage() {
   return (
-    <div className="min-h-screen pt-24 pb-12 bg-gradient-to-r from-dental-navy to-dental-accent2">
+    <div className="min-h-screen pt-24 pb-12 bg-gradient-to-r from-dental-navy to-dental-darkBlue">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function ReferralsPage() {
             <Button
               asChild
               size="lg"
-              className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
+              className="bg-dental-secondary hover:bg-dental-accent2 text-white hover:text-black"
             >
               <Link href="https://www.eyds.co.uk/make-a-referral">
                 Make a Referral

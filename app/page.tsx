@@ -110,7 +110,7 @@ const HomePage = () => {
             <Button
               asChild
               size="lg"
-              className="mb-4 bg-dental-secondary hover:bg-dental-accent2 hover:text-black"
+              className="mb-4 bg-dental-secondary hover:bg-dental-accent2 text-white hover:text-black"
             >
               <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
                 Make an Enquiry
