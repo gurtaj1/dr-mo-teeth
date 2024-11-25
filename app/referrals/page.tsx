@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import AnimatedElement from "@/components/ui/animated-element";
 import { linkFramerVariants } from "@/app/globals/constants";
 
 export default function ReferralsPage() {
@@ -32,6 +32,31 @@ export default function ReferralsPage() {
             standard of care for each patient.
           </motion.p>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <AnimatedElement>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                <h3 className="text-xl font-bold mb-4">Surgical Services</h3>
+                <ul className="space-y-2">
+                  <li>• Dental Implants</li>
+                  <li>• Complex Extractions</li>
+                  <li>• Wisdom Teeth Removal</li>
+                  <li>• Bone Grafting</li>
+                </ul>
+              </div>
+            </AnimatedElement>
+            <AnimatedElement>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                <h3 className="text-xl font-bold mb-4">Sedation Options</h3>
+                <ul className="space-y-2">
+                  <li>• IV Sedation</li>
+                  <li>• Anxiety Management</li>
+                  <li>• Complex Case Management</li>
+                  <li>• Emergency Care</li>
+                </ul>
+              </div>
+            </AnimatedElement>
+          </div>
+
           <motion.div
             variants={linkFramerVariants}
             initial="initial"
@@ -44,7 +69,7 @@ export default function ReferralsPage() {
               size="lg"
               className="bg-dental-accent1 text-dental-navy hover:bg-dental-accent2"
             >
-              <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+              <Link href="https://www.eyds.co.uk/make-a-referral">
                 Make a Referral
               </Link>
             </Button>
