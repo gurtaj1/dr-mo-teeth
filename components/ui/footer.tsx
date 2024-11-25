@@ -210,12 +210,16 @@ const Footer = () => {
               variants={linkFramerVariants}
               initial="initial"
               whileHover="whileHover"
+              whileTap="whileTap"
             >
               <Button
                 asChild
-                className="mt-4 w-full text-black bg-white hover:bg-dental-accent2"
+                className="mt-4 w-full text-black bg-dental-secondary hover:bg-dental-accent2"
               >
-                <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+                <Link
+                  href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com"
+                  className="text-white hover:text-black"
+                >
                   Book an Appointment
                 </Link>
               </Button>

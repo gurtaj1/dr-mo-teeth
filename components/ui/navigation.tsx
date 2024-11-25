@@ -684,12 +684,16 @@ const Navigation = () => {
             variants={linkFramerVariants}
             initial="initial"
             whileHover="whileHover"
+            whileTap="whileTap"
           >
             <Button
               asChild
-              className="bg-white hover:bg-dental-accent2 text-black"
+              className="bg-dental-secondary hover:bg-dental-accent2 text-black"
             >
-              <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+              <Link
+                href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com"
+                className="text-white hover:text-black"
+              >
                 Get in touch
               </Link>
             </Button>
@@ -1321,9 +1325,12 @@ const Navigation = () => {
                       >
                         <Button
                           asChild
-                          className="w-full bg-white hover:bg-dental-accent2 text-black"
+                          className="w-full bg-dental-secondary hover:bg-dental-accent2 text-black"
                         >
-                          <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+                          <Link
+                            href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com"
+                            className="text-white hover:text-black"
+                          >
                             Get in touch
                           </Link>
                         </Button>
