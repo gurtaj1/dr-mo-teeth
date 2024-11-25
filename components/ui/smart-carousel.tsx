@@ -144,7 +144,6 @@ export default function SmartCarousel({
 
   useEffect(() => {
     if (boxShadowColor) {
-      // Only run browser-specific color parsing in useEffect
       if (
         typeof window !== "undefined" &&
         !boxShadowColor.startsWith("#") &&
@@ -163,32 +162,36 @@ export default function SmartCarousel({
     }
   }, [boxShadowColor]);
 
-  // Function to determine slides to show based on window size
   const updateSlidesToShow = () => {
     const width = window.innerWidth;
-    setCurrentSlidesToShow(width < 640 ? 1 : slidesToShow); // Show 1 slide on mobile, otherwise use slidesToShow
+    if (width < 640) {
+      setCurrentSlidesToShow(1);
+    } else if (width < 768) {
+      setCurrentSlidesToShow(2);
+    } else {
+      setCurrentSlidesToShow(slidesToShow);
+    }
   };
 
   useEffect(() => {
-    updateSlidesToShow(); // Initial check
-    window.addEventListener("resize", updateSlidesToShow); // Update on resize
-    return () => window.removeEventListener("resize", updateSlidesToShow); // Cleanup
+    updateSlidesToShow();
+    window.addEventListener("resize", updateSlidesToShow);
+    return () => window.removeEventListener("resize", updateSlidesToShow);
   }, [slidesToShow]);
 
   return (
-    <div className="relative">
+    <div className="relative px-8 sm:px-12">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex-[0_0_auto] min-w-0 pl-4 w-full sm:w-1/2 md:w-1/3"
+              className="flex-[0_0_auto] min-w-0 pl-4"
               style={{
                 flex: `0 0 ${100 / currentSlidesToShow}%`,
               }}
             >
               {typeof item === "string" ? (
-                // Handle image slides
                 <div className="relative w-full aspect-video rounded-lg">
                   <div
                     className="absolute inset-0 rounded-lg"
@@ -205,7 +208,6 @@ export default function SmartCarousel({
                   />
                 </div>
               ) : (
-                // Handle content slides
                 item
               )}
             </div>
@@ -217,7 +219,7 @@ export default function SmartCarousel({
           <Button
             variant="outline"
             size="icon"
-            className={`absolute top-1/2 -left-12 -translate-y-1/2 ${
+            className={`absolute top-1/2 left-0 -translate-y-1/2 ${
               isDark
                 ? "rounded-lg bg-dental-accent2/20 border-dental-accent2 hover:bg-dental-accent2/40 hover:border-dental-accent2"
                 : "rounded-lg bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
@@ -229,7 +231,7 @@ export default function SmartCarousel({
           <Button
             variant="outline"
             size="icon"
-            className={`absolute top-1/2 -right-12 -translate-y-1/2 ${
+            className={`absolute top-1/2 right-0 -translate-y-1/2 ${
               isDark
                 ? "rounded-lg bg-dental-accent2/20 border-dental-accent2 hover:bg-dental-accent2/40 hover:border-dental-accent2"
                 : "rounded-lg bg-dental-teal/20 border-dental-teal hover:bg-dental-teal/40 hover:border-dental-teal"
