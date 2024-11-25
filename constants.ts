@@ -8,7 +8,7 @@ export const colors = {
     accent2: "rgb(70,219,251)", // Bright cyan
     black: "rgb(4,4,4)", // Pure black
     deepBlue: "rgb(1, 5, 48)", // dark blue
-    navy: "rgb(20, 80, 112)", // Navy blue - maybe replace with rgb(4,78,125)?
+    navy: "rgb(4,78,125)", // Navy blue
     butterflyBlue: "rgb(70,158,251)", // Butterfly blue
     teal: "rgb(56,192,188)", // Teals
     gray: "rgb(84,84,84)", // Gray
