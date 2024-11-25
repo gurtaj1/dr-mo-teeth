@@ -661,6 +661,20 @@ const Navigation = () => {
                 </motion.div>
               </div>
             </div>
+            <motion.div
+              initial="initial"
+              whileHover="whileHover"
+              whileTap="WhileTap"
+            >
+              <motion.div variants={linkFramerVariants}>
+                <Link
+                  href="/referrals"
+                  className="text-2xl text-white flex items-center gap-2 hover:text-dental-accent2"
+                >
+                  Referrals
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
 
@@ -709,7 +723,7 @@ const Navigation = () => {
                       className="px-6 py-4 text-white"
                     >
                       <Link
-                        href="#about"
+                        href="/#about"
                         className="flex items-center gap-2 hover:text-dental-accent2"
                       >
                         <AboutSectionIcon
@@ -1272,6 +1286,29 @@ const Navigation = () => {
                           </Link>
                         </motion.div>
                       </div>
+                    </div>
+
+                    {/* Schedule Button */}
+                    <div className="border-t border-dental-teal">
+                      <motion.div
+                        variants={linkFramerVariants}
+                        initial="initial"
+                        whileHover="whileHover"
+                        whileTap="whileTap"
+                      >
+                        <Link
+                          href="/referrals"
+                          className="w-full px-6 py-4 text-white flex items-center justify-between hover:text-dental-accent2 border-b border-dental-teal"
+                        >
+                          <span className="flex items-center gap-2 pl-10">
+                            {/* <ServicesSectionIcon
+                              className="w-8 h-8"
+                              variants={iconFramerVariants}
+                            /> */}
+                            Referrals
+                          </span>
+                        </Link>
+                      </motion.div>
                     </div>
 
                     {/* Schedule Button */}
