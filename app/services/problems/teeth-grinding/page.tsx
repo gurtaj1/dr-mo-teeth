@@ -19,8 +19,8 @@ const TeethGrinding = () => {
           <p>
             Bruxism is the grinding or clenching of teeth. The effects of teeth
             grinding, such as worn enamel, jaw pain, headaches, and even cracked
-            teeth can be difficult to deal with. But don't worry, I'm here to
-            help.
+            teeth can be difficult to deal with. But don&apos;t worry, I&apos;m
+            here to help.
           </p>
           <ul className="space-y-2">
             <li>
