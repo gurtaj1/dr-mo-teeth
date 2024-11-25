@@ -17,10 +17,10 @@ const config: Config = {
           secondary: colors.dental.secondary, // Bright blue
           accent1: colors.dental.accent1, // Light cyan
           accent2: colors.dental.accent2, // Bright cyan
-          dark: colors.dental.dark, // Dark blue
           black: colors.dental.black, // Pure black
           deepBlue: colors.dental.deepBlue, // dark blue
           navy: colors.dental.navy, // Navy blue
+          butterflyBlue: colors.dental.butterflyBlue, // Butterfly blue
           teal: colors.dental.teal, // Teals
           gray: colors.dental.gray, // Gray
           dirtyGold: colors.dental.dirtyGold, // dirty gold

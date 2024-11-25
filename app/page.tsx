@@ -305,7 +305,7 @@ const HomePage = () => {
                 <AnimatedElement transitionSize key={index}>
                   <Link href={service.link} className="h-full cursor-pointer">
                     <motion.div
-                      className="bg-dental-deepBlue rounded-lg hover:bg-dental-primary/20 transition-colors border-dental-teal border h-full flex flex-col group"
+                      className="bg-dental-butterflyBlue/80 rounded-lg hover:bg-dental-primary/20 transition-colors border-white border h-full flex flex-col group"
                       whileHover={{
                         scale: 1.05,
                         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
@@ -321,14 +321,14 @@ const HomePage = () => {
                       }}
                     >
                       <CardContent className="p-6 flex flex-col flex-1">
-                        <div className="overflow-hidden rounded-lg mb-4  group-hover:border group-hover:border-white">
+                        <div className="overflow-hidden rounded-lg mb-4 group-hover:border group-hover:border-white">
                           <img
                             src={`/service-${index + 1}.jpg`}
                             alt={service.title}
                             className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                         </div>
-                        <div className="flex flex-col flex-1 text-white">
+                        <div className="flex flex-col flex-1 text-black group-hover:text-white">
                           <h3 className="text-xl font-semibold mb-2 ">
                             {service.title}
                           </h3>
@@ -343,7 +343,7 @@ const HomePage = () => {
                               },
                             }}
                             viewport={{ once: false }}
-                            className="w-full h-0.5 bg-dental-teal group-hover:bg-dental-accent2 origin-left mb-4"
+                            className="w-full h-0.5 bg-white group-hover:bg-dental-accent2 origin-left mb-4"
                           />
                           <p className="/80">{service.description}</p>
                         </div>

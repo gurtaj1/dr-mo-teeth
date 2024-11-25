@@ -34,9 +34,9 @@ const getTailwindColor = (colorClass: string): string | null => {
     "dental-secondary": "64, 163, 221",
     "dental-accent1": "173, 233, 238",
     "dental-accent2": "70, 219, 251",
-    "dental-dark": "4, 78, 125",
     "dental-black": "4, 4, 4",
     "dental-navy": "20, 80, 112",
+    "dental-butterflyBlue": "70, 158, 251",
     "dental-teal": "56, 192, 188",
     "dental-gray": "84, 84, 84",
   };
