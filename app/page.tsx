@@ -17,6 +17,7 @@ import {
   navBarHeight,
   homeIconVariants,
   homeCardVariants,
+  linkFramerVariants,
 } from "./globals/constants";
 
 const HomePage = () => {
@@ -80,7 +81,8 @@ const HomePage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
-        <video
+        {/* place below code back when a video has been made */}
+        {/* <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           loop
@@ -88,21 +90,33 @@ const HomePage = () => {
           playsInline
         >
           <source src={"/mo-teeth-invideo.mp4"} type="video/mp4" />
-        </video>
+        </video> */}
+        <img
+          src="/home-background.jpg"
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         <div className="relative z-10 text-center ">
           <h1 className="font-newsreader text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 text-white">
             DR. MO
           </h1>
-          <Button
-            asChild
-            size="lg"
-            className="mb-4 bg-dental-teal hover:bg-dental-secondary"
+          <motion.div
+            variants={linkFramerVariants}
+            initial="initial"
+            whileHover="whileHover"
+            whileTap="whileTap"
           >
-            <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
-              Make an Enquiry
-            </Link>
-          </Button>
+            <Button
+              asChild
+              size="lg"
+              className="mb-4 bg-dental-secondary hover:bg-dental-accent2 hover:text-black"
+            >
+              <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+                Make an Enquiry
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
