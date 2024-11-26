@@ -730,10 +730,6 @@ const Navigation = () => {
                         href="/#about"
                         className="flex items-center gap-2 hover:text-dental-accent2"
                       >
-                        <AboutSectionIcon
-                          className="w-8 h-8"
-                          variants={iconFramerVariants}
-                        />
                         About
                       </Link>
                     </motion.div>
@@ -751,10 +747,6 @@ const Navigation = () => {
                           className="w-full px-6 py-4 text-white flex items-center justify-between hover:text-dental-accent2"
                         >
                           <span className="flex items-center gap-2">
-                            <ServicesSectionIcon
-                              className="w-8 h-8"
-                              variants={iconFramerVariants}
-                            />
                             Services
                           </span>
                           <span className="ml-2">
@@ -1143,10 +1135,6 @@ const Navigation = () => {
                           className="w-full px-6 py-4 text-white flex items-center justify-between hover:text-dental-accent2"
                         >
                           <span className="flex items-center gap-2">
-                            <ProblemsSectionIcon
-                              className="w-8 h-8"
-                              variants={iconFramerVariants}
-                            />
                             Problems I Treat
                           </span>
                           <span className="ml-2">
@@ -1304,11 +1292,7 @@ const Navigation = () => {
                           href="/referrals"
                           className="w-full px-6 py-4 text-white flex items-center justify-between hover:text-dental-accent2 border-b border-dental-teal"
                         >
-                          <span className="flex items-center gap-2 pl-10">
-                            {/* <ServicesSectionIcon
-                              className="w-8 h-8"
-                              variants={iconFramerVariants}
-                            /> */}
+                          <span className="flex items-center gap-2">
                             Referrals
                           </span>
                         </Link>
