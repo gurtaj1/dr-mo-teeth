@@ -81,7 +81,8 @@ const HomePage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section
-        className={`relative h-[calc(100vh-${navBarHeight}px)] flex items-center justify-center`}
+        className={`relative h-[100svh] flex items-center justify-center`}
+        style={{ height: `calc(100svh - ${navBarHeight}px)` }}
       >
         {/* place below code back when a video has been made */}
         {/* <video
