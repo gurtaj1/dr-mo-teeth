@@ -11,7 +11,7 @@ import { useIntersectionObservers } from "@/hooks/use-intersection-observers";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-import { linkFramerVariants } from "@/app/globals/constants";
+import { linkFramerVariants, navBarHeight } from "@/app/globals/constants";
 const Footer = () => {
   const pathname = usePathname();
   const [animationKey, setAnimationKey] = useState(0);
@@ -73,12 +73,52 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/#about" className="hover:text-dental-accent2">
+                <Link
+                  href="/#about"
+                  className="hover:text-dental-accent2"
+                  onClick={(e) => {
+                    // Only handle the scroll behavior if we're already on the home page
+                    if (pathname === "/") {
+                      e.preventDefault();
+                      const element = document.getElementById("about");
+                      const elementPosition =
+                        element?.getBoundingClientRect().top ?? 0;
+                      const offsetPosition =
+                        elementPosition + window.pageYOffset - navBarHeight;
+
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth",
+                      });
+                    }
+                    // If we're not on the home page, let the default navigation happen
+                  }}
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-dental-accent2">
+                <Link
+                  href="#services"
+                  className="hover:text-dental-accent2"
+                  onClick={(e) => {
+                    // Only handle the scroll behavior if we're already on the home page
+                    if (pathname === "/") {
+                      e.preventDefault();
+                      const element = document.getElementById("services");
+                      const elementPosition =
+                        element?.getBoundingClientRect().top ?? 0;
+                      const offsetPosition =
+                        elementPosition + window.pageYOffset - navBarHeight;
+
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth",
+                      });
+                    }
+                    // If we're not on the home page, let the default navigation happen
+                  }}
+                >
                   Services
                 </Link>
               </li>

@@ -3,7 +3,7 @@
 import AnimatedImageTextSection from "../../../../components/ui/animated-image-text-section";
 import QuestionsSection from "@/components/ui/questions-section";
 import HeroSection from "@/components/ui/hero-section";
-
+import PageLoadTransitionWrapper from "@/components/ui/page-load-transition-wrapper";
 const questions = [
   {
     icon: "✦",
@@ -46,104 +46,108 @@ const questions = [
 
 const BadBreath = () => {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
-      {/* Hero Section */}
-      <HeroSection
-        title={{
-          lineOne: "Why Does My Breath",
-          lineTwo: "Smell So Bad?",
-          isFirstLineBold: false,
-        }}
-        description="It's normal to have bad breath occasionally, for example after eating strong foods or when you wake up in the morning. However, about 25% of people experience chronic bad breath, known as halitosis. This type of bad breath can't be fixed just by brushing, flossing, drinking water, or chewing gum."
-      />
+    <PageLoadTransitionWrapper>
+      <div className="min-h-screen bg-white overflow-x-hidden">
+        {/* Hero Section */}
+        <HeroSection
+          title={{
+            lineOne: "Why Does My Breath",
+            lineTwo: "Smell So Bad?",
+            isFirstLineBold: false,
+          }}
+          description="It's normal to have bad breath occasionally, for example after eating strong foods or when you wake up in the morning. However, about 25% of people experience chronic bad breath, known as halitosis. This type of bad breath can't be fixed just by brushing, flossing, drinking water, or chewing gum."
+        />
 
-      <AnimatedImageTextSection
-        imagePosition="left"
-        imageSrc="/bad-breath-1.jpg"
-        imageAlt="Bad Breath Causes"
-        titleLineOne="Bad Breath Isn't Always a"
-        titleLineTwo="Dental Concern"
-      >
-        <div>
-          <p>
-            Sometimes, bad breath can indicate a health issue, such as a sinus
-            infection, acid reflux, or problems with your liver or kidneys. If
-            you think this might be the case, it&apos;s important to contact
-            your doctor. If you&apos;re unsure what the cause is, get in touch.
-          </p>
-        </div>
-      </AnimatedImageTextSection>
-
-      <AnimatedImageTextSection
-        imagePosition="right"
-        imageSrc="/bad-breath-2.jpg"
-        imageAlt="Bad Breath Treatment"
-        titleLineOne="How to Fix"
-        titleLineTwo="Bad Breath"
-        isTitleLineOneBold
-        isDark
-      >
-        <div className="space-y-6 ">
-          <ol className="space-y-2">
-            <li>
-              <strong>Step 1.</strong> Request Your Appointment
-            </li>
-            <li>
-              <strong>Step 2.</strong> Get an Exam, Diagnosis, and Custom
-              Treatment Plan
-            </li>
-            <li>
-              <strong>Step 3.</strong> Begin Treatment and Learn How to Prevent
-              Bad Breath from Coming Back
-            </li>
-          </ol>
-
-          <p>
-            Your treatment will depend on what we find, so it&apos;s important
-            to get a professional diagnosis to find the right solution!
-          </p>
-        </div>
-      </AnimatedImageTextSection>
-
-      <AnimatedImageTextSection
-        imagePosition="left"
-        imageSrc="/bad-breath-3.jpg"
-        imageAlt="Bad Breath FAQs"
-        titleLineOne="Common Treatments for"
-        titleLineTwo="Halitosis"
-      >
-        <div className="space-y-6">
+        <AnimatedImageTextSection
+          imagePosition="left"
+          imageSrc="/bad-breath-1.jpg"
+          imageAlt="Bad Breath Causes"
+          titleLineOne="Bad Breath Isn't Always a"
+          titleLineTwo="Dental Concern"
+        >
           <div>
-            <ul className="space-y-2">
-              <li>
-                ⭐ Deep Cleaning: If gum disease is the cause of your bad
-                breath, we may suggest a deep cleaning or other gum treatment
-              </li>
-              <li>
-                ⭐ Filling or Root Canal: If you have tooth decay or infection,
-                a filling or root canal may be needed to restore your tooth
-              </li>
-              <li>
-                ⭐ Oral Appliance: If you breathe through your mouth at night,
-                which can cause dry mouth and bad breath, a custom night guard
-                might be the solution for you
-              </li>
-            </ul>
+            <p>
+              Sometimes, bad breath can indicate a health issue, such as a sinus
+              infection, acid reflux, or problems with your liver or kidneys. If
+              you think this might be the case, it&apos;s important to contact
+              your doctor. If you&apos;re unsure what the cause is, get in
+              touch.
+            </p>
           </div>
-        </div>
-      </AnimatedImageTextSection>
+        </AnimatedImageTextSection>
 
-      <QuestionsSection
-        theme="dark"
-        title={
-          <>
-            Common Questions About <br />{" "}
-            <span className="font-bold">Bad Breath</span>
-          </>
-        }
-        questions={questions}
-      />
-    </div>
+        <AnimatedImageTextSection
+          imagePosition="right"
+          imageSrc="/bad-breath-2.jpg"
+          imageAlt="Bad Breath Treatment"
+          titleLineOne="How to Fix"
+          titleLineTwo="Bad Breath"
+          isTitleLineOneBold
+          isDark
+        >
+          <div className="space-y-6 ">
+            <ol className="space-y-2">
+              <li>
+                <strong>Step 1.</strong> Request Your Appointment
+              </li>
+              <li>
+                <strong>Step 2.</strong> Get an Exam, Diagnosis, and Custom
+                Treatment Plan
+              </li>
+              <li>
+                <strong>Step 3.</strong> Begin Treatment and Learn How to
+                Prevent Bad Breath from Coming Back
+              </li>
+            </ol>
+
+            <p>
+              Your treatment will depend on what we find, so it&apos;s important
+              to get a professional diagnosis to find the right solution!
+            </p>
+          </div>
+        </AnimatedImageTextSection>
+
+        <AnimatedImageTextSection
+          imagePosition="left"
+          imageSrc="/bad-breath-3.jpg"
+          imageAlt="Bad Breath FAQs"
+          titleLineOne="Common Treatments for"
+          titleLineTwo="Halitosis"
+        >
+          <div className="space-y-6">
+            <div>
+              <ul className="space-y-2">
+                <li>
+                  ⭐ Deep Cleaning: If gum disease is the cause of your bad
+                  breath, we may suggest a deep cleaning or other gum treatment
+                </li>
+                <li>
+                  ⭐ Filling or Root Canal: If you have tooth decay or
+                  infection, a filling or root canal may be needed to restore
+                  your tooth
+                </li>
+                <li>
+                  ⭐ Oral Appliance: If you breathe through your mouth at night,
+                  which can cause dry mouth and bad breath, a custom night guard
+                  might be the solution for you
+                </li>
+              </ul>
+            </div>
+          </div>
+        </AnimatedImageTextSection>
+
+        <QuestionsSection
+          theme="dark"
+          title={
+            <>
+              Common Questions About <br />{" "}
+              <span className="font-bold">Bad Breath</span>
+            </>
+          }
+          questions={questions}
+        />
+      </div>
+    </PageLoadTransitionWrapper>
   );
 };
 

@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { AnimatePresence } from "framer-motion";
 
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
@@ -43,7 +44,9 @@ export default function RootLayout({
             className="flex-grow flex flex-col"
             style={{ paddingTop: navBarHeight }}
           >
-            <Suspense fallback={<Loading />}>{children}</Suspense>
+            <Suspense fallback={<Loading />}>
+              <AnimatePresence mode="wait">{children}</AnimatePresence>
+            </Suspense>
           </main>
           <Footer />
         </ReactLenis>
