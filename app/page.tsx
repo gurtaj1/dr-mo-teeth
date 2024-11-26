@@ -132,13 +132,13 @@ const HomePage = () => {
           <div className="container mx-auto px-6 relative">
             <AnimatedElement>
               <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
-                <span className="relative">
+                <span className="relative inline-block">
                   About Me
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
                   />
                 </span>
               </h2>
@@ -187,13 +187,13 @@ const HomePage = () => {
           <div className="container mx-auto px-6 relative">
             <AnimatedElement>
               <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 text-dental-navy">
-                <span className="relative">
+                <span className="relative inline-block">
                   My Approach to Dental Care
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
                   />
                 </span>
               </h2>
@@ -293,13 +293,13 @@ const HomePage = () => {
           <div className="container mx-auto px-6">
             <AnimatedElement>
               <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
-                <span className="relative">
+                <span className="relative inline-block">
                   My Services
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
                   />
                 </span>
               </h2>
@@ -404,13 +404,13 @@ const HomePage = () => {
           <div className="container mx-auto px-6">
             <AnimatedElement>
               <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 text-dental-navy">
-                <span className="relative">
+                <span className="relative inline-block">
                   3 SIMPLE STEPS FOR ACHIEVING YOUR BEST SMILE
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="absolute bottom-0 left-40 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
                   />
                 </span>
               </h2>
@@ -479,13 +479,13 @@ const HomePage = () => {
           <div className="container mx-auto px-6">
             <AnimatedElement>
               <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
-                <span className="relative">
+                <span className="relative inline-block">
                   Patient Reviews
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
                   />
                 </span>
               </h2>
