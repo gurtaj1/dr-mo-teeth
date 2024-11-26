@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import Loading from "./loading";
+import InitialRenderAnimationWrapper from "./initial-render-animation-wrapper";
 
 import "./globals.css";
 
@@ -39,16 +40,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-dental-deepBlue`}
       >
         <ReactLenis root>
-          <Navigation />
-          <main
-            className="flex-grow flex flex-col"
-            style={{ paddingTop: navBarHeight }}
-          >
-            <Suspense fallback={<Loading />}>
-              <AnimatePresence mode="wait">{children}</AnimatePresence>
-            </Suspense>
-          </main>
-          <Footer />
+          <InitialRenderAnimationWrapper>
+            <Navigation />
+            <main
+              className="flex-grow flex flex-col"
+              style={{ paddingTop: navBarHeight }}
+            >
+              <Suspense fallback={<Loading showText />}>
+                <AnimatePresence mode="wait">{children}</AnimatePresence>
+              </Suspense>
+            </main>
+            <Footer />
+          </InitialRenderAnimationWrapper>
         </ReactLenis>
       </body>
     </html>

@@ -14,7 +14,7 @@ const svgVariants = {
   },
 };
 
-const ToothLogoDark = (props: MotionSVGProps) => (
+const PulsingToothLogoDark = (props: MotionSVGProps) => (
   <motion.svg
     xmlns="http://www.w3.org/2000/svg"
     id="Layer_2"
@@ -333,4 +333,4 @@ const ToothLogoDark = (props: MotionSVGProps) => (
     </g>
   </motion.svg>
 );
-export default ToothLogoDark;
+export default PulsingToothLogoDark;
