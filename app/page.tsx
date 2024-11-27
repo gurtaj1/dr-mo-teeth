@@ -333,7 +333,7 @@ const HomePage = () => {
                   </span>
                 </h2>
               </AnimatedElement>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
                     title: "Teeth Whitening",
