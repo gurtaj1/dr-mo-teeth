@@ -184,31 +184,32 @@ const HomePage = () => {
         </section>
 
         {/* My Approach Section */}
-        <section className="py-16 bg-white relative">
+        <section className="py-24 bg-gradient-to-b from-white via-dental-accent1/5 to-white relative">
           <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
             <div className="container mx-auto px-6 relative">
               <AnimatedElement>
-                <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 text-dental-navy">
+                <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-16 text-dental-navy">
                   <span className="relative inline-block">
                     My Approach to Dental Care
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: "100%" }}
                       transition={{ duration: 1, ease: "easeOut" }}
-                      className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
                     />
                   </span>
                 </h2>
               </AnimatedElement>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <AnimatedElement transitionSize>
                   <motion.div
                     initial="initial"
                     whileHover="whileHover"
                     whileTap="whileTap"
+                    className="transform hover:-translate-y-2 transition-all duration-300"
                   >
                     <motion.div
-                      className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
+                      className="text-center p-8 rounded-xl bg-white shadow-lg hover:shadow-2xl border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-72 flex flex-col justify-between transition-all duration-300"
                       variants={homeCardVariants}
                     >
                       <div className="mb-4">
@@ -235,9 +236,10 @@ const HomePage = () => {
                     initial="initial"
                     whileHover="whileHover"
                     whileTap="whileTap"
+                    className="transform hover:-translate-y-2 transition-all duration-300"
                   >
                     <motion.div
-                      className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
+                      className="text-center p-8 rounded-xl bg-white shadow-lg hover:shadow-2xl border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-72 flex flex-col justify-between transition-all duration-300"
                       variants={homeCardVariants}
                     >
                       <div className="mb-4">
@@ -262,9 +264,10 @@ const HomePage = () => {
                     initial="initial"
                     whileHover="whileHover"
                     whileTap="whileTap"
+                    className="transform hover:-translate-y-2 transition-all duration-300"
                   >
                     <motion.div
-                      className="text-center p-6 rounded-lg border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-64 flex flex-col justify-between"
+                      className="text-center p-8 rounded-xl bg-white shadow-lg hover:shadow-2xl border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-72 flex flex-col justify-between transition-all duration-300"
                       variants={homeCardVariants}
                     >
                       <div className="mb-4">
