@@ -18,24 +18,7 @@ export const iconFramerVariants = {
     filter: "drop-shadow(0px 0px 0px rgba(229, 185, 77, 0))",
   },
   whileHover: {
-    fill: [colors.dental.accent2, colors.dental.teal, colors.dental.accent2],
-    filter: "drop-shadow(0px 0px 2px rgba(229, 185, 77, 0.5))",
-    transition: {
-      fill: {
-        duration: 1,
-        ease: "easeInOut",
-        repeat: Infinity,
-        repeatType: "loop" as const,
-      },
-      filter: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
-    },
-  },
-  whileTap: {
-    fill: [colors.dental.accent2, colors.dental.teal, colors.dental.accent2],
-    filter: "drop-shadow(0px 0px 5px rgba(229, 185, 77, 0.7))",
+    fill: [colors.dental.deepBlue, colors.dental.teal, colors.dental.deepBlue],
     transition: {
       fill: {
         duration: 2,
@@ -43,9 +26,16 @@ export const iconFramerVariants = {
         repeat: Infinity,
         repeatType: "loop" as const,
       },
-      filter: {
-        duration: 0.2,
-        ease: "easeOut",
+    },
+  },
+  whileTap: {
+    fill: [colors.dental.deepBlue, colors.dental.teal, colors.dental.deepBlue],
+    transition: {
+      fill: {
+        duration: 2,
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatType: "loop" as const,
       },
     },
   },
