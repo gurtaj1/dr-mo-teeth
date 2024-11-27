@@ -154,7 +154,7 @@ const HomePage = () => {
                         Bachelor of Dental Surgery (BDS) – Cardiff University
                       </li>
                       <li>
-                        Master in Implantology with Distinction (MSc) –
+                        Masters in Implantology with Distinction (MSc) –
                         University of Salford
                       </li>
                       <li>GDC Number – 251332</li>
