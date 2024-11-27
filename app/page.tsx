@@ -24,28 +24,52 @@ import PageLoadTransitionWrapper from "@/components/ui/page-load-transition-wrap
 const HomePage = () => {
   const testimonials = [
     {
-      name: "John Doe",
-      text: "Dr Mo transformed my smile! I couldn't be happier with the results.",
+      name: "Unnamed",
+      text: "I recently visited The Hedon Dental Practice and was incredibly impressed. The reception staff were welcoming and efficient, making me feel comfortable immediately. The clinic is clean and calming, which helped ease my usual dental anxiety. Dr. Mo is fantastic. He listened to my concerns and explained the treatment plan clearly. The procedure was smooth and virtually painless, thanks to Dr. Mo's expertise. I appreciated the clear aftercare instructions and the follow-up call to check on my recovery. For anyone nervous about dental visits, I highly recommend The Hedon Dental Practice. Dr. Mo and his team provide exceptional care with a personal touch. I left feeling confident and well-cared for. I will definitely be returning and recommending them to friends and family.",
     },
     {
-      name: "Jane Smith",
-      text: "The team at Dr Mo made me feel comfortable throughout my entire treatment.",
+      name: "Unnamed",
+      text: "All round 1st class service.. Mo best dentist I've been to aided superbly by Emma.. Obviously pricier than NHS but you get what you pay for, also shout out to the superb hygienist..would recommend 👍",
     },
     {
-      name: "Mike Johnson",
-      text: "I've never felt more confident about my teeth. Thank you, Dr Mo!",
+      name: "Unnamed",
+      text: "Had an emergency, NHS 111 could not help for 5 days. Called Hedon Dental Practice, great advise whilst they got to see me THE NEXT DAY. God send when you are in that much pain, Id only just signed up with them the week before. Dr Moh looked after me and I can't express how during the procedure everything was explained and made me and made you feel so at ease. I have had work done in the past in London with top class Dental specialists and I would honestly say Hedon beats them for expertise and pride in their work. You can tell they have it in buckets from the front desk staff to the practitioner to the dental nurse thank you so much.",
     },
     {
-      name: "Sarah Williams",
-      text: "Professional, caring and excellent results. Highly recommend Dr Mo!",
+      name: "",
+      text: "Having not visited a dentist in over 15 years, having to do so following tooth ache in August 2023, I was a little apprehensive you could say but after 9 months and multiple treatments, my experience has been great. Dr Mo set out a clear treatment plan to rectify all my dental problems (and there was a few), talking me through every stage and every appointment, giving my mouth and me time to heal and rest between appointments, even changing the plan at the appointment depending on how I was feeling. All of the staff are welcoming and supportive, explain all the aftercare to you and go above and beyond. I would recommend Hedon Dental Surgery to anyone especially if like me you haven’t been in a long time. I certainly wont be leaving it another 15 years before visiting again! ",
     },
     {
-      name: "David Brown",
-      text: "The best dental experience I've ever had. Dr Mo is fantastic.",
+      name: "",
+      text: "Want to thank Dr mo and Emma had new dentures fitted today really happy with them once again thank you",
     },
     {
-      name: "Emma Davis",
-      text: "Life-changing results! So happy I chose Dr Mo for my treatment.",
+      name: "",
+      text: "Visited today for 2 large composite fillings, I don’t think anyone likes going to the dentist but Mo and Arina were brilliant. Explained the procedure fully, put me at ease, and I didn’t feel a thing. Also had chilled music playing, shut my eyes and pretended I was on a beach. Thanks guys",
+    },
+    {
+      name: "",
+      text: "I was at the dentist yesterday to see mr Mohsin Aslam it’s always a pleasure to see him one of the best dentists I have ever seen and then went to see Maria see was fantastic as usual.",
+    },
+    {
+      name: "",
+      text: "Just been for a check up with Mo. Excellent service and very informative.",
+    },
+    {
+      name: "",
+      text: "I have been getting my dental treatment for a few years now at Hedon practice. It's been the best experience overall compared with other practices. This is because the reception staff and all dental staff are easygoing, polite and helpful. Doctor Mo has always spent the time explaining the dental issue in a simplified way and then has explained what will be the best solution to resolve the dental issue quickly and painlessly. Doctor Mo shows great skill and diligence in doing my dental work always going the extra mile in terms of time and effort to get the job done meticulously.i have been to ther dentists where after treatment I've found I have had further issues or they have not spent time to resolve the problem due to not giving the time and then I've had further issues. With doctor Mo you know you will get the best dental care advice and treatment. Thank you to all the team.",
+    },
+    {
+      name: "",
+      text: "Highly recommend Dr Mo Aslam, I had been worried about the pain in my back Molar and he sorted my right out! Treatment was done dillegently and pain free and managed to restore it and now my gnashers look good as new!",
+    },
+    {
+      name: "",
+      text: "Dr Mo is fabulous - I am very nervous and his lovely kind calming manner makes my worries disappear - I can’t recommend him enough 😊",
+    },
+    {
+      name: "",
+      text: "Fantastic dental practice! Mo is the first dentist I have come across that takes the time to carry out thorough checks and treatment. Not only that, he explains everything in lamens terms. This was so refreshing, as all my previous dentists overlooked issues in order to get me out of the door quickly. This guy loves his job, and it shows! Cannot recommend highly enough.",
     },
   ];
 
