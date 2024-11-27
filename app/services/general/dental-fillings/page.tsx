@@ -70,11 +70,25 @@ const DentalFillings = () => {
           isDark
         >
           <ol className="space-y-4 ">
-            <li>1. Examination and x-rays to assess decay</li>
-            <li>2. Local anesthetic to ensure comfort</li>
-            <li>3. Removal of decay and cleaning of the cavity</li>
-            <li>4. Placement and shaping of filling material</li>
-            <li>5. Final adjustments for proper bite</li>
+            <ol className="space-y-4 ">
+              <li>
+                <strong>Step 1.</strong> Examination and x-rays to assess decay
+              </li>
+              <li>
+                <strong>Step 2.</strong> Local anesthetic to ensure comfort
+              </li>
+              <li>
+                <strong>Step 3.</strong> Removal of decay and cleaning of the
+                cavity
+              </li>
+              <li>
+                <strong>Step 4.</strong> Placement and shaping of filling
+                material
+              </li>
+              <li>
+                <strong>Step 5.</strong> Final adjustments for proper bite
+              </li>
+            </ol>
           </ol>
         </AnimatedImageTextSection>
       </div>

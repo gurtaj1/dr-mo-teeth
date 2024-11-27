@@ -26,22 +26,28 @@ const TeethGrinding = () => {
             </p>
             <ul className="space-y-2">
               <li>
-                ⭐ Worn Enamel: Grinding can wear down your tooth enamel over
-                time
+                <span className="text-dental-teal">•</span> Worn Enamel:
+                Grinding can wear down your tooth enamel over time
               </li>
               <li>
-                ⭐ Jaw Pain: Clenching puts strain on jaw muscles and joints
+                <span className="text-dental-teal">•</span> Jaw Pain: Clenching
+                puts strain on jaw muscles and joints
               </li>
               <li>
-                ⭐ Headaches: Tension from grinding often leads to headaches
+                <span className="text-dental-teal">•</span> Headaches: Tension
+                from grinding often leads to headaches
               </li>
               <li>
-                ⭐ Cracked Teeth: Excessive force can cause teeth to crack or
-                chip
+                <span className="text-dental-teal">•</span> Cracked Teeth:
+                Excessive force can cause teeth to crack or chip
               </li>
-              <li>⭐ Sleep Issues: Grinding disrupts quality sleep</li>
               <li>
-                ⭐ Treatment Options: We offer solutions to protect your teeth
+                <span className="text-dental-teal">•</span> Sleep Issues:
+                Grinding disrupts quality sleep
+              </li>
+              <li>
+                <span className="text-dental-teal">•</span> Treatment Options:
+                We offer solutions to protect your teeth
               </li>
             </ul>
           </div>
@@ -62,19 +68,21 @@ const TeethGrinding = () => {
             </p>
             <ul className="space-y-2">
               <li>
-                ⭐ <strong>Botox:</strong> This treatment relaxes the muscles
-                that cause jaw clenching and grinding, helping to relieve
-                tension and reduce the frequency and intensity of grinding
-                episodes.
+                <span className="text-dental-teal">•</span>{" "}
+                <strong>Botox:</strong> This treatment relaxes the muscles that
+                cause jaw clenching and grinding, helping to relieve tension and
+                reduce the frequency and intensity of grinding episodes.
               </li>
               <li>
-                ⭐ <strong>Splints:</strong> These custom-made oral appliances
-                are worn during sleep to reposition your lower jaw, open up the
+                <span className="text-dental-teal">•</span>{" "}
+                <strong>Splints:</strong> These custom-made oral appliances are
+                worn during sleep to reposition your lower jaw, open up the
                 airway, and decrease the chances of grinding, leading to better
                 sleep quality.
               </li>
               <li>
-                ⭐ <strong>Full Mouth Rehab:</strong> If you experience severe
+                <span className="text-dental-teal">•</span>{" "}
+                <strong>Full Mouth Rehab:</strong> If you experience severe
                 teeth grinding and significant dental damage, a full mouth
                 reconstruction may be necessary. This comprehensive approach
                 includes restorative treatments like dental implants, crowns,
@@ -124,10 +132,19 @@ const TeethGrinding = () => {
                     Teeth grinding can show up in several ways, including:
                   </p>
                   <ul className="space-y-2">
-                    <li>⭐ Worn enamel</li>
-                    <li>⭐ Jaw pain</li>
-                    <li>⭐ Headaches</li>
-                    <li>⭐ Tooth sensitivity</li>
+                    <li>
+                      <span className="text-dental-teal">•</span> Worn enamel
+                    </li>
+                    <li>
+                      <span className="text-dental-teal">•</span> Jaw pain
+                    </li>
+                    <li>
+                      <span className="text-dental-teal">•</span> Headaches
+                    </li>
+                    <li>
+                      <span className="text-dental-teal">•</span> Tooth
+                      sensitivity
+                    </li>
                   </ul>
                   <p className="mt-2">
                     If you notice any of these symptoms, it&apos;s important to

@@ -41,8 +41,8 @@ const SmileMakeover = () => {
           imagePosition="left"
           imageSrc="/smile-makeover-2.jpg"
           imageAlt="Smile Makeover Process"
-          titleLineOne="Common Treatments in a"
-          titleLineTwo="Smile Makeover"
+          titleLineOne="Smile Makeover"
+          titleLineTwo="Treatments"
         >
           <div className="space-y-6">
             <p>
@@ -72,7 +72,7 @@ const SmileMakeover = () => {
           <div className="space-y-4 ">
             <ol className="space-y-4">
               <li>
-                <strong>1. Initial Consultation</strong>
+                <strong>Step 1.</strong> Initial Consultation
                 <p>
                   Every Smile Makeover begins with a thorough consultation.
                   During this visit, we&apos;ll discuss your aesthetic goals,
@@ -81,7 +81,7 @@ const SmileMakeover = () => {
                 </p>
               </li>
               <li>
-                <strong>2. Customized Treatment Plan</strong>
+                <strong>Step 2.</strong> Customized Treatment Plan
                 <p>
                   Once we have a clear understanding of your needs, we will
                   create a customized treatment plan to achieve your desired
@@ -91,7 +91,7 @@ const SmileMakeover = () => {
                 </p>
               </li>
               <li>
-                <strong>3. The Makeover</strong>
+                <strong>Step 3.</strong> The Makeover
                 <p>
                   With your treatment plan in place, we will begin the makeover
                   process. Depending on the procedures involved, your smile
@@ -100,7 +100,7 @@ const SmileMakeover = () => {
                 </p>
               </li>
               <li>
-                <strong>4. Post-Treatment Care</strong>
+                <strong>Step 4.</strong> Post-Treatment Care
                 <p>
                   After your Smile Makeover, we&apos;ll provide detailed
                   aftercare instructions to ensure that your new smile lasts.

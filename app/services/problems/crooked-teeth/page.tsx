@@ -25,24 +25,27 @@ const CrookedTeeth = () => {
             </p>
             <ul className="space-y-2">
               <li>
-                ⭐ Chewing Problems: Misaligned teeth can affect your ability to
-                chew properly, causing pain during meals and digestive issues
+                <span className="text-dental-teal">•</span> Chewing Problems:
+                Misaligned teeth can affect your ability to chew properly,
+                causing pain during meals and digestive issues
               </li>
               <li>
-                ⭐ Oral Health Risks: Hard-to-clean areas increase risk of
-                periodontal disease, damaging gums and bone structure
+                <span className="text-dental-teal">•</span> Oral Health Risks:
+                Hard-to-clean areas increase risk of periodontal disease,
+                damaging gums and bone structure
               </li>
               <li>
-                ⭐ Speech Impact: Crooked teeth can affect speech clarity and
-                pronunciation
+                <span className="text-dental-teal">•</span> Speech Impact:
+                Crooked teeth can affect speech clarity and pronunciation
               </li>
               <li>
-                ⭐ Self-Esteem: Many people feel self-conscious about their
-                misaligned smile
+                <span className="text-dental-teal">•</span> Self-Esteem: Many
+                people feel self-conscious about their misaligned smile
               </li>
               <li>
-                ⭐ Treatment Options: We provide personalized treatments to help
-                achieve a healthy, confident smile
+                <span className="text-dental-teal">•</span> Treatment Options:
+                We provide personalized treatments to help achieve a healthy,
+                confident smile
               </li>
             </ul>
           </div>
@@ -104,10 +107,21 @@ const CrookedTeeth = () => {
               consult a dentist:
             </p>
             <ul className="space-y-2">
-              <li>⭐ Difficulty chewing or oral pain during meals</li>
-              <li>⭐ Cavities in hard-to-reach areas</li>
-              <li>⭐ Speech difficulties</li>
-              <li>⭐ Lower self-esteem or a tendency to hide your smile</li>
+              <li>
+                <span className="text-dental-teal">•</span> Difficulty chewing
+                or oral pain during meals
+              </li>
+              <li>
+                <span className="text-dental-teal">•</span> Cavities in
+                hard-to-reach areas
+              </li>
+              <li>
+                <span className="text-dental-teal">•</span> Speech difficulties
+              </li>
+              <li>
+                <span className="text-dental-teal">•</span> Lower self-esteem or
+                a tendency to hide your smile
+              </li>
             </ul>
           </div>
         </AnimatedImageTextSection>
@@ -122,9 +136,18 @@ const CrookedTeeth = () => {
           <div className="space-y-6">
             <div>
               <ol className="space-y-2">
-                <li>1. Request Your Appointment</li>
-                <li>2. Get an Exam and Custom Treatment Plan</li>
-                <li>3. Begin Treatment and Learn to Correct Related Habits</li>
+                <li>
+                  <span className="font-bold">Step 1.</span> Request Your
+                  Appointment
+                </li>
+                <li>
+                  <span className="font-bold">Step 2.</span> Get an Exam and
+                  Custom Treatment Plan
+                </li>
+                <li>
+                  <span className="font-bold">Step 3.</span> Begin Treatment and
+                  Learn to Correct Related Habits
+                </li>
               </ol>
             </div>
             <div>
@@ -134,12 +157,17 @@ const CrookedTeeth = () => {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  ⭐ Invisalign: Clear aligners that gradually straighten teeth
+                  <span className="text-dental-teal">•</span> Invisalign: Clear
+                  aligners that gradually straighten teeth
                 </li>
-                <li>⭐ Bonding: Reshape teeth for better alignment</li>
                 <li>
-                  ⭐ Veneers: Thin shells that cover the front of teeth for a
-                  more uniform appearance
+                  <span className="text-dental-teal">•</span> Bonding: Reshape
+                  teeth for better alignment
+                </li>
+                <li>
+                  <span className="text-dental-teal">•</span> Veneers: Thin
+                  shells that cover the front of teeth for a more uniform
+                  appearance
                 </li>
               </ul>
             </div>

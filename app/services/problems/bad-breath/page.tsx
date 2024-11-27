@@ -10,12 +10,29 @@ const questions = [
     title: "What's the best way to prevent bad breath?",
     content: (
       <ul className="space-y-2">
-        <li>⭐ Brush and floss every day</li>
-        <li>⭐ Use a tongue scraper after you brush</li>
-        <li>⭐ Avoid cigarettes and tobacco products</li>
-        <li>⭐ Drink lots of water and keep your mouth moist</li>
-        <li>⭐ Breathe through your nose, not your mouth</li>
-        <li>⭐ Visit the dentist every 6 months for a checkup!</li>
+        <li>
+          <span className="text-dental-teal">•</span> Brush and floss every day
+        </li>
+        <li>
+          <span className="text-dental-teal">•</span> Use a tongue scraper after
+          you brush
+        </li>
+        <li>
+          <span className="text-dental-teal">•</span> Avoid cigarettes and
+          tobacco products
+        </li>
+        <li>
+          <span className="text-dental-teal">•</span> Drink lots of water and
+          keep your mouth moist
+        </li>
+        <li>
+          <span className="text-dental-teal">•</span> Breathe through your nose,
+          not your mouth
+        </li>
+        <li>
+          <span className="text-dental-teal">•</span> Visit the dentist every 6
+          months for a checkup!
+        </li>
       </ul>
     ),
   },
@@ -118,18 +135,20 @@ const BadBreath = () => {
             <div>
               <ul className="space-y-2">
                 <li>
-                  ⭐ Deep Cleaning: If gum disease is the cause of your bad
-                  breath, we may suggest a deep cleaning or other gum treatment
+                  <span className="text-dental-teal">•</span> Deep Cleaning: If
+                  gum disease is the cause of your bad breath, we may suggest a
+                  deep cleaning or other gum treatment
                 </li>
                 <li>
-                  ⭐ Filling or Root Canal: If you have tooth decay or
-                  infection, a filling or root canal may be needed to restore
-                  your tooth
+                  <span className="text-dental-teal">•</span> Filling or Root
+                  Canal: If you have tooth decay or infection, a filling or root
+                  canal may be needed to restore your tooth
                 </li>
                 <li>
-                  ⭐ Oral Appliance: If you breathe through your mouth at night,
-                  which can cause dry mouth and bad breath, a custom night guard
-                  might be the solution for you
+                  <span className="text-dental-teal">•</span> Oral Appliance: If
+                  you breathe through your mouth at night, which can cause dry
+                  mouth and bad breath, a custom night guard might be the
+                  solution for you
                 </li>
               </ul>
             </div>

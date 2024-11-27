@@ -30,22 +30,23 @@ const Bonding = () => {
           </p>
           <ol className="space-y-2">
             <li>
-              <strong>1. Preparation:</strong> Little preparation is needed, and
-              anesthesia is often not necessary
+              <strong>Step 1. Preparation:</strong> Little preparation is
+              needed, and anesthesia is often not necessary
             </li>
             <li>
-              <strong>2. Bonding:</strong> The tooth surface is roughened and
-              conditioned
+              <strong>Step 2. Bonding:</strong> The tooth surface is roughened
+              and conditioned
             </li>
             <li>
-              <strong>3. Application:</strong> The resin is applied, molded, and
-              smoothed
+              <strong>Step 3. Application:</strong> The resin is applied,
+              molded, and smoothed
             </li>
             <li>
-              <strong>4. Curing:</strong> A special light hardens the material
+              <strong>Step 4. Curing:</strong> A special light hardens the
+              material
             </li>
             <li>
-              <strong>5. Finishing:</strong> Final shaping and polishing
+              <strong>Step 5. Finishing:</strong> Final shaping and polishing
             </li>
           </ol>
         </AnimatedImageTextSection>
@@ -59,11 +60,25 @@ const Bonding = () => {
           isDark
         >
           <ul className="space-y-4">
-            <li>⭐ Quick and painless procedure</li>
-            <li>⭐ Affordable cosmetic solution</li>
-            <li>⭐ Natural-looking results</li>
-            <li>⭐ Preserves tooth structure</li>
-            <li>⭐ Completed in one visit</li>
+            <li>
+              <span className="text-dental-teal">•</span> Quick and painless
+              procedure
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Affordable cosmetic
+              solution
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Natural-looking
+              results
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Preserves tooth
+              structure
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Completed in one visit
+            </li>
           </ul>
         </AnimatedImageTextSection>
       </div>

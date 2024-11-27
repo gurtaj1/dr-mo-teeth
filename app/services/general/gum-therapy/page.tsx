@@ -67,12 +67,25 @@ const GumTherapy = () => {
           titleLineTwo="Gum Therapy"
           isDark
         >
-          <ul className="space-y-4 ">
-            <li>⭐ Prevents tooth loss</li>
-            <li>⭐ Reduces inflammation and bleeding</li>
-            <li>⭐ Eliminates bad breath</li>
-            <li>⭐ Protects overall oral health</li>
-            <li>⭐ Maintains healthy bone structure</li>
+          <ul className="space-y-4">
+            <li>
+              <span className="text-dental-teal">•</span> Prevents tooth loss
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Reduces inflammation
+              and bleeding
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Eliminates bad breath
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Protects overall oral
+              health
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Maintains healthy bone
+              structure
+            </li>
           </ul>
         </AnimatedImageTextSection>
       </div>

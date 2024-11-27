@@ -59,11 +59,26 @@ const Veneers = () => {
           isDark
         >
           <ul className="space-y-4 ">
-            <li>⭐ Natural-looking results</li>
-            <li>⭐ Stain-resistant surface</li>
-            <li>⭐ Minimal tooth reduction required</li>
-            <li>⭐ Long-lasting smile enhancement</li>
-            <li>⭐ Customized to your desired look</li>
+            <li>
+              <span className="text-dental-teal">•</span> Natural-looking
+              results
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Stain-resistant
+              surface
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Minimal tooth
+              reduction required
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Long-lasting smile
+              enhancement
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Customized to your
+              desired look
+            </li>
           </ul>
         </AnimatedImageTextSection>
 

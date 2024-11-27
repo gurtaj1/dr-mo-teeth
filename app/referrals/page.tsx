@@ -34,30 +34,16 @@ export default function ReferralsPage() {
               standard of care for each patient.
             </motion.p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <AnimatedElement>
-                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                  <h3 className="text-xl font-bold mb-4">Surgical Services</h3>
-                  <ul className="space-y-2">
-                    <li>• Dental Implants</li>
-                    <li>• Complex Extractions</li>
-                    <li>• Wisdom Teeth Removal</li>
-                    <li>• Bone Grafting</li>
-                  </ul>
-                </div>
-              </AnimatedElement>
-              <AnimatedElement>
-                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                  <h3 className="text-xl font-bold mb-4">Sedation Options</h3>
-                  <ul className="space-y-2">
-                    <li>• IV Sedation</li>
-                    <li>• Anxiety Management</li>
-                    <li>• Complex Case Management</li>
-                    <li>• Emergency Care</li>
-                  </ul>
-                </div>
-              </AnimatedElement>
-            </div>
+            <AnimatedElement>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm w-full mb-12">
+                <h3 className="text-xl font-bold mb-4">Referrals Accepted:</h3>
+                <ul className="space-y-2">
+                  <li>• Implant</li>
+                  <li>• Surgical Extractions</li>
+                  <li>• Intravenous Sedation</li>
+                </ul>
+              </div>
+            </AnimatedElement>
 
             <motion.div
               variants={linkFramerVariants}
@@ -71,7 +57,11 @@ export default function ReferralsPage() {
                 size="lg"
                 className="bg-dental-secondary hover:bg-dental-accent2 text-white hover:text-black"
               >
-                <Link href="https://www.eyds.co.uk/make-a-referral">
+                <Link
+                  href="https://www.eyds.co.uk/make-a-referral"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Make a Referral
                 </Link>
               </Button>

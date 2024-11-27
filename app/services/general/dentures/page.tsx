@@ -56,11 +56,26 @@ const Dentures = () => {
           isDark
         >
           <ul className="space-y-4">
-            <li>⭐ Restore your ability to eat and speak</li>
-            <li>⭐ Improve facial appearance</li>
-            <li>⭐ Boost confidence with a complete smile</li>
-            <li>⭐ Prevent shifting of remaining teeth</li>
-            <li>⭐ Custom-fitted for comfort</li>
+            <li>
+              <span className="text-dental-teal">•</span> Restore your ability
+              to eat and speak
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Improve facial
+              appearance
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Boost confidence with
+              a complete smile
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Prevent shifting of
+              remaining teeth
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Custom-fitted for
+              comfort
+            </li>
           </ul>
         </AnimatedImageTextSection>
       </div>

@@ -59,11 +59,22 @@ const DentalImplants = () => {
           titleLineTwo="Dental Implants:"
           isDark
         >
-          <ul className="space-y-4 ">
-            <li>⭐ Strengthens your jawbone</li>
-            <li>⭐ Promotes healthy gums</li>
-            <li>⭐ Restores your ability to chew and speak</li>
-            <li>⭐ Boosts your confidence to smile naturally again</li>
+          <ul className="space-y-4">
+            <li>
+              <span className="text-dental-teal">•</span> Strengthens your
+              jawbone
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Promotes healthy gums
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Restores your ability
+              to chew and speak
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Boosts your confidence
+              to smile naturally again
+            </li>
           </ul>
         </AnimatedImageTextSection>
 

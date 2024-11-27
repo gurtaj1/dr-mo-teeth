@@ -21,14 +21,29 @@ const Toothache = () => {
               causing your discomfort is the first step toward finding relief.
             </p>
             <ul className="space-y-2">
-              <li>⭐ Tooth Decay: Cavities can cause sensitivity and pain</li>
-              <li>⭐ Gum Disease: Infected gums lead to tooth and jaw pain</li>
-              <li>⭐ Grinding: Excessive pressure damages teeth over time</li>
-              <li>⭐ Injury: Physical trauma can cause immediate pain</li>
-              <li>⭐ Infection: Abscesses cause severe, throbbing pain</li>
               <li>
-                ⭐ Treatment Options: We offer solutions for all types of tooth
-                pain
+                <span className="text-dental-teal">•</span> Tooth Decay:
+                Cavities can cause sensitivity and pain
+              </li>
+              <li>
+                <span className="text-dental-teal">•</span> Gum Disease:
+                Infected gums lead to tooth and jaw pain
+              </li>
+              <li>
+                <span className="text-dental-teal">•</span> Grinding: Excessive
+                pressure damages teeth over time
+              </li>
+              <li>
+                <span className="text-dental-teal">•</span> Injury: Physical
+                trauma can cause immediate pain
+              </li>
+              <li>
+                <span className="text-dental-teal">•</span> Infection: Abscesses
+                cause severe, throbbing pain
+              </li>
+              <li>
+                <span className="text-dental-teal">•</span> Treatment Options:
+                We offer solutions for all types of tooth pain
               </li>
             </ul>
           </div>
@@ -43,15 +58,34 @@ const Toothache = () => {
         >
           <p className="mb-4">Your tooth pain could be due to:</p>
           <ul className="space-y-2 ">
-            <li>• Tooth decay/cavities</li>
-            <li>• Gum disease</li>
-            <li>• Grinding (bruxism)</li>
-            <li>• Enamel erosion</li>
-            <li>• Traumatic injury</li>
-            <li>• Abscessed tooth (root infection)</li>
-            <li>• Impacted tooth</li>
-            <li>• Cracked teeth</li>
-            <li>• Broken filling</li>
+            <li>
+              <span className="text-dental-teal">•</span> Tooth decay/cavities
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Gum disease
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Grinding (bruxism)
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Enamel erosion
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Traumatic injury
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Abscessed tooth (root
+              infection)
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Impacted tooth
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Cracked teeth
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Broken filling
+            </li>
           </ul>
           <p className="mt-4">
             If attending for a pain appointment, I will discuss your pain&apos;s
@@ -107,14 +141,25 @@ const Toothache = () => {
           </p>
           <ul className="space-y-2 ">
             <li>
-              • Maintain good oral hygiene by brushing twice a day, flossing
-              daily, and using a gentle mouthwash.
+              <span className="text-dental-teal">•</span> Maintain good oral
+              hygiene by brushing twice a day, flossing daily, and using a
+              gentle mouthwash.
             </li>
-            <li>• Schedule dental check-ups and cleanings every six months.</li>
-            <li>• Avoid smoking and limit alcohol consumption.</li>
-            <li>• Eat a balanced diet rich in nutrients.</li>
             <li>
-              • Wear a mouthguard at night if you grind your teeth during sleep.
+              <span className="text-dental-teal">•</span> Schedule dental
+              check-ups and cleanings every six months.
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Avoid smoking and
+              limit alcohol consumption.
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Eat a balanced diet
+              rich in nutrients.
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Wear a mouthguard at
+              night if you grind your teeth during sleep.
             </li>
           </ul>
         </AnimatedImageTextSection>

@@ -29,7 +29,7 @@ const Invisalign = () => {
               imagePosition="left"
               imageSrc="/invisalign-1.jpg"
               imageAlt="Invisalign Clear Aligners"
-              titleLineOne="Modern"
+              titleLineOne="Invisalign"
               titleLineTwo="Clear Aligners"
               isTitleLineOneBold={false}
               isDark

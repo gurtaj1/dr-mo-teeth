@@ -78,24 +78,29 @@ const WisdomToothPain = () => {
           </p>
           <ol className="space-y-2 ">
             <li>
-              1. Local Anaesthetic: We&apos;ll administer a local anaesthetic to
-              ensure you don&apos;t feel any pain during the procedure.
+              <span className="font-bold">Step 1.</span> Local Anaesthetic:
+              We&apos;ll administer a local anaesthetic to ensure you don&apos;t
+              feel any pain during the procedure.
             </li>
             <li>
-              2. Removing Gum Tissue: Any gum tissue covering your wisdom teeth
-              will be carefully removed.
+              <span className="font-bold">Step 2.</span> Removing Gum Tissue:
+              Any gum tissue covering your wisdom teeth will be carefully
+              removed.
             </li>
             <li>
-              3. Extracting the Teeth: They are extracted using gentle pressure
-              and techniques to remove the tooth from the bone.
+              <span className="font-bold">Step 3.</span> Extracting the Teeth:
+              They are extracted using gentle pressure and techniques to remove
+              the tooth from the bone.
             </li>
             <li>
-              4. Stitching the Gums: After the extraction, I will stitch up your
-              gums although this is not always needed.
+              <span className="font-bold">Step 4.</span> Stitching the Gums:
+              After the extraction, I will stitch up your gums although this is
+              not always needed.
             </li>
             <li>
-              5. Recovery Plan: I will provide you with detailed instructions
-              for your recovery to ensure a smooth healing process.
+              <span className="font-bold">Step 5.</span> Recovery Plan: I will
+              provide you with detailed instructions for your recovery to ensure
+              a smooth healing process.
             </li>
           </ol>
           <p className=" mt-4">

@@ -106,22 +106,24 @@ const DentalAnxiety = () => {
             <AnimatedElement>
               <ul className=" max-w-3xl mx-auto space-y-2 text-center">
                 <li>
-                  • No-Judgment Appointments: Feel free to discuss your concerns
-                  openly
+                  <span className="font-bold">• No-Judgment Appointments:</span>{" "}
+                  Feel free to discuss your concerns openly
                 </li>
                 <li>
-                  • Thorough Answers: addressing all your questions and fears
+                  <span className="font-bold">• Thorough Answers:</span>{" "}
+                  addressing all your questions and fears
                 </li>
                 <li>
-                  • Numbing Options: use anaesthetics to minimize discomfort
+                  <span className="font-bold">• Numbing Options:</span> use
+                  anaesthetics to minimise discomfort
                 </li>
                 <li>
-                  • Comfortable Environment: the surgery is designed to feel
-                  soothing and welcoming
+                  <span className="font-bold">• Comfortable Environment:</span>{" "}
+                  the surgery is designed to feel soothing and welcoming
                 </li>
                 <li>
-                  • Flexible Payment Options: providing various ways to manage
-                  costs
+                  <span className="font-bold">• Flexible Payment Options:</span>{" "}
+                  providing various ways to manage costs
                 </li>
               </ul>
             </AnimatedElement>
@@ -151,17 +153,29 @@ const DentalAnxiety = () => {
                     strategies that may help:
                   </p>
                   <ul className="list-none mt-2">
-                    <li>
-                      - Talk to your hygienist or dentist about your fears
+                    <li className="flex">
+                      <span className="text-dental-teal mr-2">•</span>
+                      <span>
+                        Talk to your hygienist or dentist about your fears
+                      </span>
                     </li>
-                    <li>
-                      - Let us know if you need a break during your appointment
+                    <li className="flex">
+                      <span className="text-dental-teal mr-2">•</span>
+                      <span>
+                        Let us know if you need a break during your appointment
+                      </span>
                     </li>
-                    <li>
-                      - Use breathing and mindfulness techniques to stay calm
+                    <li className="flex">
+                      <span className="text-dental-teal mr-2">•</span>
+                      <span>
+                        Use breathing and mindfulness techniques to stay calm
+                      </span>
                     </li>
-                    <li>
-                      - Bring a supportive friend or family member to your visit
+                    <li className="flex">
+                      <span className="text-dental-teal mr-2">•</span>
+                      <span>
+                        Bring a supportive friend or family member to your visit
+                      </span>
                     </li>
                   </ul>
                 </>
@@ -177,10 +191,22 @@ const DentalAnxiety = () => {
                     common symptoms include:
                   </p>
                   <ul className="list-none mt-2">
-                    <li>- Low blood pressure</li>
-                    <li>- Panic attacks during or before appointments</li>
-                    <li>- Dizziness or faintness</li>
-                    <li>- Heart palpitations</li>
+                    <li className="flex">
+                      <span className="text-dental-teal mr-2">•</span>
+                      <span>Low blood pressure</span>
+                    </li>
+                    <li className="flex">
+                      <span className="text-dental-teal mr-2">•</span>
+                      <span>Panic attacks during or before appointments</span>
+                    </li>
+                    <li className="flex">
+                      <span className="text-dental-teal mr-2">•</span>
+                      <span>Dizziness or faintness</span>
+                    </li>
+                    <li className="flex">
+                      <span className="text-dental-teal mr-2">•</span>
+                      <span>Heart palpitations</span>
+                    </li>
                   </ul>
                 </>
               ),

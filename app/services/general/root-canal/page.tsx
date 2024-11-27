@@ -76,24 +76,22 @@ const RootCanal = () => {
                     tooth, here are some symptoms to watch for:
                   </p>
                   <ul className="space-y-2">
-                    <li className="flex">
-                      <span className="w-6 shrink-0">⭐</span>
-                      <span>Persistent toothache</span>
+                    <li>
+                      <span className="text-dental-teal">•</span> Persistent
+                      toothache
                     </li>
-                    <li className="flex">
-                      <span className="w-6 shrink-0">⭐</span>
-                      <span>Ongoing sensitivity to temperature changes</span>
+                    <li>
+                      <span className="text-dental-teal">•</span> Ongoing
+                      sensitivity to temperature changes
                     </li>
-                    <li className="flex">
-                      <span className="w-6 shrink-0">⭐</span>
-                      <span>Tenderness in the jawbone</span>
+                    <li>
+                      <span className="text-dental-teal">•</span> Tenderness in
+                      the jawbone
                     </li>
-                    <li className="flex">
-                      <span className="w-6 shrink-0">⭐</span>
-                      <span>
-                        Chips or fractures in your tooth (even minor breaks can
-                        lead to significant decay and infection)
-                      </span>
+                    <li>
+                      <span className="text-dental-teal">•</span> Chips or
+                      fractures in your tooth (even minor breaks can lead to
+                      significant decay and infection)
                     </li>
                   </ul>
                 </>

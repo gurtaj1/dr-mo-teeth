@@ -46,10 +46,20 @@ const TeethWhitening = () => {
             <div>
               <h3 className="font-bold mb-2">What Causes Stained Teeth?</h3>
               <ul className="space-y-1">
-                <li>⭐ Coffee and tea</li>
-                <li>⭐ Foods with dark pigments</li>
-                <li>⭐ Smoking and tobacco use</li>
-                <li>⭐ Natural ageing</li>
+                <li>
+                  <span className="text-dental-teal">•</span> Coffee and tea
+                </li>
+                <li>
+                  <span className="text-dental-teal">•</span> Foods with dark
+                  pigments
+                </li>
+                <li>
+                  <span className="text-dental-teal">•</span> Smoking and
+                  tobacco use
+                </li>
+                <li>
+                  <span className="text-dental-teal">•</span> Natural ageing
+                </li>
               </ul>
             </div>
 

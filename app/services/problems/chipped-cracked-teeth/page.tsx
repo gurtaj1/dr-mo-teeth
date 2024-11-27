@@ -24,28 +24,46 @@ const BrokenTeeth = () => {
               and gum disease. Here are some common causes:
             </p>
             <ul className="space-y-2">
-              <li>
-                • Injury: A fall or blow to the face can easily damage a tooth.
+              <li className="flex">
+                <span className="mr-2">•</span>
+                <span>
+                  Injury: A fall or blow to the face can easily damage a tooth.
+                </span>
               </li>
-              <li>
-                • Hard Foods: Biting into hard items, such as candy or ice, can
-                cause chips or cracks.
+              <li className="flex">
+                <span className="mr-2">•</span>
+                <span>
+                  Hard Foods: Biting into hard items, such as candy or ice, can
+                  cause chips or cracks.
+                </span>
               </li>
-              <li>
-                • Chewing Habits: Compulsive habits, like chewing ice or pens,
-                can weaken teeth over time.
+              <li className="flex">
+                <span className="mr-2">•</span>
+                <span>
+                  Chewing Habits: Compulsive habits, like chewing ice or pens,
+                  can weaken teeth over time.
+                </span>
               </li>
-              <li>
-                • Bruxism: Grinding or clenching your teeth excessively can lead
-                to damage.
+              <li className="flex">
+                <span className="mr-2">•</span>
+                <span>
+                  Bruxism: Grinding or clenching your teeth excessively can lead
+                  to damage.
+                </span>
               </li>
-              <li>
-                • Tooth Decay: Weakened teeth from decay are more likely to
-                break.
+              <li className="flex">
+                <span className="mr-2">•</span>
+                <span>
+                  Tooth Decay: Weakened teeth from decay are more likely to
+                  break.
+                </span>
               </li>
-              <li>
-                • Health Conditions: Certain health issues and medications can
-                weaken tooth structure.
+              <li className="flex">
+                <span className="mr-2">•</span>
+                <span>
+                  Health Conditions: Certain health issues and medications can
+                  weaken tooth structure.
+                </span>
               </li>
             </ul>
           </div>
@@ -83,14 +101,23 @@ const BrokenTeeth = () => {
               and protect your mouth:
             </p>
             <ul className="space-y-2">
-              <li>⭐ Pain Relief: To help reduce pain and inflammation</li>
-              <li>
-                ⭐ Rinse: With mouthwash or salt water to kill bacteria and help
-                prevent infection
+              <li className="flex">
+                <span className="text-dental-teal mr-2">•</span>
+                <span>Pain Relief: To help reduce pain and inflammation</span>
               </li>
-              <li>
-                ⭐ Dental Wax: Use dental wax to cover sharp edges on the broken
-                tooth to protect your mouth
+              <li className="flex">
+                <span className="text-dental-teal mr-2">•</span>
+                <span>
+                  Rinse: With mouthwash or salt water to kill bacteria and help
+                  prevent infection
+                </span>
+              </li>
+              <li className="flex">
+                <span className="text-dental-teal mr-2">•</span>
+                <span>
+                  Dental Wax: Use dental wax to cover sharp edges on the broken
+                  tooth to protect your mouth
+                </span>
               </li>
             </ul>
           </div>
@@ -107,15 +134,17 @@ const BrokenTeeth = () => {
             <div>
               <ol className="space-y-2">
                 <li>
-                  1. Request Your Appointment: Get in touch to schedule a visit
+                  <span className="font-bold">Step 1.</span> Request Your
+                  Appointment: Get in touch to schedule a visit
                 </li>
                 <li>
-                  2. Get an Exam: We&apos;ll examine your tooth and provide a
-                  diagnosis, along with a custom treatment plan
+                  <span className="font-bold">Step 2.</span> Get an Exam:
+                  We&apos;ll examine your tooth and provide a diagnosis, along
+                  with a custom treatment plan
                 </li>
                 <li>
-                  3. Begin Treatment: Start your treatment and learn how to
-                  prevent future damage
+                  <span className="font-bold">Step 3.</span> Begin Treatment:
+                  Start your treatment and learn how to prevent future damage
                 </li>
               </ol>
               <p className="mt-4">
@@ -128,10 +157,18 @@ const BrokenTeeth = () => {
                 Common Treatments for Broken or Cracked Teeth:
               </h3>
               <ul className="space-y-2">
-                <li>⭐ Dental Implants</li>
-                <li>⭐ Dental Fillings</li>
-                <li>⭐ Crowns</li>
-                <li>⭐ Veneers</li>
+                <li>
+                  <span className="text-dental-teal">•</span> Dental Implants
+                </li>
+                <li>
+                  <span className="text-dental-teal">•</span> Dental Fillings
+                </li>
+                <li>
+                  <span className="text-dental-teal">•</span> Crowns
+                </li>
+                <li>
+                  <span className="text-dental-teal">•</span> Veneers
+                </li>
               </ul>
             </div>
           </div>
