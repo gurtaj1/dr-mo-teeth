@@ -51,11 +51,25 @@ const Crowns = () => {
           isDark
         >
           <ul className="space-y-4">
-            <li>⭐ Protects and strengthens damaged teeth</li>
-            <li>⭐ Restores natural appearance</li>
-            <li>⭐ Improves tooth function</li>
-            <li>⭐ Prolongs tooth life</li>
-            <li>⭐ Allows confident eating and smiling</li>
+            <li>
+              <span className="text-dental-teal">•</span> Protects and
+              strengthens damaged teeth
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Restores natural
+              appearance
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Improves tooth
+              function
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Prolongs tooth life
+            </li>
+            <li>
+              <span className="text-dental-teal">•</span> Allows confident
+              eating and smiling
+            </li>
           </ul>
         </AnimatedImageTextSection>
       </div>
