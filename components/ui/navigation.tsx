@@ -100,38 +100,40 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-dental-deepBlue/70 bg-opacity-95 shadow-m font-newsreader">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <motion.div
-            variants={linkFramerVariants}
-            initial="initial"
-            whileHover="whileHover"
-          >
-            <Link href="/" className="text-2xl font-bold text-white">
-              <Image
-                src="/logo-mark-white.png"
-                alt="Dr Mo Smiles"
-                width={180}
-                height={48}
-                className="h-12 w-auto"
-                priority
-              />
-            </Link>
-          </motion.div>
-          <motion.div
-            variants={linkFramerVariants}
-            initial="initial"
-            whileHover="whileHover"
-          >
-            <Link href="/" className="text-2xl font-bold text-white">
-              <Image
-                src="/signature-white.png"
-                alt="Dr Mo Smiles"
-                width={180}
-                height={48}
-                className="h-40 w-auto my-[-60px] ml-[-12px]"
-                priority
-              />
-            </Link>
-          </motion.div>
+          <div className="flex items-end space-x-4">
+            <motion.div
+              variants={linkFramerVariants}
+              initial="initial"
+              whileHover="whileHover"
+            >
+              <Link href="/" className="text-2xl font-bold text-white">
+                <Image
+                  src="/logo-mark-white.png"
+                  alt="Dr Mo Smiles"
+                  width={180}
+                  height={48}
+                  className="h-12 w-auto"
+                  priority
+                />
+              </Link>
+            </motion.div>
+            <motion.div
+              variants={linkFramerVariants}
+              initial="initial"
+              whileHover="whileHover"
+            >
+              <Link href="/" className="text-2xl font-bold text-white">
+                <Image
+                  src="/signature-white.png"
+                  alt="Dr Mo Smiles"
+                  width={180}
+                  height={48}
+                  className="h-40 w-auto my-[-60px] ml-[-12px]"
+                  priority
+                />
+              </Link>
+            </motion.div>
+          </div>
           {/* Desktop Navigation - hide on mobile */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="w-5"></div>
