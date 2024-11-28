@@ -13,6 +13,7 @@ interface SmartCarouselProps {
   boxShadowColor?: string;
   hideSideButtons?: boolean;
   isDark?: boolean;
+  className?: string;
 }
 
 type CarouselOptions = {
@@ -90,6 +91,7 @@ export default function SmartCarousel({
   boxShadowColor,
   hideSideButtons = false,
   isDark = false,
+  className,
 }: SmartCarouselProps) {
   const options: CarouselOptions = {
     align: "start",
@@ -180,7 +182,7 @@ export default function SmartCarousel({
   }, [slidesToShow]);
 
   return (
-    <div className="relative px-8 sm:px-12">
+    <div className={`relative ${className || "px-8 sm:px-12"}`}>
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {items.map((item, index) => (

@@ -54,7 +54,7 @@ export default function IVSedationPage() {
 
         {/* IV Sedation Process Section */}
         <section className="py-16 bg-dental-navy">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-6 text-white">
             <AnimatedElement>
               <h2 className="text-3xl mb-12 text-center">
                 <strong>
@@ -160,7 +160,7 @@ export default function IVSedationPage() {
             </AnimatedElement>
             <div className="mt-8">
               <AnimatedElement transitionSize>
-                <div className="max-w-3xl mx-auto">
+                <div className="w-full max-w-[98vw] md:max-w-3xl mx-auto">
                   <SmartCarousel
                     items={imageSlides}
                     slidesToShow={1}
@@ -168,6 +168,7 @@ export default function IVSedationPage() {
                     boxShadowColor="white"
                     hideSideButtons
                     autoplayInterval={8000}
+                    className="h-full w-full px-0 sm:px-12"
                   />
                 </div>
               </AnimatedElement>

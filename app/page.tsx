@@ -155,7 +155,7 @@ const HomePage = () => {
           className="font-newsreader py-16 bg-dental-navy relative"
         >
           <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
-            <div className="container mx-auto px-6 relative">
+            <div className="text-white container mx-auto px-6 relative">
               <AnimatedElement>
                 <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
                   <span className="relative inline-block">
@@ -185,7 +185,7 @@ const HomePage = () => {
                     </ul>
                   </AnimatedElement>
                   <AnimatedElement>
-                    <p className="">
+                    <p className="text-justify">
                       Choosing me as your dentist means opting for a blend of
                       professional expertise, compassionate care, and a
                       commitment to your overall dental health. With years of
@@ -225,92 +225,53 @@ const HomePage = () => {
                 </h2>
               </AnimatedElement>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <AnimatedElement transitionSize>
-                  <motion.div
-                    initial="initial"
-                    whileHover="whileHover"
-                    whileTap="whileTap"
-                    className="transform hover:-translate-y-2 transition-all duration-300"
-                  >
+                {[
+                  {
+                    icon: TechnologyIcon,
+                    title: "TECHNOLOGY",
+                    description:
+                      "The Latest Technology Providing Precision, Efficiency and Comfort",
+                  },
+                  {
+                    icon: QualityIcon,
+                    title: "QUALITY",
+                    description: "High Quality Dentistry, Guided By Science",
+                  },
+                  {
+                    icon: BespokeIcon,
+                    title: "BESPOKE",
+                    description: "Personalised Care, Tailored To You",
+                  },
+                ].map(({ icon: Icon, title, description }) => (
+                  <AnimatedElement transitionSize key={title}>
                     <motion.div
-                      className="text-center p-8 rounded-xl bg-white shadow-lg hover:shadow-2xl border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-72 flex flex-col justify-between transition-all duration-300"
-                      variants={homeCardVariants}
+                      initial="initial"
+                      whileHover="whileHover"
+                      whileTap="whileTap"
+                      className="transform hover:-translate-y-2 transition-all duration-300"
                     >
-                      <div className="mb-4">
-                        <TechnologyIcon
-                          className="w-16 h-16 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
-                          variants={homeIconVariants}
-                        />
-                      </div>
-                      <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
-                        TECHNOLOGY
-                      </h3>
-                      <p className="text-gray-600">
-                        The Latest Technology
-                        <br />
-                        Providing Precision,
-                        <br />
-                        Efficiency and Comfort
-                      </p>
+                      <motion.div
+                        className="text-center p-6 sm:p-8 rounded-xl bg-white shadow-lg hover:shadow-2xl border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group min-h-[200px] sm:min-h-[250px] flex flex-col justify-between transition-all duration-300"
+                        variants={homeCardVariants}
+                      >
+                        <div className="mb-4">
+                          <Icon
+                            className="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
+                            variants={homeIconVariants}
+                          />
+                        </div>
+                        <div>
+                          <h3 className="text-lg sm:text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
+                            {title}
+                          </h3>
+                          <p className="text-gray-600 text-sm sm:text-base">
+                            {description}
+                          </p>
+                        </div>
+                      </motion.div>
                     </motion.div>
-                  </motion.div>
-                </AnimatedElement>
-                <AnimatedElement transitionSize>
-                  <motion.div
-                    initial="initial"
-                    whileHover="whileHover"
-                    whileTap="whileTap"
-                    className="transform hover:-translate-y-2 transition-all duration-300"
-                  >
-                    <motion.div
-                      className="text-center p-8 rounded-xl bg-white shadow-lg hover:shadow-2xl border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-72 flex flex-col justify-between transition-all duration-300"
-                      variants={homeCardVariants}
-                    >
-                      <div className="mb-4">
-                        <QualityIcon
-                          className="w-16 h-16 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
-                          variants={homeIconVariants}
-                        />
-                      </div>
-                      <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
-                        QUALITY
-                      </h3>
-                      <p className="text-gray-600">
-                        High Quality Dentistry,
-                        <br />
-                        Guided By Science
-                      </p>
-                    </motion.div>
-                  </motion.div>
-                </AnimatedElement>
-                <AnimatedElement transitionSize>
-                  <motion.div
-                    initial="initial"
-                    whileHover="whileHover"
-                    whileTap="whileTap"
-                    className="transform hover:-translate-y-2 transition-all duration-300"
-                  >
-                    <motion.div
-                      className="text-center p-8 rounded-xl bg-white shadow-lg hover:shadow-2xl border-2 border-dental-teal/20 hover:bg-dental-accent1/5 group h-72 flex flex-col justify-between transition-all duration-300"
-                      variants={homeCardVariants}
-                    >
-                      <div className="mb-4">
-                        <BespokeIcon
-                          className="w-16 h-16 mx-auto text-dental-teal transition-transform duration-300 group-hover:scale-110"
-                          variants={homeIconVariants}
-                        />
-                      </div>
-                      <h3 className="text-xl font-bold mb-2 text-dental-navy transition-colors duration-300 group-hover:text-dental-teal">
-                        BESPOKE
-                      </h3>
-                      <p className="text-gray-600">
-                        Personalised Care,
-                        <br />
-                        Tailored To You
-                      </p>
-                    </motion.div>
-                  </motion.div>
-                </AnimatedElement>
+                  </AnimatedElement>
+                ))}
               </div>
             </div>
           </ScrollMotionWrapper>
@@ -322,7 +283,7 @@ const HomePage = () => {
             <div className="container mx-auto px-6">
               <AnimatedElement>
                 <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
-                  <span className="relative inline-block">
+                  <span className="text-white relative inline-block">
                     My Services
                     <motion.div
                       initial={{ width: 0 }}
@@ -477,7 +438,7 @@ const HomePage = () => {
                         <motion.img
                           src={step.image}
                           alt={`Step ${step.step}`}
-                          className="w-full h-64 object-cover rounded-lg"
+                          className="w-full h-48 sm:h-64 object-cover rounded-lg"
                           whileHover={{
                             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                           }}
@@ -485,13 +446,13 @@ const HomePage = () => {
                             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                           }}
                         />
-                        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-dental-teal flex items-center justify-center">
-                          <span className="text-2xl font-bold text-white">
+                        <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-dental-teal flex items-center justify-center">
+                          <span className="text-xl sm:text-2xl font-bold text-white">
                             {step.step}
                           </span>
                         </div>
                       </div>
-                      <p className="text-dental-navy text-xl font-semibold mt-8 text-center">
+                      <p className="text-dental-navy text-lg sm:text-xl font-semibold mt-6 sm:mt-8 text-center">
                         {step.text}
                       </p>
                     </motion.div>

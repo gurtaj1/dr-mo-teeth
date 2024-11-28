@@ -8,7 +8,7 @@ const RootCanal = () => {
   return (
     <PageLoadTransitionWrapper>
       <div className="min-h-screen bg-white overflow-x-hidden">
-        <div className="text-8xl text-center  bg-dental-navy pt-8">
+        <div className="text-5xl md:text-6xl lg:text-8xl text-center bg-dental-navy pt-8 text-white">
           <h1>Root Canal Therapy</h1>
         </div>
         {/* Root Canal Section */}

@@ -20,7 +20,7 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   return (
     <section className={`py-16 bg-dental-navy ${className}`}>
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 text-white">
         <div className="flex flex-col items-start">
           <AnimatedElement>
             <h1 className="text-3xl md:text-5xl lg:text-7xl mb-8 text-white">

@@ -56,7 +56,7 @@ const Invisalign = () => {
         <section className="container mx-auto px-6">
           <div className="mt-8">
             <AnimatedElement transitionSize>
-              <div className="max-w-3xl mx-auto">
+              <div className="w-full max-w-[98vw] md:max-w-3xl mx-auto">
                 <SmartCarousel
                   items={imageSlides}
                   slidesToShow={1}
@@ -64,6 +64,7 @@ const Invisalign = () => {
                   boxShadowColor="dental-primary"
                   hideSideButtons
                   autoplayInterval={8000}
+                  className="px-0 sm:px-12"
                 />
               </div>
             </AnimatedElement>

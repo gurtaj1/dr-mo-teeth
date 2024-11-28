@@ -6,6 +6,8 @@ import AnimatedImageTextSection from "../../../../components/ui/animated-image-t
 import QuestionsSection from "@/components/ui/questions-section";
 import TitleSection from "@/components/ui/title-section";
 import PageLoadTransitionWrapper from "@/components/ui/page-load-transition-wrapper";
+import AnimatedElement from "@/components/ui/animated-element";
+import { motion } from "framer-motion";
 
 const Extractions = () => {
   const questions = [
@@ -85,47 +87,70 @@ const Extractions = () => {
         </AnimatedImageTextSection>
 
         {/* Reasons for Extraction Section */}
-        <section
-          className="py-16 bg-dental-navy relative"
-          style={{
-            backgroundImage: `url('/extractions-2.jpg')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-70" />
-          <div className="container mx-auto px-6 relative">
-            <h2 className="text-3xl mb-12  text-center">
-              <strong>Reasons for a Tooth Extraction </strong>
-              <br />
-              May Include:
-            </h2>
+        <section className="py-16 bg-dental-navy relative">
+          <div className="container mx-auto px-6 relative text-white">
+            <AnimatedElement>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl mb-12 text-center">
+                <span className="relative inline-block">
+                  <strong>Reasons for a Tooth Extraction</strong>
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-dental-teal to-transparent"
+                  />
+                </span>
+                <br />
+                <span className="mt-2 block">May Include:</span>
+              </h2>
+            </AnimatedElement>
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="bg-white/10 p-6 rounded-lg text-center">
-                <div className=" text-4xl mb-4">
-                  <i className="fas fa-virus"></i>
-                </div>
-                <p className="">Infected or abscessed tooth</p>
-              </div>
-              <div className="bg-white/10 p-6 rounded-lg text-center">
-                <div className=" text-4xl mb-4">
-                  <i className="fas fa-tooth"></i>
-                </div>
-                <p className="">Broken or severely damaged teeth</p>
-              </div>
-              <div className="bg-white/10 p-6 rounded-lg text-center">
-                <div className=" text-4xl mb-4">
-                  <i className="fas fa-teeth"></i>
-                </div>
-                <p className="">Problems caused by wisdom teeth</p>
-              </div>
-              <div className="bg-white/10 p-6 rounded-lg text-center">
-                <div className=" text-4xl mb-4">
-                  <i className="fas fa-arrows-alt-h"></i>
-                </div>
-                <p className="">Overcrowding in the mouth</p>
-              </div>
+              {[
+                {
+                  icon: "fas fa-virus",
+                  text: "Infected or abscessed tooth",
+                },
+                {
+                  icon: "fas fa-tooth",
+                  text: "Broken or severely damaged teeth",
+                },
+                {
+                  icon: "fas fa-teeth",
+                  text: "Problems caused by wisdom teeth",
+                },
+                {
+                  icon: "fas fa-arrows-alt-h",
+                  text: "Overcrowding in the mouth",
+                },
+              ].map((item, index) => (
+                <AnimatedElement key={index} transitionSize>
+                  <motion.div
+                    className="bg-white/10 p-6 rounded-lg text-center cursor-pointer h-full"
+                    whileHover={{
+                      scale: 1.05,
+                      backgroundColor: "rgba(255, 255, 255, 0.15)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      duration: 0.2,
+                    }}
+                  >
+                    <motion.div
+                      className="text-4xl mb-4"
+                      whileHover={{
+                        scale: 1.1,
+                        color: "#4dbaf9",
+                      }}
+                    >
+                      <i className={item.icon}></i>
+                    </motion.div>
+                    <p>{item.text}</p>
+                  </motion.div>
+                </AnimatedElement>
+              ))}
             </div>
           </div>
         </section>

@@ -42,11 +42,11 @@ const TitleSection = ({
     <section
       className={`py-16 bg-dental-navy ${isFullPageHeight ? "flex-grow" : ""}`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 text-white">
         <AnimatedElement>
           <h1
             ref={titleRef}
-            className="text-4xl md:text-6xl lg:text-8xl font-bold text-center mb-8"
+            className="text-5xl md:text-6xl lg:text-8xl font-bold text-center mb-8"
           >
             {titleText}
           </h1>

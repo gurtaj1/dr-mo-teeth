@@ -106,6 +106,31 @@ const DentalImplants = () => {
             uncomfortable dentures.
           </p>
         </AnimatedImageTextSection>
+
+        {/* Implant Retained Bridges Section */}
+        <AnimatedImageTextSection
+          imagePosition="right"
+          imageSrc="/dental-implants-5.jpg"
+          imageAlt="Dental Implant Retained Bridges"
+          titleLineOne="Dental Implant"
+          titleLineTwo="Retained Bridges"
+          isDark
+        >
+          <p className="mb-4">
+            Dental implant retained bridges are a fixed option of replacing
+            multiple missing teeth. Instead of using traditional bridges that
+            can damage the neighbouring teeth for support, these bridges are
+            anchored securely to dental implants which act like screws placed in
+            your jawbone.
+          </p>
+          <p>
+            The implants provide a strong foundation, allowing the bridge to
+            stay in place while you eat and speak. Dental implant retained
+            bridges can replace multiple missing teeth in one area of your mouth
+            and can also replace all your missing teeth if you have no teeth at
+            all.
+          </p>
+        </AnimatedImageTextSection>
       </div>
     </PageLoadTransitionWrapper>
   );

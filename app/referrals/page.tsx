@@ -15,7 +15,7 @@ export default function ReferralsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="container mx-auto px-6"
+          className="container mx-auto px-6 text-white"
         >
           <h1 className="text-5xl font-bold mb-8 text-center">Referrals</h1>
 

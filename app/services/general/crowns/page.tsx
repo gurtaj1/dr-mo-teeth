@@ -8,8 +8,8 @@ const Crowns = () => {
   return (
     <PageLoadTransitionWrapper>
       <div className="min-h-screen bg-white overflow-x-hidden">
-        <div className="text-5xl text-center bg-dental-navy pt-8">
-          <h1 className="text-8xl">Crowns</h1>
+        <div className="text-5xl text-center bg-dental-navy pt-8 text-white">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl">Crowns</h1>
         </div>
         {/* Dental Crowns Section */}
         <HeroSection

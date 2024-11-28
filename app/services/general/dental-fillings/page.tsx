@@ -7,7 +7,7 @@ const DentalFillings = () => {
   return (
     <PageLoadTransitionWrapper>
       <div className="min-h-screen bg-white overflow-x-hidden">
-        <div className="text-8xl text-center  bg-dental-navy pt-8">
+        <div className="text-5xl md:text-6xl lg:text-8xl text-center bg-dental-navy pt-8 text-white">
           <h1>Dental Fillings</h1>
         </div>
 
