@@ -24,15 +24,15 @@ import PageLoadTransitionWrapper from "@/components/ui/page-load-transition-wrap
 const HomePage = () => {
   const testimonials = [
     {
-      name: "Unnamed",
+      name: "",
       text: "I recently visited The Hedon Dental Practice and was incredibly impressed. The reception staff were welcoming and efficient, making me feel comfortable immediately. The clinic is clean and calming, which helped ease my usual dental anxiety. Dr. Mo is fantastic. He listened to my concerns and explained the treatment plan clearly. The procedure was smooth and virtually painless, thanks to Dr. Mo's expertise. I appreciated the clear aftercare instructions and the follow-up call to check on my recovery. For anyone nervous about dental visits, I highly recommend The Hedon Dental Practice. Dr. Mo and his team provide exceptional care with a personal touch. I left feeling confident and well-cared for. I will definitely be returning and recommending them to friends and family.",
     },
     {
-      name: "Unnamed",
+      name: "",
       text: "All round 1st class service.. Mo best dentist I've been to aided superbly by Emma.. Obviously pricier than NHS but you get what you pay for, also shout out to the superb hygienist..would recommend 👍",
     },
     {
-      name: "Unnamed",
+      name: "",
       text: "Had an emergency, NHS 111 could not help for 5 days. Called Hedon Dental Practice, great advise whilst they got to see me THE NEXT DAY. God send when you are in that much pain, Id only just signed up with them the week before. Dr Moh looked after me and I can't express how during the procedure everything was explained and made me and made you feel so at ease. I have had work done in the past in London with top class Dental specialists and I would honestly say Hedon beats them for expertise and pride in their work. You can tell they have it in buckets from the front desk staff to the practitioner to the dental nurse thank you so much.",
     },
     {
@@ -76,7 +76,7 @@ const HomePage = () => {
   const carouselItems = testimonials.map((testimonial, index) => (
     <Card key={index} className="h-full border-none shadow-lg">
       <CardContent className="p-6 flex flex-col justify-between h-full">
-        <p className="text-gray-600 mb-4 text-lg italic">
+        <p className="text-gray-600 mb-4 text-lg italic line-clamp-6">
           &quot;{testimonial.text}&quot;
         </p>
         <p className="font-semibold text-right">{testimonial.name}</p>
