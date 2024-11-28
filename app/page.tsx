@@ -12,6 +12,7 @@ import ScrollMotionWrapper from "@/components/ui/scroll-motion-wrapper";
 import TechnologyIcon from "@/app/svg-components/technology-icon";
 import QualityIcon from "@/app/svg-components/quality-icon";
 import BespokeIcon from "@/app/svg-components/bespoke-icon";
+import DrMoWithToothInCircle from "@/app/svg-components/dr-mo-with-tooth-in-circle";
 
 import {
   navBarHeight,
@@ -121,15 +122,14 @@ const HomePage = () => {
             <source src={"/mo-teeth-invideo.mp4"} type="video/mp4" />
           </video> */}
           <img
-            src="/home-background.jpg"
+            src="/home-hero.jpg"
             alt="Background"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
           <div className="relative z-10 text-center ">
-            <h1 className="font-newsreader text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 text-white">
-              DR. MO
-            </h1>
+            <DrMoWithToothInCircle className="w-full h-full mx-auto pb-14" />
+
             <motion.div
               variants={linkFramerVariants}
               initial="initial"
