@@ -336,7 +336,7 @@ const HomePage = () => {
                   <AnimatedElement transitionSize key={index}>
                     <Link href={service.link} className="h-full cursor-pointer">
                       <motion.div
-                        className="bg-dental-butterflyBlue/80 rounded-lg hover:bg-dental-primary/20 transition-colors border-white border h-full flex flex-col group"
+                        className="bg-dental-primary rounded-lg hover:bg-dental-primary/20 transition-colors border border-white hover:border-dental-accent2 h-full flex flex-col group"
                         whileHover={{
                           scale: 1.05,
                           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
