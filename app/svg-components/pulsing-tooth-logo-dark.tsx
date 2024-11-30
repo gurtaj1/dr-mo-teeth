@@ -1,18 +1,8 @@
 import { motion } from "framer-motion";
-import type { MotionSVGProps } from "./types";
 
-const svgVariants = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: [0, 1, 0], // Pulsing effect
-    transition: {
-      duration: 2, // Total duration for one pulse
-      ease: "easeInOut",
-      repeat: Infinity, // Indefinite looping
-      repeatType: "loop" as const, // Ensures it loops continuously
-    },
-  },
-};
+import { pulsingIconVariants } from "../globals/constants";
+
+import type { MotionSVGProps } from "./types";
 
 const PulsingToothLogoDark = (props: MotionSVGProps) => (
   <motion.svg
@@ -20,7 +10,7 @@ const PulsingToothLogoDark = (props: MotionSVGProps) => (
     id="Layer_2"
     data-name="Layer 2"
     viewBox="0 0 399.43 530.03"
-    variants={svgVariants}
+    variants={pulsingIconVariants}
     initial="initial"
     animate="animate"
     {...props}
