@@ -24,7 +24,7 @@ export default function ReferralsPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-lg mb-8 leading-relaxed"
+              className="text-lg mb-8 leading-relaxed text-center"
             >
               I welcome referrals for a wide range of oral surgery services,
               including dental implants, and intravenous sedation. If you have a
@@ -35,7 +35,7 @@ export default function ReferralsPage() {
             </motion.p>
 
             <AnimatedElement>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm w-full mb-12">
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm w-full md:w-2/3 lg:w-1/3 mb-12 mx-auto">
                 <h3 className="text-xl font-bold mb-4">Referrals Accepted:</h3>
                 <ul className="space-y-2">
                   <li>• Implant</li>

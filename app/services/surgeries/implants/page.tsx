@@ -81,7 +81,7 @@ const DentalImplants = () => {
         {/* Implant Retained Dentures Section */}
         <AnimatedImageTextSection
           imagePosition="left"
-          imageSrc="/dental-implants-4.jpg"
+          imageSrc="/dental-implants-6.jpg"
           imageAlt="Dental Implant Retained Dentures"
           titleLineOne="Dental Implant"
           titleLineTwo="Retained Dentures"
@@ -110,7 +110,7 @@ const DentalImplants = () => {
         {/* Implant Retained Bridges Section */}
         <AnimatedImageTextSection
           imagePosition="right"
-          imageSrc="/dental-implants-5.jpg"
+          imageSrc="/dental-implants-4.jpg"
           imageAlt="Dental Implant Retained Bridges"
           titleLineOne="Dental Implant"
           titleLineTwo="Retained Bridges"

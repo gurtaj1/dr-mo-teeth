@@ -12,7 +12,6 @@ import ScrollMotionWrapper from "@/components/ui/scroll-motion-wrapper";
 import TechnologyIcon from "@/app/svg-components/technology-icon";
 import QualityIcon from "@/app/svg-components/quality-icon";
 import BespokeIcon from "@/app/svg-components/bespoke-icon";
-import DrMoWithToothInCircle from "@/app/svg-components/dr-mo-with-tooth-in-circle";
 
 import {
   navBarHeight,
@@ -127,8 +126,10 @@ const HomePage = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-          <div className="relative z-10 text-center ">
-            <DrMoWithToothInCircle className="w-full h-full mx-auto pb-14" />
+          <div className="relative z-10 text-center bg-black/5 p-8 rounded-xl backdrop-blur-sm shadow-[0_0_40px_10px_rgba(0,0,0,0.05)]">
+            <h1 className="text-8xl font-bold text-white font-newsreader pb-8">
+              Dr. Mo
+            </h1>
 
             <motion.div
               variants={linkFramerVariants}
@@ -224,7 +225,52 @@ const HomePage = () => {
                   </span>
                 </h2>
               </AnimatedElement>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div className="block md:hidden">
+                <SmartCarousel
+                  hideSideButtons
+                  items={[
+                    {
+                      icon: TechnologyIcon,
+                      title: "TECHNOLOGY",
+                      description:
+                        "The Latest Technology Providing Precision, Efficiency and Comfort",
+                    },
+                    {
+                      icon: QualityIcon,
+                      title: "QUALITY",
+                      description: "High Quality Dentistry, Guided By Science",
+                    },
+                    {
+                      icon: BespokeIcon,
+                      title: "BESPOKE",
+                      description: "Personalised Care, Tailored To You",
+                    },
+                  ].map(({ icon: Icon, title, description }) => (
+                    <motion.div key={title} className="px-2">
+                      <motion.div
+                        className="text-center p-6 rounded-xl bg-white shadow-lg border-2 border-dental-teal/20 group min-h-[200px] flex flex-col justify-between"
+                        variants={homeCardVariants}
+                      >
+                        <div className="mb-4">
+                          <Icon
+                            className="w-12 h-12 mx-auto fill-dental-navy stroke-dental-navy text-dental-navy"
+                            variants={homeIconVariants}
+                          />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold mb-2 text-dental-navy">
+                            {title}
+                          </h3>
+                          <p className="text-gray-600 text-sm">{description}</p>
+                        </div>
+                      </motion.div>
+                    </motion.div>
+                  ))}
+                  slidesToShow={1}
+                  autoplay={true}
+                />
+              </div>
+              <div className="hidden md:grid grid-cols-3 gap-12">
                 {[
                   {
                     icon: TechnologyIcon,
@@ -359,7 +405,7 @@ const HomePage = () => {
                               className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                           </div>
-                          <div className="flex flex-col flex-1 text-black group-hover:text-white">
+                          <div className="flex flex-col flex-1 text-white group-hover:text-dental-accent1">
                             <h3 className="text-xl font-semibold mb-2 ">
                               {service.title}
                             </h3>
@@ -468,7 +514,7 @@ const HomePage = () => {
           <ScrollMotionWrapper transitionY transitionScale transitionOpacity>
             <div className="container mx-auto px-6">
               <AnimatedElement>
-                <h2 className="font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
+                <h2 className="text-white font-castoro text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8">
                   <span className="relative inline-block">
                     Patient Reviews
                     <motion.div

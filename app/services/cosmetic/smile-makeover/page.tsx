@@ -7,7 +7,7 @@ const SmileMakeover = () => {
   return (
     <PageLoadTransitionWrapper>
       <div className="min-h-screen bg-white overflow-x-hidden">
-        <div className="text-5xl md:text-6xl lg:text-8xl text-center bg-dental-navy pt-8">
+        <div className="text-white text-5xl md:text-6xl lg:text-8xl text-center bg-dental-navy pt-8">
           <h1>Smile Makeover</h1>
         </div>
         <AnimatedImageTextSection

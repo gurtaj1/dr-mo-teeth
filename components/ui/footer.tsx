@@ -234,7 +234,7 @@ const Footer = () => {
                   <MapPin className="mr-2" size={18} />
                 </Link>
                 <Link href="https://maps.app.goo.gl/dbgXNq8s5xRRJCPW7">
-                  10 Soutter Gate, Hedon, Hull HU12 8JS
+                  10 Souttergate, Hedon, Hull HU12 8JS
                 </Link>
               </li>
               <li className="flex items-center hover:text-dental-accent2">
