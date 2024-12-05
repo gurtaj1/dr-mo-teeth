@@ -126,7 +126,7 @@ const HomePage = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-          <div className="relative z-10 text-center bg-black/5 p-8 rounded-xl backdrop-blur-sm shadow-[0_0_40px_10px_rgba(0,0,0,0.05)]">
+          <div className="relative z-10 text-center bg-black/5 p-8 rounded-xl">
             <h1 className="text-8xl font-bold text-white font-newsreader pb-8">
               DR. MO
             </h1>
