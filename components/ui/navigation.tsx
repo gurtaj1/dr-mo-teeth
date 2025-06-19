@@ -108,11 +108,11 @@ const Navigation = () => {
             >
               <Link href="/" className="text-2xl font-bold text-white">
                 <Image
-                  src="/logo-mark-white.png"
+                  src="/nav-initials-logo.png"
                   alt="Dr Mo Smiles"
-                  width={180}
-                  height={48}
-                  className="h-12 w-auto"
+                  width={240}
+                  height={64}
+                  className="h-16 w-auto my-[-8px]"
                   priority
                 />
               </Link>
@@ -128,7 +128,7 @@ const Navigation = () => {
                   alt="Dr Mo Smiles"
                   width={180}
                   height={48}
-                  className="h-40 w-auto my-[-60px] ml-[-12px]"
+                  className="h-40 w-auto my-[-60px] ml-[-26px]"
                   priority
                 />
               </Link>
