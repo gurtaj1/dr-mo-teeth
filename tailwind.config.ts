@@ -76,6 +76,7 @@ const config: Config = {
       fontFamily: {
         newsreader: ["Newsreader", "serif"],
         castoro: ["Castoro Titling", "serif"],
+        spectral: ["Spectral", "serif"],
       },
     },
   },

@@ -37,7 +37,7 @@ const HomePage = () => {
     },
     {
       name: "",
-      text: "Having not visited a dentist in over 15 years, having to do so following tooth ache in August 2023, I was a little apprehensive you could say but after 9 months and multiple treatments, my experience has been great. Dr Mo set out a clear treatment plan to rectify all my dental problems (and there was a few), talking me through every stage and every appointment, giving my mouth and me time to heal and rest between appointments, even changing the plan at the appointment depending on how I was feeling. All of the staff are welcoming and supportive, explain all the aftercare to you and go above and beyond. I would recommend Hedon Dental Surgery to anyone especially if like me you haven’t been in a long time. I certainly wont be leaving it another 15 years before visiting again! ",
+      text: "Having not visited a dentist in over 15 years, having to do so following tooth ache in August 2023, I was a little apprehensive you could say but after 9 months and multiple treatments, my experience has been great. Dr Mo set out a clear treatment plan to rectify all my dental problems (and there was a few), talking me through every stage and every appointment, giving my mouth and me time to heal and rest between appointments, even changing the plan at the appointment depending on how I was feeling. All of the staff are welcoming and supportive, explain all the aftercare to you and go above and beyond. I would recommend Hedon Dental Surgery to anyone especially if like me you haven't been in a long time. I certainly wont be leaving it another 15 years before visiting again! ",
     },
     {
       name: "",
@@ -45,11 +45,11 @@ const HomePage = () => {
     },
     {
       name: "",
-      text: "Visited today for 2 large composite fillings, I don’t think anyone likes going to the dentist but Mo and Arina were brilliant. Explained the procedure fully, put me at ease, and I didn’t feel a thing. Also had chilled music playing, shut my eyes and pretended I was on a beach. Thanks guys",
+      text: "Visited today for 2 large composite fillings, I don't think anyone likes going to the dentist but Mo and Arina were brilliant. Explained the procedure fully, put me at ease, and I didn't feel a thing. Also had chilled music playing, shut my eyes and pretended I was on a beach. Thanks guys",
     },
     {
       name: "",
-      text: "I was at the dentist yesterday to see mr Mohsin Aslam it’s always a pleasure to see him one of the best dentists I have ever seen and then went to see Maria see was fantastic as usual.",
+      text: "I was at the dentist yesterday to see mr Mohsin Aslam it's always a pleasure to see him one of the best dentists I have ever seen and then went to see Maria see was fantastic as usual.",
     },
     {
       name: "",
@@ -65,7 +65,7 @@ const HomePage = () => {
     },
     {
       name: "",
-      text: "Dr Mo is fabulous - I am very nervous and his lovely kind calming manner makes my worries disappear - I can’t recommend him enough 😊",
+      text: "Dr Mo is fabulous - I am very nervous and his lovely kind calming manner makes my worries disappear - I can't recommend him enough 😊",
     },
     {
       name: "",
@@ -107,7 +107,7 @@ const HomePage = () => {
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section
-          className={`relative h-[100svh] flex items-center justify-center`}
+          className={`relative h-[100svh] flex flex-col items-center justify-center bg-black`}
           style={{ height: `calc(100svh - ${navBarHeight}px)` }}
         >
           {/* place below code back when a video has been made */}
@@ -120,33 +120,34 @@ const HomePage = () => {
           >
             <source src={"/mo-teeth-invideo.mp4"} type="video/mp4" />
           </video> */}
-          <img
-            src="/home-hero.jpg"
-            alt="Background"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-          <div className="relative z-10 text-center bg-black/5 p-8 rounded-xl">
-            <h1 className="text-8xl font-bold text-white font-newsreader pb-8">
-              DR. MO
+          <div className="flex flex-col items-center justify-center flex-1 py-16">
+            <img
+              src="/initials-logo-black-bg.jpg"
+              alt="Dr. Mo Logo"
+              className="max-w-md max-h-96 object-contain"
+            />
+            <div className="w-96 sm:w-[500px] md:w-[650px] lg:w-[800px] h-[3px] mb-6 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-light text-white font-spectral text-center px-6 tracking-widest">
+              EMPOWERING YOU TO SMILE
             </h1>
-
-            <motion.div
-              variants={linkFramerVariants}
-              initial="initial"
-              whileHover="whileHover"
-              whileTap="whileTap"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="mb-4 bg-dental-secondary hover:bg-dental-accent2 text-white hover:text-black"
+            <div className="mt-12">
+              <motion.div
+                variants={linkFramerVariants}
+                initial="initial"
+                whileHover="whileHover"
+                whileTap="whileTap"
               >
-                <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
-                  Make an Enquiry
-                </Link>
-              </Button>
-            </motion.div>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-dental-secondary hover:bg-dental-accent2 text-white hover:text-black"
+                >
+                  <Link href="mailto:implantclinician@outlook.com,drmohsinaslam@outlook.com">
+                    Make an Enquiry
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
           </div>
         </section>
 
