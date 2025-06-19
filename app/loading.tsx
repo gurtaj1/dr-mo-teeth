@@ -18,10 +18,10 @@ export default function Loading({ showText = false }: LoadingProps) {
           animate="animate"
         >
           <Image
-            src="/logo-mark-white.png"
+            src="/nav-initials-logo.png"
             alt="Dr Mo Smiles"
-            width={280}
-            height={75}
+            width={320}
+            height={85}
             priority
           />
         </motion.div>
