@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 import GoogleIcon from "@/app/svg-components/google-icon";
 import { cn } from "@/lib/utils";
 
@@ -33,9 +34,11 @@ const GoogleReviewCard = ({
       {/* Header */}
       <div className="flex items-start gap-3 mb-3">
         {avatar ? (
-          <img
+          <Image
             src={avatar}
             alt={name}
+            width={40}
+            height={40}
             className="w-10 h-10 rounded-full object-cover"
           />
         ) : (

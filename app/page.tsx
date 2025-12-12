@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import AnimatedElement from "@/components/ui/animated-element";
 import SmartCarousel from "@/components/ui/smart-carousel";
 import ScrollMotionWrapper from "@/components/ui/scroll-motion-wrapper";
@@ -422,7 +421,7 @@ const HomePage = () => {
                           stiffness: 300,
                         }}
                       >
-                        <CardContent className="p-6 flex flex-col flex-1">
+                        <div className="p-6 flex flex-col flex-1">
                           <div className="overflow-hidden rounded-lg mb-4 group-hover:border group-hover:border-white">
                             <img
                               src={`/service-${index + 1}.jpg`}
@@ -449,7 +448,7 @@ const HomePage = () => {
                             />
                             <p className="/80">{service.description}</p>
                           </div>
-                        </CardContent>
+                        </div>
                       </motion.div>
                     </Link>
                   </AnimatedElement>
