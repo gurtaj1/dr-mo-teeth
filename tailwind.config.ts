@@ -26,6 +26,7 @@ const config: Config = {
           dirtyGold: colors.dental.dirtyGold, // dirty gold
           gold: colors.dental.gold,
           lightGold: colors.dental.lightGold,
+          googleYellowOrange: colors.dental.googleYellowOrange, // Google yellowish-orange
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

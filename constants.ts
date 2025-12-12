@@ -13,5 +13,6 @@ export const colors = {
     teal: "rgb(56,192,188)", // Teals
     gray: "rgb(84,84,84)", // Gray
     dirtyGold: "rgb(56, 50, 2)", // dirty gold
+    googleYellowOrange: "rgb(251, 188, 4)", // Google yellowish-orange
   },
 };
